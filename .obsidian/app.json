@@ -1,0 +1,9 @@
+{
+  "readableLineLength": false,
+  "spellcheck": false,
+  "alwaysUpdateLinks": true,
+  "showLineNumber": true,
+  "attachmentFolderPath": "images",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "Documents"
+}

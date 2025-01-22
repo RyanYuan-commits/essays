@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"c3b5d64bb8299731","type":"text","text":"🦝 Python","x":-180,"y":-33,"width":180,"height":53},
+		{"id":"5fe98776de27e00b","type":"text","text":"- [[🎥【Python】数据类型]]\n- [[🍙【Python】列表推导式]]\n- [[🌴【Python】Python 语言规范]]\n- [[🏉【Python】模块与包]]","x":208,"y":-186,"width":477,"height":180},
+		{"id":"00b6aeb43c48e71d","type":"text","text":"","x":-720,"y":-186,"width":260,"height":86},
+		{"id":"0373e5d233e6352a","type":"text","text":"- [[🥟【Python】urllib]]","x":208,"y":80,"width":477,"height":80}
+	],
+	"edges":[
+		{"id":"e59e70af145169f0","fromNode":"c3b5d64bb8299731","fromSide":"right","toNode":"0373e5d233e6352a","toSide":"left","label":"Client"},
+		{"id":"62db569610f56b5b","fromNode":"c3b5d64bb8299731","fromSide":"right","toNode":"5fe98776de27e00b","toSide":"left","label":"Basic"},
+		{"id":"f6cf48302cd2b561","fromNode":"c3b5d64bb8299731","fromSide":"left","toNode":"00b6aeb43c48e71d","toSide":"right","label":"Repository"}
+	]
+}

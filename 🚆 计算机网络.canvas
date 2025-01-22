@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"fe64694a43c498a8","type":"text","text":" 🚆 计算机网络","x":-120,"y":-40,"width":180,"height":60},
+		{"id":"48e03f01418a2740","type":"text","text":"TCP","x":270,"y":-307,"width":130,"height":50},
+		{"id":"a6d3e1589f1255db","type":"text","text":"- [[🏐 TCP 三次握手与四次挥手]]","x":520,"y":-442,"width":480,"height":320}
+	],
+	"edges":[
+		{"id":"45978ee969784bef","fromNode":"fe64694a43c498a8","fromSide":"right","toNode":"48e03f01418a2740","toSide":"left"},
+		{"id":"3939847d0fd1f4d9","fromNode":"48e03f01418a2740","fromSide":"right","toNode":"a6d3e1589f1255db","toSide":"left"}
+	]
+}

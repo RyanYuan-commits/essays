@@ -1,0 +1,236 @@
+{
+  "main": {
+    "id": "fdfc419827c627db",
+    "type": "split",
+    "children": [
+      {
+        "id": "3415710bafb03113",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "19bf63715e7f45d6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Documents/🛶【定时任务】Cron 表达式.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🛶【定时任务】Cron 表达式"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0a6a0130b1da74db",
+    "type": "split",
+    "children": [
+      {
+        "id": "1efffa0510548c0b",
+        "type": "tabs",
+        "dimension": 54.34451219512195,
+        "children": [
+          {
+            "id": "1a0db686bfef8213",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "cron",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "54adbb5467cd09b9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          },
+          {
+            "id": "05931ff3fd7deea5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Documents/🛶【定时任务】Cron 表达式.md"
+              },
+              "icon": "lucide-list",
+              "title": "🛶【定时任务】Cron 表达式 的大纲"
+            }
+          }
+        ]
+      },
+      {
+        "id": "25cab42ed9ce137e",
+        "type": "tabs",
+        "dimension": 45.65548780487805,
+        "children": [
+          {
+            "id": "ebbc0192d4444d86",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 363.5
+  },
+  "right": {
+    "id": "0a5ee2d5afe794c2",
+    "type": "split",
+    "children": [
+      {
+        "id": "468316507deef7c9",
+        "type": "tabs",
+        "dimension": 50.073855243722306,
+        "children": [
+          {
+            "id": "6f7fdba51c6ae6e4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Documents/🛶【定时任务】Cron 表达式.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "🛶【定时任务】Cron 表达式 的反向链接列表"
+            }
+          },
+          {
+            "id": "e3b877fcd2ef31f5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Documents/🛶【定时任务】Cron 表达式.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "🛶【定时任务】Cron 表达式 的出链列表"
+            }
+          },
+          {
+            "id": "772c37fbb11122e0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "fd6fb9dad9cfda65",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 3
+      },
+      {
+        "id": "1c3cc1b5880b84f1",
+        "type": "tabs",
+        "dimension": 49.926144756277694,
+        "children": [
+          {
+            "id": "3a64a2cf3eb0da09",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 450.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "19bf63715e7f45d6",
+  "lastOpenFiles": [
+    "🦝 Python 技术栈.canvas",
+    "Documents/🏉【Python】模块与包.md",
+    "Documents/🌴【Python】Python 语言规范.md",
+    "Documents/🍙【Python】列表推导式.md",
+    "Documents/🎥【Python】数据类型.md",
+    "🎯 分布式架构.canvas",
+    "🐕 Tips.canvas",
+    "🏓 技术路书.canvas",
+    "Canvas/🍋 MySQL 底层探秘.canvas",
+    "Documents/🎖️ Docker 常用命令快速查阅.md",
+    "Documents/🥟【Python】urllib.md",
+    "Canvas/🌼 ElasticSearch.canvas",
+    "Documents/🍝【ES】使用别名.md",
+    "Documents/🍝 ElasticSearch.md",
+    "🛳️ 源码航行.canvas",
+    "images/ES 查看所有索引.png",
+    "Documents/🐌【ES】 高级的 DSL 查询.md",
+    "Documents/🗽【ES】分词器.md",
+    "Documents/🍋【ES】DSL 示例.md",
+    "images/DSL 查询思维导图.png",
+    "Documents/🦄【ES】Posting List 压缩算法.md",
+    "Documents/🥒【ES】集群和分片.md",
+    "Documents/🌐【ES】什么是 Elastic Search？.md",
+    "Documents/☘️【Docker】部署 ElasticSearch.md",
+    "🚆 计算机网络.canvas",
+    "🦚 项目笔记整理.md",
+    "🗽 深入理解 Linux.canvas",
+    "🦝 前端学习.canvas",
+    "Documents/🌺【ES】搜索和查询.md",
+    "Documents/🍵【ES】词项索引与 FST 算法的实现过程.md",
+    "Documents/🚤 ThreadLocal、InheritableThreadLocal 源码解析.md"
+  ]
+}

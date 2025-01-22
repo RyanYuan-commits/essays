@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"6ea0229d16423f32","type":"text","text":"Vue","x":-315,"y":100,"width":105,"height":60,"color":"4"},
+		{"id":"5f3b13623c566da1","type":"file","file":"Documents/🥟 【Vue】核心语法.md","x":-40,"y":-240,"width":480,"height":218},
+		{"id":"fee9540bebeadab6","type":"file","file":"Documents/🍒【Vue】父子组件传值.md","x":-40,"y":340,"width":480,"height":100}
+	],
+	"edges":[
+		{"id":"23921af2c3800bed","fromNode":"6ea0229d16423f32","fromSide":"right","toNode":"5f3b13623c566da1","toSide":"left"},
+		{"id":"c32089f7ac8f3dae","fromNode":"6ea0229d16423f32","fromSide":"right","toNode":"fee9540bebeadab6","toSide":"left"}
+	]
+}

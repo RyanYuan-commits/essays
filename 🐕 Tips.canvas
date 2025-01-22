@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"2b8cf9cb30fe2b0b","type":"text","text":"🐕 Tips","x":26,"y":-10,"width":134,"height":60,"color":"5"},
+		{"id":"9fd2cfdeaa359cd4","type":"file","file":"Documents/🎖️ Docker 常用命令快速查阅.md","x":334,"y":-110,"width":465,"height":260},
+		{"id":"1d77930fbe316b53","type":"file","file":"Documents/🤿 如何生成 SSH 公钥.md","x":334,"y":-460,"width":1286,"height":188},
+		{"id":"eef0800d33a7ccc5","type":"file","file":"Documents/🖼️【Spring】@Resource vs @AutoWire.md","x":334,"y":340,"width":1086,"height":400},
+		{"id":"2477a65432938a0e","type":"text","text":"- [[🌽【Docker】部署 Redis]]\n- [[☘️【Docker】部署 ElasticSearch]]","x":920,"y":-26,"width":500,"height":146}
+	],
+	"edges":[
+		{"id":"fa238101051497b3","fromNode":"2b8cf9cb30fe2b0b","fromSide":"right","toNode":"1d77930fbe316b53","toSide":"left"},
+		{"id":"f62ed83bb53000f6","fromNode":"2b8cf9cb30fe2b0b","fromSide":"right","toNode":"9fd2cfdeaa359cd4","toSide":"left"},
+		{"id":"f40dc57ee26a396a","fromNode":"2b8cf9cb30fe2b0b","fromSide":"right","toNode":"eef0800d33a7ccc5","toSide":"left"},
+		{"id":"18479dd62ac82ef2","fromNode":"9fd2cfdeaa359cd4","fromSide":"right","toNode":"2477a65432938a0e","toSide":"left"}
+	]
+}

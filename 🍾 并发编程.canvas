@@ -1,0 +1,33 @@
+{
+	"nodes":[
+		{"id":"e198335f1a311a65","type":"text","text":"并发编程","x":-128,"y":-25,"width":168,"height":57,"color":"2"},
+		{"id":"cb9b62c41c30e90b","type":"text","text":"Netty","x":340,"y":-25,"width":124,"height":57,"color":"6"},
+		{"id":"51513cf32bca4bd5","type":"text","text":"并发基础","x":340,"y":-547,"width":124,"height":50,"color":"4"},
+		{"id":"44f14b7dee589a1e","type":"text","text":" Java 提供的并发编程工具","x":-720,"y":-205,"width":320,"height":60,"color":"5"},
+		{"id":"b8ee0f1994187507","type":"text","text":"Java 并发知识点","x":-720,"y":220,"width":250,"height":60,"color":"4"},
+		{"id":"3c2cd63d351319cb","type":"text","text":"基础组件","x":817,"y":-313,"width":183,"height":57,"color":"3"},
+		{"id":"75a32c0db531ae87","type":"text","text":"编码器与解码器","x":818,"y":-28,"width":242,"height":60,"color":"5"},
+		{"id":"ae5230ba12ffd27f","type":"text","text":"序列化与反序列化","x":817,"y":224,"width":243,"height":56,"color":"4"},
+		{"id":"940afbaba9746223","type":"text","text":"- Json 与 Protobuf \n\t- [[🧱 关于序列化和反序列化]]\n\t- [[🎠【Netty】使用 JSON 协议通信]]\n\t- [[🏀【Netty】使用 Protobuf 通信]]","x":1096,"y":179,"width":440,"height":150,"color":"4"},
+		{"id":"f08950c2798b8fbf","type":"text","text":"- Decoder 与 Encoder\n\t- [[🍒 半包和粘包问题]]\n\t- [[🐰【Netty】Decoder 原理与实践]]\n\t- [[🍭【Netty】常用的内置 Decoder]]\n\t- [[🚅【Netty】解码器原理与实践]]","x":1096,"y":-88,"width":440,"height":180,"color":"5"},
+		{"id":"b6dbf15a7da8a1b8","type":"text","text":"- [[🦖【Netty】实践案例：DiscardServer]]\n- [[🌾【Netty】核心原理：Reactor 模式实现]]\n\t- [[🧃【Netty】Bootstrap 引导类详解]]\n\t- [[🧭【Netty】Channel 通道详解]]\n\t- [[🏖️【Netty】Handler 业务处理类详解]]\n\t- [[🌵【Netty】Pipeline 流水线详解]]\n\t- [[🍬【ByteBuf】缓冲区详解]]\n","x":1096,"y":-404,"width":440,"height":240,"color":"3"},
+		{"id":"7b740f29f03caf74","type":"text","text":"- [[🎽【并发】高并发 IO 底层原理]]\n- [[🥭【并发】Java NIO 详解]]\n\t- [[🦞【NIO】Selector]]\n\t- [[🥨【NIO】Channel]]\n\t- [[🍌【NIO】Buffer]]\n- [[🌲【并发】Reactor 反应器模式]]","x":540,"y":-621,"width":440,"height":199,"color":"4"},
+		{"id":"af4de658a5dbc903","type":"text","text":"- [[🍨【并发】JMM 模型]]\n- [[🥭【并发】Java 并发编程基础]]\n- [[🍦【并发】Java 中的 Unsafe 类]]","x":-1340,"y":190,"width":530,"height":120,"color":"4"},
+		{"id":"c91281c275c7050d","type":"text","text":"- [[🚤 ThreadLocal、InheritableThreadLocal 源码解析]]\n- [[🍉【并发】线程池源码详解]]\n- [[🚣【并发】ThreadLocalRandom 源码解析]]\n- [[💫【并发】ReentrantLock 源码解析]]\n- [[🌻 ConcurrentHashMap 源码解析]]","x":-1400,"y":-260,"width":590,"height":170,"color":"5"}
+	],
+	"edges":[
+		{"id":"c689149b45c25d9b","fromNode":"e198335f1a311a65","fromSide":"left","toNode":"44f14b7dee589a1e","toSide":"right","label":" JUC 类源码解析"},
+		{"id":"c216ad08c139c85a","fromNode":"44f14b7dee589a1e","fromSide":"left","toNode":"c91281c275c7050d","toSide":"right"},
+		{"id":"f6c4ddcbfee59067","fromNode":"e198335f1a311a65","fromSide":"right","toNode":"51513cf32bca4bd5","toSide":"left","label":"并发基础"},
+		{"id":"8b7286bf17ad24ba","fromNode":"51513cf32bca4bd5","fromSide":"right","toNode":"7b740f29f03caf74","toSide":"left"},
+		{"id":"5dfa5a5ab8de6492","fromNode":"e198335f1a311a65","fromSide":"right","toNode":"cb9b62c41c30e90b","toSide":"left","label":"Netty"},
+		{"id":"9cdb4e861088d123","fromNode":"cb9b62c41c30e90b","fromSide":"right","toNode":"3c2cd63d351319cb","toSide":"left","label":"基础组件"},
+		{"id":"6c2f8ca2e895fc31","fromNode":"3c2cd63d351319cb","fromSide":"right","toNode":"b6dbf15a7da8a1b8","toSide":"left"},
+		{"id":"f32348a63110e32f","fromNode":"cb9b62c41c30e90b","fromSide":"right","toNode":"75a32c0db531ae87","toSide":"left","label":"编码器与解码器"},
+		{"id":"f868a429c9d8516a","fromNode":"75a32c0db531ae87","fromSide":"right","toNode":"f08950c2798b8fbf","toSide":"left"},
+		{"id":"07dac448cc6cacb7","fromNode":"cb9b62c41c30e90b","fromSide":"right","toNode":"ae5230ba12ffd27f","toSide":"left","label":"序列化与反序列化"},
+		{"id":"3227dab8465d4c12","fromNode":"ae5230ba12ffd27f","fromSide":"right","toNode":"940afbaba9746223","toSide":"left"},
+		{"id":"96776ffaf1d12e7a","fromNode":"e198335f1a311a65","fromSide":"left","toNode":"b8ee0f1994187507","toSide":"right","label":"Java 并发知识点"},
+		{"id":"e69954b3be4a4814","fromNode":"b8ee0f1994187507","fromSide":"left","toNode":"af4de658a5dbc903","toSide":"right"}
+	]
+}
