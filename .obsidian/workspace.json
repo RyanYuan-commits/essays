@@ -41,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cron",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -202,6 +202,8 @@
   "active": "19bf63715e7f45d6",
   "lastOpenFiles": [
     "🦝 Python 技术栈.canvas",
+    "Documents/🥟【Python】urllib.md",
+    "Documents/🛶【定时任务】Cron 表达式.md",
     "Documents/🏉【Python】模块与包.md",
     "Documents/🌴【Python】Python 语言规范.md",
     "Documents/🍙【Python】列表推导式.md",
@@ -211,7 +213,6 @@
     "🏓 技术路书.canvas",
     "Canvas/🍋 MySQL 底层探秘.canvas",
     "Documents/🎖️ Docker 常用命令快速查阅.md",
-    "Documents/🥟【Python】urllib.md",
     "Canvas/🌼 ElasticSearch.canvas",
     "Documents/🍝【ES】使用别名.md",
     "Documents/🍝 ElasticSearch.md",
