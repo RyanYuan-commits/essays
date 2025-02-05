@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"2eb8c57d26bedc6d","type":"text","text":"🍀 Flask","x":-128,"y":-31,"width":148,"height":60},
+		{"id":"6eefeba58b1534c6","type":"text","text":"- [[🦋【Python】Flask 基本概念]]\n\t- [[🌱【Python】Flask 路由]]\n\t- [[🦄【Python】Flask 视图函数]]\n\t- [[🦜【Python】Flask 模板渲染]]\n\t- [[🍝【Python】Flask 表单处理]]\n\t- [[💐【Python】SQLAlchemy]]\n\t- [[🏡【Python】Flask 蓝图]]\n\t- [[🍿【Python】Flask 错误处理]]\n\t","x":200,"y":64,"width":500,"height":316},
+		{"id":"95070a8d670e7a10","type":"text","text":"- [[🍁【Python】什么是 Flask？]]\n- [[🐥【Python】Flask 项目结构]]","x":200,"y":-200,"width":420,"height":100},
+		{"id":"9114326aafd9eb8c","type":"file","file":"images/Flask 基本概念.png","x":840,"y":-280,"width":660,"height":1005}
+	],
+	"edges":[
+		{"id":"83a67856e1511011","fromNode":"2eb8c57d26bedc6d","fromSide":"right","toNode":"95070a8d670e7a10","toSide":"left","label":"简单介绍"},
+		{"id":"c14e7a775574d69e","fromNode":"2eb8c57d26bedc6d","fromSide":"right","toNode":"6eefeba58b1534c6","toSide":"left","label":"基本概念"},
+		{"id":"cd526b8f0a31ad18","fromNode":"6eefeba58b1534c6","fromSide":"right","toNode":"9114326aafd9eb8c","toSide":"left"}
+	]
+}

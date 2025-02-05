@@ -61,6 +61,10 @@ print(my_dict['key1']) # value1
 my_dict['key3'] = 3 
 print(my_dict) # {'key1': 'value1', 'key2': 2, 'key3': 3}
 ```
+字典的遍历方式：
+- 遍历字典的键：`for key in my_dict.keys()`
+- 遍历字典的值：`for value in my_dict.values()`
+- 同时遍历字典的键值对：`for key, value in my_dict.items()`
 ## 布尔类型
 表示逻辑值，只有 `True` 和 `False` 两个值。
 ```python

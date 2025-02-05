@@ -10,7 +10,7 @@
 ![[【small-mybatis】Mapper XML 的解析和注册使用 架构图.png|900]]
 - 首先需要定义 `SqlSessionFactoryBuilder` 工厂建造者模式类，通过入口 IO 的方式对 XML 文件进行解析。当前我们主要以解析 SQL 部分为主，并注册映射器，串联出整个核心流程的脉络。
 - 文件解析以后会存放到 Configuration 配置类中，接下来你会看到这个配置类会被串联到整个 Mybatis 流程中，所有内容存放和读取都离不开这个类。如我们在 DefaultSqlSession 中获取 Mapper 和执行 selectOne 也同样是需要在 Configuration 配置类中进行读取操作。
-我们在 Mapper 的 xml 中可以获得一条具体的 sql 语句，和对其一系列的配置，具体可以看 [[【mybatis】MappedStatement]]
+我们在 Mapper 的 xml 中可以获得一条具体的 sql 语句，和对其一系列的配置，具体可以看 [[🐂【mybatis】MappedStatement]]
 # 实现
 ![[【small-mybatis】Mapper XML 的解析和注册使用 核心类图.png|800]]
 ## Configuration 类
