@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"a18747ea8f1195e4","type":"text","text":"设计模式","x":-140,"y":-27,"width":140,"height":60},
+		{"id":"16a67b005cebcd41","type":"text","text":"- [[🦋【设计模式】简单工厂模式]]\n- [[☘️【设计模式】工厂方法模式]]","x":200,"y":-360,"width":446,"height":220}
+	],
+	"edges":[
+		{"id":"1a6d8e466999586b","fromNode":"a18747ea8f1195e4","fromSide":"right","toNode":"16a67b005cebcd41","toSide":"left","label":"创建型设计模式"}
+	]
+}

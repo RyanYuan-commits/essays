@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"e5339ffb1ba5af57","type":"text","text":"🏜️ kubernetes","x":-480,"y":8,"width":220,"height":60},
+		{"id":"a8ba43388afffca8","type":"text","text":"- [[🏀 什么是云原生？]]\n- [[🎄 服务网格]]","x":0,"y":-280,"width":301,"height":100}
+	],
+	"edges":[
+		{"id":"d40e6cca7c5445a3","fromNode":"e5339ffb1ba5af57","fromSide":"right","toNode":"a8ba43388afffca8","toSide":"left","label":"基础理解"}
+	]
+}

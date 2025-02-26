@@ -5,7 +5,7 @@
 		{"id":"632119f28beee72e","type":"text","text":" 事务(Transcation)","x":380,"y":10,"width":241,"height":50,"color":"6"},
 		{"id":"84b486c44cc09b11","type":"text","text":"日志(Logs)","x":380,"y":385,"width":241,"height":50,"color":"5"},
 		{"id":"a900eb4c7966fc33","type":"text","text":"架构设计","x":380,"y":-335,"width":241,"height":55},
-		{"id":"7535b5ba4d68e1f8","type":"text","text":"拓展阅读：[从源码看MySQL的加锁规则](https://juejin.cn/post/7133014068830404622)","x":-1042,"y":273,"width":380,"height":55},
+		{"id":"7535b5ba4d68e1f8","type":"text","text":"拓展阅读：[从源码看MySQL的加锁规则](https://juejin.cn/post/7133014068830404622)","x":-1042,"y":273,"width":414,"height":55},
 		{"id":"420509ac68c7f52f","type":"text","text":"锁(Lock)","x":-878,"y":478,"width":250,"height":50,"color":"2"},
 		{"id":"387bb48f706f7a63","type":"text","text":"- [[🍩【MySQL】唯一索引等值查询加锁情况]]\n- [[🦃【MySQL】唯一索引范围查询加锁情况]]\n- [[🦃【MySQL】二级索引等值查询加锁情况]]\n- [[💴【MySQL】二级索引范围查询加锁情况]]","x":-2112,"y":421,"width":520,"height":165},
 		{"id":"fbc01d593f1f0be6","type":"text","text":"[[🍬【MySQL】MySQL 的死锁案例及解决方法]]","x":-2112,"y":756,"width":520,"height":180},

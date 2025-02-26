@@ -4,9 +4,11 @@
 		{"id":"754ff3cfc33ab47c","type":"text","text":"- [[🍑 关于消息队列 MQ]]\n- [[🌵 RocketMQ]]\n- [[🍀 RabbitMQ]]","x":-220,"y":-324,"width":380,"height":133,"color":"4"},
 		{"id":"5ff553e303372759","type":"text","text":"数据库","x":-480,"y":0,"width":140,"height":60,"color":"6"},
 		{"id":"7733ee7b845c56cb","type":"text","text":"🏓 技术路书","x":-940,"y":-158,"width":200,"height":60},
-		{"id":"364893b0616f0ca8","type":"text","text":"开发技术","x":-1260,"y":-158,"width":164,"height":60,"color":"5"},
-		{"id":"5f530877ca3b156b","type":"text","text":"- [[🍾 SpringMVC]]\n- [[🌼 ElasticSearch.canvas|🌼 ElasticSearch]]\n- [[🎄 Dubbo]]\n- [[🖌️ DDD 架构设计.canvas|🖌️ DDD 架构设计]]\n- [[🕣 Sharding-JDBC]]","x":-1980,"y":-233,"width":550,"height":208,"color":"5"},
-		{"id":"33c70bd9df2bfa24","type":"text","text":"- [[🍋 MySQL 底层探秘.canvas|🍋 MySQL 底层探秘]]\n- [[🥠 Redis 底层探秘.canvas|🥠 Redis 底层探秘]]\n","x":-220,"y":-15,"width":380,"height":91,"color":"6"}
+		{"id":"33c70bd9df2bfa24","type":"text","text":"- [[🍋 MySQL 底层探秘.canvas|🍋 MySQL 底层探秘]]\n- [[🥠 Redis 底层探秘.canvas|🥠 Redis 底层探秘]]\n","x":-220,"y":-15,"width":380,"height":91,"color":"6"},
+		{"id":"0e6e92b92fd6aa0f","type":"text","text":"编程语言","x":-1360,"y":60,"width":164,"height":60,"color":"2"},
+		{"id":"7f3df91152dc4e14","type":"text","text":"- [[🦝 Python 技术栈.canvas|🦝 Python 技术栈]]\n- [[⛱️ Java 技术栈.canvas|Java 技术栈]]","x":-2080,"y":-50,"width":550,"height":280,"color":"3"},
+		{"id":"364893b0616f0ca8","type":"text","text":"开发技术","x":-1360,"y":-350,"width":164,"height":60,"color":"5"},
+		{"id":"5f530877ca3b156b","type":"text","text":"- [[🍾 SpringMVC]]\n- [[🌼 ElasticSearch.canvas|🌼 ElasticSearch]]\n- [[🎄 Dubbo]]\n- [[🖌️ DDD 架构设计.canvas|🖌️ DDD 架构设计]]\n- [[🕣 Sharding-JDBC]]\n- [[💿 设计模式.canvas|设计模式]]","x":-2080,"y":-437,"width":550,"height":234,"color":"5"}
 	],
 	"edges":[
 		{"id":"414ce7edc0371b78","fromNode":"7733ee7b845c56cb","fromSide":"right","toNode":"5ff553e303372759","toSide":"left"},
@@ -14,6 +16,8 @@
 		{"id":"53f789d289f7f012","fromNode":"45e297017962c11e","fromSide":"right","toNode":"754ff3cfc33ab47c","toSide":"left"},
 		{"id":"644c6c80f6b243d1","fromNode":"7733ee7b845c56cb","fromSide":"left","toNode":"364893b0616f0ca8","toSide":"right"},
 		{"id":"2d71055e46886aed","fromNode":"364893b0616f0ca8","fromSide":"left","toNode":"5f530877ca3b156b","toSide":"right"},
-		{"id":"80f85d43faba1048","fromNode":"5ff553e303372759","fromSide":"right","toNode":"33c70bd9df2bfa24","toSide":"left"}
+		{"id":"80f85d43faba1048","fromNode":"5ff553e303372759","fromSide":"right","toNode":"33c70bd9df2bfa24","toSide":"left"},
+		{"id":"f279e5ad67381abe","fromNode":"7733ee7b845c56cb","fromSide":"left","toNode":"0e6e92b92fd6aa0f","toSide":"right"},
+		{"id":"86074feadf7f045b","fromNode":"0e6e92b92fd6aa0f","fromSide":"left","toNode":"7f3df91152dc4e14","toSide":"right"}
 	]
 }

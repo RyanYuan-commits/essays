@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"8bb797814a66a116","type":"text","text":"🦜 英语学习","x":-180,"y":-3,"width":180,"height":60},
+		{"id":"909525c175c5b684","type":"text","text":"英语语法","x":280,"y":-280,"width":140,"height":60},
+		{"id":"34d25b8594c7036a","type":"text","text":"[[🍁【英语】英语语法综述]]","x":303,"y":-496,"width":277,"height":60},
+		{"id":"24cb0d57864dcd4c","type":"text","text":"[[🏜️【英语语法】动词]]","x":729,"y":-379,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"1eacc256e307a0bd","fromNode":"8bb797814a66a116","fromSide":"right","toNode":"909525c175c5b684","toSide":"left","label":"Grammer"},
+		{"id":"1731a2330e89ffef","fromNode":"909525c175c5b684","fromSide":"top","toNode":"34d25b8594c7036a","toSide":"bottom"},
+		{"id":"fb66a1a112095426","fromNode":"909525c175c5b684","fromSide":"right","toNode":"24cb0d57864dcd4c","toSide":"left"}
+	]
+}
