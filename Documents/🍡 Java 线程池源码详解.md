@@ -184,7 +184,7 @@ private Runnable getTask() {
             return null;
         }
         int wc = workerCountOf(c);
-        // (1) 当允许销毁核心线程和当前线程数大于核心线程数的时候，这个值为 true
+        // (1) 当允许销毁核心线程 和 当前线程数大于核心线程数的时候，这个值为 true
         boolean timed = allowCoreThreadTimeOut || wc > corePoolSize;
 		// (2) 降低线程总数并且，返回 null（这个线程将会被销毁）
         if ((wc > maximumPoolSize || (timed && timedOut)) && (wc > 1 || workQueue.isEmpty())) {

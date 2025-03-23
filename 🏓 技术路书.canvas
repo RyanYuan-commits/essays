@@ -4,7 +4,7 @@
 		{"id":"754ff3cfc33ab47c","type":"text","text":"- [[🍑 关于消息队列 MQ]]\n- [[🌵 RocketMQ]]\n- [[🍀 RabbitMQ]]","x":-220,"y":-324,"width":380,"height":133,"color":"4"},
 		{"id":"5ff553e303372759","type":"text","text":"数据库","x":-480,"y":0,"width":140,"height":60,"color":"6"},
 		{"id":"7733ee7b845c56cb","type":"text","text":"🏓 技术路书","x":-940,"y":-158,"width":200,"height":60},
-		{"id":"33c70bd9df2bfa24","type":"text","text":"- [[🍋 MySQL 底层探秘.canvas|🍋 MySQL 底层探秘]]\n- [[🥠 Redis 底层探秘.canvas|🥠 Redis 底层探秘]]\n","x":-220,"y":-15,"width":380,"height":91,"color":"6"},
+		{"id":"33c70bd9df2bfa24","type":"text","text":"- [[🍋 MySQL 底层探秘.canvas|🍋 MySQL 底层探秘]]\n- [[🥠 Redis 底层探秘.canvas|🥠 Redis 底层探秘]]","x":-220,"y":-15,"width":380,"height":91,"color":"6"},
 		{"id":"0e6e92b92fd6aa0f","type":"text","text":"编程语言","x":-1360,"y":60,"width":164,"height":60,"color":"2"},
 		{"id":"7f3df91152dc4e14","type":"text","text":"- [[🦝 Python 技术栈.canvas|🦝 Python 技术栈]]\n- [[⛱️ Java 技术栈.canvas|⛱️ Java 技术栈]]","x":-2080,"y":-50,"width":550,"height":280,"color":"3"},
 		{"id":"364893b0616f0ca8","type":"text","text":"开发技术","x":-1360,"y":-350,"width":164,"height":60,"color":"5"},

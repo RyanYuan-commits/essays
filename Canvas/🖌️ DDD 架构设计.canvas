@@ -1,36 +1,15 @@
 {
 	"nodes":[
 		{"id":"2482ab990cf8495d","type":"text","text":"🍵 DDD 架构设计","x":-800,"y":-20,"width":220,"height":50,"color":"2"},
-		{"id":"496952bdb1a1be20","type":"file","file":"Documents/⛪ 第四部分：实战演练.md","x":-1640,"y":-170,"width":540,"height":90},
-		{"id":"2bbf76197cd5c657","type":"text","text":"与 MVC 架构的比较","x":-1084,"y":-484,"width":250,"height":60},
-		{"id":"b56ae0ebba7c4ea8","type":"file","file":"Documents/🦘 MVC 架构.md","x":-1580,"y":-908,"width":672,"height":148},
-		{"id":"528ea2feb5c16a3d","type":"file","file":"Documents/🌏【DDD 概念辨析】：充血模型.md","x":2080,"y":1900,"width":820,"height":120},
-		{"id":"c0c79fce56a81207","type":"file","file":"Documents/🍀【DDD 概念辨析】领域模型.md","x":2080,"y":2100,"width":804,"height":221},
-		{"id":"598f4f75ad9d39fc","type":"file","file":"Documents/🐟【DDD 概念辨析】实体、聚合、值对象.md","x":2083,"y":2466,"width":801,"height":140},
-		{"id":"9c8b7c597d039f80","type":"file","file":"Documents/🍍【DDD 概念辨析】仓储和适配器.md","x":2083,"y":2700,"width":801,"height":100},
-		{"id":"56563513de0c1a40","type":"file","file":"Documents/🎱 Aggregate、BoundedContext 案例.md","x":3160,"y":2139,"width":520,"height":400},
-		{"id":"072c7f9b49b6b274","type":"file","file":"Documents/🐏 Entity、DomainService、Repository 案例.md","x":3240,"y":2800,"width":520,"height":400},
-		{"id":"06b05fb96bc478e3","type":"file","file":"Documents/🏅 软件设计方法.md","x":-240,"y":2100,"width":400,"height":400},
-		{"id":"22db53f2854ac181","type":"file","file":"Documents/🍮 DDD 四色建模.md","x":-240,"y":2600,"width":400,"height":400},
-		{"id":"dd932e944ddfab56","type":"file","file":"Documents/🤹 第一部分：DDD 简单介绍及案例.md","x":480,"y":1612,"width":520,"height":400},
-		{"id":"6aea95ec111683eb","type":"text","text":"什么是充血模型，领域内都包括什么，实体、聚合、值对象，有什么区别？这样一些\"为什么\"的概念，也是战术设计过程中非常重要的知识项。搞清楚它们才能做 DDD 设计。","x":1280,"y":2228,"width":592,"height":132},
-		{"id":"80f97fdf541b8c6a","type":"text","text":"==基础理解五板斧==\n- [[💫【DDD】DP]]\n- [[🍌【DDD】Entiry & Domain Service]]\n- [[🧃【DDD】统一语言和模型价值]]\n- [[🐋【DDD】聚合根 & 限界上下文]]\n- [[⛱️【DDD】实战演练]]","x":-420,"y":-118,"width":470,"height":247}
+		{"id":"80f97fdf541b8c6a","type":"text","text":"==基础理解五板斧==\n- [[💫【DDD】DP]]\n- [[🍌【DDD】Entiry & Domain Service]]\n- [[🧃【DDD】统一语言和模型价值]]\n- [[🐋【DDD】聚合根 & 限界上下文]]\n- [[⛱️【DDD】实战演练]]","x":-320,"y":-367,"width":470,"height":247},
+		{"id":"147c81365834bc55","type":"text","text":"- [[🏅 软件设计方法]]\n- [[🍮 DDD 四色建模]]","x":-320,"y":120,"width":470,"height":140},
+		{"id":"71b8ef2829b9cea6","type":"text","text":"- [[🌏【DDD 概念辨析】：充血模型]]\n- [[🍀【DDD 概念辨析】领域模型]]\n- [[🐟【DDD 概念辨析】实体、聚合、值对象]]\n- [[🍍【DDD 概念辨析】仓储和适配器]]","x":-1640,"y":120,"width":505,"height":160},
+		{"id":"542ed2719f11495a","type":"text","text":"- [[🥗【DDD】是什么？]]","x":-1580,"y":-280,"width":385,"height":160}
 	],
 	"edges":[
-		{"id":"0222a296827447ca","fromNode":"2482ab990cf8495d","fromSide":"left","toNode":"496952bdb1a1be20","toSide":"right"},
-		{"id":"331e8a5f740cacb1","fromNode":"dd932e944ddfab56","fromSide":"right","toNode":"6aea95ec111683eb","toSide":"left"},
-		{"id":"15fdc7955b18aa3a","fromNode":"6aea95ec111683eb","fromSide":"right","toNode":"c0c79fce56a81207","toSide":"left"},
-		{"id":"30730f40bca6814d","fromNode":"6aea95ec111683eb","fromSide":"right","toNode":"598f4f75ad9d39fc","toSide":"left"},
-		{"id":"0be5d09b2fe2e507","fromNode":"6aea95ec111683eb","fromSide":"right","toNode":"9c8b7c597d039f80","toSide":"left"},
-		{"id":"4b96273ad2f91c82","fromNode":"2482ab990cf8495d","fromSide":"top","toNode":"2bbf76197cd5c657","toSide":"bottom"},
-		{"id":"7d0e6c042bd03d71","fromNode":"2bbf76197cd5c657","fromSide":"top","toNode":"b56ae0ebba7c4ea8","toSide":"bottom"},
-		{"id":"bd672cc11e1354f7","fromNode":"598f4f75ad9d39fc","fromSide":"right","toNode":"56563513de0c1a40","toSide":"left"},
-		{"id":"e6274e8705842fc1","fromNode":"9c8b7c597d039f80","fromSide":"right","toNode":"072c7f9b49b6b274","toSide":"left"},
-		{"id":"d8c1761cb29e65d8","fromNode":"2482ab990cf8495d","fromSide":"right","toNode":"06b05fb96bc478e3","toSide":"left"},
-		{"id":"b0fdcaf0ebe0baa7","fromNode":"06b05fb96bc478e3","fromSide":"right","toNode":"dd932e944ddfab56","toSide":"left"},
-		{"id":"c3e1d0d502b4830c","fromNode":"6aea95ec111683eb","fromSide":"right","toNode":"528ea2feb5c16a3d","toSide":"left"},
-		{"id":"598f74407e955447","fromNode":"2482ab990cf8495d","fromSide":"right","toNode":"22db53f2854ac181","toSide":"left"},
-		{"id":"064197e6cf5e72f5","fromNode":"22db53f2854ac181","fromSide":"right","toNode":"6aea95ec111683eb","toSide":"bottom"},
-		{"id":"7450e49639337916","fromNode":"2482ab990cf8495d","fromSide":"right","toNode":"80f97fdf541b8c6a","toSide":"left"}
+		{"id":"7450e49639337916","fromNode":"2482ab990cf8495d","fromSide":"right","toNode":"80f97fdf541b8c6a","toSide":"left"},
+		{"id":"6d02d079ac6d198c","fromNode":"2482ab990cf8495d","fromSide":"left","toNode":"542ed2719f11495a","toSide":"right","label":"随笔"},
+		{"id":"2f9865cdda16041f","fromNode":"2482ab990cf8495d","fromSide":"right","toNode":"147c81365834bc55","toSide":"left","label":"暂存"},
+		{"id":"0269baa4216038b3","fromNode":"2482ab990cf8495d","fromSide":"left","toNode":"71b8ef2829b9cea6","toSide":"right","label":"概念辨析"}
 	]
 }

@@ -2,10 +2,29 @@
 	"nodes":[
 		{"id":"6ea0229d16423f32","type":"text","text":"Vue","x":-315,"y":100,"width":105,"height":60,"color":"4"},
 		{"id":"5f3b13623c566da1","type":"file","file":"Documents/🥟 【Vue】核心语法.md","x":-40,"y":-240,"width":480,"height":218},
-		{"id":"fee9540bebeadab6","type":"file","file":"Documents/🍒【Vue】父子组件传值.md","x":-40,"y":340,"width":480,"height":100}
+		{"id":"fee9540bebeadab6","type":"file","file":"Documents/🍒【Vue】父子组件传值.md","x":-40,"y":340,"width":480,"height":100},
+		{"id":"940fa179679e8134","type":"text","text":"React\n","x":-1740,"y":70,"width":120,"height":60},
+		{"id":"6d53044ac1395612","type":"text","text":"- [[🐙【React】快速入门]]","x":-1839,"y":-110,"width":318,"height":71},
+		{"id":"c705b68a368b7d72","type":"text","text":"【React】UI","x":-2180,"y":-140,"width":190,"height":60},
+		{"id":"70cd3b6e1a1fc9b0","type":"text","text":"- [[🌻【React】组件的定义与使用]]\n- [[🍒【React】组件的导入与导出]]\n- [[🍋【React】使用 JSX 书写标签语言]]\n- [[🧃【React】通过大括号使用 JavaScript]]\n- [[🎉【React】组件传值]]","x":-2760,"y":-215,"width":482,"height":211},
+		{"id":"da5aac3bf911c6b5","type":"text","text":"【React】交互","x":-2180,"y":250,"width":190,"height":60},
+		{"id":"fab7dd6edb9843ea","type":"text","text":"- [[🏀【React】响应事件]]\n- [[🦋【React】渲染和提交]]\n- [[🥒【React】State 状态]]","x":-2760,"y":215,"width":482,"height":130},
+		{"id":"5930d46362e85767","type":"text","text":"【React】状态管理","x":-1425,"y":-71,"width":250,"height":60},
+		{"id":"023385e9e20b8b52","type":"text","text":"- [[🍝【React】将更新逻辑封装到 Reducer 中]]\n- [[🥓【React】使用 Context 深层传递参数]]","x":-1080,"y":-161,"width":500,"height":240},
+		{"id":"e47a8387c30f3694","type":"text","text":"【React】脱围机制","x":-1425,"y":280,"width":250,"height":60},
+		{"id":"8ee73cab66d015c9","type":"text","text":"- [[🐋【React】使用 Ref 引用值与操作 DOM]]\n- [[🏜️【React】使用 Effect 进行同步]]","x":-1080,"y":210,"width":500,"height":200}
 	],
 	"edges":[
 		{"id":"23921af2c3800bed","fromNode":"6ea0229d16423f32","fromSide":"right","toNode":"5f3b13623c566da1","toSide":"left"},
-		{"id":"c32089f7ac8f3dae","fromNode":"6ea0229d16423f32","fromSide":"right","toNode":"fee9540bebeadab6","toSide":"left"}
+		{"id":"c32089f7ac8f3dae","fromNode":"6ea0229d16423f32","fromSide":"right","toNode":"fee9540bebeadab6","toSide":"left"},
+		{"id":"38fc6fe8f09af3f7","fromNode":"940fa179679e8134","fromSide":"top","toNode":"6d53044ac1395612","toSide":"bottom"},
+		{"id":"26d6f63b099f0448","fromNode":"940fa179679e8134","fromSide":"left","toNode":"c705b68a368b7d72","toSide":"right"},
+		{"id":"34b4c13443b8504f","fromNode":"c705b68a368b7d72","fromSide":"left","toNode":"70cd3b6e1a1fc9b0","toSide":"right"},
+		{"id":"6633d51589921ce1","fromNode":"da5aac3bf911c6b5","fromSide":"left","toNode":"fab7dd6edb9843ea","toSide":"right"},
+		{"id":"1d7d1a7420b22a53","fromNode":"940fa179679e8134","fromSide":"left","toNode":"da5aac3bf911c6b5","toSide":"right"},
+		{"id":"8ae096a5efe3e97a","fromNode":"940fa179679e8134","fromSide":"right","toNode":"5930d46362e85767","toSide":"left"},
+		{"id":"e93f5fea679cf7c4","fromNode":"5930d46362e85767","fromSide":"right","toNode":"023385e9e20b8b52","toSide":"left"},
+		{"id":"67918f62bcbc7e1a","fromNode":"940fa179679e8134","fromSide":"right","toNode":"e47a8387c30f3694","toSide":"left"},
+		{"id":"1d19fe0335cfd5c1","fromNode":"e47a8387c30f3694","fromSide":"right","toNode":"8ee73cab66d015c9","toSide":"left"}
 	]
 }
