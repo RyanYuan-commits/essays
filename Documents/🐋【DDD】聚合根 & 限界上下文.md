@@ -115,7 +115,7 @@ public interface Repository<T extends AggregateRoot<ID>, ID extends Identifier> 
 ```Java
 public interface AccountRepository extends Repository<WechatAccount, PhoneNumber> {
     save(WechatAccount wechatAccount);
-    WechatAccount find(PhoneNumber phoneNumber)
+    WechatAccount find(PhoneNumber phoneNumber);
 }
 ```
 

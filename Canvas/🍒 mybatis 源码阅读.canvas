@@ -1,0 +1,33 @@
+{
+	"nodes":[
+		{"id":"b8c9abff9510214f","type":"text","text":"mybatis 源码阅读","x":-40,"y":-190,"width":240,"height":60,"color":"6"},
+		{"id":"a6e2d3952693f2a7","type":"text","text":"接口语义","x":-620,"y":-190,"width":140,"height":60,"color":"5"},
+		{"id":"78d22016c069525f","type":"text","text":"源码阅读","x":-620,"y":255,"width":140,"height":59,"color":"2"},
+		{"id":"78b4c95c3f43e943","type":"file","file":"Documents/🍧【mybatis】一条 SQL 语句是如何被解析的？.md","x":-1180,"y":200,"width":400,"height":170},
+		{"id":"451bccd7437c3a14","type":"text","text":"- [[🐋【mybatis interface】SqlSession]]\n- [[🐂【mybatis interface】MappedStatement]]","x":-1365,"y":-320,"width":585,"height":320,"color":"5"},
+		{"id":"f3667914a1af16d4","type":"text","text":"依赖补充","x":-620,"y":-749,"width":140,"height":50,"color":"4"},
+		{"id":"9551f7954c665864","type":"text","text":"JDBC","x":-880,"y":-754,"width":120,"height":60,"color":"4"},
+		{"id":"923c02e832b17b15","type":"file","file":"Documents/🌴【JDBC】利用 JDBC 实现增删改查与事务.md","x":-1880,"y":-880,"width":720,"height":313,"color":"4"},
+		{"id":"6de80812ef80bac1","type":"text","text":"模块服务","x":720,"y":-190,"width":140,"height":60,"color":"5"},
+		{"id":"be42e66d28983708","type":"text","text":"基础框架","x":720,"y":-570,"width":140,"height":60,"color":"5"},
+		{"id":"ada803df284e0425","type":"text","text":"- [[🥒【small-mybatis】创建简单的映射器代理工厂]]\n- [[🍀【small-mybatis】实现 Mapper 的注册和使用]]\n- [[🥝【small-mybatis】Mapper XML 的解析和注册使用]]","x":980,"y":-612,"width":540,"height":144,"color":"5"},
+		{"id":"c28c0fd867ad32fd","type":"text","text":"串联流程","x":720,"y":219,"width":140,"height":60,"color":"5"},
+		{"id":"f42f2a0c8d2ebc14","type":"text","text":"- [[🥠【small-mybatis】数据源的解析、创建和使用]]\n- [[🐕【small-mybatis】数据源池化技术的实现]]\n- [[🍓【small-mybatis】使用 Executor 执行 SQL]]\n- [[🌯【small-mybatis】利用反射工具包来使用对象]]","x":980,"y":-248,"width":540,"height":177,"color":"5"},
+		{"id":"89f11058f514f786","type":"text","text":"- [[🌷【small-mybatis】完善静态 SQL 解析]]\n- ","x":980,"y":149,"width":540,"height":201,"color":"5"}
+	],
+	"edges":[
+		{"id":"6fcdad8fb1c5b0dd","fromNode":"b8c9abff9510214f","fromSide":"right","toNode":"be42e66d28983708","toSide":"left","label":"基础框架"},
+		{"id":"6e64c3cdbf21d73e","fromNode":"be42e66d28983708","fromSide":"right","toNode":"ada803df284e0425","toSide":"left"},
+		{"id":"85ea0523e21dd5c7","fromNode":"b8c9abff9510214f","fromSide":"right","toNode":"6de80812ef80bac1","toSide":"left","label":"模块服务"},
+		{"id":"deee35621be3c109","fromNode":"6de80812ef80bac1","fromSide":"right","toNode":"f42f2a0c8d2ebc14","toSide":"left"},
+		{"id":"3e7e84b07597e52f","fromNode":"f3667914a1af16d4","fromSide":"left","toNode":"9551f7954c665864","toSide":"right","label":"JDBC"},
+		{"id":"0bad96189545c829","fromNode":"9551f7954c665864","fromSide":"left","toNode":"923c02e832b17b15","toSide":"right","label":"JDBC 案例"},
+		{"id":"ac9ef4405843d8ec","fromNode":"b8c9abff9510214f","fromSide":"left","toNode":"f3667914a1af16d4","toSide":"right","label":"依赖补充"},
+		{"id":"eaecf9b5be3c0d01","fromNode":"b8c9abff9510214f","fromSide":"right","toNode":"c28c0fd867ad32fd","toSide":"left","label":"串联流程"},
+		{"id":"af8b65d5accbde02","fromNode":"c28c0fd867ad32fd","fromSide":"right","toNode":"89f11058f514f786","toSide":"left"},
+		{"id":"f75b7321c5d1dad7","fromNode":"b8c9abff9510214f","fromSide":"left","toNode":"78d22016c069525f","toSide":"right","label":"重点流程"},
+		{"id":"96e6f333c4694c9a","fromNode":"78d22016c069525f","fromSide":"left","toNode":"78b4c95c3f43e943","toSide":"right"},
+		{"id":"7481f000f82db61a","fromNode":"b8c9abff9510214f","fromSide":"left","toNode":"a6e2d3952693f2a7","toSide":"right","label":"重点接口"},
+		{"id":"9019d739d11f6b5d","fromNode":"a6e2d3952693f2a7","fromSide":"left","toNode":"451bccd7437c3a14","toSide":"right"}
+	]
+}
