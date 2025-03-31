@@ -221,8 +221,34 @@ public void printList() {
 (-2147483648, null) ->	(1, 🍎) ->	(2, 🍊) ->	(3, 🍌) ->	(4, 🐶) ->	(5, 🫎) ->	
 ```
 ## 跳表时间复杂度计算
+### 1. 计算跳表的期望最大层数
+对于一个包含 n 个节点的跳表，每个节点的层数是独立随机确定的。一个节点成为第 k 层节点的概率为 $p^{k - 1}(1 - p)$（即前 k - 1 层都有指针，第 k 层没有指针）。
+根据概率论，跳表的期望最大层数 L 可以通过计算每个节点层数的期望值来得到。一个节点的层数 h 的期望值为：
+$$(E(h)=\sum_{k = 1}^{\infty}k\times p^{k - 1}(1 - p)=\frac{1}{1 - p})$$
+当 $p = \frac{1}{2}$ 时，$E(h) = 2$当 $p = \frac{1}{4}$ 时，$E(h) = \frac{4}{3}$。
 
+在实际应用中，为了避免层数过高，通常会设置一个最大层数限制 $(L_{max})$，一般取 $(L_{max}=\log_{\frac{1}{p}}n)$。
+### 2. 分析查询过程
+在跳表中进行查询操作时，从最高层开始，沿着每一层的指针向前移动，直到找到目标节点或者确定目标节点不存在。在每一层上，指针最多移动的次数不会超过该层的节点数。
 
+由于跳表的每一层节点数是呈指数级递减的，第 i 层的节点数大约为 $(n\times p^i)$。
+
+查询过程中，从最高层 L 开始，逐层向下移动。在每一层上，指针最多移动的次数不会超过该层的节点数。因此，在每一层上的移动次数的期望值为：
+- 第 L 层：最多移动 $n\times p^L$ 次。
+- 第 \(L - 1\) 层：最多移动 $n\times p^{L - 1}$ 次。
+- ......
+- 第 1 层：最多移动 $n\times p$ 次。
+### 3. 计算查询的总移动次数
+查询的总移动次数 T 等于在每一层上移动次数的总和。由于跳表的层数是 $log_{\frac{1}{p}}n$，因此：
+$$T=\sum_{i = 0}^{\log_{\frac{1}{p}}n}n\times p^i$$
+
+这是一个等比数列求和，根据等比数列求和公式 $(S_n=\frac{a(1 - r^n)}{1 - r})$（其中 a 是首项，r 是公比，n 是项数），可得：
+$$T=n\times\frac{1 - p^{\log_{\frac{1}{p}}n + 1}}{1 - p}=n\times\frac{1 - \frac{1}{n}\times p}{1 - p}\approx\frac{n}{1 - p}$$
+
+当 $p = \frac{1}{2}$ 时，$T = 2n$；当 $p = \frac{1}{4}$ 时，$T = \frac{4}{3}n$。
+但是，由于跳表的层数是 $\log_{\frac{1}{p}}n$，在每一层上移动的次数是常数级别的，因此查询的时间复杂度主要取决于跳表的层数。
+### 4. 得出查询时间复杂度
+由于跳表的期望最大层数为 $L=\log_{\frac{1}{p}}n$，在每一层上的移动次数是常数级别的，因此跳表的查询时间复杂度为 $O(\log n)$。
 ## Redis ZSet 源码浅析
 与上面实现的简单跳表相比，Redis 中的 ZSet 要更复杂一些。
 ### 数据结构
@@ -272,6 +298,17 @@ int zslRandomLevel(void) {
 }
 ```
 在插入新节点时，需要通过随机函数为其确定一下插入哪些层级，节点每次上溢的概率为四分之一。
+#### 创建跳表节点
+```cpp
+zskiplistNode* zslCreateNode(int level, double score, sds ele) {
+    // 为节点分配内存，level 决定节点具有的层数
+    zskiplistNode *zn = zmalloc(sizeof(*zn) + level * sizeof(struct zskiplistLevel));
+    zn->score = score;  // 节点的分数
+    zn->ele = ele;      // 节点的值
+    return zn;
+}
+```
+- 在创建跳表节点之前，会通过
 #### 插入操作
 ```cpp
 zskiplistNode* zslInsert(zskiplist *zsl, double score, sds ele) {
@@ -290,7 +327,9 @@ zskiplistNode* zslInsert(zskiplist *zsl, double score, sds ele) {
         }
         update[i] = x;  // 记录每层的前驱节点
     }
+    
     level = zslRandomLevel();  // 随机生成新节点的层数
+    
     if (level > zsl->level) {  // 如果新节点层数超过当前最大层数
         for (i = zsl->level; i < level; i++) {
             rank[i] = 0;
@@ -299,6 +338,7 @@ zskiplistNode* zslInsert(zskiplist *zsl, double score, sds ele) {
         }
         zsl->level = level;  // 更新跳表的层数
     }
+    
     x = zmalloc(sizeof(*x)+level*sizeof(struct zskiplistLevel));  // 分配新节点内存
     x->score = score;
     x->ele = sdsdup(ele);
@@ -320,4 +360,9 @@ zskiplistNode* zslInsert(zskiplist *zsl, double score, sds ele) {
     return x;
 }
 ```
+插入操作的步骤如下：
+1. 从最高层开始查找插入位置，同时记录每层需要更新的节点，这一步和上面我们实现的基本思路相同。
+2. 调用前面提到的随机函数来生成新节点的层级，和前面我们的实现相比，相当于将确定层级这一步提前进行了。
+3. 若新节点的层级大于当前跳表的最大层级，需要更新跳表的最大层级。
+4. 创建新节点并更新相应指针。
 ## 总结
