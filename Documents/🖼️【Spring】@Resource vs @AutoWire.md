@@ -80,4 +80,3 @@ public class TestServiceImpl {
 2. 如果只制定了 `name`，则去寻找匹配的 Bean，找到一个或者多个都会抛出异常。
 3. 如果只制定了 `type`，则去寻找匹配的 Bean，找到一个或者多个都会抛出异常。
 4. 如果都没有制定，则默认使用 `byName` 的方式进行注入，也就是类名首字母小写作为 `name` 来查找 Bean。
-

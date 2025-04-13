@@ -1,38 +1,18 @@
 {
 	"nodes":[
-		{"id":"4be5e753bf80ea33","type":"file","file":"Documents/🧞【Spring】Spring 的三级缓存.md","x":-1121,"y":-26,"width":400,"height":400},
 		{"id":"a2abdb278be3176e","type":"text","text":"","x":154,"y":-2129,"width":250,"height":60},
-		{"id":"c3bd8d208c65548c","type":"text","text":"small-spring","x":-660,"y":-200,"width":161,"height":60,"color":"1"},
+		{"id":"c3bd8d208c65548c","type":"text","text":"small-spring","x":-660,"y":-200,"width":180,"height":60,"color":"1"},
 		{"id":"e1fb851d4704922a","type":"text","text":"","x":115,"y":-2165,"width":250,"height":60},
-		{"id":"ec4aa30f11a46bc5","type":"text","text":"IoC 篇","x":-240,"y":-430,"width":113,"height":60},
-		{"id":"b0f89eafc6a98844","type":"text","text":"AOP 篇","x":-240,"y":-20,"width":120,"height":60},
-		{"id":"a2a3acc45fe9e506","type":"text","text":"Spring 源码阅读","x":-1020,"y":-200,"width":198,"height":60,"color":"5"},
-		{"id":"e498b6131cb91505","type":"file","file":"Documents/🌴【Spring】Spring 提供了哪些功能？.md","x":-1121,"y":-480,"width":400,"height":160},
-		{"id":"b6b971e1462d4e4f","type":"file","file":"Documents/🍡【spring】Bean 生命周期全解.md","x":-1860,"y":-498,"width":400,"height":178},
-		{"id":"b9c5ce5c876e3092","type":"text","text":"Spring AOP","x":-1626,"y":63,"width":166,"height":60},
-		{"id":"10dc789a8e893e23","type":"file","file":"Documents/🐿️【AOP】AOP 核心概念.md","x":-2620,"y":-320,"width":629,"height":219},
-		{"id":"366db5060d4a4c8c","type":"file","file":"Documents/🛀【AOP】Spring AOP 使用案例.md","x":-2620,"y":-33,"width":629,"height":252},
-		{"id":"fb2761eaaae898db","type":"text","text":"Spring AOP 源码解析","x":-2241,"y":380,"width":250,"height":60},
-		{"id":"7400ebba0b192052","type":"text","text":"- [[🥕【small-spring】基于 JDK 和 CgLib 实现 AOP 核心功能]]\n- [[🧉【small-spring】把 AOP 拓展到 Bean 的生命周期]]\n- [[👣【small-spring】自动扫描 Bean 注册]]\n- [[🍞【small-spring】通过注解简化属性配置]]\n- [[🦏【small-spring】给代理对象的属性设置值]]","x":-20,"y":-86,"width":600,"height":192},
-		{"id":"122eadd7ffa6a585","type":"text","text":"- [[🖼️【Spring】@Resource vs @AutoWire]]","x":-891,"y":-1100,"width":624,"height":404},
-		{"id":"17c4aa9616e676da","type":"file","file":"Documents/🍋【Spring】spring AOP 源码阅读.md","x":-3020,"y":270,"width":690,"height":280},
-		{"id":"505d6182b3c7f9e1","type":"text","text":"- [[🦦【small-spring】构造一个简单的 Bean 工厂]]\n- [[🧩【small-spring】实现 Bean 的注册与获取]]\n- [[🥃【small-spring】基于 Cglib 实现含构造函数的类实例化策略]]\n- [[🖼️【small-spring】为 Bean 对象注入属性和依赖]]\n- [[🏄‍♀️【small-spring】资源加载器解析文件对象]]\n- [[🌺【small-spring】实现 ApplicationContext]]\n- [[🥝【small-spring】Bean 的初始化和销毁方法]]\n- [[🍇【small-spring】Aware 感知对象]]\n- [[♦️【small-spring】Bean Scope 与 Factory Bean]]\n- [[🦮【small-spring】容器事件和事件监听器]]","x":-20,"y":-589,"width":660,"height":378}
+		{"id":"ec4aa30f11a46bc5","type":"text","text":"IoC 篇","x":-240,"y":-400,"width":160,"height":50},
+		{"id":"b0f89eafc6a98844","type":"text","text":"AOP 篇","x":-240,"y":5,"width":160,"height":50},
+		{"id":"7400ebba0b192052","type":"text","text":"- [[🥕【small-spring】基于 JDK 和 CgLib 实现 AOP 核心功能]]\n- [[🧉【small-spring】把 AOP 拓展到 Bean 的生命周期]]\n- [[👣【small-spring】自动扫描 Bean 注册]]\n- [[🍞【small-spring】通过注解简化属性配置]]\n- [[🦏【small-spring】给代理对象的属性设置值]]","x":20,"y":-66,"width":660,"height":192},
+		{"id":"505d6182b3c7f9e1","type":"text","text":"- [[🦦【small-spring】构造一个简单的 Bean 工厂]]\n- [[🧩【small-spring】实现 Bean 的注册与获取]]\n- [[🥃【small-spring】基于 Cglib 实现含构造函数的类实例化策略]]\n- [[🖼️【small-spring】为 Bean 对象注入属性和依赖]]\n- [[🏄‍♀️【small-spring】资源加载器解析文件对象]]\n- [[🌺【small-spring】实现 ApplicationContext]]\n- [[🥝【small-spring】Bean 的初始化和销毁方法]]\n- [[🍇【small-spring】Aware 感知对象]]\n- [[♦️【small-spring】Bean Scope 与 Factory Bean]]\n- [[🦮【small-spring】容器事件和事件监听器]]","x":20,"y":-552,"width":660,"height":382},
+		{"id":"4be5e753bf80ea33","type":"file","file":"Documents/🧞【Spring】Spring 的三级缓存.md","x":-1110,"y":-20,"width":400,"height":226}
 	],
 	"edges":[
-		{"id":"1eccf3998573cf30","fromNode":"c3bd8d208c65548c","fromSide":"left","toNode":"a2a3acc45fe9e506","toSide":"right"},
-		{"id":"0238136ffaf7ecf7","fromNode":"a2a3acc45fe9e506","fromSide":"left","toNode":"b6b971e1462d4e4f","toSide":"right","label":"IoC"},
 		{"id":"9969fd7a554c82e4","fromNode":"c3bd8d208c65548c","fromSide":"right","toNode":"ec4aa30f11a46bc5","toSide":"left"},
 		{"id":"59bc7b21d09da1c4","fromNode":"ec4aa30f11a46bc5","fromSide":"right","toNode":"505d6182b3c7f9e1","toSide":"left"},
 		{"id":"06412e60ad23f343","fromNode":"c3bd8d208c65548c","fromSide":"right","toNode":"b0f89eafc6a98844","toSide":"left"},
-		{"id":"b357520b6aa5adfd","fromNode":"b0f89eafc6a98844","fromSide":"right","toNode":"7400ebba0b192052","toSide":"left"},
-		{"id":"e12c6379396a9de2","fromNode":"a2a3acc45fe9e506","fromSide":"top","toNode":"e498b6131cb91505","toSide":"bottom"},
-		{"id":"efc8f867dfa29f5d","fromNode":"a2a3acc45fe9e506","fromSide":"left","toNode":"b9c5ce5c876e3092","toSide":"right","label":"AOP"},
-		{"id":"a45570b491189cc6","fromNode":"b9c5ce5c876e3092","fromSide":"left","toNode":"10dc789a8e893e23","toSide":"right","label":"什么是 AOP？"},
-		{"id":"48687edb0a024cec","fromNode":"b9c5ce5c876e3092","fromSide":"left","toNode":"366db5060d4a4c8c","toSide":"right","label":"案例"},
-		{"id":"7be6253c951b87cd","fromNode":"10dc789a8e893e23","fromSide":"left","toNode":"366db5060d4a4c8c","toSide":"left"},
-		{"id":"1eb736085ced0ad6","fromNode":"b9c5ce5c876e3092","fromSide":"left","toNode":"fb2761eaaae898db","toSide":"right","label":"源码解析"},
-		{"id":"1a05b85e8ff5d520","fromNode":"fb2761eaaae898db","fromSide":"left","toNode":"17c4aa9616e676da","toSide":"right"},
-		{"id":"9acf36bcf533d00c","fromNode":"a2a3acc45fe9e506","fromSide":"bottom","toNode":"4be5e753bf80ea33","toSide":"top"},
-		{"id":"f7e7e3572c2b4442","fromNode":"c3bd8d208c65548c","fromSide":"top","toNode":"122eadd7ffa6a585","toSide":"bottom","label":"知识整理"}
+		{"id":"b357520b6aa5adfd","fromNode":"b0f89eafc6a98844","fromSide":"right","toNode":"7400ebba0b192052","toSide":"left"}
 	]
 }

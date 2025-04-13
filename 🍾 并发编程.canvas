@@ -2,7 +2,7 @@
 	"nodes":[
 		{"id":"e198335f1a311a65","type":"text","text":"并发编程","x":-128,"y":-25,"width":168,"height":57,"color":"2"},
 		{"id":"cb9b62c41c30e90b","type":"text","text":"Netty","x":340,"y":-25,"width":124,"height":57,"color":"6"},
-		{"id":"51513cf32bca4bd5","type":"text","text":"并发基础","x":340,"y":-547,"width":124,"height":50,"color":"4"},
+		{"id":"51513cf32bca4bd5","type":"text","text":"并发基础","x":340,"y":-547,"width":140,"height":50,"color":"4"},
 		{"id":"44f14b7dee589a1e","type":"text","text":" Java 提供的并发编程工具","x":-720,"y":-205,"width":320,"height":60,"color":"5"},
 		{"id":"b8ee0f1994187507","type":"text","text":"Java 并发知识点","x":-720,"y":220,"width":250,"height":60,"color":"4"},
 		{"id":"3c2cd63d351319cb","type":"text","text":"基础组件","x":817,"y":-313,"width":183,"height":57,"color":"3"},

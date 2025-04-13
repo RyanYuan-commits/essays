@@ -1,14 +1,14 @@
 {
 	"nodes":[
-		{"id":"45e297017962c11e","type":"text","text":"消息队列","x":-480,"y":-290,"width":180,"height":65,"color":"4"},
-		{"id":"754ff3cfc33ab47c","type":"text","text":"- [[🍑 关于消息队列 MQ]]\n- [[🌵 RocketMQ]]\n- [[🍀 RabbitMQ]]","x":-220,"y":-324,"width":380,"height":133,"color":"4"},
 		{"id":"5ff553e303372759","type":"text","text":"数据库","x":-480,"y":0,"width":140,"height":60,"color":"6"},
 		{"id":"7733ee7b845c56cb","type":"text","text":"🏓 技术路书","x":-940,"y":-158,"width":200,"height":60},
 		{"id":"33c70bd9df2bfa24","type":"text","text":"- [[🍋 MySQL 底层探秘.canvas|🍋 MySQL 底层探秘]]\n- [[🥠 Redis 底层探秘.canvas|🥠 Redis 底层探秘]]","x":-220,"y":-15,"width":380,"height":91,"color":"6"},
 		{"id":"0e6e92b92fd6aa0f","type":"text","text":"编程语言","x":-1360,"y":60,"width":164,"height":60,"color":"2"},
-		{"id":"7f3df91152dc4e14","type":"text","text":"- [[🦝 Python 技术栈.canvas|🦝 Python 技术栈]]\n- [[⛱️ Java 技术栈.canvas|⛱️ Java 技术栈]]","x":-2080,"y":-50,"width":550,"height":280,"color":"3"},
+		{"id":"7f3df91152dc4e14","type":"text","text":"- [[🦝 Python 技术栈.canvas|🦝 Python 技术栈]]\n- [[⛱️ Java 技术栈.canvas|⛱️ Java 技术栈]]\n- [[🥖 Golang 技术栈.canvas|🥖 Golang 技术栈]]","x":-2080,"y":-50,"width":550,"height":280,"color":"3"},
 		{"id":"364893b0616f0ca8","type":"text","text":"开发技术","x":-1360,"y":-350,"width":164,"height":60,"color":"5"},
-		{"id":"5f530877ca3b156b","type":"text","text":"- [[🍾 SpringMVC]]\n- [[🌼 ElasticSearch.canvas|🌼 ElasticSearch]]\n- [[🎄 Dubbo]]\n- [[🖌️ DDD 架构设计.canvas|🖌️ DDD 架构设计]]\n- [[🕣 Sharding-JDBC]]\n- [[🍅 设计模式.canvas|🍅  设计模式]]","x":-2080,"y":-437,"width":550,"height":234,"color":"5"}
+		{"id":"5f530877ca3b156b","type":"text","text":"- [[🍾 SpringMVC]]\n- [[🌼 ElasticSearch.canvas|🌼 ElasticSearch]]\n- [[🎄 Dubbo]]\n- [[🖌️ DDD 架构设计.canvas|🖌️ DDD 架构设计]]\n- [[🕣 Sharding-JDBC]]\n- [[🍅 设计模式.canvas|🍅  设计模式]]\n- [[🥒 Spring 专项.canvas|🥒 Spring 专项]]","x":-2080,"y":-458,"width":550,"height":277,"color":"5"},
+		{"id":"45e297017962c11e","type":"text","text":"消息队列","x":-480,"y":-350,"width":140,"height":65,"color":"4"},
+		{"id":"754ff3cfc33ab47c","type":"text","text":"- [[🍑 关于消息队列 MQ]]\n- [[🌵 RocketMQ]]\n- [[🍀 RabbitMQ]]","x":-220,"y":-384,"width":380,"height":133,"color":"4"}
 	],
 	"edges":[
 		{"id":"414ce7edc0371b78","fromNode":"7733ee7b845c56cb","fromSide":"right","toNode":"5ff553e303372759","toSide":"left"},
