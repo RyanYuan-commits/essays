@@ -1,6 +1,6 @@
-这两个注解都是提供依赖注入功能的注解，我们来具体看一下它们的区别。
+这两个注解都是为了标记 Bean 注入。
 ## 源码
-org.springframework.beans.factory.annotation
+`org.springframework.beans.factory.annotation.Autowired`
 ```java
 @Target({ElementType.CONSTRUCTOR, ElementType.METHOD, ElementType.PARAMETER, ElementType.FIELD, ElementType.ANNOTATION_TYPE})  
 @Retention(RetentionPolicy.RUNTIME)  
@@ -9,9 +9,9 @@ public @interface Autowired {
     boolean required() default true;  
 }
 ```
-其可以应用在：构造方法、方法、参数、字段、注解上。
+Autowired 注解可以应用在：构造方法、方法、参数、字段、注解上。
 
-javax.annotation
+`javax.annotation.Resource`
 ```java
 @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD})  
 @Retention(RetentionPolicy.RUNTIME)  
@@ -40,13 +40,15 @@ public @interface Resource {
     }  
 }
 ```
-其可以使用在类（接口、枚举等）、字段、方法上。
+其可以使用在类、字段、方法上。
 ## 具体区别
+### 可使用的位置不同
+@Resource 注解无法使用在构造方法上，而 @Autowired 可以。
 ### 提供者不同
 通过上面的路径我们也可以看出来，`@Autowired` 是 Spring 提供的注解。
 而 `@Resource` 是 javax 拓展包中的注解，其定义为 "The Resource annotation marks a resource that is needed by the application."，Spring 对这个 javax 拓展包中的注解提供了支持。
 ### 注入逻辑不同
-`@Autowired` 只提供了按照类型去注入的能力，当然也是可以通过与其他注解，比如 `@Qualifier` 的配合实现按照名称注入。
+`@Autowired` 只提供了 **按类型注入** 的能力，如果要按照名称注入的话，需要 `@Qualifier` 注解来辅助。
 ```java
 @Service  
 public class TestServiceImpl {  
@@ -79,4 +81,4 @@ public class TestServiceImpl {
 1. 如果 `name` 和 `type` 属性同时被指定，则找到唯一的 Bean 进行装配，如果找不到直接抛出异常。
 2. 如果只制定了 `name`，则去寻找匹配的 Bean，找到一个或者多个都会抛出异常。
 3. 如果只制定了 `type`，则去寻找匹配的 Bean，找到一个或者多个都会抛出异常。
-4. 如果都没有制定，则默认使用 `byName` 的方式进行注入，也就是类名首字母小写作为 `name` 来查找 Bean。
+4. 如果都没有制定，则默认使用 `byName` 的方式进行注入，也就是类名首字母小写作为 Bean 的名称来查找 Bean。

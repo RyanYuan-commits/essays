@@ -1,4 +1,4 @@
-[[🗺️【spring-aop】Spring 代理类创建流程梳理]]
+[[🗺️【Spring-AOP】Spring 代理类创建流程梳理]]
 
 沿着上节的流程，详细的来看看 `wrapIfNecessary()` 方法：
 ```java
@@ -28,7 +28,7 @@ protected Object wrapIfNecessary(Object bean, String beanName, Object cacheKey) 
     return bean;  
 }
 ```
-# 不生成代理类的情况
+## 不生成代理类的情况
 ```java
     if (StringUtils.hasLength(beanName) && this.targetSourcedBeans.contains(beanName)) {  
        return bean;  
@@ -46,7 +46,7 @@ protected Object wrapIfNecessary(Object bean, String beanName, Object cacheKey) 
 - AdvisedBeans 缓存中存在 cacheKey 且值为 false，直接返回原始 bean。
 - Bean 属于基础设施类或满足跳过条件，将 cacheKey 标记为 false 并返回原始 bean。
 - 没有与 Bean 匹配的 Advisor
-# 获取适配类的 Advisors
+## 获取适配类的 Advisors
 ```java
 Object[] specificInterceptors = getAdvicesAndAdvisorsForBean(bean.getClass(), beanName, null);  
 ```
@@ -111,7 +111,7 @@ public static List<Advisor> findAdvisorsThatCanApply(List<Advisor> candidateAdvi
 再次遍历 candidateAdvisors 列表，排除 IntroductionAdvisor，只处理普通的 Advisor。
 	对于每个普通的 Advisor，调用 canApply(candidate, clazz, hasIntroductions) 方法检查它是否适用于目标类 clazz。
 	如果适用，将其添加到 eligibleAdvisors 列表中。
-# 创建代理类
+## 创建代理类
 ```java
     if (specificInterceptors != DO_NOT_PROXY) {  
        this.advisedBeans.put(cacheKey, Boolean.TRUE);  
@@ -173,7 +173,7 @@ protected Object createProxy(Class<?> beanClass, @Nullable String beanName,
 }
 ```
 该方法的返回值为：`proxyFactory.getProxy(classLoader);`，即调用 `proxyFactory` 的创建代理方法。
-## 代理工厂的初始化配置
+### 代理工厂的初始化配置
 整个方法其实就是对代理工厂的一个构建，在调用 `proxyFactory.copyFrom(this); `，会将 `Creator` 的配置复制到代理工厂中：
 `org.springframework.aop.framework.ProxyConfig#copyFrom(ProxyConfig other)`
 ```java
@@ -203,7 +203,7 @@ public void copyFrom(ProxyConfig other) {
 - 当其设置为 true 的时候：
 	- 配置被锁定，不能再动态更改通知或切面配置。
 	- 增强系统的稳定性和性能，因为代理不需要支持动态修改。
-## 根据是否代理目标类执行不同的操作
+### 根据是否代理目标类执行不同的操作
 对应源码的这一部分：
 ```java
 if (proxyFactory.isProxyTargetClass()) {  
@@ -289,7 +289,7 @@ protected void evaluateProxyInterfaces(Class<?> beanClass, ProxyFactory proxyFac
 	}
 ```
 如果筛选后没有适合的接口，则会回退到基于目标类的代理方式（ **触发 CGLIB 动态代理** ）。
-## 填充代理工厂的其他属性
+### 填充代理工厂的其他属性
 对应源码的这一部分：
 ```java
     Advisor[] advisors = buildAdvisors(beanName, specificInterceptors);  
@@ -311,7 +311,7 @@ protected void evaluateProxyInterfaces(Class<?> beanClass, ProxyFactory proxyFac
 获取并构建一个 **Advisor** 列表，这个 `specificInterceptors` 是从 `wrapIfNecessory`中传递下来的，然后将这些 Advisor 添加到代理工厂。
 Spring 使用 SmartClassLoader 检测目标类的类加载器和代理类的类加载器是否一致：
 	如果代理类的类加载器与目标类不一致，可能会导致类加载问题，因此 Spring 会尝试调整使用的类加载器。
-## 正式开始创建代理类
+### 正式开始创建代理类
 ```java
 return proxyFactory.getProxy(classLoader);
 ```
@@ -359,7 +359,7 @@ public AopProxy createAopProxy(AdvisedSupport config) throws AopConfigException 
 我们再来梳理一下这个配置中对一些值：
 - isOptimize：默认 false，不进行智能代理优化
 - isProxyTargetClass：**类或者Creator 指定需要代理的是目标类** 或 **类没有实现任何可用接口** 时为 true，其他时候为 false
-### 创建 CgLib 代理类
+#### 创建 CgLib 代理类
 对应源码的这一部分：
 ```java
     if (!NativeDetector.inNativeImage() &&  
@@ -380,7 +380,7 @@ public AopProxy createAopProxy(AdvisedSupport config) throws AopConfigException 
 - isProxyTargetClass 需要代理目标类
 - hasNoUserSuppliedProxyInterfaces，检测接口，如果发现用户没有提供任何自定义接口，Spring 可能会选择使用 CGLIB 代理。
 还有一些特殊的情况，创建的是 JDK 代理类，这个放到下面去说。
-### 创建 JDK 代理类
+#### 创建 JDK 代理类
 当下面的条件不符合
 ```java
 !NativeDetector.inNativeImage() && (config.isOptimize() || config.isProxyTargetClass() || hasNoUserSuppliedProxyInterfaces(config))

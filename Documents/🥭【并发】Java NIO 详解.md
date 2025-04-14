@@ -1,5 +1,5 @@
-# NIO 技术的起源
-## Java BIO 案例
+## NIO 技术的起源
+### Java BIO 案例
 >[!info] BioDemoHandler
 ```java
 public class BioDemoHandler implements Runnable {  
@@ -55,7 +55,7 @@ public class BioDemoServer {
 3. 线程的切换成本是很高的。操作系统发生线程切换的时候，需要保留线程的上下文，然后执行系统调用。过多的线程频繁切换带来的后果是，可能执行线程切换的时间甚至会大于线程执行的时间，这时候带来的表现往往是系统 CPU sy 值特别高（超过20%以上)的情况，导致系统几乎陷入不可用的状态。
 4. 容易造成锯齿状的系统负载。因为系统负载（System Load）是用活动线程数和等待线程数来综合计算的，一旦线程数量高但外部网络环境不是很稳定，就很容易造成大量请求同时到来，从而激活大量阻塞线程从而使系统负载压力过大。
 面对数十万的连接，BIO 显然是无法实现的，但是，高并发的需求却越来越普通，随着移动端应用的兴起和各种网络游戏的盛行，百万级长连接日趋普遍，此时，必然需要一种更高效的I/O处理组件——这就是Java 的NIO编程组件。
-## Java NIO 简介
+### Java NIO 简介
 在 1.4 版本之前，Java IO 类库是阻塞式 IO；从1.4版本开始，引进了新的异步 IO 库，被称为 Java New IO 类库，简称为 Java NIO。
 NIO 弥补了原来面向流的OIO同步阻塞的不足，它为标准 Java 代码提供了 **高速的、面向缓冲区** 的 IO。
 
@@ -65,7 +65,7 @@ Java NIO类库包含以下三个核心组件：
 3. Selector（选择器）
 
 Java NIO，属于 IO 多路复用模型。只不过，Java NIO组件提供了统一的应用开发API，为大家屏蔽了底层的操作系统的差异。
-### NIO vs OIO
+#### NIO vs OIO
 在Java中，NIO和OIO的区别，主要体现在三个方面：
 1. **OIO是面向流（Stream Oriented）的，NIO是面向缓冲区（Buffer Oriented）的。**
 	在面向流的OIO操作中，IO的 read() 操作总是以流式的方式顺序地从一个流（Stream）中读取一个或多个字节，因此，我们不能随意地改变读取指针的位置，也不能前后移动流中的数据。
@@ -78,12 +78,12 @@ Java NIO，属于 IO 多路复用模型。只不过，Java NIO组件提供了统
 3. **OIO没有选择器（Selector）概念，而NIO有选择器的概念。**
 	NIO技术的实现，是基于底层的IO多路复用技术实现的，比如在Windows中需要select多路复用组件的支持，在Linux系统中需要select/poll/epoll多路复用组件的支持。所以NIO的需要底层操作系统提供支持。
 
-# NIO 核心组件
+## NIO 核心组件
 - [[🥨【NIO】Channel]]
 - [[🦞【NIO】Selector]]
 - [[🍌【NIO】Buffer]]
 
-# 通过 NIO 实现的简单 Discard 服务器
+## 通过 NIO 实现的简单 Discard 服务器
 Discard 服务器的功能很简单：仅仅读取客户端通道的输入数据，读取完成后直接关闭客户端通道；并且读取到的数据直接抛弃掉（Discard）。
 ```java
 public class DiscardServerDemo {  
