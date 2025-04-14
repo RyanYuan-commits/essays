@@ -1,9 +1,7 @@
 {
 	"nodes":[
-		{"id":"8bbba9c6393f7b40","type":"text","text":"⛱️ Java","x":-160,"y":-8,"width":140,"height":68},
-		{"id":"37451036bb43cb97","type":"text","text":"- [[🍒【Java】时间相关类]]\n- [[🚘【Java常用类】Random 随机数类]]","x":227,"y":-215,"width":453,"height":207}
+		{"id":"37451036bb43cb97","type":"text","text":"- [[🍒【Java】时间相关类]]\n- [[🚘【Java常用类】Random 随机数类]]","x":227,"y":-215,"width":453,"height":207},
+		{"id":"56885f7694d0c78c","type":"text","text":"## Java 集合\n- [[🍧【Java】HashMap 源码分析]]\n- [[🐊【Java】ArrayList 源码分析]]","x":-720,"y":-215,"width":660,"height":595}
 	],
-	"edges":[
-		{"id":"c35cd8fba61cfe5b","fromNode":"8bbba9c6393f7b40","fromSide":"right","toNode":"37451036bb43cb97","toSide":"left","label":"常用类库"}
-	]
+	"edges":[]
 }

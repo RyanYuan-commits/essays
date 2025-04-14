@@ -2,7 +2,7 @@
 	"nodes":[
 		{"id":"d183633e830c8382","type":"text","text":"🛳️ 源码航行","x":-160,"y":-253,"width":200,"height":60},
 		{"id":"76b81a20a6607414","type":"text","text":" Java 源码分析","x":300,"y":-253,"width":217,"height":60},
-		{"id":"90cf5cf15eec7083","type":"text","text":"- [[🍧 HashMap 源码分析]]\n- [[🍉【并发】线程池源码详解]]\n- [[🐊 ArrayList 源码分析]]\n- [[🚤 ThreadLocal、InheritableThreadLocal 源码解析]]","x":660,"y":-311,"width":560,"height":176}
+		{"id":"90cf5cf15eec7083","type":"text","text":"- [[🍧【Java】HashMap 源码分析]]\n- [[🍉【并发】线程池源码详解]]\n- [[🐊【Java】ArrayList 源码分析]]\n- [[🚤 ThreadLocal、InheritableThreadLocal 源码解析]]","x":660,"y":-311,"width":560,"height":176}
 	],
 	"edges":[
 		{"id":"607caaf1d9f30622","fromNode":"d183633e830c8382","fromSide":"right","toNode":"76b81a20a6607414","toSide":"left","label":"Java"},
