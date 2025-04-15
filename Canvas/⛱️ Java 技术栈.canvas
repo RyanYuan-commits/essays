@@ -1,7 +1,8 @@
 {
 	"nodes":[
-		{"id":"37451036bb43cb97","type":"text","text":"- [[🍒【Java】时间相关类]]\n- [[🚘【Java常用类】Random 随机数类]]","x":227,"y":-215,"width":453,"height":207},
-		{"id":"56885f7694d0c78c","type":"text","text":"## Java 集合\n- [[🍧【Java】HashMap 源码分析]]\n- [[🐊【Java】ArrayList 源码分析]]","x":-720,"y":-215,"width":660,"height":595}
+		{"id":"56885f7694d0c78c","type":"text","text":"## 集合\n- [[🍧【Java】HashMap 源码分析]]\n- [[🐊【Java】ArrayList 源码分析]]","x":-720,"y":-215,"width":660,"height":595},
+		{"id":"03b2d09f08691bd7","type":"text","text":"## 常用类\n- [[🍒【Java】时间相关类]]\n- [[🚘【Java】Random 类]]\n- [[🍊【Java】String 类]]","x":0,"y":-215,"width":616,"height":595},
+		{"id":"932cfa1ce3a12d6a","type":"text","text":"## 并发\n- [[🍓【Java】并发面试题整理]]\n- [[🍨【Java】Java Memory Model]]\n- [[🖼️【Java】创建线程的三种方式]]\n- [[🚤 【Java】ThreadLocal]]","x":-720,"y":540,"width":660,"height":560}
 	],
 	"edges":[]
 }

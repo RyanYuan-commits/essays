@@ -9,8 +9,8 @@
 		{"id":"ae5230ba12ffd27f","type":"text","text":"序列化与反序列化","x":817,"y":224,"width":243,"height":56,"color":"4"},
 		{"id":"940afbaba9746223","type":"text","text":"- Json 与 Protobuf \n\t- [[🧱 关于序列化和反序列化]]\n\t- [[🎠【Netty】使用 JSON 协议通信]]\n\t- [[🏀【Netty】使用 Protobuf 通信]]","x":1096,"y":179,"width":440,"height":150,"color":"4"},
 		{"id":"f08950c2798b8fbf","type":"text","text":"- Decoder 与 Encoder\n\t- [[🍒 半包和粘包问题]]\n\t- [[🐰【Netty】Decoder 原理与实践]]\n\t- [[🍭【Netty】常用的内置 Decoder]]\n\t- [[🚅【Netty】解码器原理与实践]]","x":1096,"y":-88,"width":440,"height":180,"color":"5"},
-		{"id":"af4de658a5dbc903","type":"text","text":"- [[🍨【并发】JMM 模型]]\n- [[🥭【并发】Java 并发编程基础]]\n- [[🍦【并发】Java 中的 Unsafe 类]]","x":-1340,"y":190,"width":530,"height":120,"color":"4"},
-		{"id":"c91281c275c7050d","type":"text","text":"- [[🚤 ThreadLocal、InheritableThreadLocal 源码解析]]\n- [[🍉【并发】线程池源码详解]]\n- [[🚣【并发】ThreadLocalRandom 源码解析]]\n- [[💫【并发】ReentrantLock 源码解析]]\n- [[🌻 ConcurrentHashMap 源码解析]]","x":-1400,"y":-260,"width":590,"height":170,"color":"5"},
+		{"id":"af4de658a5dbc903","type":"text","text":"- [[🍨【Java】Java Memory Model]]\n- [[🥭【并发】Java 并发编程基础]]\n- [[🍦【并发】Java 中的 Unsafe 类]]","x":-1340,"y":190,"width":530,"height":120,"color":"4"},
+		{"id":"c91281c275c7050d","type":"text","text":"- [[🚤 【Java】ThreadLocal]]\n- [[🍉【并发】线程池源码详解]]\n- [[🚣【并发】ThreadLocalRandom 源码解析]]\n- [[💫【并发】ReentrantLock 源码解析]]\n- [[🌻 ConcurrentHashMap 源码解析]]","x":-1400,"y":-260,"width":590,"height":170,"color":"5"},
 		{"id":"b6dbf15a7da8a1b8","type":"text","text":"- [[🦖【Netty】实践案例：DiscardServer]]\n- [[🌾【Netty】核心原理：Reactor 模式实现]]\n\t- [[🧃【Netty】Bootstrap 引导类详解]]\n\t- [[🧭【Netty】Channel 通道详解]]\n\t- [[🏖️【Netty】Handler 业务处理类详解]]\n\t- [[🌵【Netty】Pipeline 流水线详解]]\n\t- [[🍬【ByteBuf】缓冲区详解]]\n","x":1096,"y":-426,"width":524,"height":284,"color":"3"},
 		{"id":"51513cf32bca4bd5","type":"text","text":"并发基础","x":340,"y":-621,"width":140,"height":50,"color":"4"},
 		{"id":"7b740f29f03caf74","type":"text","text":"- [[🎽【并发】高并发 IO 底层原理]]\n- [[🥭【并发】Java NIO 详解]]\n\t- [[🦞【NIO】Selector]]\n\t- [[🥨【NIO】Channel]]\n\t- [[🍌【NIO】Buffer]]\n- [[🌲【并发】Reactor 反应器模式]]","x":567,"y":-730,"width":500,"height":269,"color":"4"}
