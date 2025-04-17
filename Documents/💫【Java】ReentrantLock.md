@@ -1,5 +1,5 @@
 ReentrantLock 是一个可重入的独占锁，同时只要一个线程获取到锁，其他线程获取锁的时候，会被阻塞并且放入锁的 AQS 阻塞队列；ReentrantLock 中实现了公平锁和非公平锁，使用默认构造方法得到的是非公平锁，类中提供了一个传入布尔值的构造方法，`ReentrantLock(boolean fair)` 使用该构造方法传入 `true` 得到的就是公平锁。
-## 基本介绍
+## 1 基本介绍
 ```java
 public ReentrantLock() {
 	sync = new NonfairSync();
@@ -15,10 +15,10 @@ ReentrantLock 中的内部类 Sync 直接继承了 AQS ，Sync 的两个子类 F
 
 虽然是可重入锁，但是重入的次数并不是无限次，
 ```java
-    /**
-     * The synchronization state.
-     */
-    private volatile int state;
+/**
+ * The synchronization state.
+ */
+private volatile int state;
 ```
 AQS 中的 state 是用 `int` 声明的，重入的最大次数就是 `int` 能表示的最大值，如果超过这个数字，就会因为越界使其变为负数，此时会抛出异常；
 
@@ -38,15 +38,14 @@ public class ReentrantLockSourceCode {
 运行最终结果：
 ![[重入锁重入次数上限异常.png|800]]
 
-## 获取锁的方法
-### void lock() 方法
-在上面的案例中我们已经使用过了这个方法，当线程希望获取锁的时候就去调用这个方法：
+## 2 获取锁
+### 2.1 void lock() 方法
 ```java
-    public void lock() {
-        sync.lock();
-    }
+public void lock() {
+	sync.lock();
+}
 ```
-这个方法实际上是委托给了 sync 执行的，sync 会在初始化的时候根据传入的值设置为公平锁或非公平锁，这里先来看使用的最多的非公平锁中的实现：
+这个方法实际上是委托给了 sync 执行的，sync 会在初始化的时候根据传入的值设置为公平锁或非公平锁，非公平锁的 lock 方法是这样的：
 ```java
 /**
  * Performs lock.  Try immediate barge, backing up to normal
@@ -59,14 +58,13 @@ final void lock() {
 ```
 使用 CAS 在 state 预期值为 0 的情况下，将其设置为 1，如果成功了就将当前线程设置为锁的持有者；
 反之则会调用 AQS 抽象类中的 acquire(1) 方法来将尝试将线程挂起到阻塞队列中。
-
-这里调用了 AQS 类中的 acquire 方法：
+#### 2.1.1 非公平锁 tryAcquire 方法
 ```java
-      public final void acquire(int arg) {
-        if (!tryAcquire(arg) &&
-            acquireQueued(addWaiter(Node.EXCLUSIVE), arg))
-            selfInterrupt();
-	    }
+public final void acquire(int arg) {
+if (!tryAcquire(arg) &&
+	acquireQueued(addWaiter(Node.EXCLUSIVE), arg))
+	selfInterrupt();
+}
 ```
 这个方法中首先调用了 tryAcquire(int acquires) 方法去尝试获取锁；
 如果获取失败了，就将线程放到阻塞队列中并挂起，AQS 将 tryAcquire 方法开放给子类实现，子类可以自定义这个方法的逻辑来实现不同的锁；
@@ -95,21 +93,12 @@ final boolean nonfairTryAcquire(int acquires) {
 	return false;
 }
 ```
-这样就完成了上锁的操作，来梳理一下这个方法的流程
 线程尝试去获取锁，使用 CAS 操作尝试将 state 值从 0 修改为 1
 - 如果修改成功将锁的持有者设置为该线程
-- 如果失败了就有两种可能：当前线程持有锁和其他线程持有锁，调用 AQS 中的 acquire 方法
-    1. 调用子类中实现的 tryAcquire 方法
-        - 尝试再次使用 CAS 操作，如果修改失败了则判断当前锁是否被当前线程持有
-            - 持有则递增 state
-            - 反之直接返回 false
-    2. tryAcquire 成功则直接返回，反之则将线程加入队列中并且阻塞挂起。
+- 然后判断是否是当前线程持有锁，如果是，重入次数加一。
+#### 2.1.2 公平锁 tryAcquire
 再来补充一下公平锁的 `tryAcquire()` 方法的实现：
 ```java
-/**
- * Fair version of tryAcquire.  Don't grant access unless
- * recursive call or no waiters or is first.
- */
 protected final boolean tryAcquire(int acquires) {
 	final Thread current = Thread.currentThread();
 	int c = getState();
@@ -133,7 +122,7 @@ protected final boolean tryAcquire(int acquires) {
 }
 ```
 不同之处在于在上面的（1）位置加上了 hasQueuedPredecessors() 方法去判断队列中是否有前置的线程，如果有则不会去尝试获取锁，这样就保证了公平性。
-### void lockInterruptibly() 方法
+### 2.2 void lockInterruptibly() 方法
 这个方法和 lock 方法类似，它的不同之处在于，使用这个方法获取锁的线程对于 interrupt() 方法会做出立即反应，即抛出 InterruptedException 异常然后返回，而 lock 方法则是在阻塞结束后再去判断线程在挂起的过程中是否出现阻塞。
 ```java
 public void lockInterruptibly() throws InterruptedException {
@@ -152,8 +141,8 @@ public final void acquireInterruptibly(int arg)
 		doAcquireInterruptibly(arg);
 }
 ```
-doAcquireInterruptibly(arg); 方法当线程返回并发现阻塞的时候，会直接抛出异常，其他方法中则会返回一个布尔值来表示线程在阻塞过程中是否被中断，让开发者自己去设置处理的方式。
-### boolean tryLock() 方法
+因为 AQS 底层是使用 LockSupport 来挂起线程的，这样挂起的线程在被中断后不会抛出中断异常，而是会将中断标志设置为 true，留给线程自己去判断然后处理。
+### 2.3 boolean tryLock() 方法
 ```java
 public boolean tryLock() {
 	return sync.nonfairTryAcquire(1);
@@ -177,8 +166,9 @@ final boolean nonfairTryAcquire(int acquires) {
 	return false;
 }
 ```
-尝试获取锁，如果锁没有被其他线程持有，当前线程获取到锁并且返回 true，反之则返回 false；当获取失败了时候，这个方法并不会将线程放到阻塞队列。
-### boolean tryLock(long timeout, TimeUnit unit)
+尝试获取锁，如果锁没有被其他线程持有，当前线程获取到锁并且返回 true，反之则返回 false；
+当获取失败了时候，这个方法并不会将线程放到阻塞队列。
+### 2.4 boolean tryLock(long timeout, TimeUnit unit)
 尝试获取锁，与上面方法不同的是，方法设置了超时时间，如果这个时间内还没有获取到锁，则会直接返回 false。
 ```java
 lock.tryLock(1000, TimeUnit.SECONDS);
@@ -190,8 +180,7 @@ lock.tryLock(1000, TimeUnit.SECONDS);
         return sync.tryAcquireNanos(1, unit.toNanos(timeout));
     }
 ```
-
-## 释放锁
+## 3 释放锁
 
 ```java
     public void unlock() {
@@ -242,7 +231,7 @@ private void unparkSuccessor(Node node) {
 
 	/*
 	 * 要接触挂起状态的线程一般是下一个线程，但如果下一个线程被取消
-			 * 或者为空，则从尾部开始遍历查找可以解除的线程
+	 * 或者为空，则从尾部开始遍历查找可以解除的线程
 	 */
 	Node s = node.next;
 	if (s == null || s.waitStatus > 0) {
@@ -255,9 +244,7 @@ private void unparkSuccessor(Node node) {
 		LockSupport.unpark(s.thread);
 }
 ```
-
-### 1.4 使用 ReentrantLock 的好处
-
+## 4 使用 ReentrantLock 的好处
 1. **可定时的锁等待**：**`ReentrantLock`** 提供了 **`tryLock(long timeout, TimeUnit unit)`** 方法，可以在指定的时间内等待获取锁。这在需要避免线程长时间等待的情况下很有用。
 2. **可中断的锁等待**：**`ReentrantLock`** 提供了 **`lockInterruptibly()`** 方法，允许在等待锁的过程中响应中断，这样可以避免线程长时间阻塞。
 3. **公平锁和非公平锁**：**`ReentrantLock`** 提供了公平锁和非公平锁两种模式，可以通过构造函数来选择。公平锁会按照线程请求锁的顺序来获取锁，而非公平锁则不保证顺序。而 **`synchronized`** 关键字锁默认是非公平的。
