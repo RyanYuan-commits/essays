@@ -1,5 +1,5 @@
 这两个注解都是为了标记 Bean 注入。
-## 源码
+## 1 源码
 `org.springframework.beans.factory.annotation.Autowired`
 ```java
 @Target({ElementType.CONSTRUCTOR, ElementType.METHOD, ElementType.PARAMETER, ElementType.FIELD, ElementType.ANNOTATION_TYPE})  
@@ -41,13 +41,13 @@ public @interface Resource {
 }
 ```
 其可以使用在类、字段、方法上。
-## 具体区别
-### 可使用的位置不同
+## 2 具体区别
+### 2.1 可使用的位置不同
 @Resource 注解无法使用在构造方法上，而 @Autowired 可以。
-### 提供者不同
+### 2.2 提供者不同
 通过上面的路径我们也可以看出来，`@Autowired` 是 Spring 提供的注解。
 而 `@Resource` 是 javax 拓展包中的注解，其定义为 "The Resource annotation marks a resource that is needed by the application."，Spring 对这个 javax 拓展包中的注解提供了支持。
-### 注入逻辑不同
+### 2.3 注入逻辑不同
 `@Autowired` 只提供了 **按类型注入** 的能力，如果要按照名称注入的话，需要 `@Qualifier` 注解来辅助。
 ```java
 @Service  

@@ -11,7 +11,7 @@
 ## 案例
 ```python
 # 生成一个包含 0 到 9 的平方的列表 
-squares = [x ** 2 for x in range(10)] 
+squares = [x ** 2 for x in range(10)]
 print(squares)
 ```
 - `x` 从 `range(10)` 中取值，即 0 到 9。

@@ -1,13 +1,8 @@
 {
 	"nodes":[
-		{"id":"a43ca351c21e525b","type":"text","text":"🥒 Spring","x":320,"y":860,"width":160,"height":60},
-		{"id":"269095624bac1474","type":"text","text":"### Spring 随笔\n- [[🖼️【Spring】@Resource vs @AutoWire]]","x":49,"y":1160,"width":703,"height":160},
 		{"id":"00b1b3c95bf59339","type":"text","text":"### Small - Spring\n[[🎲 small-spring.canvas|🎲 small-spring]]\n#### IoC 篇\n- [[🦦【small-spring】构造一个简单的 Bean 工厂]]\n- [[🧩【small-spring】实现 Bean 的注册与获取]]\n- [[🥃【small-spring】基于 Cglib 实现含构造函数的类实例化策略]]\n- [[🖼️【small-spring】为 Bean 对象注入属性和依赖]]\n- [[🏄‍♀️【small-spring】资源加载器解析文件对象]]\n- [[🌺【small-spring】实现 ApplicationContext]]\n- [[🥝【small-spring】Bean 的初始化和销毁方法]]\n- [[🍇【small-spring】Aware 感知对象]]\n- [[♦️【small-spring】Bean Scope 与 Factory Bean]]\n- [[🦮【small-spring】容器事件和事件监听器]]\n#### AOP 篇\n- [[🥕【small-spring】基于 JDK 和 CgLib 实现 AOP 核心功能]]\n- [[🧉【small-spring】把 AOP 拓展到 Bean 的生命周期]]\n- [[👣【small-spring】自动扫描 Bean 注册]]\n- [[🍞【small-spring】通过注解简化属性配置]]\n- [[🦏【small-spring】给代理对象的属性设置值]]","x":-340,"y":-120,"width":703,"height":860},
-		{"id":"47bdc39d7655632c","type":"text","text":"### Spring 源码笔记\n#### AOP\n**基础概念**\n- [[🐿️【AOP】AOP 核心概念]]\n- [[🛀【AOP】Spring AOP 使用案例]]\n**源码阅读**\n- [[🐿️【AOP】AOP 核心概念]] \n- [[🐺【spring-aop】实现一个简单的 AOP 切面]]\n- [[🦦【spring-aop】Spring 实现 AOP 的核心类]]\n- [[🗺️【Spring-AOP】Spring 代理类创建流程梳理]]\n- [[🥗【spring-aop】Spring AOP 代理类创建方法解析]]\n- [[🖌️【spring-aop】Spring 生成的代理类的结构以及拦截器链式调用]]\n#### IoC\n- [[🧞【Spring】Spring 的三级缓存]]","x":440,"y":-120,"width":720,"height":860}
+		{"id":"47bdc39d7655632c","type":"text","text":"### Spring 源码笔记\n#### AOP\n**基础概念**\n- [[🐿️【AOP】AOP 核心概念]]\n- [[🛀【AOP】Spring AOP 使用案例]]\n\n**源码阅读**\n- [[🐿️【AOP】AOP 核心概念]] \n- [[🐺【spring-aop】实现一个简单的 AOP 切面]]\n- [[🦦【spring-aop】Spring 实现 AOP 的核心类]]\n- [[🗺️【Spring-AOP】Spring 代理类创建流程梳理]]\n- [[🥗【spring-aop】Spring AOP 代理类创建方法解析]]\n- [[🖌️【spring-aop】Spring 生成的代理类的结构以及拦截器链式调用]]\n#### IoC\n- [[🧞【Spring】Spring 的三级缓存]]","x":440,"y":-120,"width":720,"height":860},
+		{"id":"269095624bac1474","type":"text","text":"### Spring 随笔\n- [[🖼️【Spring】@Resource vs @AutoWire]]\n- [[🎣【Spring】事务机制]]","x":-340,"y":840,"width":703,"height":500}
 	],
-	"edges":[
-		{"id":"14ed3ab487da66c1","fromNode":"a43ca351c21e525b","fromSide":"left","toNode":"00b1b3c95bf59339","toSide":"bottom"},
-		{"id":"09318dad34769360","fromNode":"a43ca351c21e525b","fromSide":"right","toNode":"47bdc39d7655632c","toSide":"bottom"},
-		{"id":"d890f199a71dcc77","fromNode":"a43ca351c21e525b","fromSide":"bottom","toNode":"269095624bac1474","toSide":"top"}
-	]
+	"edges":[]
 }

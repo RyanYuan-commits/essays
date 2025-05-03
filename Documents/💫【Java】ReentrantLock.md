@@ -250,3 +250,9 @@ private void unparkSuccessor(Node node) {
 3. **公平锁和非公平锁**：**`ReentrantLock`** 提供了公平锁和非公平锁两种模式，可以通过构造函数来选择。公平锁会按照线程请求锁的顺序来获取锁，而非公平锁则不保证顺序。而 **`synchronized`** 关键字锁默认是非公平的。
 4. **可重入性**：**`ReentrantLock`** 是可重入锁，同一个线程可以多次获取同一个锁而不会死锁。而 **`synchronized`** 关键字锁也是可重入的，但是必须在同一个方法或者代码块中。
 5. **条件变量**：**`ReentrantLock`** 提供了 **`Condition`** 接口（AQS 提供的），可以设置多个 Condition 对象来更好的控制线程的状态。
+## 5. ReentrantLock vs synchronized
+对比 synchronized，ReentrantLock 有这些优势：
+- 可以支持公平锁
+- 可以让线程在等待锁的时候响应中断
+- 线程等待的时间是可控的，提供了尝试获取锁（失败不挂起）和指定等待时间的方法
+

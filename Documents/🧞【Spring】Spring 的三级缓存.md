@@ -205,3 +205,5 @@ public Object getSingleton(String beanName, ObjectFactory<?> singletonFactory) {
 在创建 Bean 的时候，向三级缓存中存放的是获取中间状态的 Bean 的方法，这不是多次一举吗？为什么此时不直接创建然后将中间状态的 Bean 放入二级缓存？
 答：为了 AOP 代理对象的延迟创建。
 Spring 根据是否对 Bean 执行了 AOP 代理，分为普通 Bean 和 代理 Bean，而代理 Bean 的构建是在后面的 `initializeBean` 方法中执行的，顺序应该是 实例化 -> 填充依赖 -> 初始化 Bean，Spring 为了不打破这个既定顺序，使用了三级缓存，执行的是 AOP 模块提供的 `getEarlyBeanReference` 方法，而非是正常执行下的 `postProcessAfterInitialization` 方法。
+### 3.2 为什么构造器和原型 Bean 不支持循环依赖？
+因为三级缓存是在实例化后作用的，这两种方式创建的 Bean 没有进行实例化。

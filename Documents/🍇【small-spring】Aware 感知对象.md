@@ -205,4 +205,4 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 ```
 - 这里我们去掉了一些类的内容，只保留关于本次 Aware 感知接口的操作。
 - 首先在 initializeBean 中，通过判断 `bean instanceof Aware`，调用了三个接口方法，`BeanFactoryAware.setBeanFactory(this)`、`BeanClassLoaderAware.setBeanClassLoader(getBeanClassLoader())`、`BeanNameAware.setBeanName(beanName)`，这样就能通知到已经实现了此接口的类。
-- 另外我们还向 BeanPostProcessor 中添加了 `ApplicationContextAwareProcessor`，此时在这个方法中也会被调用到具体的类实现，得到一个 ApplicationContex 属性。
+- 另外我们还向 BeanPostProcessor 中添加了 `ApplicationContextAwareProcessor`，此时在这个方法中也会被调用到具体的类实现，得到一个 ApplicationContext 属性。
