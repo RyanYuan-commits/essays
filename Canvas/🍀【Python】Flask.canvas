@@ -3,7 +3,7 @@
 		{"id":"2eb8c57d26bedc6d","type":"text","text":"🍀 Flask","x":-128,"y":-31,"width":148,"height":60},
 		{"id":"6eefeba58b1534c6","type":"text","text":"- [[🦋【Python】Flask 基本概念]]\n\t\n\t- [[🦜【Python】Flask 模板渲染]]\n\t- [[🍝【Python】Flask 表单处理]]\n\t- [[💐【Python】SQLAlchemy]]\n\t- [[🏡【Python】Flask 蓝图]]\n\t- [[🍿【Python】Flask 错误处理]]\n\t","x":200,"y":64,"width":500,"height":216},
 		{"id":"b056eb4907a5dc5d","type":"text","text":"- [[🌱【Python】Flask 路由]]\n- [[🦄【Python】Flask 视图函数]]","x":-640,"y":-197,"width":347,"height":97},
-		{"id":"9114326aafd9eb8c","type":"file","file":"images/Flask 基本概念.png","x":840,"y":-330,"width":660,"height":1005},
+		{"id":"9114326aafd9eb8c","type":"file","file":"Images/Flask 基本概念.png","x":840,"y":-330,"width":660,"height":1005},
 		{"id":"95070a8d670e7a10","type":"text","text":"- [[🍁【Python】什么是 Flask？]]\n- [[🐥【Python】Flask 项目结构]]","x":200,"y":-220,"width":420,"height":100}
 	],
 	"edges":[

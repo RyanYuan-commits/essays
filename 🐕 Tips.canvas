@@ -1,17 +1,108 @@
 {
-	"nodes":[
-		{"id":"2b8cf9cb30fe2b0b","type":"text","text":"🐕 Tips","x":26,"y":-10,"width":134,"height":60,"color":"5"},
-		{"id":"9fd2cfdeaa359cd4","type":"file","file":"Documents/🎖️ Docker 常用命令快速查阅.md","x":334,"y":-110,"width":465,"height":260},
-		{"id":"1d77930fbe316b53","type":"file","file":"Documents/🤿 如何生成 SSH 公钥.md","x":334,"y":-460,"width":1286,"height":188},
-		{"id":"eef0800d33a7ccc5","type":"file","file":"Documents/🖼️【Spring】@Resource vs @AutoWire.md","x":334,"y":340,"width":1086,"height":400},
-		{"id":"d0e94f9507ef6203","type":"text","text":"- [[🔒 Git.canvas|Git]]","x":-600,"y":-191,"width":353,"height":81},
-		{"id":"2477a65432938a0e","type":"text","text":"- [[🌽【Docker】部署 Redis]]\n- [[☘️【Docker】部署 ElasticSearch]]\n- [[⛱️【Docker】部署 MySQL]]","x":920,"y":-53,"width":500,"height":146}
-	],
-	"edges":[
-		{"id":"fa238101051497b3","fromNode":"2b8cf9cb30fe2b0b","fromSide":"right","toNode":"1d77930fbe316b53","toSide":"left"},
-		{"id":"f62ed83bb53000f6","fromNode":"2b8cf9cb30fe2b0b","fromSide":"right","toNode":"9fd2cfdeaa359cd4","toSide":"left"},
-		{"id":"f40dc57ee26a396a","fromNode":"2b8cf9cb30fe2b0b","fromSide":"right","toNode":"eef0800d33a7ccc5","toSide":"left"},
-		{"id":"18479dd62ac82ef2","fromNode":"9fd2cfdeaa359cd4","fromSide":"right","toNode":"2477a65432938a0e","toSide":"left"},
-		{"id":"3f938fbd4e1fd190","fromNode":"2b8cf9cb30fe2b0b","fromSide":"left","toNode":"d0e94f9507ef6203","toSide":"right"}
-	]
+  "edges": [
+    {
+      "fromNode": "2b8cf9cb30fe2b0b",
+      "fromSide": "right",
+      "id": "fa238101051497b3",
+      "toNode": "1d77930fbe316b53",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "2b8cf9cb30fe2b0b",
+      "fromSide": "right",
+      "id": "f62ed83bb53000f6",
+      "toNode": "9fd2cfdeaa359cd4",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "2b8cf9cb30fe2b0b",
+      "fromSide": "right",
+      "id": "f40dc57ee26a396a",
+      "toNode": "eef0800d33a7ccc5",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "9fd2cfdeaa359cd4",
+      "fromSide": "right",
+      "id": "18479dd62ac82ef2",
+      "toNode": "2477a65432938a0e",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "2b8cf9cb30fe2b0b",
+      "fromSide": "left",
+      "id": "3f938fbd4e1fd190",
+      "toNode": "d0e94f9507ef6203",
+      "toSide": "right"
+    }
+  ],
+  "nodes": [
+    {
+      "color": "5",
+      "height": 60,
+      "id": "2b8cf9cb30fe2b0b",
+      "styleAttributes": {
+      },
+      "text": "🐕 Tips",
+      "type": "text",
+      "width": 134,
+      "x": 26,
+      "y": -10
+    },
+    {
+      "file": "Documents/🎖️ Docker 常用命令快速查阅.md",
+      "height": 260,
+      "id": "9fd2cfdeaa359cd4",
+      "styleAttributes": {
+      },
+      "type": "file",
+      "width": 465,
+      "x": 334,
+      "y": -110
+    },
+    {
+      "file": "Documents/🤿 如何生成 SSH 公钥.md",
+      "height": 188,
+      "id": "1d77930fbe316b53",
+      "styleAttributes": {
+      },
+      "type": "file",
+      "width": 1286,
+      "x": 334,
+      "y": -460
+    },
+    {
+      "file": "Documents/🖼️【Spring】@Resource vs @AutoWire.md",
+      "height": 400,
+      "id": "eef0800d33a7ccc5",
+      "styleAttributes": {
+      },
+      "type": "file",
+      "width": 1086,
+      "x": 334,
+      "y": 340
+    },
+    {
+      "height": 81,
+      "id": "d0e94f9507ef6203",
+      "styleAttributes": {
+      },
+      "text": "- [[🔒 Git.canvas|Git]]",
+      "type": "text",
+      "width": 353,
+      "x": -600,
+      "y": -191
+    },
+    {
+      "height": 146,
+      "id": "2477a65432938a0e",
+      "styleAttributes": {
+      },
+      "text": "- [[🌽【Docker】部署 Redis]]\n- [[☘️【Docker】部署 ElasticSearch]]\n- [[⛱️【Docker】部署 MySQL]]",
+      "type": "text",
+      "width": 500,
+      "x": 920,
+      "y": -53
+    }
+  ]
 }

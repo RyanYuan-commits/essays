@@ -1,9 +1,0 @@
-{
-	"nodes":[
-		{"id":"841590022da3af7c","type":"text","text":"SpringCloud-Netflix ","x":-520,"y":10,"width":265,"height":50},
-		{"id":"a710758dc56bb743","type":"text","text":"- [[🪕 关于SpringCloud-Netflix]]\n- ","x":-120,"y":-126,"width":520,"height":322}
-	],
-	"edges":[
-		{"id":"3631e8cdcea56592","fromNode":"841590022da3af7c","fromSide":"right","toNode":"a710758dc56bb743","toSide":"left"}
-	]
-}

@@ -1,9 +1,0 @@
-{
-	"nodes":[
-		{"id":"3ad57f931ac5bd67","type":"text","text":"☘️ Artificial Intelligence","x":-160,"y":-30,"width":280,"height":60},
-		{"id":"eac80ad11de172e2","type":"text","text":"- [[🧃【AI】MCP Server]]","x":320,"y":-183,"width":351,"height":103}
-	],
-	"edges":[
-		{"id":"01c4cb909e433387","fromNode":"3ad57f931ac5bd67","fromSide":"right","toNode":"eac80ad11de172e2","toSide":"left"}
-	]
-}

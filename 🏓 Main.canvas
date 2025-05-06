@@ -1,0 +1,54 @@
+{
+  "edges": [
+  ],
+  "nodes": [
+    {
+      "color": "5",
+      "height": 234,
+      "id": "5f530877ca3b156b",
+      "styleAttributes": {
+      },
+      "text": "## 框架整理\n- [[🍾 SpringMVC]]\n- [[🕣 Sharding-JDBC]]\n- [[🥒 Spring 专题.canvas|🥒 Spring 专题]]\n- [[🏜️ Kubernetes 专题.canvas|🏜️ Kubernetes 专题]]\n",
+      "type": "text",
+      "width": 440,
+      "x": -2200,
+      "y": -474
+    },
+    {
+      "color": "6",
+      "height": 234,
+      "id": "33c70bd9df2bfa24",
+      "styleAttributes": {
+      },
+      "text": "## 中间件\n- [[🍋 MySQL 专题.canvas|🍋 MySQL 专题]]\n- [[🥠 Redis 专题.canvas|🥠 Redis 专题]]\n- [[🌼 ElasticSearch.canvas|🌼 ElasticSearch]]",
+      "type": "text",
+      "width": 400,
+      "x": -1680,
+      "y": -474
+    },
+    {
+      "color": "3",
+      "height": 280,
+      "id": "7f3df91152dc4e14",
+      "styleAttributes": {
+      },
+      "text": "## 编程语言\n- [[⛱️ Java 技术栈.canvas|⛱️ Java 技术栈]]\n- [[🦝 Python 技术栈.canvas|🦝 Python 技术栈]]\n- [[🥖 Golang 技术栈.canvas|🥖 Golang 技术栈]]\n- [[🎮 前端.canvas|🎮 前端]]",
+      "type": "text",
+      "width": 440,
+      "x": -2200,
+      "y": -160
+    },
+    {
+      "color": "3",
+      "height": 280,
+      "id": "6c874ca7137799c0",
+      "styleAttributes": {
+      },
+      "text": "## 编程地基\n- [[🖌️ DDD 架构设计.canvas|🖌️ DDD 架构设计]]\n- [[🍅 设计模式.canvas|🍅  设计模式]]\n- [[🚆 计算机网络.canvas|🚆 计算机网络]]\n- [[🗽 深入理解 Linux.canvas|🗽 深入理解 Linux]]",
+      "type": "text",
+      "width": 400,
+      "x": -1680,
+      "y": -160
+    }
+  ]
+}

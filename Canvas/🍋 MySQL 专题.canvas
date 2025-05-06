@@ -1,0 +1,83 @@
+{
+  "edges": [
+  ],
+  "nodes": [
+    {
+      "height": 404,
+      "id": "9f186b3d0df85cde",
+      "styleAttributes": {
+      },
+      "text": "## 高可用\n主从复制：\n- [[🦅【MySQL】主从复制原理]]\n- [[🐥【MySQL】主从配置]]\n\n分库分表：\n- [[🍒【数据库】分库分表]]\n- [[🕣 Sharding-JDBC]]\n",
+      "type": "text",
+      "width": 540,
+      "x": -480,
+      "y": -564
+    },
+    {
+      "height": 460,
+      "id": "94a3746bd444a3bd",
+      "styleAttributes": {
+      },
+      "text": "## 基础\n- [[🏝️【MySQL】EXPLAIN 语句]]\n- [[🍊【MySQL】执行流程]]\n- [[⚱️【MySQL】字段类型]]",
+      "type": "text",
+      "width": 531,
+      "x": -1891,
+      "y": -1120
+    },
+    {
+      "height": 460,
+      "id": "2ffd4d9625776f32",
+      "styleAttributes": {
+      },
+      "text": "## 索引\n基础知识：\n- [[🧀【MySQL】索引分类]]\n- [[⛷️【MySQL】索引失效]]\n- [[⛷️【MySQL】索引失效]]\n- [[🌾【MySQL】Count 方法对比]]\n-  [[🏺【MySQL】InnoDb 数据结构]]\n\n索引优化：\n- [[🕊️【MySQL】索引的创建建议]]\n- [[🍝【MySQL】对于深分页的优化]]",
+      "type": "text",
+      "width": 640,
+      "x": -1200,
+      "y": -1120
+    },
+    {
+      "height": 460,
+      "id": "b857a8483ab87b67",
+      "styleAttributes": {
+      },
+      "text": "## 日志\n- [[🖌️【MySQL】历史记录 undo log]]\n- [[🐳【MySQL】缓存池 Buffer Pool]]\n-  [[🏵️【MySQL】断电保护 redo log]]\n- [[🥽【MySQL】归档记录 bin log]]",
+      "type": "text",
+      "width": 540,
+      "x": -480,
+      "y": -1120
+    },
+    {
+      "height": 404,
+      "id": "05208e8213b060d8",
+      "styleAttributes": {
+      },
+      "text": "## 事务\n- [[🎎【事务】基本介绍]]\n- [[🐿️【MySQL】隔离级别底层原理]]\n- [[🤿【MySQL】幻读问题]]",
+      "type": "text",
+      "width": 531,
+      "x": -1891,
+      "y": -564
+    },
+    {
+      "height": 404,
+      "id": "5c00e66daec6a407",
+      "styleAttributes": {
+      },
+      "text": "## 锁\n锁的分类： [[🍍【MySQL】锁的分类]]\n\n加锁过程： [[🍩【MySQL】加锁过程]]\n- 拓展阅读：[从源码看MySQL的加锁规则](https://juejin.cn/post/7133014068830404622)\n\n死锁： [[🍬【MySQL】死锁案例]]",
+      "type": "text",
+      "width": 640,
+      "x": -1200,
+      "y": -564
+    },
+    {
+      "file": "Images/icon-MySQL.png",
+      "height": 207,
+      "id": "60ba7a352790f026",
+      "styleAttributes": {
+      },
+      "type": "file",
+      "width": 400,
+      "x": -1080,
+      "y": -1380
+    }
+  ]
+}

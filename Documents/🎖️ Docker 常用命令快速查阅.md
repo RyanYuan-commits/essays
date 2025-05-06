@@ -67,10 +67,7 @@ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 4. **`containerPort`**
     - 格式：仅指定容器端口
     - 示例：**`80`**，这将容器内部的80端口映射到宿主机的一个随机可用端口上。
-
-启动 Ubuntu 实例的方法： **`docker run -it ubuntu /bin/bash`**
-
-- 如果不使用这种方法，容器会因为没有前台运行的内容而自我销毁。
+启动 Ubuntu 实例的方法： **`docker run -it ubuntu /bin/bash`**，如果不使用这种方法，容器会因为没有前台运行的内容而自我销毁。
 
 ---
 
@@ -187,7 +184,7 @@ docker build [OPTIONS] [DOCKER_FILE_POSITION]
 | docker network connect [NEWWORK] [CONTAINER]    | 使指定容器加入网络 |
 | docker network disconnect [NEWWORK] [CONTAINER] | 使指定容器离开网络 |
 | docker network inspect [NEWWORK_NAME]           | 查看网络的详细信息 |
-# 数据拷贝相关命令
+## 数据拷贝相关命令
 ```
 docker cp 容器名:要拷贝的文件在容器里面的路径 要拷贝到宿主机的相应路径
 ```

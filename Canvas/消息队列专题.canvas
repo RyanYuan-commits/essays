@@ -1,0 +1,39 @@
+{
+  "edges": [
+  ],
+  "nodes": [
+    {
+      "file": "Documents/🕌【RabbitMQ】面试题整理.md",
+      "height": 400,
+      "id": "e4e1fcdff0f67315",
+      "styleAttributes": {
+      },
+      "type": "file",
+      "width": 400,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "file": "Documents/🍑 关于消息队列 MQ.md",
+      "height": 400,
+      "id": "21cf96ada2529477",
+      "styleAttributes": {
+      },
+      "type": "file",
+      "width": 400,
+      "x": -540,
+      "y": 0
+    },
+    {
+      "file": "Documents/🏑【RocketMQ】领域模型.md",
+      "height": 400,
+      "id": "70ee9d80f81190cc",
+      "styleAttributes": {
+      },
+      "type": "file",
+      "width": 940,
+      "x": -540,
+      "y": 520
+    }
+  ]
+}

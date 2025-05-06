@@ -1,0 +1,17 @@
+{
+  "edges": [
+  ],
+  "nodes": [
+    {
+      "height": 340,
+      "id": "a8ba43388afffca8",
+      "styleAttributes": {
+      },
+      "text": "## 基础概念\n- [[🏀 什么是云原生？]]\n- [[🎄 服务网格]]",
+      "type": "text",
+      "width": 560,
+      "x": -440,
+      "y": -260
+    }
+  ]
+}

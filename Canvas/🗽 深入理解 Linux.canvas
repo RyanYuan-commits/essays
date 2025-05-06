@@ -1,11 +1,28 @@
 {
-	"nodes":[
-		{"id":"08c272d523387f77","type":"text","text":"🗽 深入理解 Linux","x":-125,"y":-30,"width":225,"height":50},
-		{"id":"c2305334efb22482","type":"text","text":"[[🦅【Linux】Shell 入门]]","x":400,"y":-180,"width":250,"height":60},
-		{"id":"e5b1507ed4356092","type":"text","text":"- [[🍌【Linux】文件系统]]\n- [[🌾【Linux】Linux 常用命令]]","x":-1100,"y":-205,"width":710,"height":400}
-	],
-	"edges":[
-		{"id":"cb1243c5c9f71342","fromNode":"08c272d523387f77","fromSide":"right","toNode":"c2305334efb22482","toSide":"left","label":"Shell 脚本编程"},
-		{"id":"6814ab8f411e593f","fromNode":"08c272d523387f77","fromSide":"left","toNode":"e5b1507ed4356092","toSide":"right","label":"基础知识"}
-	]
+  "edges": [
+  ],
+  "nodes": [
+    {
+      "height": 400,
+      "id": "e5b1507ed4356092",
+      "styleAttributes": {
+      },
+      "text": "## 基础知识\n- [[🍌【Linux】文件系统]]\n- [[🌾【Linux】Linux 常用命令]]",
+      "type": "text",
+      "width": 710,
+      "x": -1100,
+      "y": -205
+    },
+    {
+      "height": 400,
+      "id": "c2305334efb22482",
+      "styleAttributes": {
+      },
+      "text": "## Shell 编程\n- [[🦅【Linux】Shell 入门]]",
+      "type": "text",
+      "width": 640,
+      "x": -240,
+      "y": -205
+    }
+  ]
 }
