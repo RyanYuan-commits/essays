@@ -8,7 +8,7 @@
       "id": "5f530877ca3b156b",
       "styleAttributes": {
       },
-      "text": "## 框架整理\n- [[🍾 SpringMVC]]\n- [[🕣 Sharding-JDBC]]\n- [[🥒 Spring 专题.canvas|🥒 Spring 专题]]\n- [[🏜️ Kubernetes 专题.canvas|🏜️ Kubernetes 专题]]\n",
+      "text": "## 框架整理\n- [[🍾 SpringMVC]]\n- [[🥒 Spring 专题.canvas|🥒 Spring 专题]]\n- [[🏜️ Kubernetes 专题.canvas|🏜️ Kubernetes 专题]]\n",
       "type": "text",
       "width": 440,
       "x": -2200,
@@ -32,7 +32,7 @@
       "id": "7f3df91152dc4e14",
       "styleAttributes": {
       },
-      "text": "## 编程语言\n- [[⛱️ Java 技术栈.canvas|⛱️ Java 技术栈]]\n- [[🦝 Python 技术栈.canvas|🦝 Python 技术栈]]\n- [[🥖 Golang 技术栈.canvas|🥖 Golang 技术栈]]\n- [[🎮 前端.canvas|🎮 前端]]",
+      "text": "## 编程语言\n- [[⛱️ Java 技术栈.canvas|⛱️ Java 技术栈]]\n- [[🦝 Python 技术栈.canvas|🦝 Python 技术栈]]\n- [[🥖 Golang 技术栈.canvas|🥖 Golang 技术栈]]\n- [[🎮 FE 技术栈.canvas|🎮 FE 技术栈]]",
       "type": "text",
       "width": 440,
       "x": -2200,
@@ -44,7 +44,7 @@
       "id": "6c874ca7137799c0",
       "styleAttributes": {
       },
-      "text": "## 编程地基\n- [[🖌️ DDD 架构设计.canvas|🖌️ DDD 架构设计]]\n- [[🍅 设计模式.canvas|🍅  设计模式]]\n- [[🚆 计算机网络.canvas|🚆 计算机网络]]\n- [[🗽 深入理解 Linux.canvas|🗽 深入理解 Linux]]",
+      "text": "## 编程地基\n- [[🖌️ DDD 架构设计.canvas|🖌️ DDD 架构设计]]\n- [[🍅 设计模式.canvas|🍅  设计模式]]\n- [[🚆 计算机网络.canvas|🚆 计算机网络]]\n- [[🗽 操作系统.canvas|🗽 操作系统]]",
       "type": "text",
       "width": 400,
       "x": -1680,
