@@ -1,6 +1,7 @@
-## 1 基本理解
+## 1 什么是 Shell？
+![[shell.png#pic_center]]
 通过编写 Shell 命令，发送给 Linux 内核去执行，操作的就是计算机硬件了，Shell 命令是用户操作内核的桥梁，Shell 脚本通过 Shell 命令或者编程语言编写的 Shell 文本文件，这就是 Shell 脚本，也叫 Shell 程序。
-解析器的基本类型，通过 `cat /etc/shells` 命令查看 Linux 提供的 Shell 解析器，通过 `echo $SHELL` 打印输出当前系统使用的 SHELL 解析器类型，常见的 Shell 解释器有以下几种：
+通过 `cat /etc/shells` 命令查看 Linux 提供的 Shell 解析器，通过 `echo $SHELL` 打印输出当前系统使用的 SHELL 解析器类型，常见的 Shell 解释器有以下几种：
 - `/bin/sh`：Bourne Shell，是 Linux 最初使用的 Shell；
 - `/bin/bash`：Bourne again Shell，是 `/bin/sh` 的扩展，是 LinuxOS 的默认 Shell，有灵活和强大的编辑接口和有好的用户界面，交互性强；
 - `/sbin/nologin`：未登录解析器，用于控制用户禁止登录系统的，有时候一些服务，比如邮件服务，并不需要登录；

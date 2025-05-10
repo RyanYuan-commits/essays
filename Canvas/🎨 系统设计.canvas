@@ -1,0 +1,25 @@
+{
+	"edges":[],
+	"nodes":[
+		{
+			"id":"28be565b34243f87",
+			"styleAttributes":{},
+			"text":"### 🧶 基础知识\n- [[🐋【系统设计】Restful API]]\n- [[🖌️ DDD 架构设计.canvas|🖌️ DDD 架构设计]]",
+			"type":"text",
+			"x":-500,
+			"y":-200,
+			"width":500,
+			"height":240
+		},
+		{
+			"id":"5b9cbc1392fc7fae",
+			"styleAttributes":{},
+			"text":"### 🔏 认证授权\n- [[⛱️【系统设计】认证授权扫盲]]\n- ",
+			"type":"text",
+			"x":40,
+			"y":-200,
+			"width":460,
+			"height":240
+		}
+	]
+}
