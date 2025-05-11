@@ -1,105 +1,86 @@
 {
-  "edges": [
-  ],
-  "nodes": [
-    {
-      "height": 297,
-      "id": "c081206ad98abbf3",
-      "styleAttributes": {
-      },
-      "text": "## 线程模型\n- [[🦔【Redis】单线程模型]]\n- [[🍋【Redis】多线程特性和 IO 多路复用]]\n- 拓展：[[🥟 Unix 中的五种线程模型]]",
-      "type": "text",
-      "width": 680,
-      "x": 560,
-      "y": -897
-    },
-    {
-      "height": 777,
-      "id": "7aab96635976a2f8",
-      "styleAttributes": {
-      },
-      "text": "## 实战\n分布式锁：\n- [[⛸️【Redis】自研简单分布式锁]]\n- [[🌾【Redis】Redisson 红锁源码分析]]\n- [[🌴【Redis】RedLock 红锁]]\n\n 缓存：\n - 缓存事故：\n\t - [[🦖【缓存】缓存雪崩]]\n\t - [[🍫【缓存】缓存击穿]]\n\t - [[🕶️【缓存】缓存穿透]] =>  [[🐳 什么是布隆过滤器？]]\n - 缓存策略\n\t - [[🕓【缓存】双重检查锁]]\n\t -  [[♠️【缓存】数据库和缓存的一致性如何保证？]]\n\t- [[🏄‍♂️【缓存】延迟双删策略]]\n\t -  [[🧚 【缓存】关于缓存一致性方案选取的总结]]",
-      "type": "text",
-      "width": 653,
-      "x": -253,
-      "y": -897
-    },
-    {
-      "height": 330,
-      "id": "1edeb142f28dc0fb",
-      "styleAttributes": {
-      },
-      "text": "## 数据类型\n- [[🍵【Redis】字符串 string]]\n- [[🗼【Redis】列表 List]]\n- [[🐗【Redis】哈希映射 Hash]]\n- [[🥭【Redis】集合 Set]]\n- [[🏰【Redis】有序集合 ZSet]]\n- [[🍍【Redis】跳表原理]]",
-      "type": "text",
-      "width": 653,
-      "x": -253,
-      "y": -1360
-    },
-    {
-      "height": 330,
-      "id": "2acb816c7142dd49",
-      "styleAttributes": {
-      },
-      "text": "## 持久化\n- [[🦨【Redis】RDB 持久化是如何实现的？]]\n- [[🐬【Redis】AOF 是如何实现的？]]\n- [[🐊【Redis】RDB + AOF 持久化方案]]\n- 官方文档：[Redis 持久化文档](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/)",
-      "type": "text",
-      "width": 680,
-      "x": 560,
-      "y": -1360
-    },
-    {
-      "height": 415,
-      "id": "cf48b14a429755fa",
-      "styleAttributes": {
-      },
-      "text": "## 过期删除与内存淘汰\n过期删除：\n- [[🏈【Redis】如何设置 Key 过期？]]\n- [[🥚【Redis】过期删除策略]]\n\n内存淘汰：\n- [[📿【Redis】Redis 中的内存淘汰策略]]\n- [[✳️【Redis】LRU 和 LFU 算法实现原理]]",
-      "type": "text",
-      "width": 680,
-      "x": 560,
-      "y": -535
-    },
-    {
-      "height": 330,
-      "id": "578b7147d0ff7bb3",
-      "styleAttributes": {
-      },
-      "text": "## 高可用\n- [[🌵【Redis」主从复制]]\n- [[🍊【Redis】哨兵机制]]",
-      "type": "text",
-      "width": 680,
-      "x": 1480,
-      "y": -1360
-    },
-    {
-      "file": "images/icon-redis.png",
-      "height": 280,
-      "id": "f1139e3790d5caca",
-      "styleAttributes": {
-      },
-      "type": "file",
-      "width": 280,
-      "x": 760,
-      "y": -1740
-    },
-    {
-      "height": 60,
-      "id": "da392a7148b1328b",
-      "styleAttributes": {
-      },
-      "text": "官网：https://redis.io/",
-      "type": "text",
-      "width": 280,
-      "x": 760,
-      "y": -1440
-    },
-    {
-      "height": 777,
-      "id": "087c430dab425b81",
-      "styleAttributes": {
-      },
-      "text": "## 优化\nMoreKey 问题：\n- [[🌶️【Redis】MoreKey 问题]]\n- [[🍵【Redis】ACL 配置]]\n\n大 key 问题：[[🍑【Redis】Big Key 问题]]\n\n热 key 问题：[[🛫【Redis】热 key 问题]]",
-      "type": "text",
-      "width": 680,
-      "x": 1480,
-      "y": -897
-    }
-  ]
+	"edges":[],
+	"nodes":[
+		{
+			"id":"c081206ad98abbf3",
+			"styleAttributes":{},
+			"text":"## 线程模型\n- [[🦔【Redis】单线程模型]]\n- [[🍋【Redis】多线程特性和 IO 多路复用]]\n- 拓展：[[🥟 Unix 中的五种线程模型]]",
+			"type":"text",
+			"x":560,
+			"y":-897,
+			"width":680,
+			"height":297
+		},
+		{
+			"id":"7aab96635976a2f8",
+			"styleAttributes":{},
+			"text":"## 实战\n分布式锁：\n- [[⛸️【Redis】自研简单分布式锁]]\n- [[🌾【Redis】Redisson 红锁源码分析]]\n- [[🌴【Redis】RedLock 红锁]]\n\n 缓存：\n - 缓存事故：\n\t - [[🦖【缓存】缓存雪崩]]\n\t - [[🍫【缓存】缓存击穿]]\n\t - [[🕶️【缓存】缓存穿透]] =>  [[🐳 什么是布隆过滤器？]]\n - 缓存策略\n\t - [[🕓【缓存】双重检查锁]]\n\t -  [[♠️【缓存】数据库和缓存的一致性如何保证？]]\n\t- [[🏄‍♂️【缓存】延迟双删策略]]\n\t -  [[🧚 【缓存】关于缓存一致性方案选取的总结]]",
+			"type":"text",
+			"x":-253,
+			"y":-897,
+			"width":653,
+			"height":777
+		},
+		{
+			"id":"1edeb142f28dc0fb",
+			"styleAttributes":{},
+			"text":"## 数据类型\n- [[🍵【Redis】字符串 string]]\n- [[🗼【Redis】列表 List]]\n- [[🐗【Redis】哈希映射 Hash]]\n- [[🥭【Redis】集合 Set]]\n- [[🏰【Redis】有序集合 ZSet]]\n- [[🍍【Redis】跳表原理]]",
+			"type":"text",
+			"x":-253,
+			"y":-1360,
+			"width":653,
+			"height":330
+		},
+		{
+			"id":"2acb816c7142dd49",
+			"styleAttributes":{},
+			"text":"## 持久化\n- [[🦨【Redis】RDB 持久化是如何实现的？]]\n- [[🐬【Redis】AOF 是如何实现的？]]\n- [[🐊【Redis】RDB + AOF 持久化方案]]\n- 官方文档：[Redis 持久化文档](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/)",
+			"type":"text",
+			"x":560,
+			"y":-1360,
+			"width":680,
+			"height":330
+		},
+		{
+			"id":"cf48b14a429755fa",
+			"styleAttributes":{},
+			"text":"## 过期删除与内存淘汰\n过期删除：\n- [[🏈【Redis】如何设置 Key 过期？]]\n- [[🥚【Redis】过期删除策略]]\n\n内存淘汰：\n- [[📿【Redis】Redis 中的内存淘汰策略]]\n- [[✳️【Redis】LRU 和 LFU 算法实现原理]]",
+			"type":"text",
+			"x":560,
+			"y":-535,
+			"width":680,
+			"height":415
+		},
+		{
+			"id":"578b7147d0ff7bb3",
+			"styleAttributes":{},
+			"text":"## 高可用\n- [[🌵【Redis」主从复制]]\n- [[🍊【Redis】哨兵机制]]",
+			"type":"text",
+			"x":1480,
+			"y":-1360,
+			"width":680,
+			"height":330
+		},
+		{
+			"id":"da392a7148b1328b",
+			"styleAttributes":{},
+			"text":"官网：https://redis.io/",
+			"type":"text",
+			"x":760,
+			"y":-1440,
+			"width":280,
+			"height":60
+		},
+		{
+			"id":"087c430dab425b81",
+			"styleAttributes":{},
+			"text":"## 优化\nMoreKey 问题：\n- [[🌶️【Redis】MoreKey 问题]]\n- [[🍵【Redis】ACL 配置]]\n\n大 key 问题：[[🍑【Redis】Big Key 问题]]\n\n热 key 问题：[[🛫【Redis】热 key 问题]]",
+			"type":"text",
+			"x":1480,
+			"y":-897,
+			"width":680,
+			"height":777
+		},
+		{"id":"95d2a663781a1288","x":765,"y":-1740,"width":270,"height":270,"type":"file","file":"Images/icon-redis.png"}
+	]
 }
