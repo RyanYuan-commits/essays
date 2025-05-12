@@ -1,9 +1,0 @@
-{
-	"nodes":[
-		{"id":"50a2dd31354463a2","type":"text","text":"🔒Git","x":-200,"y":-22,"width":140,"height":62},
-		{"id":"93e81b3378c59443","type":"text","text":"- [[🏀【Git】Git 笔记]]","x":225,"y":-175,"width":435,"height":95}
-	],
-	"edges":[
-		{"id":"e79633a75b942322","fromNode":"50a2dd31354463a2","fromSide":"right","toNode":"93e81b3378c59443","toSide":"left"}
-	]
-}

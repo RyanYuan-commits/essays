@@ -1,20 +1,3 @@
-![[MySQL 下的全文检索.png|1400]]
-
-## 倒排索引简单案例
-| term index | term dictionary | Posting List  | 标记匹配 |     |
-| ---------- | --------------- | ------------- | ---- | --- |
-|            | 小米              | 1,2......100W | ✔    |     |
-|            | 手机              | 1,2,3         | ✔    |     |
-|            | NFC             | 2,3           | ✔    |     |
-|            | 耳机              | 4,5           |      |     |
-|            | 红米              | 5             |      |     |
-上面展示的就是一个非常简单的倒排索引的案例，这里对其中的几个关键部分做下说明：
-	Term Dictionary：存储 **倒排索引** 中所有唯一词项（Terms）及其相关元数据的一个有序集合。
-	Term Index：词项索引，用于快速的定位某个词在 term dictionary 中的位置。
-	Posting List：与某个词项相关的文档 ID 列表，表示该词项在哪些文档中出现，并可能包含附加信息（如词频、位置）。
-## 倒排索引思维导图
-当用户搜索一个词项时，首先会在 **Term Index** 中找到该词项在 **Term Dictionary** 中的位置；然后通过 **Term Dictionary** 定位到该词项对应的 **Post List**；最终，根据 **Post List** 获取相关文档，并返回给用户。
-![[倒排索引思维导图.png]]
 ## 默认分词器
 ### 默认分词器对于英文的分词
 ```http
@@ -215,7 +198,7 @@ POST /_analyze
 	KCWS分词器(字嵌入+Bi-LSTM+CRF) https://github.com/koth/kcws
 	ZPar https://github.com/frcchang/zpar/releases
 ### IK 分词器
-GitHub: https://github.com/medcl/elasticsearch-analysis-ik/releases
+https://github.com/medcl/elasticsearch-analysis-ik/releases
 安装方式：
 ```bash
 # 将 8.4.1 切换为当前 ElasticSearch 的版本
