@@ -1,0 +1,49 @@
+{
+	"edges":[
+		{"id":"f3e42e1064c071fb","fromNode":"50db5d7bc0e965e1","fromSide":"right","toNode":"1a67df67c9a5ca61","toSide":"left","label":"基础知识"},
+		{"id":"1fd1f49ac068f5a6","fromNode":"50db5d7bc0e965e1","fromSide":"left","toNode":"5d977c1f8955b425","toSide":"right","label":"集群和分片"},
+		{"id":"79376c86b09b0014","fromNode":"50db5d7bc0e965e1","fromSide":"right","toNode":"f03d6bde3f15aa92","toSide":"left","label":"查询与搜索"}
+	],
+	"nodes":[
+		{
+			"id":"50db5d7bc0e965e1",
+			"styleAttributes":{},
+			"text":"ElasticSearch",
+			"type":"text",
+			"x":-168,
+			"y":-35,
+			"width":208,
+			"height":55
+		},
+		{
+			"id":"5d977c1f8955b425",
+			"styleAttributes":{},
+			"text":"- [[🥒【ES】集群和分片]]",
+			"type":"text",
+			"x":-880,
+			"y":-37,
+			"width":370,
+			"height":60
+		},
+		{
+			"id":"f03d6bde3f15aa92",
+			"styleAttributes":{},
+			"text":"- [[🍋【ES】DSL 示例]]\n- [[🐌【ES】 高级的 DSL 查询]]\n- [[🍝【ES】使用别名]]",
+			"type":"text",
+			"x":420,
+			"y":140,
+			"width":640,
+			"height":160
+		},
+		{
+			"id":"1a67df67c9a5ca61",
+			"styleAttributes":{},
+			"text":"- [[🌐【ElasticSearch】概念辨析]]\n- [[🍾【ElasticSearch】IK 分词器]]\n- [[🥭【ElasticSearch】倒排索引优化]]",
+			"type":"text",
+			"x":420,
+			"y":-260,
+			"width":640,
+			"height":140
+		}
+	]
+}

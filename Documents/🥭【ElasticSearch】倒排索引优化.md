@@ -1,38 +1,48 @@
-# 词项索引（Term Index）
+![[倒排索引思维导图.png]]
+### 1 Posting List 优化
+解决 Posting List 需要存储数据过多导致的空间浪费问题。
+#### 1.1 索引帧（Frame Of Reference）
+适用于分散紧密的情况，存储的是前后两个数字的差值。
+![[Frame Of Reference 算法.png|center|700]]
+
+#### 1.2 咆哮位图（Roaring Bitmap）
+适用于稀疏分散的情况，存储的是一个坐标值，坐标由某个数字跟这个 ID 做除法和数字对这个 ID 取余构成。
+![[咆哮位图压缩算法.png|center|700]]
+### 2 Term Index 优化
+#### 2.1 前言
 ES 用户搜索的大致过程是这样的：
-- 当用户搜索一个词项时，首先会通过词项索引（Term Index）中找到该词项在词项字典（Term Dictionary） 中的位置；
+- 当用户搜索一个词项时，首先会通过词项索引（Term Index）中找到该词项在词项字典中的位置；
 - 然后通过词项索引定位到该词项对应的 **Post List**；
 - 最终，根据 **Post List** 获取相关文档，并返回给用户。
 我们可以将词项索引理解为一个 K-V 结构，其 key 值就是 term 本身，而 value 就是指向 Term Dictionary 对应项的指针。
 对于搜索引擎这样，Term Dictionary 动辄就是以 “亿“ 起步的，那如何压缩就成了一个迫切需要解决的问题，我们从最经典的字符串压缩算法字典树开始讲起。
-## 字典树 Trie 原理
-如果存储的是英文单词，那无论任何一个词项，无外乎由 26 个英文字母组成，这也就意味越多的词项就会造成的越多的数据 “重复”；
-也就是说词项之间会有很多个公共部分，如 “abandon” 和 “abandonment” 就共享了公共前缀 “abandonment”。
+#### 2.2 字典树 Trie
+如果存储的是英文单词，那无论任何一个词项，无外乎由 26 个英文字母组成，这也就意味越多的词项就会造成的越多的数据 “重复”，也就是说词项之间会有很多个公共部分，如 “abandon” 和 “abandonment” 就共享了公共前缀 “abandonment”。
 Lucene 在存储这种有重复字符的数据的时候，只会存储一次，也就是哪怕有一亿个以 abandon 为前缀的词项，“abandom” 这个前缀也只会存储一次。
-这里就用到了一种我们经常用到的一种数据结构：Trie 即字典树，也叫前缀树（Prefix Tree）。下面我们以 Term Dictionary：（es、estech、eslint、rtech）为例，演示一下 Trie 是如何存储 Term Dictionary 的。
+这里就用到了一种我们经常用到的一种数据结构：Trie 即字典树，也叫前缀树，下面我们以 Term Dictionary：（es、estech、eslint、rtech）为例，演示一下 Trie 是如何存储 Term Dictionary 的。
 在线体验 Trie：[https://www.cs.usfca.edu/~galles/visualization/Trie.html](https://www.cs.usfca.edu/~galles/visualization/Trie.html)
 ![[前缀树演示.png]]
-在上面的案例中，公共前缀 es 虽然被重复利用了，但是 tech 也是重复部分而没有被重复的利用，这是前缀树存在的一个问题。
-## FSM => FSA
+在上面的案例中，公共前缀 es 虽然被重复利用了，但是重复部分 tech 没有被重复的利用，这是前缀树存在的一个问题。
+#### 2.3 从 FSM 到 FSA
 通常我们在计算机的语言中标示一件事物，都会通过某种数学模型来描述。
 假如现在我们要描述一件事：张三一天的所有活动；这里我们采用了一种叫做 FSM（Finite State Machine）的抽象模型，这种模型使用原型的节点标示某个“状态”，状态之间可以互相转换，但是转换过程是无向的。
 比如睡觉醒了可以去工作，工作累了可以去玩手机；或者工作中想去上厕所等等。在这个模型中，标示状态的节点是有限多个的，但状态的转换的情况是无限多的，同一时刻只能处于某一个状态，并且状态的转换是无序切循环的。
-![[FSM 案例.png]]
+![[FSM 案例.png|center|600]]
 这种模型并不适合存储 Term Dictionary，但是它将数据存储在边上的思想却很有价值，在 FSM 基础上衍生出了 FSA（Finite State Acceptor）。
-![[FSA 案例.png]]
+![[FSA 案例.png|center|800]]
 相较于 FSM，FSA 增加了 Entry 和 Final 的概念，也就是由状态转换的不确定性变为了确定，由闭环变为了单向有序，这一点和 Trie 是类似的；
 但是不同的是，FSA 的 Final 节点是唯一的，也是因为这个原因，FSA 在录入和 Trie 相同的 Term Dictionary 数据的时候，从第三步开始才表现出了区别，即尾部复用。如果在第三步的时候还不太明显，那第四步中就可以清楚的看到FSA在后缀的处理上更加高效。
 至此，FSA 已经满足了对 Term Dictionary 数据高效存储的基本要求，但是仍然不满足的一个问题就是，FSA 无法存储 key-value 的数据类型，所以 FST 在 FSA 基础上为每一个出度添加了一个 output 属性，用来存储每个 term 的 value 值。
-## FST 有限状态转换机
+### 3 FST 有限状态转换机
+#### 3.1 FST 插入案例
 下面插入这些 K-V 对，看一下 FST 是如何存储的：（es/10、estech/5、eslint/8、rtech/16）
-![[FST 案例.png]]
+![[FST 案例.png|center|900]]
 1. 当第一个词项 es/10 被写入的时候，其输出的值被保存在第一个节点的出度上；当数据从 FST 中读取的时候，计算每个节点对应的出度以及终止节点的 Final Output 的总和就能得到存储的 value 值。
 2. 第二个词项 estech/5 被写入的时候，其输出值 5 和 es 的输出值 10 产生了冲突，此时为了保证两者均存储正确，FST 会将 10 拆分成两个 5，一个 5 仍然作为 0 号节点的出度，而另一个 5 就需要找一个合适的位置存放；
    而其存放在任何位置都会影响 estech/5 的计算，为了避免这个问题，将数据存储在 Final 节点上，作为其 Final Output 存储。
 3. 剩余两个词项的存储过程比较简单，这里将不多赘述，直接看上面的图例即可。
-# Lucene 中 FST 的构建过程
-## FST 构造过程的 infrastructure
-在 Lucene 中，通过一个泛型来描述 FST 的数据结构，org.apache.lucene.util.fst.FST。
+#### 3.2 Lucene 中 FST 的构建过程
+在 Lucene 中，通过一个泛型来描述 FST 的数据结构，`org.apache.lucene.util.fst.FST`。
 对于 FST 实例对象的构造，Lucene 利用了建造者模式，提供了一个 Builder 类来便捷的获取 FST 实例对象，FST 构造过程中涉及到的大部分代码和使用到的 infrastructure 都作为方法或者内部类在 Builder 类中封装。
 FST 构造过程中的节点，使用 Builder 中的一个静态内部类：UnCompiledNode 来表示：
 ```java
@@ -71,7 +81,6 @@ public static class Arc<T> {
 ```java
 public final class FST<T> implements Accountable {}
 ```
-
 Lucene 中使用建造者模式，构建了一个 Builder 类，在注释中提到，它的作用为：Builds a minimal FST (maps an IntsRef term to an arbitrary output) from pre-sorted terms with outputs；也就是通过一个提前排序好的、具有输出（output）的词项（term）组来构建一个最小的 FST 结构。设计 FST 构建过程的大部分代码都被封装在这个类中。
 在 FST 对象的构建过程中又用一个 Node 类型的对象来描述 FST 模型中的节点，这个节点是 org.apache.lucene.util.fst.Builder 的内部接口：
 ```java

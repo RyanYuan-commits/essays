@@ -26,7 +26,7 @@
 		{
 			"id":"33c70bd9df2bfa24",
 			"styleAttributes":{},
-			"text":"## 中间件\n- [[🍋 MySQL 专题.canvas|🍋 MySQL 专题]]\n- [[🥠 Redis 专题.canvas|🥠 Redis 专题]]\n- [[🌼 ElasticSearch.canvas|🌼 ElasticSearch]]\n- [[🏜️ Kubernetes 专题.canvas|🏜️ Kubernetes 专题]]",
+			"text":"## 中间件\n- [[🍋 MySQL 专题.canvas|🍋 MySQL 专题]]\n- [[🥠 Redis 专题.canvas|🥠 Redis 专题]]\n- [[🌼 ElasticSearch 专题.canvas|🌼 ElasticSearch]]\n- [[🏜️ Kubernetes 专题.canvas|🏜️ Kubernetes 专题]]",
 			"type":"text",
 			"x":-2140,
 			"y":-320,
