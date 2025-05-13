@@ -1,39 +1,54 @@
 {
-	"edges":[
-		{"id":"f62ed83bb53000f6","fromNode":"2b8cf9cb30fe2b0b","fromSide":"right","toNode":"9fd2cfdeaa359cd4","toSide":"left"},
-		{"id":"18479dd62ac82ef2","fromNode":"9fd2cfdeaa359cd4","fromSide":"right","toNode":"2477a65432938a0e","toSide":"left"}
-	],
-	"nodes":[
-		{
-			"id":"2b8cf9cb30fe2b0b",
-			"styleAttributes":{},
-			"text":"🐕 Tips",
-			"type":"text",
-			"x":26,
-			"y":-10,
-			"width":134,
-			"height":60,
-			"color":"5"
-		},
-		{
-			"file":"Documents/🎖️ Docker 常用命令快速查阅.md",
-			"id":"9fd2cfdeaa359cd4",
-			"styleAttributes":{},
-			"type":"file",
-			"x":334,
-			"y":-110,
-			"width":465,
-			"height":260
-		},
-		{
-			"id":"2477a65432938a0e",
-			"styleAttributes":{},
-			"text":"- [[🌽【Docker】部署 Redis]]\n- [[☘️【Docker】部署 ElasticSearch]]\n- [[⛱️【Docker】部署 MySQL]]",
-			"type":"text",
-			"x":920,
-			"y":-53,
-			"width":500,
-			"height":146
-		}
-	]
+  "edges": [
+    {
+      "fromNode": "2b8cf9cb30fe2b0b",
+      "fromSide": "right",
+      "id": "f62ed83bb53000f6",
+      "toNode": "9fd2cfdeaa359cd4",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "9fd2cfdeaa359cd4",
+      "fromSide": "right",
+      "id": "18479dd62ac82ef2",
+      "toNode": "2477a65432938a0e",
+      "toSide": "left"
+    }
+  ],
+  "nodes": [
+    {
+      "color": "5",
+      "height": 60,
+      "id": "2b8cf9cb30fe2b0b",
+      "styleAttributes": {
+      },
+      "text": "🐕 Tips",
+      "type": "text",
+      "width": 134,
+      "x": 26,
+      "y": -10
+    },
+    {
+      "file": "Documents/🎖️ Docker 常用命令快速查阅.md",
+      "height": 260,
+      "id": "9fd2cfdeaa359cd4",
+      "styleAttributes": {
+      },
+      "type": "file",
+      "width": 465,
+      "x": 334,
+      "y": -110
+    },
+    {
+      "height": 146,
+      "id": "2477a65432938a0e",
+      "styleAttributes": {
+      },
+      "text": "- [[🌽【Docker】部署 Redis]]\n- [[☘️【Docker】部署 ElasticSearch]]\n- [[⛱️【Docker】部署 MySQL]]",
+      "type": "text",
+      "width": 500,
+      "x": 920,
+      "y": -53
+    }
+  ]
 }

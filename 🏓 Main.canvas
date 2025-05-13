@@ -1,38 +1,42 @@
 {
-	"edges":[],
-	"nodes":[
-		{
-			"id":"7f3df91152dc4e14",
-			"styleAttributes":{},
-			"text":"## 编程语言\n- [[⛱️ Java 技术栈.canvas|⛱️ Java 技术栈]]\n- [[🦝 Python 技术栈.canvas|🦝 Python 技术栈]]\n- [[🥖 Golang 技术栈.canvas|🥖 Golang 技术栈]]\n- [[🎮 FE 技术栈.canvas|🎮 FE 技术栈]]",
-			"type":"text",
-			"x":-1420,
-			"y":-474,
-			"width":500,
-			"height":234,
-			"color":"5"
-		},
-		{
-			"id":"6c874ca7137799c0",
-			"styleAttributes":{},
-			"text":"## 编程地基\n- [[🍅 设计模式.canvas|🍅  设计模式]]\n- [[🚆 计算机网络.canvas|🚆 计算机网络]]\n- [[🗽 操作系统.canvas|🗽 操作系统]]\n- [[🎨 系统设计.canvas|🎨 系统设计]]",
-			"type":"text",
-			"x":-1420,
-			"y":-160,
-			"width":500,
-			"height":280,
-			"color":"3"
-		},
-		{
-			"id":"33c70bd9df2bfa24",
-			"styleAttributes":{},
-			"text":"## 中间件\n- [[🍋 MySQL 专题.canvas|🍋 MySQL 专题]]\n- [[🥠 Redis 专题.canvas|🥠 Redis 专题]]\n- [[🌼 ElasticSearch 专题.canvas|🌼 ElasticSearch]]\n- [[🏜️ Kubernetes 专题.canvas|🏜️ Kubernetes 专题]]",
-			"type":"text",
-			"x":-2140,
-			"y":-320,
-			"width":500,
-			"height":274,
-			"color":"6"
-		}
-	]
+  "edges": [
+  ],
+  "nodes": [
+    {
+      "color": "5",
+      "height": 234,
+      "id": "7f3df91152dc4e14",
+      "styleAttributes": {
+      },
+      "text": "## 编程语言\n- [[⛱️ Java 技术栈.canvas|⛱️ Java 技术栈]]\n- [[🦝 Python 技术栈.canvas|🦝 Python 技术栈]]\n- [[🥖 Golang 技术栈.canvas|🥖 Golang 技术栈]]\n- [[🎮 FE 技术栈.canvas|🎮 FE 技术栈]]",
+      "type": "text",
+      "width": 500,
+      "x": -1420,
+      "y": -474
+    },
+    {
+      "color": "3",
+      "height": 280,
+      "id": "6c874ca7137799c0",
+      "styleAttributes": {
+      },
+      "text": "## 编程地基\n- [[🍅 设计模式.canvas|🍅  设计模式]]\n- [[🚆 计算机网络.canvas|🚆 计算机网络]]\n- [[🗽 操作系统.canvas|🗽 操作系统]]\n- [[🎨 系统设计.canvas|🎨 系统设计]]",
+      "type": "text",
+      "width": 500,
+      "x": -1420,
+      "y": -160
+    },
+    {
+      "color": "6",
+      "height": 274,
+      "id": "33c70bd9df2bfa24",
+      "styleAttributes": {
+      },
+      "text": "## 中间件\n- [[🍋 MySQL 专题.canvas|🍋 MySQL 专题]]\n- [[🥠 Redis 专题.canvas|🥠 Redis 专题]]\n- [[🌼 ElasticSearch 专题.canvas|🌼 ElasticSearch]]\n- [[🏜️ Kubernetes 专题.canvas|🏜️ Kubernetes 专题]]",
+      "type": "text",
+      "width": 500,
+      "x": -2140,
+      "y": -320
+    }
+  ]
 }

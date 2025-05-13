@@ -1,17 +1,149 @@
 {
   "edges": [
+    {
+      "fromNode": "aff96fbc9d40082a",
+      "fromSide": "right",
+      "id": "6c8a0bfc962c4709",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "8f7d5e51c1b384e6",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "8f7d5e51c1b384e6",
+      "fromSide": "right",
+      "id": "699d1813cbd76876",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "0ccb006ef6ce029e",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "8f7d5e51c1b384e6",
+      "fromSide": "right",
+      "id": "11f0c3024d3b877d",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "ae4211a8404c079b",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "8f7d5e51c1b384e6",
+      "fromSide": "right",
+      "id": "9f878786b23c9712",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "10ddd858a9604fba",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "aff96fbc9d40082a",
+      "fromSide": "right",
+      "id": "a54aa588e61f08c3",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "03d8c64992b5bd4c",
+      "toSide": "left"
+    }
   ],
   "nodes": [
     {
-      "height": 340,
-      "id": "a8ba43388afffca8",
+      "color": "2",
+      "height": 60,
+      "id": "aff96fbc9d40082a",
       "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
       },
-      "text": "## 基础概念\n- [[🏀 什么是云原生？]]\n- [[🎄 服务网格]]",
+      "text": "**Kubernetes 专题**",
       "type": "text",
-      "width": 560,
-      "x": -440,
-      "y": -260
+      "width": 214,
+      "x": -354,
+      "y": -99
+    },
+    {
+      "height": 60,
+      "id": "8f7d5e51c1b384e6",
+      "styleAttributes": {
+        "border": "invisible",
+        "shape": null,
+        "textAlign": null
+      },
+      "text": "1 基础知识",
+      "type": "text",
+      "width": 160,
+      "x": -20,
+      "y": -320
+    },
+    {
+      "height": 60,
+      "id": "10ddd858a9604fba",
+      "styleAttributes": {
+        "border": "dotted"
+      },
+      "text": "- [[🍍【Kubernetes】实战 Web 应用部署]]",
+      "type": "text",
+      "width": 440,
+      "x": 300,
+      "y": -220
+    },
+    {
+      "height": 60,
+      "id": "0ccb006ef6ce029e",
+      "styleAttributes": {
+        "border": "dotted"
+      },
+      "text": "- [[🏀【Kubernetes】云原生概念扫盲]]\n",
+      "type": "text",
+      "width": 440,
+      "x": 300,
+      "y": -320
+    },
+    {
+      "height": 60,
+      "id": "ae4211a8404c079b",
+      "styleAttributes": {
+        "border": "dotted"
+      },
+      "text": "- [[🐳【Kubernetes】简介]]",
+      "type": "text",
+      "width": 440,
+      "x": 300,
+      "y": -420
+    },
+    {
+      "height": 220,
+      "id": "4c88a8f84ff3d1b8",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "### 分布式总结\n- [[🍍【分布式】CAP & BASE 理论]]\n- [[🛎️【分布式】分布式算法总结]]\n- [[🐋【分布式】分布式 ID 总结]]",
+      "type": "text",
+      "width": 440,
+      "x": -740,
+      "y": -840
+    },
+    {
+      "height": 100,
+      "id": "03d8c64992b5bd4c",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "- https://www.yuque.com/fairy-era/yg511q/szg74m\n- https://juejin.cn/post/7440477979752808500?searchId=20250513185102953BA76E1C1BC35B67C2",
+      "type": "text",
+      "width": 1060,
+      "x": -20,
+      "y": 140
     }
   ]
 }
