@@ -1,4 +1,4 @@
-## Redis
+### Redis
 ```bash
 docker run -it \
 -v ~/Documents/volumes/redis_conf/redis_master/conf:/usr/local/etc/redis \
@@ -7,7 +7,7 @@ docker run -it \
 -d redis \
 redis-server /usr/local/etc/redis/redis.conf
 ```
-## MySQL
+### MySQL
 ```bash
 docker run \
 -p 3306:3306 \
@@ -20,8 +20,8 @@ docker run \
 -e MYSQL_ROOT_PASSWORD=my-secret-pw \
 -d mysql:8.3.0
 ```
-## ES 相关部署
-### 配置启动 ElasticSearch
+### ES 相关部署
+#### 配置启动 ElasticSearch
 拉取镜像
 ```bash
 docker pull elasticsearch:7.17.9
@@ -49,7 +49,7 @@ docker run -p 9200:9200 -p 9300:9300 --name elasticsearch \
 http.cors.enabled: true
 http.cors.allow-origin: "*"
 ```
-### 配置启动 Kibana
+#### 配置启动 Kibana
 ```bash
 docker cp e7aab1c16542:/usr/share/kibana/config /Users/bytedance/Documents/volumes/kibana/config
 ```
@@ -65,7 +65,7 @@ docker run --name kibana \
  ```
  i18n.locale: "zh-CN"
 ```
-### 配置启动 ElasticSearch-Head
+#### 配置启动 ElasticSearch-Head
 ```bash
 docker run -d --name=elasticsearch-head -p 9100:9100 \
 mobz/elasticsearch-head:5-alpine

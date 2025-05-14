@@ -1,26 +1,50 @@
 {
-	"edges":[],
-	"nodes":[
-		{
-			"id":"28be565b34243f87",
-			"styleAttributes":{},
-			"text":"### 🧶 基础知识\n- [[🐋【系统设计】Restful API]]\n- [[🖌️ DDD 架构设计.canvas|🖌️ DDD 架构设计]]",
-			"type":"text",
-			"x":-500,
-			"y":-200,
-			"width":500,
-			"height":280
-		},
-		{
-			"id":"5b9cbc1392fc7fae",
-			"styleAttributes":{},
-			"text":"### 🔏 认证授权\n- [[⛱️【系统设计】认证授权扫盲]]\n- [[🍊【系统设计】CSRF 攻击]]\n- [[🌾【系统设计】JWT 详解]]\n- [[🥩【系统设计】SSO 单点登录]]",
-			"type":"text",
-			"x":40,
-			"y":-200,
-			"width":460,
-			"height":280
-		},
-		{"id":"73f3453297a3df95","type":"text","text":"### 💸 数据安全\n- [[☘️【系统设计】常见加密算法总结]]","x":-500,"y":220,"width":500,"height":280}
-	]
+  "edges": [
+  ],
+  "nodes": [
+    {
+      "height": 280,
+      "id": "28be565b34243f87",
+      "styleAttributes": {
+      },
+      "text": "### 🧶 基础知识\n- [[🐋【系统设计】Restful API]]\n- [[🖌️ DDD 架构设计.canvas|🖌️ DDD 架构设计]]",
+      "type": "text",
+      "width": 500,
+      "x": -500,
+      "y": -200
+    },
+    {
+      "height": 340,
+      "id": "73f3453297a3df95",
+      "styleAttributes": {
+      },
+      "text": "### 💸 数据安全\n- [[☘️【系统设计】常见加密算法总结]]",
+      "type": "text",
+      "width": 500,
+      "x": -500,
+      "y": 160
+    },
+    {
+      "height": 340,
+      "id": "02561603f18d505a",
+      "styleAttributes": {
+      },
+      "text": "### 🥟 设计模式\n- [[🦋【设计模式】简单工厂模式]]\n- [[☘️【设计模式】工厂方法模式]]\n- [[⛱️【设计模式】抽象工厂模式]]\n- [[🧂【设计模式】建造者模式]]\n- [[🥗【设计模式】原型模式]]\n-  [[🍓【设计模式】单例模式]]",
+      "type": "text",
+      "width": 500,
+      "x": 60,
+      "y": 160
+    },
+    {
+      "height": 280,
+      "id": "5b9cbc1392fc7fae",
+      "styleAttributes": {
+      },
+      "text": "### 🔏 认证授权\n- [[⛱️【系统设计】认证授权扫盲]]\n- [[🍊【系统设计】CSRF 攻击]]\n- [[🌾【系统设计】JWT 详解]]\n- [[🥩【系统设计】SSO 单点登录]]",
+      "type": "text",
+      "width": 500,
+      "x": 60,
+      "y": -200
+    }
+  ]
 }

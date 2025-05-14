@@ -1,41 +1,35 @@
 前导知识：[[🍜 红黑树]]
-## 1 散列表与哈希算法
-### 1.1 数组和链表
-![[数组和链表.png|500]]
-==数组==：数组是一种 **线性数据结构**，由一组连续的内存单元组成，每个元素都有固定的 **索引** 位置。
-数组的优点是 **可以通过索引快速访问元素**，访问元素的时间复杂度为O(1)。
-但是因为数组的长度是指定的，所以进行插入和扩容的操作非常麻烦，需要将原本数组中的内容转移到新数组中才能完成扩容的操作。
-
-==链表==：链表也是一种线性数据结构，由一系列节点组成，每个节点包含一个数据元素和一个指向下一个节点的指针。
-链表的优点是 **插入和删除操作** 可以在O(1)时间内完成，无需移动其他元素。
-缺点是访问元素时需要 **遍历整个链表**，时间复杂度为O(n)，并且相比数组占用更多的内存空间。
-### 1.2 散列表
-![[散列表.png|500]]
+### 1 散列表与哈希算法
+#### 1.1 数组和链表
+![[数组和链表.png|center|500]]
+1. ==数组==：数组是一种 **线性数据结构**，由一组连续的内存单元组成，每个元素都有固定的 **索引** 位置。
+   数组的优点是 **可以通过索引快速访问元素**，访问元素的时间复杂度为O(1)。
+   但是因为数组的长度是指定的，所以进行插入和扩容的操作非常麻烦，需要将原本数组中的内容转移到新数组中才能完成扩容的操作。
+2. ==链表==：链表也是一种线性数据结构，由一系列节点组成，每个节点包含一个数据元素和一个指向下一个节点的指针。
+   链表的优点是 **插入和删除操作** 可以在O(1)时间内完成，无需移动其他元素。
+   缺点是访问元素时需要 **遍历整个链表**，时间复杂度为O(n)，并且相比数组占用更多的内存空间。
+#### 1.2 散列表
+![[散列表.png|center|500]]
 与上面的两种数据结构不同的是，散列表是用来 **存储键值对** 的，在实现方式上，散列表像是数组 + 链表的一个结合，也就是基本的结构是一个数组，但数组中存储的元素是一个链表（本文仅讨论链地址法）。
-提到数组，最显著的特点就是索引，散列表是通过 **哈希算法** 将键映射成一个长度固定的二进制数，然后通过 **路由算法** 将其映射到数组的索引中；
-这样做了之后，如果我们在想要寻找这个被存储的元素，只需要通过相同的 key -> 哈希算法 -> 路由算法 的方式，就可以得到数组中的唯一一个索引。
-
+提到数组，最显著的特点就是索引，散列表是通过 **哈希算法** 将键映射成一个长度固定的二进制数，然后通过 **路由算法** 将其映射到数组的索引中；如果我们在想要寻找这个被存储的元素，只需要通过相同的 key -> 哈希算法 -> 路由算法 的方式，就可以得到数组中的一个索引。
 通过这样的方式，散列表拥有了和链表一样快的插入速度，也有了可以媲美数组的查询速度，但是一切使用哈希算法的结构都不可避免的会遇到哈希冲突，即不同的 key 经过映射之后得到了相同的结果，需要解决冲突的方法，链地址法、开放散列法等；
-
 在 HashMap 中使用的是优化之后的链地址法，即在数组的某个位置存储的是一个链表结构，如果遇到哈希冲突就将这些元素链接起来；与传统的链地址法不同的是，HashMap 的链地址法当某个位置链表过长的时候，会将这个链表转化为一个红黑树。
-### 1.3 哈希算法
-![[哈希算法.png|700]]
+#### 1.3 哈希算法
+![[哈希算法.png|center|700]]
 Hash 的中文释义为散列，一般音译为哈希。哈希算法的功能是将 **任意长度** 的输入，通过算法转变为固定长度的输出。
 映射的规则称为 **哈希算法**，原始数据通过映射之后得到的二进制串就是 **哈希值**。
-
 哈希算法有如下的几个特点：
 - 无法通过哈希值反推出原始的数据，且数据一点微小的变化都会得到完全不同的哈希值，相同的数据会得到完全相同的哈希值，这两个特点使得哈希算法在安全方面有广泛的应用，比如 https 的数字证书的签名认证。
 - 哈希算法的执行效率很高效，长文本也能很快的算出对应的哈希值。
 - 由于是将任意长度是输出映射为固定长度的输出，将无限种数据映射为有范围的数据，必然会导致冲突，这也就是我们常说的 **哈希冲突**。如何处理哈希冲突是使用哈希函数的时候需要解决的问题。
-## 2 HashMap 实现概览
-### 2.1 数据结构
+### 2 HashMap 实现概览
+#### 2.1 数据结构
 HashMap 是基于 **散列表** 实现的，其底层是通过数组+链表（Java8 引入了红黑树）来存储数据的。
 HashMap 内部维护了一个数组，它是 HashMap 实例的一个成员变量，名为 table，这个数组的每个位置称为桶（Bucket）。 初始的数组长度如果不指定的话默认为 16，当插入元素过多的时候，HashMap 会使用一个更大的数组替换原来的 table，然后将原本 table 中的元素重新映射到这个新的数组。
-
 Java 8 之后，HashMap 使用了数组 + 链表 + 红黑树的结构，以应对哈希冲突。每个桶可以存储一个链表或红黑树。
 当哈希冲突发生时，新的键值对会被插入到对应位置的链表或红黑树中，具体来说，当某个链表的长度超过一定阈值（默认为8），且 table 的长度超过某个阈值（默认为 64）的时候，这个长链表会转换为红黑树，以提高查找、插入、删除操作的效率；红黑树是一种二叉查找树，它的查找时间复杂度为 O(log n) ，链表则是 O(n)。
-### 2.2 路由算法
-大致步骤是这样的：调用 key 的 hashCode 方法，key 对象映射为一个 32 位整数，为了尽可能减少哈希冲突，再对 hashCode 得到的哈希值进行一次扰动，作为最终的哈希值。
+#### 2.2 路由算法
+大致过程是这样的：调用 key 的 hashCode 方法，key 对象映射为一个 32 位整数，为了尽可能减少哈希冲突，再对 hashCode 得到的哈希值进行一次扰动，作为最终的哈希值。
 ```java
 // 扰动函数
 static final int hash(Object key) {
@@ -46,7 +40,7 @@ static final int hash(Object key) {
 // 路由计算
 (table.length - 1) & node.hash
 ```
-### 2.3 Node 节点
+#### 2.3 Node 节点
 Node 将 value 做一层包装，存储一些其他重要信息：
 ```java
 /**
@@ -72,7 +66,7 @@ static class Node<K,V> implements Map.Entry<K,V> {
 }
 ```
 
-当 Bucket 中存储的是链表的时候，使用的节点类是 Node，而当存储的是红黑树的时候，使用 TreeNode 作为构成元素：
+当 Bucket 中存储的是链表的时候，使用的节点类是 Node，而当存储的是红黑树的时候，构成元素是 TreeNode：
 ```java
 static final class TreeNode<K,V> extends LinkedHashMap.Entry<K,V> {  
     TreeNode<K,V> parent;
@@ -84,21 +78,20 @@ static final class TreeNode<K,V> extends LinkedHashMap.Entry<K,V> {
     // ......
 }
 ```
-TreeNode 也是 HashMap 的静态内部类，它继承自 LinkedHashMap.Entry，TreeNode 除了作为红黑树的节点以外，还作为一个双向的链表节点；
-TreeNode 在 Node 的基础上拓展了 parent、left、right、red 这些红黑树相关的属性，以及 prev 这个指向前驱节点，用于维护双向链表的属性。
-## 3 源码阅读
-### 3.1 关键常量解读
+`TreeNode` 也是 `HashMap` 的静态内部类，它继承自 `LinkedHashMap.Entry`，`TreeNode` 除了作为红黑树的节点以外，还作为一个双向的链表节点；`TreeNode` 在 `Node` 的基础上拓展了与红黑树相关的属性。
+### 3 源码阅读
+#### 3.1 关键常量解读
 在正式阅读关键源码之前，我们先从了解 HashMap 中的关键常量开始，这些关键常量和 HashMap 的基本结构，以及扩容、树化等特殊机制息息相关，掌握它们对于理解源码很有帮助。
 
 ```java
 static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; // aka 16
 ```
-- 如果在实例化 HashMap 的时候没有指定初始容量，其默认值为 16。
+如果在实例化 HashMap 的时候没有指定初始容量，其默认值为 16。
 
 ```java
 static final int MAXIMUM_CAPACITY = 1 << 30;
 ```
-- 表示 table 的最大容量，限定了一个扩容的上限，在后续扩容的时候，如果发现要扩容到比上限还要大，就将容量先扩容到上限，如果在容量已经达到上限后再次执行扩容方法的话，则不会继续扩容。
+表示 table 的最大容量，限定了一个扩容的上限，在后续扩容的时候，如果发现要扩容到比上限还要大，就将容量先扩容到上限，如果在容量已经达到上限后再次执行扩容方法的话，则不会继续扩容。
 
 ```java
 static final float DEFAULT_LOAD_FACTOR = 0.75f;
@@ -117,7 +110,7 @@ static final int MIN_TREEIFY_CAPACITY = 64;
 - 上面的三个常量都和 HashMap 的树化机制有关，`TREEIFY_THRESHOLD` 和 `MIN_TREEIFY_CAPACITY` 决定了链表树化的时间，具体来说，当一个链表的长度达到 8 且此时 table 数组的长度达到 64，这个链表会转化为红黑树结构；
 - 之所以也要对 table 的长度做限定，是因为当 table 长度过小的时候，发生哈希冲突的概率很大，链表长度会很容易达到阈值，这时候执行树化操作性价比较低，频繁树化操作会影响性能。
 - `UNTREEIFY_THRESHOLD` 是树降级为链表的阈值，当树中的元素降低到 6 个后，将树降级为链表。
-### 3.2 关键属性解读
+#### 3.2 关键属性解读
 ```java
 transient Node<K,V>[] table;
 ```
@@ -139,8 +132,8 @@ final float loadFactor;
 ```
 负载因子的值，可以通过 HashMap(int initialCapacity, float loadFactor) 构造方法指定。
 
-### 3.3 构造方法
-#### 3.3.1 指定容量和负载因子
+#### 3.3 构造方法
+##### 3.3.1 指定容量和负载因子
 ```java
     public HashMap(int initialCapacity, float loadFactor) {
         if (initialCapacity < 0)
@@ -155,14 +148,14 @@ final float loadFactor;
 ```
 - 当发现初始容量大于容量上限时，会先将 initialCapacity 设为 MAXIMUM_CAPACITY。
 - 调用 `tableSizeFor` 方法用于计算 table 最终容量，因为 HashMap 的数组容量一定是 2 的幂，然后将结果赋值给 `this.threshold`，当创建 table 数组的时候，会将 threshold 作为容量。
-#### 3.3.2 指定初始容量
+##### 3.3.2 指定初始容量
 ```java
 public HashMap(int initialCapacity) {
 	this(initialCapacity, DEFAULT_LOAD_FACTOR);
 }
 ```
 指定初始容量的构造方法，直接调用了前面的 HashMap(int initialCapacity, float loadFactor) 方法。 
-#### 3.3.3 空参构造
+##### 3.3.3 空参构造
 ```java
 public HashMap() {
 	this.loadFactor = DEFAULT_LOAD_FACTOR;
@@ -170,7 +163,7 @@ public HashMap() {
 ```
 - 为负载因子赋默认值 `DEFAULT_LOAD_FACTOR`
 - 方法中没有指定 threshold 值，HashMap 将 threshold 为零作为用户未指定初始容量的标识，在创建 table 的时候，如果发现 threshold 为 0，就会将 table 的容量设置为默认值 16。
-#### 3.3.4 基于其他 Map 构造
+##### 3.3.4 基于其他 Map 构造
 ```java
 public HashMap(Map<? extends K, ? extends V> m) {
 	this.loadFactor = DEFAULT_LOAD_FACTOR;
@@ -207,7 +200,7 @@ final void putMapEntries(Map<? extends K, ? extends V> m, boolean evict) {
 - HashMap 为了优化内存，将 table 的初始化时机设计到首次插入元素后；
 - 使用 HashMap#tableSizeFor 方法保证了 table 的容量一定是 2 的幂次。
 
-### 3.4 putVal 方法
+#### 3.4 putVal 方法
 当我们想要向 HashMap 中插入元素的，会调用 put 方法，这个方法底层调用的是 putVal 方法：
 ```java
  public V put(K key, V value) {
@@ -303,9 +296,9 @@ final void treeifyBin(Node<K,V>[] tab, int hash) {
     }  
 }
 ```
-### 3.5 resize 方法
+#### 3.5 resize 方法
 resize 可以在 table 未创建的时候被调用，用来创建 table，也可以对已创建的 table 进行扩容，方法总体可以分为两部分，第一部分是确定新的容量和新的扩容阈值，第二部分是执行实际的扩容操作：
-#### 3.5.1 确定新的容量和扩容阈值
+##### 3.5.1 确定新的容量和扩容阈值
 ```java
 final Node<K,V>[] resize() {
 	// 第一部分：确定 newCap 和 newThr 的值
@@ -346,7 +339,7 @@ final Node<K,V>[] resize() {
 - 当 table 的未被创建时：
 	- 如果 oldThr 不为 0，表明用户指定了初始容量，将其赋值给 newCap，否则，使用默认容量
 	- 使用默认的负载因子计算出扩容阈值，赋值给 newThr。
-#### 3.5.2 创建新 table 并迁移
+##### 3.5.2 创建新 table 并迁移
 ```java
 // 第二部分：将原数组中内容复制到拓展后的新数组中
 @SuppressWarnings({"rawtypes","unchecked"})
@@ -371,7 +364,7 @@ return newTab;
 ```
 - 首先根据上面计算出来的新的容量，创建新的 table 数组；
 - 然后如果老 table 不为 null，就需要执行复制转移的操作，使用一个 for 循环来遍历老 table 的所有位置并执行迁移；
-#### 3.5.3 对链表迁移的优化
+##### 3.5.3 对链表迁移的优化
 对于链表节点，HashMap 在迁移的时候进行了优化：
 ```java
 Node<K,V> loHead = null, loTail = null;
@@ -412,8 +405,8 @@ Node<K,V> loHead = null, loTail = null; // 需要放置在新 table 低位节点
 Node<K,V> hiHead = null, hiTail = null; // 需要放置在新 table 高位的节点的头部和尾部
 ```
 在迁移的时候，构造出低位和高位两个链表，再存入新 table 的 Bucket 中，大大优化了迁移的效率。
-## 4 HashMap 的线程安全问题
-### 4.1 多线程 put 导致的元素丢失问题
+### 4 HashMap 的线程安全问题
+##### 4.1 多线程 put 导致的元素丢失问题
 如果多个线程同时向 HashMap 中添加元素，会导致元素丢失的问题，我们根据源码来分析一下：
 ```java
 else { 
@@ -448,7 +441,7 @@ break;
 此时线程 1 插入了 k2，结构如下图所示
 ![[多线程 put 导致的元素丢失问题 2.png|300]]
 但是线程 2 仍然会执行 `p.next = newNode(hash, key, value, null);`，此时 k2 就丢失了，这就是多线程 put 导致的元素丢失问题。
-### 4.2 put 和 get 并发的时候可能导致 get 为 null
+##### 4.2 put 和 get 并发的时候可能导致 get 为 null
 线程 1 执行 put 时，因为元素个数超出 threshold 而导致扩容，线程 2 此时执行 get，有可能导致这个问题。
 ```java
 Node<K,V>[] newTab = (Node<K,V>[])new Node[newCap];
@@ -456,7 +449,7 @@ table = newTab;
 ```
 这是因为在 resize 扩容方法中，是先将 table 设置为 newTab，然后再复制的；
 此时如果有另一个线程调用 get 方法，而新的数组没有被填充完，那此时这个线程得到的就是值。
-### 4.3 JDK7 中并发 resize 会造成循环链表
+##### 4.3 JDK7 中并发 resize 会造成循环链表
 JDK 7 对 resize 方法在并发条件下，可能会产生循环链表，这个问题在 JDK 8 已经得到了解决，JDK7 中的 resize 方法是这样的：
 ```java
 void resize(int newCapacity) {

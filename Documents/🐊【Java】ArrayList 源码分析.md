@@ -2,8 +2,8 @@
 - ArrayList 中实际负责存储的结构是一个名为 elementData 的 Object 数组。
 - 当每次创建 ArrayList 对象的时候，如果使用的是无参构造器，初始的容量为 10，后续扩容会变为原来的 1.5 倍。
 - 如果使用的是指定大小的构造器，则初始的 elementData 的容量就是指定的大小，如果需要扩容，也是扩容为原来的的 1.5 倍。
-## 1 构造方法
-### 1.1 无参构造
+### 1 构造方法
+#### 1.1 无参构造
 ```java
 public ArrayList() {
 	this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA;
@@ -12,7 +12,7 @@ public ArrayList() {
 将 elementData 赋值为 DEFAULTCAPACITY_EMPTY_ELEMENTDATA，这是个空数组。
 除了这个常量以外，ArrayList 还有一个名为 EMPTY_ELEMENTDATA 的常量，它也是一个空数组，当用户指定初始容量为 0 的时候，elementData 会被赋值为 EMPTY_ELEMENTDATA，起到一个标识作用。
 
-### 1.2 指定初始容量构造
+#### 1.2 指定初始容量构造
 ```java
     public ArrayList(int initialCapacity) {
         if (initialCapacity > 0) {
@@ -33,7 +33,7 @@ public ArrayList() {
 - 如果指定的初始容量大于零，就直接构造一个容量为初始容量的 Object 数组，然后将其赋值给 elementData；
 - 否则，当初始的容量等于 0 的时候，将 elementData 赋值为 EMPTY_ELEMENTDATA；
 - 如果是负数，抛异常。
-### 1.3 基于其他 List 构造
+#### 1.3 基于其他 List 构造
 ```java
 public ArrayList(Collection<? extends E> c) {
     Object[] a = c.toArray();
@@ -54,8 +54,8 @@ public ArrayList(Collection<? extends E> c) {
 - 如果 c.getClass() 为 ArrayList 的话，就直接将数组 a 赋值给 elementData ，如果不是的话，需要再做一次转化，通过 Arrays.copyOf() 方法将数组复制为对象数组，这样做的原因有两个：
 	- 一是为了保证类型安全；
 	- 二是为了防止那个自定义的集合将把自己内部的数组的引用传过来，此时两个 List 底层操控的是相同的数组，会引起很多意料之外的问题。
-## 2 底层扩容机制
-### 2.1 判断是否需要扩容
+### 2 底层扩容机制
+#### 2.1 判断是否需要扩容
 ```java
 public boolean add(E e) {
 	ensureCapacityInternal(size + 1);  // Increments modCount!!
@@ -87,7 +87,7 @@ private void ensureExplicitCapacity(int minCapacity) {
 - 使用 `calculateCapacity(elementData, minCapacity)` 方法去计算容量；
 - 如果用户创建的时候没有指定初始容量，取 minCapacity 和 DEFAULT_CAPACITY 的最大值作为容量。
 - 然后去判断 elementData 数组长度是否足够，如果不足就进入扩容方法 grow()。
-### 2.2 扩容方法
+#### 2.2 扩容方法
 ```java
 private void grow(int minCapacity) {
 		// overflow-conscious code
@@ -104,7 +104,7 @@ private void grow(int minCapacity) {
 - 将 newCapacity 赋值为 oldCapacity 的 1.5 向下取整；
 - 看能否满足 minCapacity，如果不能则本次扩容为 minCapacity
 - 调用 Arrays.copyOf(elementData, newCapacity); 将原本 elementData 中的内容移动到新拓展的长度为 newCapacity 的数组中，这就完成了一个完整的扩容；
-### 2.3 空参构造与初始容量指定为 0
+#### 2.3 空参构造与初始容量指定为 0
 对于无参构造和初始容量为 0 的有参数构造，扩容的路径是不同的：
 - 如果是无参构造，它带进来的 minCapacity 就是 10，最终其会被拓展为 10
 - 如果是有参构造的话，带进来的 minCapacity 其实就是 1，且计算得 int newCapacity = oldCapacity + (oldCapacity >> 1); 结果是 0，那最终 elementData 会被拓展成 1，其扩容过程是这样的：
