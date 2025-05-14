@@ -43,17 +43,6 @@
       },
       "toNode": "10ddd858a9604fba",
       "toSide": "left"
-    },
-    {
-      "fromNode": "aff96fbc9d40082a",
-      "fromSide": "right",
-      "id": "a54aa588e61f08c3",
-      "styleAttributes": {
-        "arrow": "blunt",
-        "pathfindingMethod": "square"
-      },
-      "toNode": "03d8c64992b5bd4c",
-      "toSide": "left"
     }
   ],
   "nodes": [
@@ -79,7 +68,7 @@
         "shape": null,
         "textAlign": null
       },
-      "text": "1 基础知识",
+      "text": "**1 基础知识**",
       "type": "text",
       "width": 160,
       "x": -20,
@@ -132,18 +121,6 @@
       "width": 440,
       "x": -740,
       "y": -840
-    },
-    {
-      "height": 100,
-      "id": "03d8c64992b5bd4c",
-      "styleAttributes": {
-        "border": "invisible"
-      },
-      "text": "- https://www.yuque.com/fairy-era/yg511q/szg74m\n- https://juejin.cn/post/7440477979752808500?searchId=20250513185102953BA76E1C1BC35B67C2",
-      "type": "text",
-      "width": 1060,
-      "x": -20,
-      "y": 140
     }
   ]
 }
