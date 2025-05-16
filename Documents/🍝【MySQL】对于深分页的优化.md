@@ -1,8 +1,8 @@
-## 什么是深分页问题？
+### 什么是深分页问题？
 大家都写过分页查询，通过mysql的limit关键字，例如我要查第一页10条，那么就是limit 0,10。这看起来没啥问题。
 但假如数据量很大，页数很多，我查第1000000页的10条，那就是limit 1000000,10；此时执行速度明显变慢，这就是深分页问题造成的。
 同样的查询数据量，深分页可能1s左右，但是你查最初的分页的时候，可能只需要几毫秒。
-## 深分页的执行流程
+### 深分页的执行流程
 ```sql
 SELECT id, name FROM red_pakcet_detail WHERE create_time > '2022-06-13' LIMIT 100000, 10;
 ```
@@ -12,8 +12,8 @@ SELECT id, name FROM red_pakcet_detail WHERE create_time > '2022-06-13' LIMIT 10
 原因：
 1、limit 要扫描 10000010 条数据，并且进行丢弃。 
 2、扫描更多数据也意味着回表的数据更多。
-## 解决方案
-### 子查询优化
+### 解决方案
+#### 子查询优化
 ```sql
 SELECT rpd.id, rpd.name
 FROM red_packet_detail rpd
@@ -25,7 +25,7 @@ JOIN (
 ) subquery ON rpd.id = subquery.id;
 ```
 查询出所有需要列出的数据的 id，减少在查询过程中的 100000 次回表操作。
-### 偏移法
+#### 偏移法
 ```sql
 SELECT id, name 
 FROM red_packet_detail 

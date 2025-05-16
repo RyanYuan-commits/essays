@@ -1,22 +1,21 @@
-# 目标
+### 目标
 在 Spring 中有一个 Event 事件功能，它可以提供事件的定义、发布以及监听事件来完成一些自定义的动作。比如你可以定义一个新用户注册的事件，当有用户执行注册完成后，在事件监听中给用户发送一些优惠券和短信提醒，这样的操作就可以把属于基本功能的注册和对应的策略服务分开，降低系统的耦合。以后在扩展注册服务，比如需要添加风控策略、添加实名认证、判断用户属性等都不会影响到依赖注册成功后执行的动作。
 
 那么在本章节我们需要以观察者模式的方式，设计和实现 Spring Event 的容器事件和事件监听器功能，最终可以让我们在现有实现的 Spring 框架中可以定义、监听和发布自己的事件信息。
-# 方案
-其实事件的设计本身就是一种观察者模式的实现，它所要解决的就是一个对象状态改变给其他对象通知的问题，而且要考虑到易用和低耦合，保证高度的协作。
-在功能实现上我们需要定义出事件类、事件监听、事件发布，而这些类的功能需要结合到 Spring 的 AbstractApplicationContext#refresh()，以便于处理事件初始化和注册事件监听器的操作。整体设计结构如下图：
+### 方案
+其实事件的设计本身就是一种观察者模式的实现，它所要解决的就是一个对象状态改变给其他对象通知的问题，而且要考虑到易用和低耦合，保证高度的协作；在功能实现上我们需要定义出事件类、事件监听、事件发布，而这些类的功能需要结合到 Spring 的 `AbstractApplicationContext#refresh()`，以便于处理事件初始化和注册事件监听器的操作。整体设计结构如下图：
 ![[【small-spring】容器事件和事件监听器 架构图.png]]
 - 在整个功能实现过程中，仍然需要在面向用户的应用上下文 `AbstractApplicationContext` 中添加相关事件内容，包括：初始化事件发布者、注册事件监听器、发布容器刷新完成事件。
 - 使用观察者模式定义事件类、监听类、发布类，同时还需要完成一个广播器的功能，接收到事件推送时进行分析处理符合监听事件接受者感兴趣的事件，也就是使用 isAssignableFrom 进行判断。
 - isAssignableFrom 和 instanceof 相似，不过 isAssignableFrom 是用来判断子类和父类的关系的，或者接口的实现类和接口的关系的，默认所有的类的终极父类都是Object。如果A.isAssignableFrom(B)结果是true，证明B可以转换成为A,也就是A可以由B转换而来。
-# 实现
-![[【small-spring】容器事件和事件监听器 核心类图.png|1500]]
+### 实现
+![[【small-spring】容器事件和事件监听器 核心类图.png|center|900]]
 - 以上整个类关系图以围绕实现 event 事件定义、发布、监听功能实现和把事件的相关内容使用 AbstractApplicationContext#refresh 进行注册和处理操作。
 - 在实现的过程中主要以扩展 spring context 包为主，事件的实现也是在这个包下进行扩展的，当然也可以看出来目前所有的实现内容，仍然是以 IOC 为主。
 - `ApplicationContext` 容器继承事件发布功能接口 `ApplicationEventPublisher`，并在实现类中提供事件监听功能。
 - `ApplicationEventMulticaster` 接口是注册监听器和发布事件的广播器，提供添加、移除和发布事件方法。
 - 最后是发布容器关闭事件，这个仍然需要扩展到 `AbstractApplicationContext#close` 方法中，由注册到虚拟机的钩子实现。
-## 定义和实现事件
+#### 定义和实现事件
 ```java
 public abstract class ApplicationEvent extends EventObject {
 
@@ -89,7 +88,7 @@ public class ContextRefreshedEvent extends ApplicationContextEvent{
 ```
 - `ApplicationEvent` 是定义事件的抽象类，所有的事件包括 **关闭、刷新，以及用户自己实现的事件**，都需要继承这个类。
 - `ContextClosedEvent`、`ContextRefreshedEvent`，分别是 Spring 框架自己实现的两个事件类，可以用于监听刷新和关闭动作。
-## 事件广播器
+#### 事件广播器
 ```java
 public interface ApplicationEventMulticaster {
 
@@ -174,7 +173,7 @@ public abstract class AbstractApplicationEventMulticaster implements Application
 - `getApplicationListeners` 方法主要是摘取符合广播事件中的监听处理器，具体过滤动作在 `supportsEvent` 方法中。
 - 在 `supportsEvent` 方法中，主要包括对 Cglib、Simple 不同实例化需要获取目标 Class，Cglib代理类需要获取父类的Class，普通实例化的不需要。接下来就是通过提取接口和对应的 `ParameterizedType` 和 `eventClassName`，方便最后确认是否为子类和父类的关系，以此证明此事件归这个符合的类处理。
 - `Type actualTypeArgument = ((ParameterizedType) genericInterface).getActualTypeArguments()[0];` 用于获取泛型的具体参数
-## 事件发布者的定义和实现
+#### 事件发布者的定义和实现
 ```java
 public interface ApplicationEventPublisher {
 

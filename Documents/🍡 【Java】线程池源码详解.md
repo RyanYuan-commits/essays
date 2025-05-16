@@ -1,5 +1,5 @@
-## 1 任务提交
-### 1.1 任务提交源码
+### 1 任务提交
+#### 1.1 任务提交源码
 ![[线程池任务提交流程图.png]]
 ```java
 public void execute(Runnable command) {
@@ -32,14 +32,14 @@ public void execute(Runnable command) {
 - 而如果当前线程已经大于核心线程数，会首先将任务放入到阻塞队列。
 - 如果阻塞队列也已经无法放入任务了，此时就会在最大线程数的限制下去增加新的线程。
 - 上述的方式全部失败了，执行拒绝策略。
-### 1.2 关于 ctl
+#### 1.2 关于 ctl
 ```java
 private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));
 ```
 线程池中的 `ctl` 是一个 `AtomicInteger` 类型的变量，分别用它的高位和低位来存储线程池的状态和线程数目
 - 通过 `ctl` 的高位来表示线程池的当前状态 `RUNNING`（运行）、`SHUTDOWN`（关闭）、`STOP`（停止）、`TIDYING`（整理）、`TERMINATED`（终止）。
 - 通过 `ctl` 的低位来记录当前线程池中活跃的工作线程的数量。
-### 1.3 关于拒绝策略
+#### 1.3 关于拒绝策略
 ```Java
 public interface RejectedExecutionHandler {
     void rejectedExecution(Runnable r, ThreadPoolExecutor executor);
@@ -51,8 +51,8 @@ public interface RejectedExecutionHandler {
 - `CallerRunsPolicy`：任务由提交任务的线程来继续执行。
 - `DiscardOldestPolicy`：丢弃阻塞队列中最旧的未处理任务，然后尝试重新提交被拒绝的任务。
 - `DiscardPolicy`：默默丢弃掉任务而不做任何的处理。
-## 2 任务执行
-### 2.1 Worker 工作线程类
+### 2 任务执行
+#### 2.1 Worker 工作线程类
 ```java
 if (workerCountOf(c) < corePoolSize) {
 	// (1) 当前线程数小于核心线程数，需要创建线程
@@ -99,7 +99,7 @@ public void run() {
 }
 ```
 
-### 2.2 工作线程的 "run" 方法
+#### 2.2 工作线程的 "run" 方法
 当 `Worker` 中的线程被启动并分配到 CPU 资源后，就会开始执行 `Worker` 的 `run()`，并最终执行到 `runWorker(Worker w)` 方法：
 ```java
 final void runWorker(Worker w) {
@@ -145,8 +145,8 @@ final void runWorker(Worker w) {
 - 如果 `getTask()` 方法返回 null，就会通过 `processWorkerExit(w, completedAbruptly)` 根据当前的情况去执行线程的销毁。 **(3)**
 当线程退出循环的时候，就会执行 `processWorkerExit(w, completedAbruptly)`，而正常退出循环的条件是 `(task = getTask()) != null`，可见这个方法除了获取任务的功能外，还承载了工作线程生命周期管理的功能。
 
-### 2.3 getTask 任务获取与线程管理
-#### 2.3.1 源码解析
+#### 2.3 getTask 任务获取与线程管理
+##### 源码解析
 ```java
 private Runnable getTask() {
     boolean timedOut = false; // Did the last poll() time out?
@@ -188,7 +188,7 @@ private Runnable getTask() {
 - `workQueue.poll(keepAliveTime, TimeUnit.NANOSECONDS)`  以 `keepAliveTime` 为参数，在这段时间内如果没有获取到任务的话，会停止等待。
 - `workQueue.take()` 是一个持久性的挂起，即使长时间没有获取到任务，线程也会处于一个挂起的状态而不会返回。
 当线程返回后，如果获取到了任务，直接返回，而如果是超时返回，会将 `timedOut` 设置为 `true`，在下一次循环的时候，如果 timed 和 timeOut 同时为 true，这个线程就要被销毁了，通过 CAS 减少线程数然后返回 `null`。
-#### 2.3.2 小结
+##### 小结
 调用这个方法的线程会尝试从任务队列中获取任务，如果这个方法返回 null，这个 Worker 就会被销毁；
 线程数目小于核心线程数目，这个方法会阻塞线程直到获取到任务，这确保了核心线程不会被销毁；
 而如果此时线程数目大于核心线程数目，此时调用这个方法的时候，会阻塞 keepAliveTime 时间然后返回，这个线程就会被销毁，线程池通过这样的方式来控制非核心线程的存活时间的。
@@ -199,7 +199,7 @@ private Runnable getTask() {
 - 当前线程为非核心线程，且在超时时间内未获取到任务。
 通过前两种情况，其实可以窥探到线程池的生命周期控制是如何实现的，其实就是设置一个标志（前面提到的 ctl），getTask() 方法中，会根据线程池的状态做出反应。
 
-## 3 线程的销毁、线程异常退出的处理
+### 3 线程的销毁、线程异常退出的处理
 上面的 getTask() 方法返回 null 之后，就会执行 processWorkerExit 方法，除此之外，当线程抛出异常后，同样会执行这个方法：
 ```java
 private void processWorkerExit(Worker w, boolean completedAbruptly) {  
@@ -228,11 +228,11 @@ private void processWorkerExit(Worker w, boolean completedAbruptly) {
 }
 ```
 当循环正常退出的时候，completedAbruptly 的值为 false；而如果因为抛出异常而退出，completedAbruptly 的值会为 true。
-### 3.1 循环正常退出
+#### 3.1 循环正常退出
 - 统计当前完成的任务数量；
 - 通过 workers.remove(w); 语句来删除当前的 Worker，
 - 然后去判断当前线程数目是否能满足最小值，如果满足，直接返回。
-### 3.2 抛出异常退出
+#### 3.2 抛出异常退出
 如果是由于抛出异常被捕获导致的异常退出，会通过 `addWorker` 去再创建一个新的线程，顶替原来抛出异常的线程。
 也就是对于抛出异常的情况，线程池会重新创建一个新的 `Worker`，那为什么不干脆捕获异常然后让这个线程继续运行呢？
 这样做是没问题的，但如果不将异常给抛出的话，`Thread` 自带的捕获异常机制就无法触发，这个机制可以让我们在线程抛出异常后做一些特殊的处理，线程工厂在创建线程的时候，可以指定一个 `Handler`。
@@ -245,7 +245,7 @@ ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 1, 0L, TimeUnit.DAYS, ne
         },new ThreadPoolExecutor.AbortPolicy());
 ```
 线程池将任务执行过程中抛出异常后如何处理开放给了开发者，所以选择了抛出异常然后重新创建的方式。
-## 4 线程池的关闭
+### 4 线程池的关闭
 线程池提供了两种关闭方法，`shutdown` 方法会等待所有任务结束后再关闭线程池，而 `shutdownNow` 则会立刻关闭线程池。
 这两种方法会改变线程池的状态标志位，然后通过 `interrupt` 而不是 `stop` 方法来尝试中断所有闲置的 Worker 线程，这样就避免了线程在执行过程中的突然中断引发意料之外的问题；线程池中的线程是通过 `ReentrantLock` 来挂起的，其底层调用了 LockSuport 的挂起方式，通过这种方式挂起的线程，在被中断后不会抛出中断异常，而是将中断标志位改为 true 后重新被调度，
 ```java

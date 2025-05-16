@@ -18,7 +18,6 @@ EXPLAIN SELECT * FROM your_table WHERE condition;
 | ref           | 表示使用索引时与哪个列或常量进行比较。它指示了连接条件或者检索条件的引用方式。如果查询条件中有常量，ref 列会显示常量值。                                                           |
 | filtered      | 表示查询过程中，行过滤的比例。它是基于 MySQL 的内部计算，表示在 rows 列中，最终符合条件的行的比例（百分比）。<br>如果 filtered 的值为 100，表示所有行都符合查询条件；如果较小，说明很多行被过滤掉，性能可能较差。 |
 | extra         | 提供查询执行的额外信息，通常可以用来帮助诊断查询性能。                                                                                              |
-
 ### select_type 的值
 - ==SIMPLE==：简单查询，没有使用联合查询（JOIN）或子查询。
 - ==PRIMARY==：最外层的查询，通常是执行 SELECT 语句时的主查询。
@@ -27,7 +26,6 @@ EXPLAIN SELECT * FROM your_table WHERE condition;
 - ==SUBQUERY==：子查询的 SELECT 语句。
 - ==DEPENDENT SUBQUERY==：依赖于外部查询的子查询。
 - ==DERIVED==：派生表，通常指的是在 FROM 子句中的子查询。
-
 ### type 的值
 - ==system==：只有一行记录的表（如 mysql.db 表）。
 - ==const==：只返回一行数据，通常用于主键或唯一索引的查询。

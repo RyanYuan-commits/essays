@@ -1,5 +1,5 @@
-# DispatcherServlet 主流程
-## 初始化流程
+### DispatcherServlet 主流程
+#### 初始化流程
 也就是 Servlet 生命周期中的 init 方法。
 - org.springframework.web.servlet.**HttpServletBean**#init()：DispatcherServlet 初始化的起点
 - org.springframework.web.servlet.**FrameworkServlet**#initServletBean：调用方法 initWebApplicationContext 来初始化 Web 的 ApplicationContext，这是对 Spring 原生 ApplicationContext 的封装
@@ -43,7 +43,7 @@ static {
 
 ![[DispatcherServlet.properties 配置文件.png]]
 配置文件中配置了一些关键类的默认实现，如果开发者没有向 Spring 容器中注入自己的实现的话，SpringMVC 会自动加载上述的实现。
-## 执行流程
+#### 执行流程
 对应的是 Servlet 生命周期中的 service 方法。
 - javax.servlet.http.**HttpServlet**#service：调用本类中的 doGet 和 doPost
 - org.springframework.web.servlet.FrameworkServlet#processRequest：FrameworkServlet 中重写了 doGet 和 doPost 方法，其最终都会调用到 processRequest 方法，方法中调用了 doService 方法

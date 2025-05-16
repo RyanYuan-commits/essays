@@ -1,8 +1,8 @@
-## 1 什么是 bin log？
+### 1 什么是 bin log？
 前面介绍的 undo log 和 redo log 这两个日志都是 Innodb 存储引擎生成的。
 MySQL 在完成一条更新操作后，Server 层还会生成一条 binlog，等之后事务提交的时候，会将该事物执行过程中产生的所有 binlog 统一写入 binlog 文件。
 binlog 文件是记录了所有数据库表结构变更和表数据修改的日志，不会记录查询类的操作，比如 SELECT 和 SHOW 操作。
-## 2 作用
+### 2 作用
 这个问题跟 MySQL 的时间线有关系。
 最开始 MySQL 里并没有 `InnoDB` 引擎，MySQL 自带的引擎是 `MyISAM`，但是 `MyISAM` 没有 `crash-safe` 的能力，`bin log` 日志只能用于归档。
 而 `InnoDB` 是另一个公司以插件形式引入 MySQL 的，既然只依靠 `bin log` 是没有 `crash-safe`（崩溃恢复）能力的，所以 `InnoDB` 使用 redo log 来实现 `crash-safe` 能力。

@@ -97,17 +97,6 @@
     },
     {
       "height": 393,
-      "id": "cf66134e4b91b9e5",
-      "styleAttributes": {
-      },
-      "text": "## 自动内存管理\n\n- [[🌻【Java】垃圾回收器设计考虑的问题]]\n- [[👷‍♀️ 引用计数算法与可达性分析算法]]\n- [[💟 【Java】四种引用类型]]\n- [[🥝【Java】根节点枚举]]\n- [[🥐【Java】记忆集与卡表]]\n- [[🦜【Java】并发的可达性分析]]\n-  [[🏋️【Java】垃圾收集算法]]",
-      "type": "text",
-      "width": 700,
-      "x": 1000,
-      "y": 1851
-    },
-    {
-      "height": 393,
       "id": "98b032c18ce14882",
       "styleAttributes": {
       },
@@ -116,39 +105,6 @@
       "width": 544,
       "x": -40,
       "y": 1851
-    },
-    {
-      "height": 139,
-      "id": "220559dc5e85d492",
-      "styleAttributes": {
-      },
-      "text": "- [[📀【Java】ConcurrentHashMap]]\n- [[🌵【Java】CountDownLatch]]\n- [[🏜️【Java】CyclicBarrier]]",
-      "type": "text",
-      "width": 700,
-      "x": -280,
-      "y": 3648
-    },
-    {
-      "height": 179,
-      "id": "25b936ba6b812a5c",
-      "styleAttributes": {
-      },
-      "text": "- [[💘 线程池基本介绍]]\n- [[🍡 【Java】线程池源码详解]]\n- [[💜 【Java】关于线程池的一些思考]]\n- [[🍗【Java】线程池的动态修改]]",
-      "type": "text",
-      "width": 660,
-      "x": -2240,
-      "y": 3369
-    },
-    {
-      "height": 60,
-      "id": "dcfc52b9e7cf4cb2",
-      "styleAttributes": {
-      },
-      "text": "",
-      "type": "text",
-      "width": 260,
-      "x": -1920,
-      "y": 3660
     },
     {
       "height": 215,
@@ -182,6 +138,50 @@
       "width": 544,
       "x": -40,
       "y": 2400
+    },
+    {
+      "height": 139,
+      "id": "220559dc5e85d492",
+      "styleAttributes": {
+      },
+      "text": "- [[📀【Java】ConcurrentHashMap]]\n- [[🌵【Java】CountDownLatch]]\n- [[🏜️【Java】CyclicBarrier]]",
+      "type": "text",
+      "width": 700,
+      "x": -280,
+      "y": 3648
+    },
+    {
+      "height": 179,
+      "id": "25b936ba6b812a5c",
+      "styleAttributes": {
+      },
+      "text": "- [[💘 线程池基本介绍]]\n- [[🍡 【Java】线程池源码详解]]\n- [[💜 【Java】关于线程池的一些思考]]\n- [[🍗【Java】线程池的动态修改]]",
+      "type": "text",
+      "width": 660,
+      "x": -2240,
+      "y": 3369
+    },
+    {
+      "height": 393,
+      "id": "cf66134e4b91b9e5",
+      "styleAttributes": {
+      },
+      "text": "## 自动内存管理\n\n- [[🌻【Java】垃圾回收器设计考虑的问题]]\n- [[👷‍♀️ 引用计数算法与可达性分析算法]]\n- [[💟【Java】四种引用类型]]\n- [[🥝【Java】根节点枚举]]\n- [[🥐【Java】记忆集与卡表]]\n- [[🦜【Java】并发的可达性分析]]\n-  [[🏋️【Java】垃圾收集算法]]",
+      "type": "text",
+      "width": 700,
+      "x": 1000,
+      "y": 1851
+    },
+    {
+      "file": "Canvas/🥒 Spring 专题.canvas",
+      "height": 465,
+      "id": "11763cd7f95e2fd8",
+      "styleAttributes": {
+      },
+      "type": "file",
+      "width": 530,
+      "x": 950,
+      "y": 3420
     },
     {
       "height": 243,
@@ -219,39 +219,6 @@
       "y": 4056
     },
     {
-      "height": 159,
-      "id": "932cfa1ce3a12d6a",
-      "styleAttributes": {
-      },
-      "text": "- [[🍍【Java】CAS 原理]]\n- [[🍍【Java】AbstractQueueSynchronizer]]\n- [[💫【Java】ReentrantLock]]\n- [[🍾 并发编程.canvas|🍾 并发编程]]",
-      "type": "text",
-      "width": 660,
-      "x": -2240,
-      "y": 4347
-    },
-    {
-      "height": 60,
-      "id": "9588f9e7777c6b9c",
-      "styleAttributes": {
-      },
-      "text": "",
-      "type": "text",
-      "width": 260,
-      "x": 460,
-      "y": 3760
-    },
-    {
-      "file": "Canvas/🥒 Spring 专题.canvas",
-      "height": 465,
-      "id": "11763cd7f95e2fd8",
-      "styleAttributes": {
-      },
-      "type": "file",
-      "width": 530,
-      "x": 950,
-      "y": 3420
-    },
-    {
       "file": "Canvas/🍒 mybatis 源码阅读.canvas",
       "height": 400,
       "id": "841ce158162ae810",
@@ -283,6 +250,17 @@
       "width": 700,
       "x": 1000,
       "y": 2400
+    },
+    {
+      "height": 173,
+      "id": "932cfa1ce3a12d6a",
+      "styleAttributes": {
+      },
+      "text": "- [[🍍【Java】CAS 原理]]\n- [[🍍【Java】AbstractQueueSynchronizer]]\n- [[💫【Java】ReentrantLock]]\n- [[🍾 并发编程.canvas|🍾 并发编程]]",
+      "type": "text",
+      "width": 660,
+      "x": -2240,
+      "y": 4347
     }
   ]
 }

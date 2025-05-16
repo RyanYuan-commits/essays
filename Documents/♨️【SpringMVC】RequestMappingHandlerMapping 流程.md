@@ -46,7 +46,7 @@ protected boolean isHandler(Class<?> beanType) {
 }
 ```
 ---
-	当发现这个 Bean 是一个 Handler Bean 之后，调用 detectHandlerMethods 方法，这个方法会检测这个类中所有的 Handler 方法（判断逻辑是看方法上有没有 @RequestingMapping 注解），然后将其注册到 AbstractHandlerMethodMapping 的 mappingRegistry 中保存起来：
+当发现这个 Bean 是一个 Handler Bean 之后，调用 detectHandlerMethods 方法，这个方法会检测这个类中所有的 Handler 方法（判断逻辑是看方法上有没有 @RequestingMapping 注解），然后将其注册到 AbstractHandlerMethodMapping 的 mappingRegistry 中保存起来：
 ```java
 protected void detectHandlerMethods(final Object handler) {  
     Class<?> handlerType = (handler instanceof String ?  

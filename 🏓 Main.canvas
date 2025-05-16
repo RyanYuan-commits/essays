@@ -100,17 +100,6 @@
       "toSide": "left"
     },
     {
-      "fromNode": "b2b98fbf92da0481",
-      "fromSide": "right",
-      "id": "04881e73192a9366",
-      "styleAttributes": {
-        "arrow": "blunt",
-        "pathfindingMethod": "square"
-      },
-      "toNode": "f86e7d4817932890",
-      "toSide": "left"
-    },
-    {
       "fromNode": "2d41824e6a156613",
       "fromSide": "right",
       "id": "b478bdbb0a84a3df",
@@ -153,37 +142,31 @@
       },
       "toNode": "9788c8520cffba85",
       "toSide": "left"
+    },
+    {
+      "fromNode": "b2b98fbf92da0481",
+      "fromSide": "right",
+      "id": "9c7d8327a48f06a0",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "c7e03ec2169949ad",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "05d7daac18cece14",
+      "fromSide": "right",
+      "id": "3976ac12914f198a",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "7f72cf4358f37d78",
+      "toSide": "left"
     }
   ],
   "nodes": [
-    {
-      "color": "1",
-      "height": 60,
-      "id": "2d41824e6a156613",
-      "styleAttributes": {
-        "border": "invisible",
-        "textAlign": "center"
-      },
-      "text": "🏓 Main",
-      "type": "text",
-      "width": 260,
-      "x": -2560,
-      "y": -200
-    },
-    {
-      "color": "4",
-      "height": 60,
-      "id": "05d7daac18cece14",
-      "styleAttributes": {
-        "border": "invisible",
-        "textAlign": "center"
-      },
-      "text": "中间件",
-      "type": "text",
-      "width": 200,
-      "x": -2200,
-      "y": -200
-    },
     {
       "color": "2",
       "height": 60,
@@ -197,104 +180,6 @@
       "width": 200,
       "x": -2200,
       "y": 60
-    },
-    {
-      "color": "5",
-      "height": 60,
-      "id": "64a77d658369424f",
-      "styleAttributes": {
-        "border": "invisible",
-        "textAlign": "center"
-      },
-      "text": "编程语言",
-      "type": "text",
-      "width": 200,
-      "x": -2200,
-      "y": -440
-    },
-    {
-      "height": 60,
-      "id": "de83e89eb9cb0394",
-      "styleAttributes": {
-        "border": "invisible"
-      },
-      "text": "[[🍋 MySQL 专题.canvas|🍋 MySQL 专题]]",
-      "type": "text",
-      "width": 260,
-      "x": -1830,
-      "y": -260
-    },
-    {
-      "height": 60,
-      "id": "c46786e84eb6ba69",
-      "styleAttributes": {
-        "border": "invisible"
-      },
-      "text": "[[🥠 Redis 专题.canvas|🥠 Redis 专题]]",
-      "type": "text",
-      "width": 260,
-      "x": -1830,
-      "y": -200
-    },
-    {
-      "height": 60,
-      "id": "9788c8520cffba85",
-      "styleAttributes": {
-        "border": "invisible"
-      },
-      "text": "[[🌼 ElasticSearch 专题.canvas|🌼 ElasticSearch 专题]]",
-      "type": "text",
-      "width": 260,
-      "x": -1830,
-      "y": -140
-    },
-    {
-      "height": 60,
-      "id": "d67d0e9630cd099a",
-      "styleAttributes": {
-        "border": "invisible"
-      },
-      "text": "[[🎮 FE 技术栈.canvas|🎮 FE 技术栈]]",
-      "type": "text",
-      "width": 260,
-      "x": -1830,
-      "y": -350
-    },
-    {
-      "height": 60,
-      "id": "2bb360389d1c010f",
-      "styleAttributes": {
-        "border": "invisible"
-      },
-      "text": "[[⛱️ Java 技术栈.canvas|⛱️ Java 技术栈]]\n",
-      "type": "text",
-      "width": 220,
-      "x": -1830,
-      "y": -530
-    },
-    {
-      "height": 60,
-      "id": "bba18d1b4b631518",
-      "styleAttributes": {
-        "border": "invisible"
-      },
-      "text": "[[🦝 Python 技术栈.canvas|🦝 Python 技术栈]]\n",
-      "type": "text",
-      "width": 260,
-      "x": -1830,
-      "y": -470
-    },
-    {
-      "height": 60,
-      "id": "afb053b4d04ec327",
-      "styleAttributes": {
-        "border": "invisible"
-      },
-      "text": "[[🥖 Golang 技术栈.canvas|🥖 Golang 技术栈]]",
-      "type": "text",
-      "width": 260,
-      "x": -1830,
-      "y": -410
     },
     {
       "height": 60,
@@ -322,7 +207,19 @@
     },
     {
       "height": 60,
-      "id": "f86e7d4817932890",
+      "id": "5bd82e8e435a9232",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🚆 计算机网络.canvas|🚆 计算机网络]]",
+      "type": "text",
+      "width": 260,
+      "x": -1830,
+      "y": -40
+    },
+    {
+      "height": 60,
+      "id": "c7e03ec2169949ad",
       "styleAttributes": {
         "border": "invisible"
       },
@@ -334,15 +231,141 @@
     },
     {
       "height": 60,
-      "id": "5bd82e8e435a9232",
+      "id": "2bb360389d1c010f",
       "styleAttributes": {
         "border": "invisible"
       },
-      "text": "[[🚆 计算机网络.canvas|🚆 计算机网络]]",
+      "text": "[[⛱️ Java 技术栈.canvas|⛱️ Java 技术栈]]\n",
+      "type": "text",
+      "width": 220,
+      "x": -1830,
+      "y": -640
+    },
+    {
+      "height": 60,
+      "id": "bba18d1b4b631518",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🦝 Python 技术栈.canvas|🦝 Python 技术栈]]\n",
       "type": "text",
       "width": 260,
       "x": -1830,
-      "y": -40
+      "y": -580
+    },
+    {
+      "height": 60,
+      "id": "afb053b4d04ec327",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🥖 Golang 技术栈.canvas|🥖 Golang 技术栈]]",
+      "type": "text",
+      "width": 260,
+      "x": -1830,
+      "y": -520
+    },
+    {
+      "height": 60,
+      "id": "d67d0e9630cd099a",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🎮 FE 技术栈.canvas|🎮 FE 技术栈]]",
+      "type": "text",
+      "width": 260,
+      "x": -1830,
+      "y": -460
+    },
+    {
+      "color": "5",
+      "height": 60,
+      "id": "64a77d658369424f",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "编程语言",
+      "type": "text",
+      "width": 200,
+      "x": -2200,
+      "y": -550
+    },
+    {
+      "color": "4",
+      "height": 60,
+      "id": "05d7daac18cece14",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "中间件",
+      "type": "text",
+      "width": 200,
+      "x": -2200,
+      "y": -230
+    },
+    {
+      "color": "1",
+      "height": 60,
+      "id": "2d41824e6a156613",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "🏓 Main",
+      "type": "text",
+      "width": 260,
+      "x": -2560,
+      "y": -230
+    },
+    {
+      "height": 60,
+      "id": "7f72cf4358f37d78",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🍒 消息队列专题.canvas|🍒 消息队列专题]]",
+      "type": "text",
+      "width": 260,
+      "x": -1830,
+      "y": -130
+    },
+    {
+      "height": 60,
+      "id": "c46786e84eb6ba69",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🥠 Redis 专题.canvas|🥠 Redis 专题]]",
+      "type": "text",
+      "width": 260,
+      "x": -1830,
+      "y": -260
+    },
+    {
+      "height": 60,
+      "id": "9788c8520cffba85",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🌼 ElasticSearch 专题.canvas|🌼 ElasticSearch 专题]]",
+      "type": "text",
+      "width": 260,
+      "x": -1830,
+      "y": -200
+    },
+    {
+      "height": 60,
+      "id": "de83e89eb9cb0394",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🍋 MySQL 专题.canvas|🍋 MySQL 专题]]",
+      "type": "text",
+      "width": 260,
+      "x": -1830,
+      "y": -320
     }
   ]
 }

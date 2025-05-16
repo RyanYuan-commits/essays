@@ -1,7 +1,7 @@
 这部分我们来具体的看一下 Spring AOP 实现中，代理类究竟是什么时候被构建的。
 
 ## 案例准备
-### maven pom 文件
+#### maven pom 文件
 - spring.version：5.3.22
 - java.version：1.8
 ```xml
@@ -27,7 +27,7 @@
 </dependency>
 ```
 
-### Service 接口与实现类
+#### Service 接口与实现类
 ```java
 public interface IUserService {  
   
@@ -52,7 +52,7 @@ public class UserService implements IUserService {
 }
 ```
 
-### 通知类
+#### 通知类
 ```java
 public class LogAdvices {  
   
@@ -68,7 +68,7 @@ public class LogAdvices {
 ```
 - 为了演示方便，本文所有的 Bean 都会通过配置文件来配置。
 
-### Main 方法
+#### Main 方法
 ```java
 public class Main {  
   
@@ -82,7 +82,7 @@ public class Main {
 }
 ```
 
-### spring xml 配置文件
+#### spring xml 配置文件
 ```java
 <?xml version="1.0" encoding="UTF-8"?>  
 <beans xmlns="http://www.springframework.org/schema/beans"  
@@ -107,7 +107,7 @@ public class Main {
 需要注意，这种方式使用的是 Spring 的自动代理机制，如果有类似 `BeanNameAutoProxyCreator` 或类似的类使用了显示的代理，会导致其中的某一项失效。
 建议的使用方式是仅使用`<aop:config>`样式或仅使用`AutoProxyCreator`样式，并且切勿混合使用它们。
 
-### 执行结果
+#### 执行结果
 先来看一下上面的 Main 方法执行后的效果：
 ```
 class com.sun.proxy.$Proxy3
@@ -117,8 +117,8 @@ after
 ```
 可以看到，我们获取到的类是一个代理类，并且代理方法已经执行成功了。
 
-## 源码分析
-### XML 解析
+### 源码分析
+#### XML 解析
 当执行下面这条语句之后：
 ```java
 ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-aop.xml");
@@ -191,8 +191,7 @@ default Object postProcessBeforeInstantiation(Class<?> beanClass, String beanNam
 这个方法会在 Bean 的实例化前被调用，可以用于修改和创建 Bean 对象。
 除此之外，`AbstractAdvisorAutoProxyCreator` 还实现了 `BeanPostProcessor` 接口的 `postProcessAfterInitialization`，在 Bean 对象执行完初始化方法后，会调用这个方法检测是否需要将其转化为代理对象。
 `AbstractAdvisorAutoProxyCreator` 是 AOP 代理中非常关键的一个类，整个创建 AOP 代理的核心流程就是其执行的这两个方法。
-
-### 加载 Creator
+#### 加载 Creator
 上面提到，`org.springframework.aop.config.internalAutoProxyCreator` 是一个 `BeanPostProcessor`，那它具体创建并注册的位置就是：
 `org.springframework.context.support#registerBeanPostProcessors(ConfigurableListableBeanFactory beanFactory)`
 调用这个方法的位置还是 `ApplicationContext` 的 `refresh()` 方法，具体的调用链路为：
@@ -202,10 +201,9 @@ default Object postProcessBeforeInstantiation(Class<?> beanClass, String beanNam
 
 具体就是将 `BeanPostProcessor` 加载到工厂中，方便后续的调用。
 具体存放 `BeanPostProcessor` 的位置为：`org.springframework.beans.factory.support.AbstractBeanFactory` 的 `beanPostProcessors` 属性。
-
-### 加载 Advisors
+#### 加载 Advisors
 - 在「**XML 解析**」部分，我们看到了 spring 为我们将 xml 中定义的 `<acp:config />` 解析为具体的 Bean 定义。
-- 并且在「**加载 Creator**」部分，spring 已经将 AOP 创建者类注册成了一个 `InstantiationAwareBeanPostProcessor`。
+	- 并且在「**加载 Creator**」部分，spring 已经将 AOP 创建者类注册成了一个 `InstantiationAwareBeanPostProcessor`。
 在将单例 Bean（原型 Bean 也可以被代理，本文只关注单例 Bean 的代理过程）加载代理之前，肯定是要将上面 `<acp:config />` 中配置的 Bean 构建出来的。
 而如果按照我们在 xml 中配置的方式，显然先构建的 Bean 将会是 `userService`。
 所以在所有的 Bean 实例化之前，需要确保这些构建 AOP 的 infrastructure 被提前构建好，这就是 `AbstractAdvisorAutoProxyCreator` 在 Bean 初始化之前执行的逻辑。

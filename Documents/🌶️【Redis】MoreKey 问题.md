@@ -1,4 +1,4 @@
-## 案例准备
+### 案例准备
 ```bash
 # 生成脚本
 for ((i=1; i<=100*10000; i++)); do echo "set k$i v$i" >> ./redisTest.txt; done
@@ -6,7 +6,7 @@ for ((i=1; i<=100*10000; i++)); do echo "set k$i v$i" >> ./redisTest.txt; done
 # 执行命令
 cat ./redisTest.txt | redis-cli --pipe
 ```
-## 真实案例
+### 真实案例
 >据云头条报道，某公司技术部发生 2 起本年度 PO 级特大事故，造成公司资金损失 400 万，原因如下：
 >由于 PHP 工程师直接操作上线 redis，执行 keys wxdb（此处省略）cf8 这样的命令，导致redis锁住，导致 CPU 飙升，引起所有支付链路卡住，等十几秒结束后，所有的请求流量全部挤压到了 redis 数据库中，使数据库产生了雪崩效应，发生了数据库宕机事件。
 
@@ -52,21 +52,21 @@ ACL SETUSER alice on >password ~* +get +set
 - ~\*：允许用户 alice 访问所有键（~ 后面跟随键的模式）。
 - +get +set：授权 alice 使用 GET 和 SET 命令。
 如果不允许使用 set 命令，就可以设置为 -set。
-## SCAN 指令
-### 什么是 SCAN 指令？
+### SCAN 指令
+#### 什么是 SCAN 指令？
 Redis [SCAN](https://redis.com.cn/commands/scan.html) 命令及其相关命令 [SSCAN](https://redis.com.cn/commands/sscan.html)、[HSCAN](https://redis.com.cn/commands/hscan.html)、 [ZSCAN](https://redis.com.cn/commands/zscan.html) 命令都是用于增量遍历集合中的元素。
 - [SCAN](https://redis.com.cn/commands/scan.html) 用于遍历当前数据库中的键。
 - [SSCAN](https://redis.com.cn/commands/sscan.html) 用于遍历集合键中的元素。
 - [HSCAN](https://redis.com.cn/commands/hscan.html) 用于遍历哈希键中的键值对。
 - [ZSCAN](https://redis.com.cn/commands/zscan.html) 用于遍历有序集合中的元素（包括元素成员和元素分值）。
-### SCAN 指令格式
+#### SCAN 指令格式
 ```c
 SCAN cursor [MATCH pattern] [COUNT count] [TYPE type]
 ```
 - cursor - 游标。
 - pattern - 匹配的模式。
 - count - 指定从数据集里返回多少元素，默认值为 10 。
-### 基本用法
+#### 基本用法
 什么是 Redis 增量遍历？[SCAN](https://redis.com.cn/commands/scan.html) 命令是一个基于游标的遍历器，每次被调用之后， 都会向用户返回一个新的游标， 用户在下次遍历时需要使用这个新游标作为 [SCAN](https://redis.com.cn/commands/scan.html) 命令的游标参数， 以此来延续之前的遍历过程。
 [SCAN](https://redis.com.cn/commands/scan.html) 返回一个包含两个元素的数组， 第一个元素是用于进行下一次遍历的新游标， 而第二个元素则是一个数组， 这个数组中包含了所有被遍历的元素。当 [SCAN](https://redis.com.cn/commands/scan.html) 命令的游标参数被设置为 `0` 时， 服务器将开始一次新的遍历，而当服务器向用户返回值为 `0` 的游标时， 表示遍历已结束。例如：
 ```

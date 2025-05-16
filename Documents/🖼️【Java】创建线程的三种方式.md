@@ -1,4 +1,4 @@
-## 1 继承 Thread 类
+### 1 继承 Thread 类
 通过继承 Thread 类，并重写它的 run 方法，我们就可以创建一个线程。​
 ```java
 // 定义一个继承自 Thread 类的子类
@@ -20,7 +20,7 @@ public class ThreadCreationByExtending {
     }
 }
 ```
-## 2 实现 Runnable 接口
+### 2 实现 Runnable 接口
 通过实现 Runnable ，并实现 run 方法，也可以创建一个线程。
 ```java
 // 定义一个实现 Runnable 接口的类
@@ -44,9 +44,8 @@ public class ThreadCreationByImplementing {
     }
 }
 ```
-## 3 Callable + Future
+### 3 Callable + Future
 `Callable` 接口和 `Runnable` 接口类似，但是 `Callable` 接口的 `call()` 方法可以有返回值，并且可以抛出异常。可以使用 `ExecutorService` 来提交 `Callable` 任务，并通过 `Future` 对象获取任务的执行结果。
-
 ```java
 import java.util.concurrent.*;
 

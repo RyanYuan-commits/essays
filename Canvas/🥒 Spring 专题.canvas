@@ -3,18 +3,18 @@
   ],
   "nodes": [
     {
-      "height": 860,
+      "height": 780,
       "id": "00b1b3c95bf59339",
       "styleAttributes": {
       },
-      "text": "### Small - Spring\n[[🎲 small-spring.canvas|🎲 small-spring]]\n#### IoC 篇\n- [[🦦【small-spring】构造一个简单的 Bean 工厂]]\n- [[🧩【small-spring】实现 Bean 的注册与获取]]\n- [[🥃【small-spring】基于 Cglib 实现含构造函数的类实例化策略]]\n- [[🖼️【small-spring】为 Bean 对象注入属性和依赖]]\n- [[🏄‍♀️【small-spring】资源加载器解析文件对象]]\n- [[🌺【small-spring】实现 ApplicationContext]]\n- [[🥝【small-spring】Bean 的初始化和销毁方法]]\n- [[🍇【small-spring】Aware 感知对象]]\n- [[♦️【small-spring】Bean Scope 与 Factory Bean]]\n- [[🦮【small-spring】容器事件和事件监听器]]\n#### AOP 篇\n- [[🥕【small-spring】基于 JDK 和 CgLib 实现 AOP 核心功能]]\n- [[🧉【small-spring】把 AOP 拓展到 Bean 的生命周期]]\n- [[👣【small-spring】自动扫描 Bean 注册]]\n- [[🍞【small-spring】通过注解简化属性配置]]\n- [[🦏【small-spring】给代理对象的属性设置值]]",
+      "text": "### Small - Spring\n#### IoC 篇\n- [[🦦【small-spring】构造一个简单的 Bean 工厂]]\n- [[🧩【small-spring】实现 Bean 的注册与获取]]\n- [[🥃【small-spring】基于 Cglib 实现含构造函数的类实例化策略]]\n- [[🖼️【small-spring】为 Bean 对象注入属性和依赖]]\n- [[🏄‍♀️【small-spring】资源加载器解析文件对象]]\n- [[🌺【small-spring】实现 ApplicationContext]]\n- [[🥝【small-spring】Bean 的初始化和销毁方法]]\n- [[🍇【small-spring】Aware 感知对象]]\n- [[♦️【small-spring】Bean Scope 与 Factory Bean]]\n- [[🦮【small-spring】容器事件和事件监听器]]\n#### AOP 篇\n- [[🥕【small-spring】基于 JDK 和 CgLib 实现 AOP 核心功能]]\n- [[🧉【small-spring】把 AOP 拓展到 Bean 的生命周期]]\n- [[👣【small-spring】自动扫描 Bean 注册]]\n- [[🍞【small-spring】通过注解简化属性配置]]\n- [[🦏【small-spring】给代理对象的属性设置值]]",
       "type": "text",
       "width": 703,
       "x": -340,
       "y": -120
     },
     {
-      "height": 860,
+      "height": 780,
       "id": "47bdc39d7655632c",
       "styleAttributes": {
       },
@@ -25,7 +25,7 @@
       "y": -120
     },
     {
-      "height": 500,
+      "height": 200,
       "id": "269095624bac1474",
       "styleAttributes": {
       },
@@ -33,7 +33,7 @@
       "type": "text",
       "width": 703,
       "x": -340,
-      "y": 840
+      "y": 760
     }
   ]
 }
