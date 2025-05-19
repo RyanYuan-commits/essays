@@ -31,30 +31,6 @@
       "toSide": "left"
     },
     {
-      "fromNode": "f3667914a1af16d4",
-      "fromSide": "left",
-      "id": "3e7e84b07597e52f",
-      "label": "JDBC",
-      "toNode": "9551f7954c665864",
-      "toSide": "right"
-    },
-    {
-      "fromNode": "9551f7954c665864",
-      "fromSide": "left",
-      "id": "0bad96189545c829",
-      "label": "JDBC 案例",
-      "toNode": "923c02e832b17b15",
-      "toSide": "right"
-    },
-    {
-      "fromNode": "b8c9abff9510214f",
-      "fromSide": "left",
-      "id": "ac9ef4405843d8ec",
-      "label": "依赖补充",
-      "toNode": "f3667914a1af16d4",
-      "toSide": "right"
-    },
-    {
       "fromNode": "b8c9abff9510214f",
       "fromSide": "right",
       "id": "eaecf9b5be3c0d01",
@@ -72,35 +48,84 @@
     {
       "fromNode": "b8c9abff9510214f",
       "fromSide": "left",
-      "id": "f75b7321c5d1dad7",
-      "label": "重点流程",
+      "id": "39274b23c6fb7fdb",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "67eaebadd288e786",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "67eaebadd288e786",
+      "fromSide": "left",
+      "id": "d66a4c92aba1626c",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "3a8d8c783b798d2f",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "67eaebadd288e786",
+      "fromSide": "left",
+      "id": "218a1514dcc7eccc",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "d64ecd9a067180ce",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "b8c9abff9510214f",
+      "fromSide": "left",
+      "id": "11edd806371fc2ef",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
       "toNode": "78d22016c069525f",
       "toSide": "right"
     },
     {
       "fromNode": "78d22016c069525f",
       "fromSide": "left",
-      "id": "96e6f333c4694c9a",
-      "toNode": "78b4c95c3f43e943",
+      "id": "2a41fd99ddf2286b",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "5a25e0825d59934f",
       "toSide": "right"
     },
     {
-      "fromNode": "b8c9abff9510214f",
+      "fromNode": "78d22016c069525f",
       "fromSide": "left",
-      "id": "7481f000f82db61a",
-      "label": "重点接口",
-      "toNode": "a6e2d3952693f2a7",
-      "toSide": "right"
-    },
-    {
-      "fromNode": "a6e2d3952693f2a7",
-      "fromSide": "left",
-      "id": "9019d739d11f6b5d",
-      "toNode": "451bccd7437c3a14",
+      "id": "34cda7aa6a151296",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "52e4bcdaee3d1e5e",
       "toSide": "right"
     }
   ],
   "nodes": [
+    {
+      "height": 60,
+      "id": "5a25e0825d59934f",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "right"
+      },
+      "text": "[[🔮【Mybatis】基本流程串讲]]",
+      "type": "text",
+      "width": 375,
+      "x": -1280,
+      "y": -360
+    },
     {
       "color": "6",
       "height": 60,
@@ -110,103 +135,8 @@
       "text": "mybatis 源码阅读",
       "type": "text",
       "width": 240,
-      "x": -40,
-      "y": -190
-    },
-    {
-      "color": "5",
-      "height": 60,
-      "id": "a6e2d3952693f2a7",
-      "styleAttributes": {
-      },
-      "text": "接口语义",
-      "type": "text",
-      "width": 140,
-      "x": -620,
-      "y": -190
-    },
-    {
-      "color": "2",
-      "height": 59,
-      "id": "78d22016c069525f",
-      "styleAttributes": {
-      },
-      "text": "源码阅读",
-      "type": "text",
-      "width": 140,
-      "x": -620,
-      "y": 255
-    },
-    {
-      "file": "Documents/🍧【mybatis】一条 SQL 语句是如何被解析的？.md",
-      "height": 170,
-      "id": "78b4c95c3f43e943",
-      "styleAttributes": {
-      },
-      "type": "file",
-      "width": 400,
-      "x": -1180,
-      "y": 200
-    },
-    {
-      "color": "5",
-      "height": 320,
-      "id": "451bccd7437c3a14",
-      "styleAttributes": {
-      },
-      "text": "- [[🐋【mybatis interface】SqlSession]]\n- [[🐂【mybatis interface】MappedStatement]]",
-      "type": "text",
-      "width": 585,
-      "x": -1365,
-      "y": -320
-    },
-    {
-      "color": "4",
-      "height": 50,
-      "id": "f3667914a1af16d4",
-      "styleAttributes": {
-      },
-      "text": "依赖补充",
-      "type": "text",
-      "width": 140,
-      "x": -620,
-      "y": -749
-    },
-    {
-      "color": "4",
-      "height": 60,
-      "id": "9551f7954c665864",
-      "styleAttributes": {
-      },
-      "text": "JDBC",
-      "type": "text",
-      "width": 120,
-      "x": -880,
-      "y": -754
-    },
-    {
-      "color": "4",
-      "file": "Documents/🌴【JDBC】利用 JDBC 实现增删改查与事务.md",
-      "height": 313,
-      "id": "923c02e832b17b15",
-      "styleAttributes": {
-      },
-      "type": "file",
-      "width": 720,
-      "x": -1880,
-      "y": -880
-    },
-    {
-      "color": "5",
-      "height": 60,
-      "id": "6de80812ef80bac1",
-      "styleAttributes": {
-      },
-      "text": "模块服务",
-      "type": "text",
-      "width": 140,
-      "x": 720,
-      "y": -190
+      "x": -120,
+      "y": -490
     },
     {
       "color": "5",
@@ -217,20 +147,20 @@
       "text": "基础框架",
       "type": "text",
       "width": 140,
-      "x": 720,
-      "y": -570
+      "x": 760,
+      "y": -876
     },
     {
       "color": "5",
-      "height": 144,
-      "id": "ada803df284e0425",
+      "height": 60,
+      "id": "6de80812ef80bac1",
       "styleAttributes": {
       },
-      "text": "- [[🥒【small-mybatis】创建简单的映射器代理工厂]]\n- [[🍀【small-mybatis】实现 Mapper 的注册和使用]]\n- [[🥝【small-mybatis】Mapper XML 的解析和注册使用]]",
+      "text": "模块服务",
       "type": "text",
-      "width": 580,
-      "x": 980,
-      "y": -612
+      "width": 140,
+      "x": 760,
+      "y": -496
     },
     {
       "color": "5",
@@ -241,8 +171,8 @@
       "text": "串联流程",
       "type": "text",
       "width": 140,
-      "x": 720,
-      "y": 219
+      "x": 760,
+      "y": -87
     },
     {
       "color": "5",
@@ -253,8 +183,8 @@
       "text": "- [[🥠【small-mybatis】数据源的解析、创建和使用]]\n- [[🐕【small-mybatis】数据源池化技术的实现]]\n- [[🍓【small-mybatis】使用 Executor 执行 SQL]]\n- [[🌯【small-mybatis】利用反射工具包来使用对象]]",
       "type": "text",
       "width": 580,
-      "x": 980,
-      "y": -248
+      "x": 1020,
+      "y": -554
     },
     {
       "color": "5",
@@ -265,8 +195,86 @@
       "text": "- [[🌷【small-mybatis】完善静态 SQL 解析]]\n- ",
       "type": "text",
       "width": 540,
-      "x": 980,
-      "y": 149
+      "x": 1020,
+      "y": -157
+    },
+    {
+      "color": "5",
+      "height": 144,
+      "id": "ada803df284e0425",
+      "styleAttributes": {
+      },
+      "text": "- [[🥒【small-mybatis】创建简单的映射器代理工厂]]\n- [[🍀【small-mybatis】实现 Mapper 的注册和使用]]\n- [[🥝【small-mybatis】Mapper XML 的解析和注册使用]]",
+      "type": "text",
+      "width": 580,
+      "x": 1020,
+      "y": -918
+    },
+    {
+      "height": 60,
+      "id": "3a8d8c783b798d2f",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "right"
+      },
+      "text": "[[🌴【JDBC】利用 JDBC 实现增删改查与事务]]",
+      "type": "text",
+      "width": 460,
+      "x": -1380,
+      "y": -840
+    },
+    {
+      "height": 60,
+      "id": "d64ecd9a067180ce",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "right"
+      },
+      "text": "[[🐑 JDK 与 CGLib 动态代理]]",
+      "type": "text",
+      "width": 460,
+      "x": -1380,
+      "y": -640
+    },
+    {
+      "color": "3",
+      "height": 60,
+      "id": "67eaebadd288e786",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "基础知识",
+      "type": "text",
+      "width": 190,
+      "x": -685,
+      "y": -734
+    },
+    {
+      "color": "2",
+      "height": 59,
+      "id": "78d22016c069525f",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "流程梳理",
+      "type": "text",
+      "width": 190,
+      "x": -685,
+      "y": -259
+    },
+    {
+      "height": 60,
+      "id": "52e4bcdaee3d1e5e",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🌹【Mybatis】插件开发原理]]",
+      "type": "text",
+      "width": 315,
+      "x": -1220,
+      "y": -160
     }
   ]
 }

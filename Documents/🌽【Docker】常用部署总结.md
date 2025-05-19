@@ -14,11 +14,12 @@ docker run \
 --restart=always \
 --name mysql \
 --privileged=true \
+-e MYSQL_ROOT_PASSWORD=my-secret-pw \
+-d mysql:8
+
 -v /home/mysql/log:/var/log/mysql \
 -v /home/mysql/data:/var/lib/mysql \
 -v /home/mysql/conf/my.cnf:/etc/mysql/my.cnf \
--e MYSQL_ROOT_PASSWORD=my-secret-pw \
--d mysql:8.3.0
 ```
 ### ES 相关部署
 #### 配置启动 ElasticSearch

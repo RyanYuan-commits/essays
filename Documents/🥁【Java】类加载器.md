@@ -1,7 +1,7 @@
 类加载器（Class Loader）是 JVM 的一部分，负责将类的字节码文件加载到内存中，并射荣成对应的 Class 文件。
 ![[类加载器图例.png|800]]
 Java 中的 SPI 机制、类的热部署、Tomcat 隔离都需要借助类加载器来实现。
-## 1 类加载器的分类
+### 1 类加载器的分类
 类加载器可以被分为两类，一类是 Java 代码实现的，另一类是 JVM 底层实现的。
 1. 虚拟机底层实现：其源代码位于 Java 虚拟机的源码中，实现语言与虚拟机底层语言一致，比如 Hotspot 使用 C++；它的作用是加载程序运行时的基础类，保证Java程序运行中基础类被正确的加载，比如 String 类。
 2. JDK 中默认提供或者自定义的类加载器：JDK中默认提供了多种处于不同渠道的类加载器，程序员也可以根据自己的需求定制；所有的 Java 类加载器都需要继承 ClassLoader 类。
@@ -9,7 +9,7 @@ Java 中的 SPI 机制、类的热部署、Tomcat 隔离都需要借助类加载
 - 【虚拟机底层实现】启动类加载器（Bootstrap）：加载 Java 中最核心的类。
 - 【Java 实现】拓展类加载器（Extension）：加载扩展类库（%JAVA_HOME%/lib/ext 目录下的 JAR 包，或者通过 java.ext.dirs 系统属性指定的路径）。
 - 【Java 实现】应用程序类加载器（Application）：加载用户类路径（CLASSPATH 环境变量指定的路径）。
-## 2 启动类加载器
+### 2 启动类加载器
 启动类加载器（Bootstrap ClassLoader）是由 HotSpot 虚拟机提供的，使用 C++ 编写的类加载器，它默认加载 Java 安装目录中 /jre/lib 目录下的类文件，比如 rt.jar、tools.jar、resource.jar 等。
 ```java
 public class Main {  
@@ -20,10 +20,10 @@ public class Main {
 }
 ```
 
-## 3 Java 实现的类加载器
+### 3 Java 实现的类加载器
 拓展类加载器和应用程序类加载器都是 JDK 提供的，使用 Java 编写的类加载器，它们是 sun.misc.Lancher 类的静态内部类，继承自 URLClassLoader，具备将字节码文件加载到内存中的功能。
 ![[拓展类加载器和应用程序类加载器的继承关系.png|1000]]
-### 3.1 拓展类加载器
+#### 3.1 拓展类加载器
 拓展类加载器（Extension Class Loader）是 JDK 中提供的、使用 Java 编写的类加载器，它默认加载目录 /jre/lib/ext 下的类文件：
 ![[拓展类加载器加载的文件.png]]
 它加载的是一些通用但是不那么重要的文件，比如 Script 的运行环境：
@@ -35,7 +35,7 @@ public class Main {
     }  
 }
 ```
-### 3.2 应用程序类加载器
+#### 3.2 应用程序类加载器
 这个类加载器加载的是 ClassPath 下的 jar 包：
 ```java
 public class Main {  
@@ -45,8 +45,8 @@ public class Main {
     }  
 }
 ```
-## 2 双亲委派机制
-### 2.1 什么是双亲委派机制？
+### 2 双亲委派机制
+#### 2.1 什么是双亲委派机制？
 双亲委派机制是 Java 中类加载器的一个重要机制。在 Java 中，处理 Bootstrap 启动类加载器以外，每个 ClassLoader 都有一个父 ClassLoader；
 当一个 ClassLoader 收到类加载的请求的时候，会将加载请求委派给父 ClassLoader，如果父 ClassLoader 能够或者已经完成了这个类的加载，将 Class 对象直接返回；
 只有当最顶层的 ClassLoader 都无法完成此类的加载，才会逐层的尝试由自己来加载。
@@ -71,7 +71,7 @@ class A {
     }  
 }
 ```
-### 2.2 ClassLoader.loadClass 方法
+#### 2.2 ClassLoader.loadClass 方法
 ```java
 protected Class<?>  loadClass(String name, boolean resolve) throws ClassNotFoundException {
         synchronized (getClassLoadingLock(name)) {
@@ -119,13 +119,13 @@ protected Class<?>  loadClass(String name, boolean resolve) throws ClassNotFound
 
 当上面的方法执行完，其实就完成了类的生命周期中的**类加载阶段** 和 **连接阶段** 或者 **连接阶段的一部分**；
 如果 resolve 变量为 false，就不会触发连接阶段中的 **解析** 阶段，也就是将符号引用转换为直接引用的阶段，这个阶段会延后到真正使用类的时候再开始。
-### 2.3 打破双亲委派机制
+#### 2.3 打破双亲委派机制
 虽然双亲委派机制有着确保核心类库的完整性和安全性和同时也避免了类被重复加载的作用，但是在以下集中情况下，我们仍然需要去打破双亲委派机制。
 1. ==隔离加载类==：在某些情况下，我们需要隔离加载的类，例如在服务器中多个应用的类需要相互隔离，避免类名冲突。这时就需要打破双亲委派机制，使得每个应用都有自己的类加载器。
 2. ==修改类加载方式==：在某些情况下，我们需要修改类的加载方式，例如热部署。当我们的代码发生改变时，我们希望能够重新加载类，而不需要重启 JVM。这时就需要打破双亲委派机制，使得我们能够控制类的加载。
 3. ==加载不同路径下的类==：在某些情况下，我们希望能够加载不同路径下的同名类，这时就需要打破双亲委派机制，使得我们能够加载不同路径下的类。
 那如何打破双亲委派机制呢？既然双亲委派机制是通过 ClassLoader 中的 loadClass 方法实现的，我们就可以通过自定义类加载器继承 ClassLoader 并重写 loadClass 方法来实现。除了这种方法之外，还可以通过线程上下文类加载器和 Osgi 框架等方式实现。
-#### 2.3.1 自定义类加载器
+##### 自定义类加载器
 ![[一个 Tomcat 可以运行多个 Web 应用简图.png|500]]
 - 一个 Tomcat 中是可以运行多个 Web 应用的，如果这两个应用之间出现了相同限定名的类，比如 Servlet 类，Tomcat 要保证这两个类都能被加载，而且使用的时候应该是不同的类
 - 如果不打破双亲委派机制后，两个应用中相同限定名的类就无法同时被加载了
@@ -197,7 +197,7 @@ A 类被加载了
 sun.misc.Launcher$AppClassLoader@18b4aac2
 ```
 上面可以看到，A 类被加载了两次，这是因为在 Java 虚拟机中，只有 ==相同的类加载器 + 相同的类限定名== 才会被识别成同一个类，即使类限定名相同，如果使用的是不同的类加载器，也会被识别为不同的类。
-#### 2.3.2 线程上下文类加载器
+##### 线程上下文类加载器
 JDBC 中使用了 DriverManager 的类来管理不同的数据库的驱动，比如 Mysql 驱动，Oracle 驱动。
 假设我们执行 DriverManager.getConnection() 方法来获取与 MySQL 的连接，如果我们没有显示的在代码中去注册驱动，就会去调用 Java 的 SPI 机制来查找 classpath 中的 Mysql 驱动。
 
