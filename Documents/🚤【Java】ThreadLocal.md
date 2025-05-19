@@ -1,6 +1,6 @@
 `ThreadLocal` ，从字面含义上来看就是 "线程本地"，这很形象的说明了它的用处；
 `ThreadLocal` 是 Java 提供的一种线程本地存储机制，可以利用该就只将数据还存在某个线程的内部，该线程可以在任意的时刻、任意的方法中去获取缓存的数据。
-## 1 总体介绍
+### 1 总体介绍
 `ThreadLocal` 共有两种类型， `ThreadLocal` 本身和他的子类 `InheritableThreadLocal`。
 ```java
 ThreadLocal<String> threadLocalString = new ThreadLocal<>();
@@ -12,14 +12,14 @@ ThreadLocal<Integer> threadLocalInteger = new ThreadLocal<>();
 ```java
 InheritableThreadLocal<String> inheritableThreadLocal = new InheritableThreadLocal<>();
 ```
-## 2 ThreadLocal
-### 2.1 基本介绍
+### 2 ThreadLocal
+#### 2.1 基本介绍
 `ThreadLocal` 底层是通过 `ThreadLocalMap` 实现的， `ThreadLocalMap` 是 `Thread` 类的属性：
 ```java
 ThreadLocal.ThreadLocalMap threadLocals = null;
 ```
 `ThreadLocalMap` 是 `ThreadLocal` 的静态内部类，存储的 KEY 为 `ThreadLocal` 对象，`VALUE` 就是实际的数据。
-### 2.2 ThreadLocal 的 set 方法
+#### 2.2 ThreadLocal 的 set 方法
 ```java
 public void set(T value) {
     Thread t = Thread.currentThread();
@@ -38,11 +38,10 @@ ThreadLocalMap getMap(Thread t) {
 - 首先，获取到当前执行该方法的线程，通过调用 `getMap(Thread t)` 方法来获取线程的 `threadLocals` 属性。
 - 线程对象的 `threadLocals` 属性初始为 `null`，它正式的创建时机就是第一次调用 `ThreadLocal` 的 `set()` 方法的时候，所以可以看到上面还有一个 `createMap` 方法;
 - 这里要特别关注键值对的内容：键是 `this` 也就是 `ThreadLocal` 对象本身，而值就是上面传入的 `value`，从这里可以看出，`ThreadLocal` 是作为键值对的键存在的，真实的数据其实就是存储在线程对象 `Thread` 中的。
-
-### 2.3 ThreadLocalMap
+#### 2.3 ThreadLocalMap
 >既然谈到了 `ThreadLocalMap` 类，这里来详细的看看它是如何实现键值对的对应关系的；
 >以及在 Entry 如何通过虚引用（WeakReference）来解决内存泄露的问题的？
-#### 2.3.1 Entry 对象
+##### Entry 对象
 `ThreadLocalMap` 是 `ThreadLocal` 的一个静态内部类，数据被封装成一个 `Entry` 类，然后存储在 `ThreadLocalMap` 的 `table` 属性中：
 ```java
 /**
@@ -78,7 +77,7 @@ static class Node<K,V> implements Map.Entry<K,V> {
 与 `Node` 不同的是，`Entry` 并没有直接保存对 KEY 的引用，而是通过继承 `WeakReference` 实现了对 KEY 的虚引用。
 而当对象 **仅** 被虚引用所指向的时候，JVM 进行 GC 垃圾回收的时候，**会直接将其回收**，也就是当 `ThreadLocal` 对象仅仅被 `ThreadLocalMap` 中的 `Entry` 引用的时候，`ThreadLocal` 对象仍然会被回收。
 但是 `Thread` 对象中的 `Node` 是不会随着 `ThreadLocal` 的回收而自动回收的，因为 `table` 数组对 `Entry` 对象的引用属于强引用，这就引发了内存泄露的问题，也就是使用的内存并没有被及时的回收。
-#### 2.3.2 清除无效 Entry 对象`
+##### 清除无效 Entry 对象
 如果这样看的话，理论上只要线程对象不被销毁，那 `Entry` 对象就永远不会被回收，这设计显然是不太合理的，所以 `ThreadLocalMap` 中还存在这样一些自动回收方法，其中比较常用的是 `cleanSomeSlots`：
 ```java
 private boolean cleanSomeSlots(int i, int n) {  
@@ -113,7 +112,7 @@ public void remove() {
     }
 }
 ```
-#### 2.3.3 哈希函数与线性探测法
+##### 哈希函数与线性探测法
 `ThreadLocalMap` 计算索引的方式为：
 ```java
 int i = key.threadLocalHashCode & (len-1);
@@ -126,7 +125,7 @@ private static int nextIndex(int i, int len) {
 }
 ```
 在原位置的基础上不断加一来寻找下一个存放位置，当越界的时候就再从 0 开始寻找。
-#### 2.3.4 getEntry 方法
+##### getEntry 方法
 ```java
 private Entry getEntry(ThreadLocal<?> key) {  
     int i = key.threadLocalHashCode & (table.length - 1);  
@@ -139,7 +138,7 @@ private Entry getEntry(ThreadLocal<?> key) {
 ```
 上面的是 `ThreadLocalMap` 的 `get` 方法，其通过哈希函数获取到坐标后，从 `table` 中获取并返回 `Entry`。
 因为 `ThreadLocalMap` 采用的是链地址法，只探测一个位置没有数据显然是不够的，`getEntryAfterMiss` 方法会一直检索到下一个空位置，如果还没有找到对应的元素才会返回 `null`。
-#### 2.3.5 set 方法
+##### set 方法
 ```java
 private void set(ThreadLocal<?> key, Object value) {
 	Entry[] tab = table;
@@ -169,7 +168,7 @@ private void set(ThreadLocal<?> key, Object value) {
 }
 ```
 不断通过 `nextIndex` 方法进行地址探测，找到空位置或相同的 KEY 执行替换或插入操作。
-### 2.4 ThreadLocal 的 get 方法
+#### 2.4 ThreadLocal 的 get 方法
 get 方法是以当前的 `ThreadLocal` 对象作为 KEY，从 Thread 对象的 `ThreadLocalMap` 中去取得对应的 VALUE 值：
 ```java
 public T get() {
@@ -187,7 +186,7 @@ public T get() {
 }
 ```
 通过 `getMap()` 方法获取线程对象的 `ThreadLocalMap` ，然后通过 `getEntry()` 方法从 map 中获取对应的数据，也就是通过 `ThreadLocal` 的哈希值，去映射到`ThreadLocalMap` 的 Entry 数组的一个下标，来将对应的对象取出。
-## 3 InheritableThreadLocal
+### 3 InheritableThreadLocal
 继承关系：
 ![[InheritableThreadLocal.png|500]]
 `InheritableThreadLocal` 继承了父类 `ThreadLocal` 并且重写了它的 `getMap()` 和 `createMap()` 等方法
@@ -200,7 +199,7 @@ public T get() {
         t.inheritableThreadLocals = new ThreadLocalMap(this, firstValue);
     }
 ```
-### 3.1 set 方法
+#### 3.1 set 方法
 ```java
 public void set(T value) {
 	Thread t = Thread.currentThread();
@@ -213,7 +212,7 @@ public void set(T value) {
 }
 ```
 此时通过 `getMap()` 获取到的不再是该线程的 `threadLocals` 而是 `inheritableThreadLocals`。
-### 3.2 创建子线程
+#### 3.2 创建子线程
 创建子线程时，父线程如果发现自己的 `InheritableThreadLocal` 不为空，会将里面的内容拷贝到字线程的同属性中。
 ```java
 private void init(ThreadGroup g, Runnable target, String name,
