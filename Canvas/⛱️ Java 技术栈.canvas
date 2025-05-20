@@ -3,46 +3,71 @@
     {
       "fromNode": "cab10c383c82f46f",
       "fromSide": "left",
-      "id": "8423211535fa107c",
+      "id": "9bc8113518ac0a6c",
       "label": "线程池",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
       "toNode": "25b936ba6b812a5c",
       "toSide": "right"
     },
     {
       "fromNode": "cab10c383c82f46f",
       "fromSide": "left",
-      "id": "00bbf7b1664b12c3",
-      "label": "锁 Lock",
-      "toNode": "932cfa1ce3a12d6a",
-      "toSide": "right"
-    },
-    {
-      "fromNode": "cab10c383c82f46f",
-      "fromSide": "left",
-      "id": "47d98af1d95e4c37",
+      "id": "5e36ef1a51d2ebc5",
       "label": "网络 IO",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
       "toNode": "b30b86d0ff03f6e0",
       "toSide": "right"
     },
     {
       "fromNode": "cab10c383c82f46f",
-      "fromSide": "right",
-      "id": "38ff1d46ebc9c6a0",
+      "fromSide": "left",
+      "id": "cea87f110bfb13aa",
       "label": "并发工具类",
-      "toNode": "220559dc5e85d492",
-      "toSide": "left"
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "932cfa1ce3a12d6a",
+      "toSide": "right"
     },
     {
       "fromNode": "cab10c383c82f46f",
       "fromSide": "right",
-      "id": "f6feaceec30f6a94",
+      "id": "1202e9a37500ef49",
       "label": "并发基础",
       "styleAttributes": {
-        "arrow": null,
-        "path": null,
-        "pathfindingMethod": null
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
       },
       "toNode": "d089f4cbd2707cf5",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "6865f3613e6c6c57",
+      "fromSide": "right",
+      "id": "862473b27be3dadc",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "56885f7694d0c78c",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "6865f3613e6c6c57",
+      "fromSide": "right",
+      "id": "9c1e9f50265bea7e",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "03b2d09f08691bd7",
       "toSide": "left"
     }
   ],
@@ -60,6 +85,18 @@
       "y": 3280
     },
     {
+      "color": "2",
+      "height": 1440,
+      "id": "76cd8be5647d07bd",
+      "label": "Java 虚拟机",
+      "styleAttributes": {
+      },
+      "type": "group",
+      "width": 2280,
+      "x": 840,
+      "y": 1680
+    },
+    {
       "color": "3",
       "height": 1400,
       "id": "04d111eaa5b2aebd",
@@ -72,116 +109,16 @@
       "y": 3320
     },
     {
-      "color": "2",
-      "height": 1440,
-      "id": "76cd8be5647d07bd",
-      "label": "Java 虚拟机",
-      "styleAttributes": {
-      },
-      "type": "group",
-      "width": 2180,
-      "x": -200,
-      "y": 1680
-    },
-    {
       "color": "4",
-      "height": 564,
+      "height": 1440,
       "id": "6ae4ba2a21af0d85",
       "label": "Java 基础",
       "styleAttributes": {
       },
       "type": "group",
-      "width": 1720,
+      "width": 2790,
       "x": -2280,
-      "y": 2118
-    },
-    {
-      "height": 393,
-      "id": "98b032c18ce14882",
-      "styleAttributes": {
-      },
-      "text": "## 基础知识\n- [[🏃【Java】Java 运行时数据区域概览]]\n- [[🖨️【Java】HotSpot 虚拟机对象探秘]]\n- [[🎠【Java】对象创建过程]]\n- [[🏂【Java】常见的 OOM 场景]]\n- [[🍑【Java】关于字符串常量池]]\n- [[🥁【Java】类加载器]]",
-      "type": "text",
-      "width": 544,
-      "x": -40,
-      "y": 1851
-    },
-    {
-      "height": 215,
-      "id": "56885f7694d0c78c",
-      "styleAttributes": {
-      },
-      "text": "## 集合\n- [[🍧【Java】HashMap 源码分析]]\n- [[🐊【Java】ArrayList 源码分析]]",
-      "type": "text",
-      "width": 660,
-      "x": -2240,
-      "y": 2253
-    },
-    {
-      "height": 215,
-      "id": "03b2d09f08691bd7",
-      "styleAttributes": {
-      },
-      "text": "## 常用类\n- [[🍒【Java】时间相关类]]\n- [[🚘【Java】Random 类]]\n- [[🍊【Java】String 类]]",
-      "type": "text",
-      "width": 616,
-      "x": -1440,
-      "y": 2253
-    },
-    {
-      "height": 393,
-      "id": "72e169cdaf7dd9d8",
-      "styleAttributes": {
-      },
-      "text": "## 垃圾回收器\n- [[🧃【Java】垃圾回收器概述]]\n- [[🥤【Java】Serial 收集器]]\n- [[🤖【Java】ParNew 收集器]]\n- [[🌽【JVM】Parallel Scavenge 收集器]]\n- [[🍲【JVM】Parallel Old 收集器]]\n- [[🦚【JVM】CMS 收集器]]\n- [[🦚【JVM】Garbage First 收集器]]",
-      "type": "text",
-      "width": 544,
-      "x": -40,
-      "y": 2400
-    },
-    {
-      "height": 139,
-      "id": "220559dc5e85d492",
-      "styleAttributes": {
-      },
-      "text": "- [[📀【Java】ConcurrentHashMap]]\n- [[🌵【Java】CountDownLatch]]\n- [[🏜️【Java】CyclicBarrier]]",
-      "type": "text",
-      "width": 700,
-      "x": -280,
-      "y": 3648
-    },
-    {
-      "height": 179,
-      "id": "25b936ba6b812a5c",
-      "styleAttributes": {
-      },
-      "text": "- [[💘 线程池基本介绍]]\n- [[🍡 【Java】线程池源码详解]]\n- [[💜 【Java】关于线程池的一些思考]]\n- [[🍗【Java】线程池的动态修改]]",
-      "type": "text",
-      "width": 660,
-      "x": -2240,
-      "y": 3369
-    },
-    {
-      "height": 393,
-      "id": "cf66134e4b91b9e5",
-      "styleAttributes": {
-      },
-      "text": "## 自动内存管理\n\n- [[🌻【Java】垃圾回收器设计考虑的问题]]\n- [[👷‍♀️ 引用计数算法与可达性分析算法]]\n- [[💟【Java】四种引用类型]]\n- [[🥝【Java】根节点枚举]]\n- [[🥐【Java】记忆集与卡表]]\n- [[🦜【Java】并发的可达性分析]]\n-  [[🏋️【Java】垃圾收集算法]]",
-      "type": "text",
-      "width": 700,
-      "x": 1000,
-      "y": 1851
-    },
-    {
-      "file": "Canvas/🥒 Spring 专题.canvas",
-      "height": 465,
-      "id": "11763cd7f95e2fd8",
-      "styleAttributes": {
-      },
-      "type": "file",
-      "width": 530,
-      "x": 950,
-      "y": 3420
+      "y": 1680
     },
     {
       "height": 243,
@@ -199,6 +136,8 @@
       "height": 61,
       "id": "cab10c383c82f46f",
       "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
       },
       "text": "🎻 Java 并发",
       "type": "text",
@@ -207,16 +146,26 @@
       "y": 3885
     },
     {
-      "height": 179,
-      "id": "d089f4cbd2707cf5",
+      "height": 393,
+      "id": "98b032c18ce14882",
       "styleAttributes": {
-        "shape": null
       },
-      "text": "- [[🍓【Java】并发面试题整理]]\n- [[🍨【Java】Java Memory Model]]\n- [[🖼️【Java】创建线程的三种方式]]\n- [[🚤【Java】ThreadLocal]]",
+      "text": "## 基础知识\n- [[🏃【Java】Java 运行时数据区域概览]]\n- [[🖨️【Java】HotSpot 虚拟机对象探秘]]\n- [[🎠【Java】对象创建过程]]\n- [[🏂【Java】常见的 OOM 场景]]\n- [[🍑【Java】关于字符串常量池]]\n- [[🥁【Java】类加载器]]",
       "type": "text",
-      "width": 700,
-      "x": -280,
-      "y": 4056
+      "width": 544,
+      "x": 1000,
+      "y": 1851
+    },
+    {
+      "file": "Canvas/🥒 Spring 专题.canvas",
+      "height": 465,
+      "id": "11763cd7f95e2fd8",
+      "styleAttributes": {
+      },
+      "type": "file",
+      "width": 530,
+      "x": 950,
+      "y": 3420
     },
     {
       "file": "Canvas/🍒 mybatis 源码阅读.canvas",
@@ -225,7 +174,7 @@
       "styleAttributes": {
       },
       "type": "file",
-      "width": 400,
+      "width": 740,
       "x": 1760,
       "y": 3420
     },
@@ -236,9 +185,20 @@
       "styleAttributes": {
       },
       "type": "file",
-      "width": 400,
+      "width": 490,
       "x": 950,
       "y": 4056
+    },
+    {
+      "height": 393,
+      "id": "72e169cdaf7dd9d8",
+      "styleAttributes": {
+      },
+      "text": "## 垃圾回收器\n- [[🧃【Java】垃圾回收器概述]]\n- [[🥤【Java】Serial 收集器]]\n- [[🤖【Java】ParNew 收集器]]\n- [[🌽【JVM】Parallel Scavenge 收集器]]\n- [[🍲【JVM】Parallel Old 收集器]]\n- [[🦚【JVM】CMS 收集器]]\n- [[🦚【JVM】Garbage First 收集器]]",
+      "type": "text",
+      "width": 544,
+      "x": 1000,
+      "y": 2400
     },
     {
       "height": 393,
@@ -248,19 +208,89 @@
       "text": "## 分析工具\n- [[🐁 【Java】基础故障处理工具]]",
       "type": "text",
       "width": 700,
-      "x": 1000,
+      "x": 2040,
       "y": 2400
     },
     {
-      "height": 173,
-      "id": "932cfa1ce3a12d6a",
+      "height": 230,
+      "id": "d089f4cbd2707cf5",
+      "styleAttributes": {
+        "shape": null
+      },
+      "text": "- [[🍓【Java】并发面试题整理]]\n- [[🍨【Java】Java Memory Model]]\n- [[🖼️【Java】创建线程的三种方式]]\n- [[🚤【Java】ThreadLocal]]\n- [[🌯【Java】CompletableFuture 使用与原理]]",
+      "type": "text",
+      "width": 700,
+      "x": -280,
+      "y": 3826
+    },
+    {
+      "height": 179,
+      "id": "25b936ba6b812a5c",
       "styleAttributes": {
       },
-      "text": "- [[🍍【Java】CAS 原理]]\n- [[🍍【Java】AbstractQueueSynchronizer]]\n- [[💫【Java】ReentrantLock]]\n- [[🍾 并发编程.canvas|🍾 并发编程]]",
+      "text": "- [[💘 线程池基本介绍]]\n- [[🍡 【Java】线程池源码详解]]\n- [[💜 【Java】关于线程池的一些思考]]\n- [[🍗【Java】线程池的动态修改]]",
       "type": "text",
       "width": 660,
       "x": -2240,
-      "y": 4347
+      "y": 3500
+    },
+    {
+      "height": 273,
+      "id": "932cfa1ce3a12d6a",
+      "styleAttributes": {
+      },
+      "text": "- [[🍾 并发编程.canvas|🍾 并发编程]]\n- [[🍍【Java】CAS 原理]]\n- [[🥒【Java】AbstractQueueSynchronizer]]\n- [[💫【Java】ReentrantLock]]\n-  [[📀【Java】ConcurrentHashMap]]\n- [[🌵【Java】CountDownLatch]]\n- [[🏜️【Java】CyclicBarrier]]",
+      "type": "text",
+      "width": 660,
+      "x": -2240,
+      "y": 4100
+    },
+    {
+      "color": "4",
+      "height": 60,
+      "id": "6865f3613e6c6c57",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "Java 基础",
+      "type": "text",
+      "width": 260,
+      "x": -1580,
+      "y": 2295
+    },
+    {
+      "height": 240,
+      "id": "03b2d09f08691bd7",
+      "styleAttributes": {
+      },
+      "text": "## 常用类\n- [[🍒【Java】时间相关类]]\n- [[🚘【Java】Random 类]]\n- [[🍊【Java】String 类]]",
+      "type": "text",
+      "width": 660,
+      "x": -1020,
+      "y": 2355
+    },
+    {
+      "height": 215,
+      "id": "56885f7694d0c78c",
+      "styleAttributes": {
+      },
+      "text": "## 集合\n- [[🍧【Java】HashMap 源码分析]]\n- [[🐊【Java】ArrayList 源码分析]]",
+      "type": "text",
+      "width": 660,
+      "x": -1020,
+      "y": 2080
+    },
+    {
+      "height": 393,
+      "id": "cf66134e4b91b9e5",
+      "styleAttributes": {
+      },
+      "text": "## 自动内存管理\n\n- [[🌻【Java】垃圾回收器设计考虑的问题]]\n- [[👷‍♀️ 引用计数算法与可达性分析算法]]\n- [[💟【Java】四种引用类型]]\n- [[🥝【Java】根节点枚举]]\n- [[🥐【Java】记忆集与卡表]]\n- [[🦜【Java】并发的可达性分析]]\n-  [[🏋️【Java】垃圾收集算法]]",
+      "type": "text",
+      "width": 700,
+      "x": 2040,
+      "y": 1851
     }
   ]
 }
