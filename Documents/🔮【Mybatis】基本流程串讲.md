@@ -152,7 +152,7 @@ try (SqlSession session = sqlSessionFactory.openSession(false)) {
     
     // 使用 id
     List<User> users = session.selectList("com.example.mapper.UserMapper.getUserById", 18);  
-}
+}aaaaaaaa
 ```
 即使使用 `Mapper`，其底层也是通过 id，也就是类的全限定名 + 方法名来获取 SQL 的，Mybatis 将这部分逻辑抽离出来，放在了 Mapper 对象的代理方法之中，下面展示的是 Mybatis 使用 JDK 动态代理生成代理对象的步骤：
 ```java

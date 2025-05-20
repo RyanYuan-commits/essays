@@ -268,7 +268,8 @@
       "height": 60,
       "id": "52e4bcdaee3d1e5e",
       "styleAttributes": {
-        "border": "invisible"
+        "border": "invisible",
+        "textAlign": "right"
       },
       "text": "[[🌹【Mybatis】插件开发原理]]",
       "type": "text",
