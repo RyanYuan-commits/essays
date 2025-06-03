@@ -202,6 +202,17 @@
       },
       "toNode": "74d52adbd46fcaf8",
       "toSide": "right"
+    },
+    {
+      "fromNode": "0d440bbb33e170ba",
+      "fromSide": "left",
+      "id": "da967aca673efbbb",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "45ea9ba8b7350bd2",
+      "toSide": "right"
     }
   ],
   "nodes": [
@@ -323,19 +334,6 @@
     },
     {
       "height": 60,
-      "id": "0cbfe61f8f17343b",
-      "styleAttributes": {
-        "border": "invisible",
-        "textAlign": "right"
-      },
-      "text": "[[🛎️【分布式】分布式算法总结]]",
-      "type": "text",
-      "width": 340,
-      "x": -1860,
-      "y": -260
-    },
-    {
-      "height": 60,
       "id": "c085d95c2eb03a40",
       "styleAttributes": {
         "border": "invisible",
@@ -385,19 +383,6 @@
       "width": 300,
       "x": -1840,
       "y": 600
-    },
-    {
-      "height": 60,
-      "id": "c161c49857a3fcfa",
-      "styleAttributes": {
-        "border": "invisible",
-        "textAlign": "right"
-      },
-      "text": "[[🍍【分布式】CAP & BASE 理论]]\n",
-      "type": "text",
-      "width": 360,
-      "x": -1880,
-      "y": -380
     },
     {
       "color": "4",
@@ -453,6 +438,45 @@
       "width": 320,
       "x": -1860,
       "y": 20
+    },
+    {
+      "height": 60,
+      "id": "0cbfe61f8f17343b",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "right"
+      },
+      "text": "[[🛎️【分布式】分布式算法总结]]",
+      "type": "text",
+      "width": 340,
+      "x": -1860,
+      "y": -320
+    },
+    {
+      "height": 60,
+      "id": "c161c49857a3fcfa",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "right"
+      },
+      "text": "[[🍍【分布式】CAP & BASE 理论]]\n",
+      "type": "text",
+      "width": 360,
+      "x": -1880,
+      "y": -400
+    },
+    {
+      "height": 60,
+      "id": "45ea9ba8b7350bd2",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "right"
+      },
+      "text": "[[🌴【分布式】Raft 算法]]",
+      "type": "text",
+      "width": 340,
+      "x": -1860,
+      "y": -240
     }
   ]
 }

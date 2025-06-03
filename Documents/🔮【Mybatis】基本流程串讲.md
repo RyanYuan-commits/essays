@@ -38,7 +38,7 @@ MyBatis 中的一等公民自然就是我们定义的SQL语句了：
 ```
 这样的一个 `<select>` 的子节点，最终会被解析并构建成一个 `MappedStatement` 对象，在 `MappedStatement` 对象中有这些关键属性：
 - `String id`，表示当前 `MappedStatement` 对象的唯一标识，由接口名 + 方法名组成，比如上面的案例中，id 为`com.ryan.common_test.mapper.UserMapper.selectUserById`
-- `StatementType statementType`，默认为PREPARED，表示利用PreparedStatement来执行SQL
+- `StatementType statementType`，默认为 PREPARED，表示利用 PreparedStatement 来执行 SQL
 - `SqlSource sqlSource`，表示对应的SQL语句
 - `List<ResultMap> resultMaps`，表示对应的ResultMap，一般只有一个，执行存储过程时可以设置多个
 - `KeyGenerator keyGenerator`，对于insert语句，如果设置了 `useGeneratedKeys=true`，那么该属性的值为 `Jdbc3KeyGenerator`，表示会在insert执行完后来获取新纪录对应的自增 id；

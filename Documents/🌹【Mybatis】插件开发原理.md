@@ -33,5 +33,5 @@ public class ExeunplePlugin implements Interceptor {
   <plugin interceptor="com.zjq.plugin.ExamplePlugin"></plugin>
 </plugins>
 ```
-这样MyBatis在启动时可以加载插件，并保存插件实例到相关对象(InterceptorChain，拦截器链) 中。待准备⼯作做完后，MyBatis处于就绪状态。我们在执⾏SQL时，需要先通过DefaultSqlSessionFactory创建 SqlSession。Executor 实例会在创建 SqlSession 的过程中被创建， Executor实例创建完毕后，MyBatis会通过JDK动态代理为实例⽣成代理类。这样，插件逻辑即可在 Executor相关⽅法被调⽤前执⾏。 以上就是MyBatis插件机制的基本原理。
+这样 MyBatis 在启动时可以加载插件，并保存插件实例到相关对象(InterceptorChain，拦截器链) 中。待准备⼯作做完后，MyBatis 处于就绪状态。我们在执⾏SQL时，需要先通过 DefaultSqlSessionFactory 创建 SqlSession。Executor 实例会在创建 SqlSession 的过程中被创建， Executor实例创建完毕后，MyBatis 会通过 JDK 动态代理为实例⽣成代理类。这样，插件逻辑即可在 Executor相关⽅法被调⽤前执⾏。 以上就是MyBatis插件机制的基本原理。
 ### 2 自定义插件

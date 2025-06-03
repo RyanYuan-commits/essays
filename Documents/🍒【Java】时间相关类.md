@@ -1,5 +1,5 @@
-## java.util.Date
-### 简单介绍
+### java.util.Date
+#### 简单介绍
 java.util.Date 是 Java 中用于表示特定瞬间（时间点）的类。
 
 >[!tips]
@@ -7,7 +7,7 @@ java.util.Date 是 Java 中用于表示特定瞬间（时间点）的类。
 
 优点：简单易用，直接存储日期和时间
 缺点：没有提供日期和时间的格式化和解析功能
-### 常用构造方法
+#### 常用构造方法
 直接获取当前时间
 ```java
 Date date = new Date();
@@ -18,17 +18,17 @@ Date date = new Date();
 long milliseconds = 1609459200000L; // 2021-01-01 00:00:00 的毫秒数
 Date specificDate = new Date(milliseconds);
 ```
-### 常用方法
+#### 常用方法
 **`long getTime()`**: 返回自 1970 年 1 月 1 日 00:00:00 GMT 以来此 `Date` 对象表示的毫秒数。
 **`void setTime(long time)`**： 根据时间戳设置 `Date` 对象表示的时间。
 **`boolean after(Date when)`**: 测试此 `Date` 对象表示的时间是否在指定 `Date` 对象表示的时间之后。
 **`boolean before(Date when)`**: 测试此 `Date` 对象表示的时间是否在指定 `Date` 对象表示的时间之前。
-### 局限性
+#### 局限性
 - **可变性**：`java.util.Date` 类是可变的，这意味着在多线程环境下使用时可能会出现线程安全问题。一旦创建了 `Date` 对象，就可以使用 `setTime()` 方法改变其表示的时间。
 - **缺乏时区支持**：`Date` 类本身并不包含时区信息，它只是简单地存储自纪元以来的毫秒数。这使得在处理不同时区的日期和时间时变得复杂，需要结合 `java.util.TimeZone` 类来处理。
 - **设计缺陷**：`Date` 类的一些方法（如 `getYear()`、`getMonth()` 等）已经被标记为过时，因为它们的设计存在问题，容易引起混淆。例如，`getYear()` 返回的是从 1900 年开始计算的年份偏移量，而不是实际的年份。
-## java.util.Calendar
-### 基本介绍
+### java.util.Calendar
+#### 基本介绍
 `ava.util.Calendar` 是 Java 中用于处理日期和时间的抽象类，它提供了比 `java.util.Date` 更丰富的日期和时间操作功能。
 由于 `Date` 类存在一些设计缺陷，`Calendar` 类弥补了这些不足，使得日期和时间的处理更加灵活和方便。
 优点：提供了丰富的日期和时间操作功能，可以处理复杂的日期计算
@@ -43,7 +43,7 @@ public class Main {
     }
 }
 ```
-### 常用字段
+#### 常用字段
 `Calendar` 类定义了许多静态常量字段，用于表示日期和时间的各个部分，常见的有：
 - `Calendar.YEAR`：表示年份。
 - `Calendar.MONTH`：表示月份，从 0 开始计数，即 0 表示一月，11 表示十二月。
@@ -52,7 +52,7 @@ public class Main {
 - `Calendar.MINUTE`：表示分钟数。
 - `Calendar.SECOND`：表示秒数。
 - `Calendar.DAY_OF_WEEK`：表示一周中的第几天，1 表示星期日，2 表示星期一，以此类推。
-### 常用构造和静态方法
+#### 常用构造和静态方法
 **`static Calendar getInstance()`**：返回一个默认时区和语言环境的 `Calendar` 实例，通常使用这个方法来获取 `Calendar` 对象。
 **`int get(int field)`**：返回指定日历字段的值。
 **`void set(int field, int value)`**：将指定的日历字段设置为给定的值。
@@ -83,14 +83,14 @@ public class CalendarExample {
 ```
 **`Date getTime()`**：返回一个表示此 `Calendar` 时间值（从纪元至现在的毫秒偏移量）的 `Date` 对象。
 **`void setTime(Date date)`**：使用给定的 `Date` 对象设置此 `Calendar` 的时间。
-### 局限性
+#### 局限性
 - **可变性**：`Calendar` 类是可变的，这在多线程环境下使用时可能会导致线程安全问题。
 - **月份索引问题**：`Calendar` 类中月份是从 0 开始计数的，这容易引起混淆，在编写代码时需要特别注意。
 - **API 设计不够简洁**：`Calendar` 类的方法和字段较多，使用起来不够直观和简洁，增加了学习和使用的成本。
-## java.time.LocalDate
+### java.time.LocalDate
 `java.time.LocalDate` 是 Java 8 引入的 `java.time` 包中的一个类，用于表示不带时区的日期，例如 `2024-12-31`。它是不可变且线程安全的，相比旧的 `java.util.Date` 和 `java.util.Calendar` 类，提供了更简洁、更直观的日期处理方式。
-### 创建 `LocalDate` 实例
-#### 1. 使用 `now()` 方法获取当前日期
+#### 创建 `LocalDate` 实例
+##### 使用 `now()` 方法获取当前日期
 ```java
 import java.time.LocalDate;
 
@@ -101,7 +101,7 @@ public class LocalDateExample {
     }
 }
 ```
-#### 2. 使用 `of()` 方法指定日期
+##### 使用 `of()` 方法指定日期
 ```java
 import java.time.LocalDate;
 
@@ -113,7 +113,7 @@ public class LocalDateExample {
 }
 ```
 `of()` 方法接收年、月、日作为参数，创建指定的日期实例。
-#### 3. 使用 `parse()` 方法从字符串解析日期
+##### 使用 `parse()` 方法从字符串解析日期
 ```java
 import java.time.LocalDate;
 
@@ -126,8 +126,8 @@ public class LocalDateExample {
 }
 ```
 `parse()` 方法默认按照 `ISO_LOCAL_DATE` 格式（`yyyy-MM-dd`）解析字符串。
-### 常用方法
-#### 1. 获取日期信息
+#### 常用方法
+##### 获取日期信息
 ```java
 import java.time.LocalDate;
 
@@ -142,7 +142,7 @@ public class LocalDateExample {
 }
 ```
 `getYear()`、`getMonthValue()` 和 `getDayOfMonth()` 分别用于获取年份、月份和日期。
-#### 2. 判断日期关系
+##### 判断日期关系
 ```java
 import java.time.LocalDate;
 
@@ -160,8 +160,8 @@ public class LocalDateExample {
 }
 ```
 `isBefore()`、`isAfter()` 和 `isEqual()` 用于判断日期之间的先后关系和是否相等。
-### 日期计算
-#### 1. 增加或减少日期
+#### 日期计算
+##### 增加或减少日期
 ```java
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -181,7 +181,7 @@ public class LocalDateExample {
 }
 ```
 `plusXxx()` 和 `minusXxx()` 方法用于增加或减少指定的时间单位，也可以使用 `plus()` 和 `minus()` 结合 `ChronoUnit` 进行更灵活的计算。
-#### 2. 计算两个日期之间的差值
+##### 计算两个日期之间的差值
 ```java
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -196,8 +196,8 @@ public class LocalDateExample {
 }
 ```
 `ChronoUnit` 的 `between()` 方法用于计算两个日期之间的差值。
-### 格式化与解析
-#### 1. 格式化日期
+#### 格式化与解析
+##### 格式化日期
 ```java
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -212,7 +212,7 @@ public class LocalDateExample {
 }
 ```
 使用 `DateTimeFormatter` 可以将 `LocalDate` 格式化为指定格式的字符串。
-#### 2. 解析自定义格式的日期字符串
+##### 解析自定义格式的日期字符串
 ```java
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -227,12 +227,11 @@ public class LocalDateExample {
 }
 ```
 同样使用 `DateTimeFormatter` 可以解析自定义格式的日期字符串为 `LocalDate` 实例。
-## java.time.LocalDateTime
+### java.time.LocalDateTime
 `LocalDateTime` 是 Java 8 引入的 `java.time` 包中的一个类，用于表示不带时区信息的日期和时间，它结合了 `LocalDate` 和 `LocalTime` 的功能，可以精确到纳秒级别。`LocalDateTime` 是不可变且线程安全的，提供了简洁、高效且功能强大的日期时间处理方式。
 
-### 1. 创建 `LocalDateTime` 实例
-
-#### 1.1 使用 `now()` 方法获取当前日期和时间
+#### 创建 `LocalDateTime` 实例
+##### 1.1 使用 `now()` 方法获取当前日期和时间
 时区可以通过 TimeZone.setDefault 设置
 ```java
 import java.time.LocalDateTime;
@@ -244,7 +243,7 @@ public class LocalDateTimeExample {
     }
 }
 ```
-#### 1.2 使用 `of()` 方法指定日期和时间
+##### 1.2 使用 `of()` 方法指定日期和时间
 ```java
 import java.time.LocalDateTime;
 
@@ -256,7 +255,7 @@ public class LocalDateTimeExample {
     }
 }
 ```
-#### 1.3 结合 `LocalDate` 和 `LocalTime` 创建
+##### 1.3 结合 `LocalDate` 和 `LocalTime` 创建
 ```java
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -271,7 +270,7 @@ public class LocalDateTimeExample {
     }
 }
 ```
-#### 1.4 使用 `parse()` 方法从字符串解析
+##### 1.4 使用 `parse()` 方法从字符串解析
 ```java
 import java.time.LocalDateTime;
 
@@ -284,8 +283,8 @@ public class LocalDateTimeExample {
 }
 ```
 默认按照 `ISO_LOCAL_DATE_TIME` 格式（`yyyy-MM-ddTHH:mm:ss`）解析，`T` 是日期和时间的分隔符。
-### 2. 常用方法
-#### 2.1 获取日期和时间信息
+### 常用方法
+##### 2.1 获取日期和时间信息
 ```java
 import java.time.LocalDateTime;
 
@@ -302,7 +301,7 @@ public class LocalDateTimeExample {
     }
 }
 ```
-#### 2.2 判断日期和时间关系
+##### 2.2 判断日期和时间关系
 ```java
 import java.time.LocalDateTime;
 
@@ -319,8 +318,8 @@ public class LocalDateTimeExample {
     }
 }
 ```
-### 3. 日期和时间计算
-#### 3.1 增加或减少时间
+### 日期和时间计算
+##### 3.1 增加或减少时间
 ```java
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
@@ -339,7 +338,7 @@ public class LocalDateTimeExample {
     }
 }
 ```
-#### 3.2 计算两个 `LocalDateTime` 之间的差值
+##### 3.2 计算两个 `LocalDateTime` 之间的差值
 ```java
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -355,10 +354,8 @@ public class LocalDateTimeExample {
     }
 }
 ```
-
-### 4. 格式化与解析
-
-#### 4.1 格式化日期和时间
+#### 格式化与解析
+##### 4.1 格式化日期和时间
 ```java
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -372,8 +369,7 @@ public class LocalDateTimeExample {
     }
 }
 ```
-
-#### 4.2 解析自定义格式的日期和时间字符串
+##### 4.2 解析自定义格式的日期和时间字符串
 ```java
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -387,10 +383,9 @@ public class LocalDateTimeExample {
     }
 }
 ```
+### 与其他时间类的转换
 
-### 5. 与其他时间类的转换
-
-#### 5.1 转换为 `LocalDate` 和 `LocalTime`
+##### 5.1 转换为 `LocalDate` 和 `LocalTime`
 ```java
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -406,5 +401,4 @@ public class LocalDateTimeExample {
     }
 }
 ```
-
 `LocalDateTime` 类为处理日期和时间提供了丰富且便捷的功能，在 Java 8 及后续版本的开发中，是处理日期和时间的理想选择。 

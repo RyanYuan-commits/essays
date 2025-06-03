@@ -85,6 +85,18 @@
       "y": 3280
     },
     {
+      "color": "4",
+      "height": 1440,
+      "id": "6ae4ba2a21af0d85",
+      "label": "Java 基础",
+      "styleAttributes": {
+      },
+      "type": "group",
+      "width": 2790,
+      "x": -2280,
+      "y": 1680
+    },
+    {
       "color": "2",
       "height": 1440,
       "id": "76cd8be5647d07bd",
@@ -107,43 +119,6 @@
       "width": 2280,
       "x": 840,
       "y": 3320
-    },
-    {
-      "color": "4",
-      "height": 1440,
-      "id": "6ae4ba2a21af0d85",
-      "label": "Java 基础",
-      "styleAttributes": {
-      },
-      "type": "group",
-      "width": 2790,
-      "x": -2280,
-      "y": 1680
-    },
-    {
-      "height": 243,
-      "id": "b30b86d0ff03f6e0",
-      "styleAttributes": {
-      },
-      "text": "- [[🎽【并发】高并发 IO 底层原理]]\n- [[🥭【并发】Java NIO 详解]]\n\t- [[🦞【NIO】Selector]]\n\t- [[🥨【NIO】Channel]]\n\t- [[🍌【NIO】Buffer]]\n- [[🌲【并发】Reactor 反应器模式]]",
-      "type": "text",
-      "width": 660,
-      "x": -2240,
-      "y": 3794
-    },
-    {
-      "color": "4",
-      "height": 61,
-      "id": "cab10c383c82f46f",
-      "styleAttributes": {
-        "border": "invisible",
-        "textAlign": "center"
-      },
-      "text": "🎻 Java 并发",
-      "type": "text",
-      "width": 240,
-      "x": -900,
-      "y": 3885
     },
     {
       "height": 393,
@@ -190,62 +165,6 @@
       "y": 4056
     },
     {
-      "height": 393,
-      "id": "72e169cdaf7dd9d8",
-      "styleAttributes": {
-      },
-      "text": "## 垃圾回收器\n- [[🧃【Java】垃圾回收器概述]]\n- [[🥤【Java】Serial 收集器]]\n- [[🤖【Java】ParNew 收集器]]\n- [[🌽【JVM】Parallel Scavenge 收集器]]\n- [[🍲【JVM】Parallel Old 收集器]]\n- [[🦚【JVM】CMS 收集器]]\n- [[🦚【JVM】Garbage First 收集器]]",
-      "type": "text",
-      "width": 544,
-      "x": 1000,
-      "y": 2400
-    },
-    {
-      "height": 393,
-      "id": "9f830a6bf3cf9ac7",
-      "styleAttributes": {
-      },
-      "text": "## 分析工具\n- [[🐁 【Java】基础故障处理工具]]",
-      "type": "text",
-      "width": 700,
-      "x": 2040,
-      "y": 2400
-    },
-    {
-      "height": 230,
-      "id": "d089f4cbd2707cf5",
-      "styleAttributes": {
-        "shape": null
-      },
-      "text": "- [[🍓【Java】并发面试题整理]]\n- [[🍨【Java】Java Memory Model]]\n- [[🖼️【Java】创建线程的三种方式]]\n- [[🚤【Java】ThreadLocal]]\n- [[🌯【Java】CompletableFuture 使用与原理]]",
-      "type": "text",
-      "width": 700,
-      "x": -280,
-      "y": 3826
-    },
-    {
-      "height": 179,
-      "id": "25b936ba6b812a5c",
-      "styleAttributes": {
-      },
-      "text": "- [[💘 线程池基本介绍]]\n- [[🍡 【Java】线程池源码详解]]\n- [[💜 【Java】关于线程池的一些思考]]\n- [[🍗【Java】线程池的动态修改]]",
-      "type": "text",
-      "width": 660,
-      "x": -2240,
-      "y": 3500
-    },
-    {
-      "height": 273,
-      "id": "932cfa1ce3a12d6a",
-      "styleAttributes": {
-      },
-      "text": "- [[🍾 并发编程.canvas|🍾 并发编程]]\n- [[🍍【Java】CAS 原理]]\n- [[🥒【Java】AbstractQueueSynchronizer]]\n- [[💫【Java】ReentrantLock]]\n-  [[📀【Java】ConcurrentHashMap]]\n- [[🌵【Java】CountDownLatch]]\n- [[🏜️【Java】CyclicBarrier]]",
-      "type": "text",
-      "width": 660,
-      "x": -2240,
-      "y": 4100
-    },
-    {
       "color": "4",
       "height": 60,
       "id": "6865f3613e6c6c57",
@@ -282,6 +201,75 @@
       "y": 2080
     },
     {
+      "height": 243,
+      "id": "b30b86d0ff03f6e0",
+      "styleAttributes": {
+      },
+      "text": "- [[🎽【并发】高并发 IO 底层原理]]\n- [[🥭【并发】Java NIO 详解]]\n\t- [[🦞【NIO】Selector]]\n\t- [[🥨【NIO】Channel]]\n\t- [[🍌【NIO】Buffer]]\n- [[🌲【并发】Reactor 反应器模式]]",
+      "type": "text",
+      "width": 660,
+      "x": -2240,
+      "y": 3794
+    },
+    {
+      "color": "4",
+      "height": 61,
+      "id": "cab10c383c82f46f",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "🎻 Java 并发",
+      "type": "text",
+      "width": 240,
+      "x": -900,
+      "y": 3885
+    },
+    {
+      "height": 393,
+      "id": "72e169cdaf7dd9d8",
+      "styleAttributes": {
+      },
+      "text": "## 垃圾回收器\n- [[🧃【Java】垃圾回收器概述]]\n- [[🥤【Java】Serial 收集器]]\n- [[🤖【Java】ParNew 收集器]]\n- [[🌽【JVM】Parallel Scavenge 收集器]]\n- [[🍲【JVM】Parallel Old 收集器]]\n- [[🦚【JVM】CMS 收集器]]\n- [[🦚【JVM】Garbage First 收集器]]",
+      "type": "text",
+      "width": 544,
+      "x": 1000,
+      "y": 2400
+    },
+    {
+      "height": 393,
+      "id": "9f830a6bf3cf9ac7",
+      "styleAttributes": {
+      },
+      "text": "## 分析工具\n- [[🐁 【Java】基础故障处理工具]]",
+      "type": "text",
+      "width": 700,
+      "x": 2040,
+      "y": 2400
+    },
+    {
+      "height": 179,
+      "id": "25b936ba6b812a5c",
+      "styleAttributes": {
+      },
+      "text": "- [[💘 线程池基本介绍]]\n- [[🍡 【Java】线程池源码详解]]\n- [[💜 【Java】关于线程池的一些思考]]\n- [[🍗【Java】线程池的动态修改]]",
+      "type": "text",
+      "width": 660,
+      "x": -2240,
+      "y": 3500
+    },
+    {
+      "height": 273,
+      "id": "932cfa1ce3a12d6a",
+      "styleAttributes": {
+      },
+      "text": "- [[🍾 并发编程.canvas|🍾 并发编程]]\n- [[🍍【Java】CAS 原理]]\n- [[🥒【Java】AbstractQueueSynchronizer]]\n- [[💫【Java】ReentrantLock]]\n-  [[📀【Java】ConcurrentHashMap]]\n- [[🌵【Java】CountDownLatch]]\n- [[🏜️【Java】CyclicBarrier]]",
+      "type": "text",
+      "width": 660,
+      "x": -2240,
+      "y": 4100
+    },
+    {
       "height": 393,
       "id": "cf66134e4b91b9e5",
       "styleAttributes": {
@@ -291,6 +279,18 @@
       "width": 700,
       "x": 2040,
       "y": 1851
+    },
+    {
+      "height": 230,
+      "id": "d089f4cbd2707cf5",
+      "styleAttributes": {
+        "shape": null
+      },
+      "text": "- [[🍓【Java】并发面试题整理]]\n- [[🍨【Java】Java Memory Model]]\n- [[🖼️【Java】创建线程的三种方式]]\n- [[🚤【Java】ThreadLocal]]\n- [[🌯【Java】CompletableFuture 使用与原理]]",
+      "type": "text",
+      "width": 700,
+      "x": -280,
+      "y": 3801
     }
   ]
 }

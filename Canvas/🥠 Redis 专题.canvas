@@ -633,18 +633,6 @@
     },
     {
       "height": 60,
-      "id": "faefde31c00136fa",
-      "styleAttributes": {
-        "border": "dashed"
-      },
-      "text": "[[🐳 布隆过滤器详解]]",
-      "type": "text",
-      "width": 230,
-      "x": -850,
-      "y": -680
-    },
-    {
-      "height": 60,
       "id": "d27db351010fe613",
       "styleAttributes": {
         "border": "invisible"
@@ -812,6 +800,18 @@
       "width": 320,
       "x": -540,
       "y": -1357
+    },
+    {
+      "height": 60,
+      "id": "faefde31c00136fa",
+      "styleAttributes": {
+        "border": "dashed"
+      },
+      "text": "[[🐳 布隆过滤器详解]]",
+      "type": "text",
+      "width": 260,
+      "x": -880,
+      "y": -680
     }
   ]
 }

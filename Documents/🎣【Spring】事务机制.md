@@ -1,13 +1,13 @@
 Spring 的事务机制是 Spring 框架中非常重要的一部分，它为企业级应用提供了强大而灵活的事务管理能力。
-## 1 事务的基本概念
+### 1 事务的基本概念
 事务是一组不可分割的操作序列，这些操作要么全部成功执行，要么全部失败回滚，以保证数据的一致性和完整性。事务具有四个特性，通常简称为 ACID：
 - **原子性（Atomicity）**：事务是一个不可分割的工作单位，事务中的操作要么全部成功，要么全部失败。
 - **一致性（Consistency）**：事务执行前后，数据库的状态必须保持一致。例如，在转账操作中，无论转账是否成功，账户的总金额应该保持不变。
 - **隔离性（Isolation）**：多个事务并发执行时，一个事务的执行不应该影响其他事务的执行。不同的隔离级别可以控制事务之间的可见性和干扰程度。
 - **持久性（Durability）**：事务一旦提交，其对数据库的更改应该永久保存，即使系统出现故障也不会丢失。
-## 2 Spring 事务管理的方式
+### 2 Spring 事务管理的方式
 Spring 提供了两种事务管理方式：编程式事务管理和声明式事务管理。
-### 2.1 编程式事务管理
+#### 2.1 编程式事务管理
 编程式事务管理需要在代码中显式地编写事务管理的代码，如开启事务、提交事务或回滚事务。这种方式灵活性高，但代码侵入性强，维护成本较高。通常使用 `TransactionTemplate` 或 `PlatformTransactionManager` 来实现。
 ```java
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +36,7 @@ public class ProgrammaticTransactionService {
     }
 }
 ```
-### 2.2 声明式事务管理
+#### 2.2 声明式事务管理
 声明式事务管理是通过 AOP（面向切面编程）实现的，它将事务管理代码与业务逻辑代码分离，降低了代码的耦合度，提高了可维护性。声明式事务管理可以通过 XML 配置或注解的方式实现，常用的注解是 `@Transactional`。
 ```java
 import org.springframework.stereotype.Service;
@@ -51,7 +51,7 @@ public class DeclarativeTransactionService {
     }
 }
 ```
-## 3 事务的传播行为
+### 3 事务的传播行为
 事务的传播行为定义了在多个事务方法相互调用时，事务如何进行传播。Spring 定义了 7 种事务传播行为：
 - **REQUIRED（默认）**：如果当前存在事务，则加入该事务；如果当前没有事务，则创建一个新的事务。
 - **SUPPORTS**：如果当前存在事务，则加入该事务；如果当前没有事务，则以非事务方式执行。
@@ -60,14 +60,14 @@ public class DeclarativeTransactionService {
 - **REQUIRES_NEW**：创建一个新的事务，如果当前存在事务，则将当前事务挂起。
 - **NOT_SUPPORTED**：以非事务方式执行操作，如果当前存在事务，则将当前事务挂起。
 - **NEVER**：以非事务方式执行操作，如果当前存在事务，则抛出异常。
-## 4 事务的隔离级别
+### 4 事务的隔离级别
 事务的隔离级别定义了一个事务对其他事务的可见性。Spring 支持以下 5 种隔离级别：
 - **ISOLATION_DEFAULT**：使用数据库的默认隔离级别。
 - **ISOLATION_READ_UNCOMMITTED**：允许读取未提交的数据，可能会导致脏读、不可重复读和幻读问题。
 - **ISOLATION_READ_COMMITTED**：只允许读取已提交的数据，可以避免脏读，但可能会出现不可重复读和幻读问题。
 - **ISOLATION_REPEATABLE_READ**：确保在同一个事务中多次读取同一数据的结果是一致的，可以避免脏读和不可重复读，但可能会出现幻读问题。
 - **ISOLATION_SERIALIZABLE**：最高的隔离级别，所有事务依次串行执行，可以避免脏读、不可重复读和幻读问题，但会影响并发性能。
-## 5 事务的使用示例
+### 5 事务的使用示例
 以下是一个使用 `@Transactional` 注解进行声明式事务管理的示例：
 ```java
 import org.springframework.beans.factory.annotation.Autowired;
@@ -97,7 +97,7 @@ public class UserService {
 ```
 在上述示例中，`transferMoney` 方法使用 `@Transactional` 注解进行事务管理，指定了事务的传播行为为 `PROPAGATION_REQUIRED`，隔离级别为 `ISOLATION_READ_COMMITTED`。如果在方法执行过程中抛出异常，事务将自动回滚，确保数据的一致性。
 综上所述，Spring 的事务机制为开发者提供了强大而灵活的事务管理能力，通过编程式和声明式事务管理方式、事务的传播行为和隔离级别等特性，开发者可以根据实际需求灵活地管理事务，保证数据的一致性和完整性。
-## 6 源码分析
+### 6 源码分析
 Spring 的事务机制是通过 AOP 实现的，当给方法加上 @Transaction 注解后，AOP 的执行链路中会多一个 TransactionInterceptor 拦截器。
 ```java
 @Override
@@ -221,8 +221,7 @@ protected Object invokeWithinTransaction(Method method, @Nullable Class<?> targe
 		}
 	}
 ```
-## 7 注解失效情况总结
-
+### 7 注解失效情况总结
 #### 1）在类的内部调用
 ```java
 @Service
