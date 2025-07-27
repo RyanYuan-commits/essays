@@ -69,6 +69,17 @@
       },
       "toNode": "03b2d09f08691bd7",
       "toSide": "left"
+    },
+    {
+      "fromNode": "6865f3613e6c6c57",
+      "fromSide": "left",
+      "id": "82521ee1b812faf6",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "14ad922cf1f21248",
+      "toSide": "right"
     }
   ],
   "nodes": [
@@ -121,50 +132,6 @@
       "y": 3320
     },
     {
-      "height": 393,
-      "id": "98b032c18ce14882",
-      "styleAttributes": {
-      },
-      "text": "## 基础知识\n- [[🏃【Java】Java 运行时数据区域概览]]\n- [[🖨️【Java】HotSpot 虚拟机对象探秘]]\n- [[🎠【Java】对象创建过程]]\n- [[🏂【Java】常见的 OOM 场景]]\n- [[🍑【Java】关于字符串常量池]]\n- [[🥁【Java】类加载器]]",
-      "type": "text",
-      "width": 544,
-      "x": 1000,
-      "y": 1851
-    },
-    {
-      "file": "Canvas/🥒 Spring 专题.canvas",
-      "height": 465,
-      "id": "11763cd7f95e2fd8",
-      "styleAttributes": {
-      },
-      "type": "file",
-      "width": 530,
-      "x": 950,
-      "y": 3420
-    },
-    {
-      "file": "Canvas/🍒 mybatis 源码阅读.canvas",
-      "height": 400,
-      "id": "841ce158162ae810",
-      "styleAttributes": {
-      },
-      "type": "file",
-      "width": 740,
-      "x": 1760,
-      "y": 3420
-    },
-    {
-      "file": "Documents/🍾 SpringMVC.md",
-      "height": 400,
-      "id": "78c4be27c577b294",
-      "styleAttributes": {
-      },
-      "type": "file",
-      "width": 490,
-      "x": 950,
-      "y": 4056
-    },
-    {
       "color": "4",
       "height": 60,
       "id": "6865f3613e6c6c57",
@@ -201,29 +168,15 @@
       "y": 2080
     },
     {
-      "height": 243,
-      "id": "b30b86d0ff03f6e0",
+      "height": 393,
+      "id": "98b032c18ce14882",
       "styleAttributes": {
       },
-      "text": "- [[🎽【并发】高并发 IO 底层原理]]\n- [[🥭【并发】Java NIO 详解]]\n\t- [[🦞【NIO】Selector]]\n\t- [[🥨【NIO】Channel]]\n\t- [[🍌【NIO】Buffer]]\n- [[🌲【并发】Reactor 反应器模式]]",
+      "text": "## 基础知识\n- [[🏃【Java】Java 运行时数据区域概览]]\n- [[🖨️【Java】HotSpot 虚拟机对象探秘]]\n- [[🎠【Java】对象创建过程]]\n- [[🏂【Java】常见的 OOM 场景]]\n- [[🍑【Java】关于字符串常量池]]\n- [[🥁【Java】类加载器]]",
       "type": "text",
-      "width": 660,
-      "x": -2240,
-      "y": 3794
-    },
-    {
-      "color": "4",
-      "height": 61,
-      "id": "cab10c383c82f46f",
-      "styleAttributes": {
-        "border": "invisible",
-        "textAlign": "center"
-      },
-      "text": "🎻 Java 并发",
-      "type": "text",
-      "width": 240,
-      "x": -900,
-      "y": 3885
+      "width": 544,
+      "x": 1000,
+      "y": 1851
     },
     {
       "height": 393,
@@ -248,6 +201,28 @@
       "y": 2400
     },
     {
+      "height": 393,
+      "id": "cf66134e4b91b9e5",
+      "styleAttributes": {
+      },
+      "text": "## 自动内存管理\n\n- [[🌻【Java】垃圾回收器设计考虑的问题]]\n- [[👷‍♀️ 引用计数算法与可达性分析算法]]\n- [[💟【Java】四种引用类型]]\n- [[🥝【Java】根节点枚举]]\n- [[🥐【Java】记忆集与卡表]]\n- [[🦜【Java】并发的可达性分析]]\n-  [[🏋️【Java】垃圾收集算法]]",
+      "type": "text",
+      "width": 700,
+      "x": 2040,
+      "y": 1851
+    },
+    {
+      "height": 243,
+      "id": "b30b86d0ff03f6e0",
+      "styleAttributes": {
+      },
+      "text": "- [[🎽【并发】高并发 IO 底层原理]]\n- [[🥭【并发】Java NIO 详解]]\n\t- [[🦞【NIO】Selector]]\n\t- [[🥨【NIO】Channel]]\n\t- [[🍌【NIO】Buffer]]\n- [[🌲【并发】Reactor 反应器模式]]",
+      "type": "text",
+      "width": 660,
+      "x": -2240,
+      "y": 3794
+    },
+    {
       "height": 179,
       "id": "25b936ba6b812a5c",
       "styleAttributes": {
@@ -270,15 +245,18 @@
       "y": 4100
     },
     {
-      "height": 393,
-      "id": "cf66134e4b91b9e5",
+      "color": "4",
+      "height": 61,
+      "id": "cab10c383c82f46f",
       "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
       },
-      "text": "## 自动内存管理\n\n- [[🌻【Java】垃圾回收器设计考虑的问题]]\n- [[👷‍♀️ 引用计数算法与可达性分析算法]]\n- [[💟【Java】四种引用类型]]\n- [[🥝【Java】根节点枚举]]\n- [[🥐【Java】记忆集与卡表]]\n- [[🦜【Java】并发的可达性分析]]\n-  [[🏋️【Java】垃圾收集算法]]",
+      "text": "🎻 Java 并发",
       "type": "text",
-      "width": 700,
-      "x": 2040,
-      "y": 1851
+      "width": 240,
+      "x": -900,
+      "y": 3885
     },
     {
       "height": 230,
@@ -291,6 +269,51 @@
       "width": 700,
       "x": -280,
       "y": 3801
+    },
+    {
+      "file": "Canvas/🥒 Spring 专题.canvas",
+      "height": 465,
+      "id": "11763cd7f95e2fd8",
+      "styleAttributes": {
+      },
+      "type": "file",
+      "width": 530,
+      "x": 950,
+      "y": 3420
+    },
+    {
+      "file": "Canvas/🍒 mybatis 源码阅读.canvas",
+      "height": 400,
+      "id": "841ce158162ae810",
+      "styleAttributes": {
+      },
+      "type": "file",
+      "width": 740,
+      "x": 1760,
+      "y": 3420
+    },
+    {
+      "file": "Documents/🍾 SpringMVC.md",
+      "height": 400,
+      "id": "78c4be27c577b294",
+      "styleAttributes": {
+      },
+      "type": "file",
+      "width": 490,
+      "x": 950,
+      "y": 4056
+    },
+    {
+      "height": 245,
+      "id": "14ad922cf1f21248",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "### 包管理\n[[🍿 Gradle]]",
+      "type": "text",
+      "width": 340,
+      "x": -2080,
+      "y": 2203
     }
   ]
 }

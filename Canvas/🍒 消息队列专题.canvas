@@ -1,5 +1,27 @@
 {
   "edges": [
+    {
+      "fromNode": "40f2924a0963b4b6",
+      "fromSide": "right",
+      "id": "0fa0ac655a204ca7",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "32ea227fb333863d",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "40f2924a0963b4b6",
+      "fromSide": "right",
+      "id": "c56a6300b736edf8",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "0d379b944b9de446",
+      "toSide": "left"
+    }
   ],
   "nodes": [
     {
@@ -34,6 +56,44 @@
       "width": 940,
       "x": -540,
       "y": 520
+    },
+    {
+      "color": "5",
+      "height": 60,
+      "id": "40f2924a0963b4b6",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "Kafka",
+      "type": "text",
+      "width": 260,
+      "x": 760,
+      "y": 490
+    },
+    {
+      "height": 60,
+      "id": "32ea227fb333863d",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🌴 Kafka 快速入门]]",
+      "type": "text",
+      "width": 260,
+      "x": 1240,
+      "y": 240
+    },
+    {
+      "height": 60,
+      "id": "0d379b944b9de446",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🍵 server.properties 配置]]",
+      "type": "text",
+      "width": 260,
+      "x": 1260,
+      "y": 740
     }
   ]
 }
