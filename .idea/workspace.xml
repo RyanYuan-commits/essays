@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="afd18f3d-9857-46e6-99d1-76083f3be9cf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Canvas/⛱️ Java 技术栈.canvas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Canvas/ mybatis 源码阅读.canvas" beforePathEscaped="$PROJECT_DIR$/Canvas/🍒 mybatis 源码阅读.canvas" beforeDir="false" afterPath="$PROJECT_DIR$/Canvas/ mybatis 源码阅读.canvas" afterPathEscaped="$PROJECT_DIR$/Canvas/🍒 mybatis 源码阅读.canvas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Canvas/ 深入理解 Java 虚拟机.canvas" beforePathEscaped="$PROJECT_DIR$/Canvas/🛀 深入理解 Java 虚拟机.canvas" beforeDir="false" afterPath="$PROJECT_DIR$/Canvas/ 深入理解 Java 虚拟机.canvas" afterPathEscaped="$PROJECT_DIR$/Canvas/🛀 深入理解 Java 虚拟机.canvas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Canvas/ Python 技术栈.canvas" beforePathEscaped="$PROJECT_DIR$/Canvas/🦝 Python 技术栈.canvas" beforeDir="false" afterPath="$PROJECT_DIR$/Canvas/ Python 技术栈.canvas" afterPathEscaped="$PROJECT_DIR$/Canvas/🦝 Python 技术栈.canvas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/【Java】垃圾回收器设计考虑的问题.md" beforePathEscaped="$PROJECT_DIR$/Documents/🌻【Java】垃圾回收器设计考虑的问题.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/【Java】时间相关类.md" beforePathEscaped="$PROJECT_DIR$/Documents/🍒【Java】时间相关类.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/ SpringMVC.md" beforePathEscaped="$PROJECT_DIR$/Documents/🍾 SpringMVC.md" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/ SpringMVC.md" afterPathEscaped="$PROJECT_DIR$/Documents/🍾 SpringMVC.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/【Java】Java 运行时数据区域概览.md" beforePathEscaped="$PROJECT_DIR$/Documents/🏃【Java】Java 运行时数据区域概览.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/️【Java】垃圾收集算法.md" beforePathEscaped="$PROJECT_DIR$/Documents/🏋️【Java】垃圾收集算法.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/ 【Java】基础故障处理工具.md" beforePathEscaped="$PROJECT_DIR$/Documents/🐁 【Java】基础故障处理工具.md" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/ 【Java】基础故障处理工具.md" afterPathEscaped="$PROJECT_DIR$/Documents/🐁 【Java】基础故障处理工具.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/ JDK 与 CGLib 动态代理.md" beforePathEscaped="$PROJECT_DIR$/Documents/🐑 JDK 与 CGLib 动态代理.md" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/ JDK 与 CGLib 动态代理.md" afterPathEscaped="$PROJECT_DIR$/Documents/🐑 JDK 与 CGLib 动态代理.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/‍♀️ 引用计数算法与可达性分析算法.md" beforePathEscaped="$PROJECT_DIR$/Documents/👷‍♀️ 引用计数算法与可达性分析算法.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/【Java】四种引用类型.md" beforePathEscaped="$PROJECT_DIR$/Documents/💟【Java】四种引用类型.md" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/【Java】四种引用类型.md" afterPathEscaped="$PROJECT_DIR$/Documents/💟【Java】四种引用类型.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/️【Java】创建线程的三种方式.md" beforePathEscaped="$PROJECT_DIR$/Documents/🖼️【Java】创建线程的三种方式.md" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/️【Java】创建线程的三种方式.md" afterPathEscaped="$PROJECT_DIR$/Documents/🖼️【Java】创建线程的三种方式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/【Java】Random 类.md" beforePathEscaped="$PROJECT_DIR$/Documents/🚘【Java】Random 类.md" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/【Java】Random 类.md" afterPathEscaped="$PROJECT_DIR$/Documents/🚘【Java】Random 类.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/【Java】根节点枚举.md" beforePathEscaped="$PROJECT_DIR$/Documents/🥝【Java】根节点枚举.md" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/【Java】根节点枚举.md" afterPathEscaped="$PROJECT_DIR$/Documents/🥝【Java】根节点枚举.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/【Java】并发的可达性分析.md" beforePathEscaped="$PROJECT_DIR$/Documents/🦜【Java】并发的可达性分析.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/【Java】垃圾回收器概述.md" beforePathEscaped="$PROJECT_DIR$/Documents/🧃【Java】垃圾回收器概述.md" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/【Java】垃圾回收器概述.md" afterPathEscaped="$PROJECT_DIR$/Documents/🧃【Java】垃圾回收器概述.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle从入门到进阶详细教程4、Gradle中主要有Project和Task对象，Project是Gradle中构建 - 掘金.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/Diary-Template.md" beforeDir="false" afterPath="$PROJECT_DIR$/Template/Diary-Template.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/《运行时数据区域》思维导图.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ Main.canvas" beforePathEscaped="$PROJECT_DIR$/🏓 Main.canvas" beforeDir="false" afterPath="$PROJECT_DIR$/ Main.canvas" afterPathEscaped="$PROJECT_DIR$/🏓 Main.canvas" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1753668227" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="30SfkutJEnwhaeDhwbGRcirEGow" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/knowledge_management/essays",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afd18f3d-9857-46e6-99d1-76083f3be9cf" name="Changes" comment="" />
+      <created>1753626041378</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753626041378</updated>
+      <workItem from="1753626043239" duration="1789000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

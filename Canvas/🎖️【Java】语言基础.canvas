@@ -1,0 +1,75 @@
+{
+	"nodes":[
+		{
+			"id":"eccbd851eca1e2ec",
+			"styleAttributes":{"border":"invisible","textAlign":"center"},
+			"text":"Java 基础",
+			"type":"text",
+			"x":-360,
+			"y":-42,
+			"width":260,
+			"height":60,
+			"color":"4"
+		},
+		{
+			"id":"dd9e2623bd86fb7f",
+			"styleAttributes":{},
+			"text":"## 常用类\n- [[💟【Java】四种引用类型]]\n- [[🍒【Java】日期相关类]]\n- [[🚘【Java】Random 类]]\n- [[🍊【Java】String 类]]",
+			"type":"text",
+			"x":200,
+			"y":18,
+			"width":660,
+			"height":240
+		},
+		{
+			"id":"43b057eda7808097",
+			"styleAttributes":{},
+			"text":"## 集合\n- [[🍧【Java】HashMap 源码分析]]\n- [[🐊【Java】ArrayList 源码分析]]",
+			"type":"text",
+			"x":200,
+			"y":-257,
+			"width":660,
+			"height":215
+		},
+		{
+			"id":"0d0d01aa9411ce2e",
+			"styleAttributes":{"border":"invisible"},
+			"text":"### 包管理\n[[🍿 Gradle]]",
+			"type":"text",
+			"x":-800,
+			"y":-73,
+			"width":340,
+			"height":122
+		}
+	],
+	"edges":[
+		{
+			"id":"bbbe9fa41a6cbcc0",
+			"styleAttributes":{"arrow":"blunt","pathfindingMethod":"square"},
+			"fromNode":"eccbd851eca1e2ec",
+			"fromSide":"right",
+			"toNode":"43b057eda7808097",
+			"toSide":"left"
+		},
+		{
+			"id":"48f9466fcdc365b4",
+			"styleAttributes":{"arrow":"blunt","pathfindingMethod":"square"},
+			"fromNode":"eccbd851eca1e2ec",
+			"fromSide":"right",
+			"toNode":"dd9e2623bd86fb7f",
+			"toSide":"left"
+		},
+		{
+			"id":"2c25950811714a73",
+			"styleAttributes":{"arrow":"blunt","pathfindingMethod":"square"},
+			"fromNode":"eccbd851eca1e2ec",
+			"fromSide":"left",
+			"toNode":"0d0d01aa9411ce2e",
+			"toSide":"right"
+		}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}
