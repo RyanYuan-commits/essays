@@ -34,12 +34,12 @@
 		{
 			"id":"0d0d01aa9411ce2e",
 			"styleAttributes":{"border":"invisible"},
-			"text":"### 包管理\n[[🍿 Gradle]]",
+			"text":"\n[[🍿 Gradle]]",
 			"type":"text",
 			"x":-800,
-			"y":-73,
+			"y":-43,
 			"width":340,
-			"height":122
+			"height":61
 		}
 	],
 	"edges":[

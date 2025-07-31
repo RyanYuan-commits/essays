@@ -1,27 +1,94 @@
 {
 	"nodes":[
 		{
-			"file":"Canvas/🥒 Spring 专题.canvas",
-			"id":"4a94d901ffd757a9",
-			"styleAttributes":{},
-			"type":"file",
-			"x":-775,
-			"y":-518,
-			"width":530,
-			"height":465
+			"id":"aae4608eb5cc991d",
+			"type":"text",
+			"text":"🎏【Java】常用依赖",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-320,
+			"y":100,
+			"width":260,
+			"height":60
 		},
 		{
-			"file":"Canvas/🍒 mybatis 源码阅读.canvas",
-			"id":"e3d467b83cccb505",
-			"styleAttributes":{},
-			"type":"file",
-			"x":35,
-			"y":-518,
-			"width":740,
-			"height":400
+			"id":"a7fb23f8373f7f23",
+			"type":"text",
+			"text":"[[🥒 【Java】Spring.canvas|🥒 【Java】Spring]]",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-700,
+			"y":100,
+			"width":260,
+			"height":60
+		},
+		{
+			"id":"98267f7acea9f515",
+			"type":"text",
+			"text":"[[🍒【Java】MyBatis.canvas|🍒【Java】MyBatis]]",
+			"styleAttributes":{"textAlign":"center"},
+			"x":80,
+			"y":100,
+			"width":260,
+			"height":60
+		},
+		{
+			"id":"a80b4c1fc3a4e1a8",
+			"type":"text",
+			"text":"[[🏆【Java】SpringMVC.canvas|🏆【Java】SpringMVC]]",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-320,
+			"y":320,
+			"width":260,
+			"height":60
+		},
+		{
+			"id":"405e2d3b77254256",
+			"type":"text",
+			"text":"[[🍊 Dubbo 源码剖析与实战-阅读笔记]]",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-340,
+			"y":-80,
+			"width":300,
+			"height":60
 		}
 	],
-	"edges":[],
+	"edges":[
+		{
+			"id":"b1ae076bdf69684c",
+			"styleAttributes":{"pathfindingMethod":"square","arrow":"blunt"},
+			"toFloating":false,
+			"fromNode":"aae4608eb5cc991d",
+			"fromSide":"left",
+			"toNode":"a7fb23f8373f7f23",
+			"toSide":"right"
+		},
+		{
+			"id":"9e3d3ddb16e94cb5",
+			"styleAttributes":{"pathfindingMethod":"square","arrow":"blunt"},
+			"toFloating":false,
+			"fromNode":"aae4608eb5cc991d",
+			"fromSide":"right",
+			"toNode":"98267f7acea9f515",
+			"toSide":"left"
+		},
+		{
+			"id":"e42f19cc23757811",
+			"styleAttributes":{"pathfindingMethod":"square","arrow":"blunt"},
+			"toFloating":false,
+			"fromNode":"aae4608eb5cc991d",
+			"fromSide":"bottom",
+			"toNode":"a80b4c1fc3a4e1a8",
+			"toSide":"top"
+		},
+		{
+			"id":"0df83130136909fd",
+			"styleAttributes":{"pathfindingMethod":"square","arrow":"blunt"},
+			"toFloating":false,
+			"fromNode":"aae4608eb5cc991d",
+			"fromSide":"top",
+			"toNode":"405e2d3b77254256",
+			"toSide":"bottom"
+		}
+	],
 	"metadata":{
 		"version":"1.0-1.0",
 		"frontmatter":{}
