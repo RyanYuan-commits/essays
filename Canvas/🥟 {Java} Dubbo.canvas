@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{
+			"id":"e2068d9f7ae586f2",
+			"type":"text",
+			"text":"🥟 **Dubbo**",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-220,
+			"y":-40,
+			"width":260,
+			"height":60,
+			"color":"5"
+		}
+	],
+	"edges":[],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}

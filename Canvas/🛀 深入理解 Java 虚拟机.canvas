@@ -1,0 +1,37 @@
+{
+	"nodes":[
+		{"id":"90aa64b6216ee7f9","type":"text","text":"🛀 深入理解 Java 虚拟机","x":-520,"y":116,"width":280,"height":61,"color":"1"},
+		{"id":"9787e057a1160451","type":"text","text":"走进 Java","x":276,"y":-557,"width":160,"height":60,"color":"2"},
+		{"id":"fdf28b0cb6ed6d75","type":"file","file":"images/《OOM 演示》思维导图.png","x":1071,"y":-380,"width":400,"height":123},
+		{"id":"194b7e5209f071de","type":"file","file":"Images/《运行时数据区域》思维导图.png","x":1071,"y":-800,"width":400,"height":141},
+		{"id":"78aba3aa82e182d9","type":"text","text":"监控与故障处理工具","x":-1240,"y":117,"width":250,"height":60},
+		{"id":"7efc55977ec0c04b","type":"text","text":"[[🐁 【Java】基础故障处理工具]]","x":-1680,"y":117,"width":250,"height":60},
+		{"id":"2e18acc0dbe2a3e9","type":"text","text":"自动内存管理","x":276,"y":520,"width":184,"height":60,"color":"2"},
+		{"id":"b6e78b737a3c0977","type":"file","file":"images/《HotSpot 虚拟机对象探秘》思维导图.png","x":1071,"y":-608,"width":400,"height":168},
+		{"id":"4d39e350036d39ad","type":"text","text":"- [[👷‍♀️ 引用计数算法与可达性分析算法]]\n- [[💟【Java】四种引用类型]]\n- [[🦁【JVM】HotSpot 算法实现细节]]\n-  [[🏋️【Java】分代假说与垃圾收集算法]]","x":927,"y":271,"width":413,"height":169},
+		{"id":"cbd4afbdae6d24c0","type":"text","text":"\n- [[🥤【Java】Serial 收集器]]\n- [[🤖【Java】ParNew 收集器]]\n- [[🌽【JVM】Parallel Scavenge 收集器]]\n- [[🍲【JVM】Parallel Old 收集器]]\n- [[🦚【JVM】CMS 收集器]]\n- [[🦚【JVM】Garbage First 收集器]]","x":920,"y":860,"width":440,"height":220},
+		{"id":"7dc1fe0bbcae4797","type":"text","text":"垃圾回收器的设计需要考虑三个问题：**哪些内存需要回收？什么时候回收？如何回收？**\n1. Java内存运行时区域的各个部分，其中程序计数器、虚拟机栈、本地方法栈3个区域随线程而生，随线程而灭，栈中的栈帧随着方法的进入和退出而有条不紊地执行着出栈和入栈操作。每一个栈帧中分配多少内存基本上是在类结构确定下来时就已知的，因此这几个区域的内存分配和回收都具备确定性， 在这几个区域内就不需要过多考虑如何回收的问题，当方法结束或者线程结束时，内存自然就跟随着回收了。\n2. Java **堆和方法区**这两个区域则有着很显著的不确定性: 一个接口的多个实现类需要的内存可能会不一样，一个方法所执行的不同条件分支所需要的内存也可能不一样，只有处于运行期间，我们才能知道程序究竟会创建哪些对象，创建多少个对象，这部分内存的分配和回收是动态的。垃圾收集器所关注的正是这部分内存该如何管理。\n","x":135,"y":-180,"width":785,"height":357},
+		{"id":"24b1f2f3b5a81e90","type":"text","text":"- [[🏃【Java】运行时数据区域]]\n- [[🖨️【Java】HotSpot 虚拟机对象探秘]]\n- [[🏂【Java】常见的 OOM 场景]]\n- [[🍑【Java】关于字符串常量池]]\n- [[🥁【Java】类加载器]]","x":480,"y":-631,"width":460,"height":208},
+		{"id":"7a98597d64cddd3b","type":"file","file":"Images/Java 中的四种引用类型.png","x":1580,"y":-1,"width":399,"height":186},
+		{"id":"84a3d22580a33549","type":"file","file":"images/《引用计数算法与可达性分析算法》思维导图.png","x":1580,"y":-220,"width":399,"height":123},
+		{"id":"743411434a7ef202","type":"file","file":"images/《HotSpot 算法实现细节》思维导图.png","x":1580,"y":300,"width":698,"height":280},
+		{"id":"f31dd7cccda65316","type":"file","file":"images/《垃圾收集算法》思维导图.png","x":1580,"y":640,"width":720,"height":561}
+	],
+	"edges":[
+		{"id":"f37df5fa75394260","fromNode":"90aa64b6216ee7f9","fromSide":"right","toNode":"9787e057a1160451","toSide":"left","label":"基础知识"},
+		{"id":"3e42b5eff3c408d9","fromNode":"90aa64b6216ee7f9","fromSide":"right","toNode":"2e18acc0dbe2a3e9","toSide":"left","label":"自动内存管理"},
+		{"id":"f8dd46075c319cfd","fromNode":"9787e057a1160451","fromSide":"right","toNode":"24b1f2f3b5a81e90","toSide":"left"},
+		{"id":"e40baefe828d45f7","fromNode":"24b1f2f3b5a81e90","fromSide":"right","toNode":"194b7e5209f071de","toSide":"left"},
+		{"id":"c7a2012d7ae233bf","fromNode":"24b1f2f3b5a81e90","fromSide":"right","toNode":"b6e78b737a3c0977","toSide":"left"},
+		{"id":"e35201e86dedb0dc","fromNode":"24b1f2f3b5a81e90","fromSide":"right","toNode":"fdf28b0cb6ed6d75","toSide":"left"},
+		{"id":"a0effdcc40ca3c23","fromNode":"2e18acc0dbe2a3e9","fromSide":"top","toNode":"7dc1fe0bbcae4797","toSide":"bottom","label":"垃圾回收器的设计需要考虑的问题"},
+		{"id":"4caebf8714071c39","fromNode":"4d39e350036d39ad","fromSide":"right","toNode":"84a3d22580a33549","toSide":"left"},
+		{"id":"1f0afb42800579f0","fromNode":"4d39e350036d39ad","fromSide":"right","toNode":"7a98597d64cddd3b","toSide":"left"},
+		{"id":"ddf39f3201ed3205","fromNode":"90aa64b6216ee7f9","fromSide":"left","toNode":"78aba3aa82e182d9","toSide":"right","label":"监控与故障处理工具"},
+		{"id":"cdd1f2b2ba998003","fromNode":"78aba3aa82e182d9","fromSide":"left","toNode":"7efc55977ec0c04b","toSide":"right"},
+		{"id":"a0831f755ea8f772","fromNode":"2e18acc0dbe2a3e9","fromSide":"right","toNode":"4d39e350036d39ad","toSide":"left","label":"引入"},
+		{"id":"a6e0bc767831abe9","fromNode":"2e18acc0dbe2a3e9","fromSide":"right","toNode":"cbd4afbdae6d24c0","toSide":"left","label":"经典垃圾收集器"},
+		{"id":"43847b694e345eb4","fromNode":"4d39e350036d39ad","fromSide":"right","toNode":"743411434a7ef202","toSide":"left"},
+		{"id":"0c6e5089dfa669e2","fromNode":"4d39e350036d39ad","fromSide":"right","toNode":"f31dd7cccda65316","toSide":"left"}
+	]
+}

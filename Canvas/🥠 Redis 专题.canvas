@@ -1,0 +1,817 @@
+{
+  "edges": [
+    {
+      "fromNode": "be84d51c78b7c264",
+      "fromSide": "left",
+      "id": "d3df9551ddb943c8",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "c6c88ad982b36a7f",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "c6c88ad982b36a7f",
+      "fromSide": "left",
+      "id": "d948156b91010d6f",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "927723b48bf1638f",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "c6c88ad982b36a7f",
+      "fromSide": "left",
+      "id": "d28058c322f6ea45",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "81325f4c7b81346b",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "c6c88ad982b36a7f",
+      "fromSide": "left",
+      "id": "0a6d64d6860f14dd",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "bddbccb51ebb865d",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "c6c88ad982b36a7f",
+      "fromSide": "left",
+      "id": "43164ee32075ca6c",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "d509a698a7d2646f",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "c6c88ad982b36a7f",
+      "fromSide": "left",
+      "id": "220ec1c5887d886a",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "698d3b0da9142118",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "698d3b0da9142118",
+      "fromSide": "left",
+      "id": "d40f5221345de076",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "d0634f95b2c99edf",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "be84d51c78b7c264",
+      "fromSide": "right",
+      "id": "8ac4f497a291fd20",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "18ef9991ebe25120",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "18ef9991ebe25120",
+      "fromSide": "right",
+      "id": "f1c783b628036db1",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "e822446b3a144c5b",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "18ef9991ebe25120",
+      "fromSide": "right",
+      "id": "7e7833cac2a10e0a",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "dce35768443453b2",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "18ef9991ebe25120",
+      "fromSide": "right",
+      "id": "4e3e2b904ea4aeb7",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "02d0c4f60380f079",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "be84d51c78b7c264",
+      "fromSide": "right",
+      "id": "cd17a6df29687321",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "1ea57cead6d6442a",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "1ea57cead6d6442a",
+      "fromSide": "right",
+      "id": "690b40d3294fb36c",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "ac7da4795d8af7b3",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "1ea57cead6d6442a",
+      "fromSide": "right",
+      "id": "1079996e882dff7c",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "722fbae5ce89a7b6",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "be84d51c78b7c264",
+      "fromSide": "right",
+      "id": "f5113f7610879cc4",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "5344a68065926117",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "5344a68065926117",
+      "fromSide": "right",
+      "id": "1d11426d7b6a67b7",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "373466826ffedd85",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "be84d51c78b7c264",
+      "fromSide": "left",
+      "id": "c3223aebd56ef479",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "942cf620dc7534bc",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "942cf620dc7534bc",
+      "fromSide": "left",
+      "id": "1429a82585f1833c",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "3804b623b49522e3",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "942cf620dc7534bc",
+      "fromSide": "left",
+      "id": "ff9980e5b6e87d1b",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "77258b27bce7ef33",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "be84d51c78b7c264",
+      "fromSide": "left",
+      "id": "0d230e22c54478a6",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "70e134474b5c06cd",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "70e134474b5c06cd",
+      "fromSide": "left",
+      "id": "951d1b674f4b9fc0",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "586bb71f42e65a56",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "70e134474b5c06cd",
+      "fromSide": "left",
+      "id": "3f4e531d27124e62",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "5efc5cda09ee5479",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "70e134474b5c06cd",
+      "fromSide": "left",
+      "id": "e8a11294597da1a2",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "d27db351010fe613",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "d27db351010fe613",
+      "fromSide": "left",
+      "id": "bfea6aca45b73114",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "faefde31c00136fa",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "be84d51c78b7c264",
+      "fromSide": "right",
+      "id": "fd57154b148583bb",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "e602c1215ff6e62f",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "e602c1215ff6e62f",
+      "fromSide": "right",
+      "id": "3cd4b34f35f4efa6",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "cf536ed6dc4d72ac",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "be84d51c78b7c264",
+      "fromSide": "left",
+      "id": "b8b94dad59689c41",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "545374239d1150e2",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "be84d51c78b7c264",
+      "fromSide": "left",
+      "id": "8c3446029053b798",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "c32560878bed868b",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "c32560878bed868b",
+      "fromSide": "left",
+      "id": "cff64a263e7cc142",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "121a0cfaa27406b7",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "c32560878bed868b",
+      "fromSide": "left",
+      "id": "194e437fadfbee17",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "c7121b28d419b301",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "c32560878bed868b",
+      "fromSide": "left",
+      "id": "558bb093956e0167",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "723dfc62af1f90e7",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "121a0cfaa27406b7",
+      "fromSide": "left",
+      "id": "2259044f06d785b9",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "94a39e2876aa1680",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "be84d51c78b7c264",
+      "fromSide": "right",
+      "id": "42098fd6ce856343",
+      "styleAttributes": {
+        "arrow": "blunt",
+        "pathfindingMethod": "square"
+      },
+      "toNode": "c0b0ff00d414e66a",
+      "toSide": "left"
+    }
+  ],
+  "nodes": [
+    {
+      "color": "5",
+      "height": 60,
+      "id": "18ef9991ebe25120",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "[**持久化**](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/)",
+      "type": "text",
+      "width": 260,
+      "x": 1720,
+      "y": -1037
+    },
+    {
+      "color": "4",
+      "height": 60,
+      "id": "1ea57cead6d6442a",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "高可用",
+      "type": "text",
+      "width": 260,
+      "x": 1720,
+      "y": -780
+    },
+    {
+      "color": "6",
+      "height": 60,
+      "id": "5344a68065926117",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "线程模型",
+      "type": "text",
+      "width": 260,
+      "x": 1720,
+      "y": -520
+    },
+    {
+      "color": "2",
+      "height": 60,
+      "id": "e602c1215ff6e62f",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "分布式锁",
+      "type": "text",
+      "width": 260,
+      "x": 1720,
+      "y": -260
+    },
+    {
+      "height": 60,
+      "id": "e822446b3a144c5b",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🦨【Redis】RDB 持久化是如何实现的？]]",
+      "type": "text",
+      "width": 440,
+      "x": 2370,
+      "y": -1137
+    },
+    {
+      "height": 60,
+      "id": "dce35768443453b2",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🐬【Redis】AOF 是如何实现的？]]",
+      "type": "text",
+      "width": 400,
+      "x": 2370,
+      "y": -1037
+    },
+    {
+      "height": 60,
+      "id": "02d0c4f60380f079",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🐊【Redis】RDB + AOF 持久化方案]]",
+      "type": "text",
+      "width": 380,
+      "x": 2370,
+      "y": -947
+    },
+    {
+      "height": 60,
+      "id": "ac7da4795d8af7b3",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🌵【Redis」主从复制]]",
+      "type": "text",
+      "width": 260,
+      "x": 2370,
+      "y": -840
+    },
+    {
+      "height": 60,
+      "id": "722fbae5ce89a7b6",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🍊【Redis】哨兵机制]]",
+      "type": "text",
+      "width": 260,
+      "x": 2370,
+      "y": -720
+    },
+    {
+      "height": 60,
+      "id": "373466826ffedd85",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🦔【Redis】线程模型]]",
+      "type": "text",
+      "width": 260,
+      "x": 2370,
+      "y": -520
+    },
+    {
+      "height": 60,
+      "id": "cf536ed6dc4d72ac",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[⛸️【Redis】分布式锁]]",
+      "type": "text",
+      "width": 260,
+      "x": 2370,
+      "y": -260
+    },
+    {
+      "height": 60,
+      "id": "c0b0ff00d414e66a",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🍾【Redis】发布订阅机制]]",
+      "type": "text",
+      "width": 340,
+      "x": 1720,
+      "y": -1324
+    },
+    {
+      "height": 60,
+      "id": "da392a7148b1328b",
+      "styleAttributes": {
+      },
+      "text": "官网：https://redis.io/",
+      "type": "text",
+      "width": 280,
+      "x": 860,
+      "y": -1019
+    },
+    {
+      "file": "Images/icon-redis.png",
+      "height": 270,
+      "id": "95d2a663781a1288",
+      "styleAttributes": {
+      },
+      "type": "file",
+      "width": 270,
+      "x": 865,
+      "y": -1319
+    },
+    {
+      "color": "1",
+      "height": 120,
+      "id": "be84d51c78b7c264",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "## 🥠 **Redis**",
+      "type": "text",
+      "width": 360,
+      "x": 780,
+      "y": -810
+    },
+    {
+      "height": 60,
+      "id": "3804b623b49522e3",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🏈【Redis】过期删除]]",
+      "type": "text",
+      "width": 260,
+      "x": -480,
+      "y": -1180
+    },
+    {
+      "height": 60,
+      "id": "586bb71f42e65a56",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🦖【Redis】缓存雪崩]]",
+      "type": "text",
+      "width": 260,
+      "x": -480,
+      "y": -880
+    },
+    {
+      "height": 60,
+      "id": "5efc5cda09ee5479",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🍫【Redis】缓存击穿]]",
+      "type": "text",
+      "width": 260,
+      "x": -480,
+      "y": -780
+    },
+    {
+      "color": "3",
+      "height": 60,
+      "id": "c6c88ad982b36a7f",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": " 数据类型",
+      "type": "text",
+      "width": 260,
+      "x": 80,
+      "y": -1497
+    },
+    {
+      "color": "2",
+      "height": 60,
+      "id": "942cf620dc7534bc",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "过期删除与内存淘汰",
+      "type": "text",
+      "width": 260,
+      "x": 80,
+      "y": -1120
+    },
+    {
+      "color": "4",
+      "height": 60,
+      "id": "70e134474b5c06cd",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "缓存事故",
+      "type": "text",
+      "width": 260,
+      "x": 80,
+      "y": -780
+    },
+    {
+      "height": 60,
+      "id": "d27db351010fe613",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🕶️【Redis】缓存穿透]]",
+      "type": "text",
+      "width": 260,
+      "x": -480,
+      "y": -680
+    },
+    {
+      "height": 60,
+      "id": "94a39e2876aa1680",
+      "styleAttributes": {
+        "border": "dotted"
+      },
+      "text": "[[🍵【Redis】ACL 配置]]",
+      "type": "text",
+      "width": 260,
+      "x": -880,
+      "y": -420
+    },
+    {
+      "height": 60,
+      "id": "121a0cfaa27406b7",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🌶️【Redis】MoreKey 问题]]",
+      "type": "text",
+      "width": 300,
+      "x": -500,
+      "y": -420
+    },
+    {
+      "height": 60,
+      "id": "723dfc62af1f90e7",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🛫【Redis】热 key 问题]]",
+      "type": "text",
+      "width": 280,
+      "x": -480,
+      "y": -280
+    },
+    {
+      "height": 60,
+      "id": "c7121b28d419b301",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🍑【Redis】Big Key 问题]]",
+      "type": "text",
+      "width": 300,
+      "x": -500,
+      "y": -160
+    },
+    {
+      "height": 60,
+      "id": "545374239d1150e2",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[♠️【Redis】缓存一致性问题]]",
+      "type": "text",
+      "width": 340,
+      "x": 0,
+      "y": -520
+    },
+    {
+      "color": "6",
+      "height": 60,
+      "id": "c32560878bed868b",
+      "styleAttributes": {
+        "border": "invisible",
+        "textAlign": "center"
+      },
+      "text": "常见问题",
+      "type": "text",
+      "width": 260,
+      "x": 80,
+      "y": -280
+    },
+    {
+      "height": 60,
+      "id": "d0634f95b2c99edf",
+      "styleAttributes": {
+        "border": "dotted"
+      },
+      "text": "[[🍍【Redis】跳表原理]]",
+      "type": "text",
+      "width": 260,
+      "x": -880,
+      "y": -1357
+    },
+    {
+      "height": 60,
+      "id": "927723b48bf1638f",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🍵【Redis】字符串 string]]",
+      "type": "text",
+      "width": 320,
+      "x": -540,
+      "y": -1657
+    },
+    {
+      "height": 60,
+      "id": "81325f4c7b81346b",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🗼【Redis】列表 List]]",
+      "type": "text",
+      "width": 320,
+      "x": -540,
+      "y": -1577
+    },
+    {
+      "height": 60,
+      "id": "77258b27bce7ef33",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[📿【Redis】内存淘汰策略]]",
+      "type": "text",
+      "width": 300,
+      "x": -520,
+      "y": -1060
+    },
+    {
+      "height": 60,
+      "id": "bddbccb51ebb865d",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🐗【Redis】哈希映射 Hash]]",
+      "type": "text",
+      "width": 320,
+      "x": -540,
+      "y": -1497
+    },
+    {
+      "height": 60,
+      "id": "d509a698a7d2646f",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🥭【Redis】集合 Set]]",
+      "type": "text",
+      "width": 320,
+      "x": -540,
+      "y": -1427
+    },
+    {
+      "height": 60,
+      "id": "698d3b0da9142118",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "text": "[[🏰【Redis】有序集合 ZSet]]",
+      "type": "text",
+      "width": 320,
+      "x": -540,
+      "y": -1357
+    },
+    {
+      "height": 60,
+      "id": "faefde31c00136fa",
+      "styleAttributes": {
+        "border": "dashed"
+      },
+      "text": "[[🐳 布隆过滤器详解]]",
+      "type": "text",
+      "width": 260,
+      "x": -880,
+      "y": -680
+    }
+  ]
+}

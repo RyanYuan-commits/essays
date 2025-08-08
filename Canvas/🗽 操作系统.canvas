@@ -1,0 +1,28 @@
+{
+  "edges": [
+  ],
+  "nodes": [
+    {
+      "height": 400,
+      "id": "c2305334efb22482",
+      "styleAttributes": {
+      },
+      "text": "## Shell 编程\n[在线工具](https://www.jyshare.com/compile/18/)\n- [[🖼️【Linux】Shell 简述]]\n- [[🍑【Linux】Shell 变量]]\n- [[🥝【Linux】Shell 数组]]\n- [[🍍【Linux】Shell 运算]]",
+      "type": "text",
+      "width": 640,
+      "x": -240,
+      "y": -205
+    },
+    {
+      "height": 400,
+      "id": "e5b1507ed4356092",
+      "styleAttributes": {
+      },
+      "text": "## 基础知识\n- [[🍌【Linux】文件系统]]\n- [[🌾【Linux】Linux 常用命令]]",
+      "type": "text",
+      "width": 640,
+      "x": -1060,
+      "y": -205
+    }
+  ]
+}

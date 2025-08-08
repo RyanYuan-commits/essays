@@ -1,0 +1,72 @@
+{
+  "edges": [
+    {
+      "fromNode": "8bb797814a66a116",
+      "fromSide": "right",
+      "id": "1eacc256e307a0bd",
+      "label": "Grammer",
+      "toNode": "909525c175c5b684",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "909525c175c5b684",
+      "fromSide": "top",
+      "id": "1731a2330e89ffef",
+      "toNode": "34d25b8594c7036a",
+      "toSide": "bottom"
+    },
+    {
+      "fromNode": "909525c175c5b684",
+      "fromSide": "right",
+      "id": "fb66a1a112095426",
+      "toNode": "24cb0d57864dcd4c",
+      "toSide": "left"
+    }
+  ],
+  "nodes": [
+    {
+      "height": 60,
+      "id": "8bb797814a66a116",
+      "styleAttributes": {
+      },
+      "text": "🦜 英语学习",
+      "type": "text",
+      "width": 180,
+      "x": -180,
+      "y": -3
+    },
+    {
+      "height": 60,
+      "id": "909525c175c5b684",
+      "styleAttributes": {
+      },
+      "text": "英语语法",
+      "type": "text",
+      "width": 140,
+      "x": 280,
+      "y": -280
+    },
+    {
+      "height": 60,
+      "id": "34d25b8594c7036a",
+      "styleAttributes": {
+      },
+      "text": "[[🍁【英语】英语语法综述]]",
+      "type": "text",
+      "width": 277,
+      "x": 303,
+      "y": -496
+    },
+    {
+      "height": 60,
+      "id": "24cb0d57864dcd4c",
+      "styleAttributes": {
+      },
+      "text": "[[🏜️【英语语法】动词]]",
+      "type": "text",
+      "width": 250,
+      "x": 729,
+      "y": -379
+    }
+  ]
+}

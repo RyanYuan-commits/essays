@@ -1,0 +1,93 @@
+{
+  "edges": [
+    {
+      "fromNode": "2482ab990cf8495d",
+      "fromSide": "right",
+      "id": "7450e49639337916",
+      "toNode": "80f97fdf541b8c6a",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "2482ab990cf8495d",
+      "fromSide": "left",
+      "id": "6d02d079ac6d198c",
+      "label": "随笔",
+      "toNode": "542ed2719f11495a",
+      "toSide": "right"
+    },
+    {
+      "fromNode": "2482ab990cf8495d",
+      "fromSide": "right",
+      "id": "2f9865cdda16041f",
+      "label": "暂存",
+      "toNode": "147c81365834bc55",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "2482ab990cf8495d",
+      "fromSide": "left",
+      "id": "0269baa4216038b3",
+      "label": "概念辨析",
+      "toNode": "71b8ef2829b9cea6",
+      "toSide": "right"
+    }
+  ],
+  "nodes": [
+    {
+      "color": "2",
+      "height": 50,
+      "id": "2482ab990cf8495d",
+      "styleAttributes": {
+      },
+      "text": "🍵 DDD 架构设计",
+      "type": "text",
+      "width": 220,
+      "x": -800,
+      "y": -20
+    },
+    {
+      "height": 247,
+      "id": "80f97fdf541b8c6a",
+      "styleAttributes": {
+      },
+      "text": "==基础理解五板斧==\n- [[💫【DDD】DP]]\n- [[🍌【DDD】Entiry & Domain Service]]\n- [[🧃【DDD】统一语言和模型价值]]\n- [[🐋【DDD】聚合根 & 限界上下文]]\n- [[⛱️【DDD】实战演练]]",
+      "type": "text",
+      "width": 470,
+      "x": -320,
+      "y": -367
+    },
+    {
+      "height": 140,
+      "id": "147c81365834bc55",
+      "styleAttributes": {
+      },
+      "text": "- [[🏅 软件设计方法]]\n- [[🍮 DDD 四色建模]]",
+      "type": "text",
+      "width": 470,
+      "x": -320,
+      "y": 120
+    },
+    {
+      "height": 160,
+      "id": "71b8ef2829b9cea6",
+      "styleAttributes": {
+      },
+      "text": "- [[🌏【DDD 概念辨析】充血模型]]\n- [[🍀【DDD 概念辨析】领域模型]]\n- [[🐟【DDD 概念辨析】实体、聚合、值对象]]\n- [[🍍【DDD 概念辨析】仓储和适配器]]",
+      "type": "text",
+      "width": 505,
+      "x": -1640,
+      "y": 120
+    },
+    {
+      "height": 160,
+      "id": "542ed2719f11495a",
+      "styleAttributes": {
+      },
+      "text": "- [[🥗【DDD】是什么？]]",
+      "type": "text",
+      "width": 385,
+      "x": -1580,
+      "y": -280
+    }
+  ]
+}

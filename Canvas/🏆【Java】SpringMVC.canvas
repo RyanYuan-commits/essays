@@ -1,0 +1,68 @@
+{
+	"nodes":[
+		{
+			"id":"002fd1806812dd7b",
+			"type":"text",
+			"text":"Spring MVC",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-140,
+			"y":-80,
+			"width":220,
+			"height":60
+		},
+		{"id":"544dacc0f69597af","type":"file","file":"images/Spring MVC 执行流程图.png","x":320,"y":-472,"width":1341,"height":845},
+		{
+			"id":"e28fb42b1ab3f6bb",
+			"type":"text",
+			"text":"- [[🍊【SpringMVC】Dispatcher 执行流程]]\n- [[♨️【SpringMVC】Handler Method 注册流程]]\n- [[🏙️【SpringMVC】RequestMappingHandlerAdapter 处理流程]]",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1000,
+			"y":-20,
+			"width":520,
+			"height":210
+		},
+		{
+			"file":"Documents/🍾 SpringMVC.md",
+			"id":"b6591b3beda5d738",
+			"styleAttributes":{},
+			"type":"file",
+			"x":-1000,
+			"y":-300,
+			"width":520,
+			"height":120
+		}
+	],
+	"edges":[
+		{
+			"id":"9dd03cbc0d360ab5",
+			"styleAttributes":{"pathfindingMethod":"square","arrow":"blunt"},
+			"toFloating":false,
+			"fromNode":"002fd1806812dd7b",
+			"fromSide":"left",
+			"toNode":"e28fb42b1ab3f6bb",
+			"toSide":"right"
+		},
+		{
+			"id":"38cdf02d50f60c8e",
+			"styleAttributes":{"pathfindingMethod":"square","arrow":"blunt"},
+			"toFloating":false,
+			"fromNode":"002fd1806812dd7b",
+			"fromSide":"right",
+			"toNode":"544dacc0f69597af",
+			"toSide":"left"
+		},
+		{
+			"id":"ba4544dce2a80ee3",
+			"styleAttributes":{"pathfindingMethod":"square","arrow":"blunt"},
+			"toFloating":false,
+			"fromNode":"002fd1806812dd7b",
+			"fromSide":"left",
+			"toNode":"b6591b3beda5d738",
+			"toSide":"right"
+		}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}

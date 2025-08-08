@@ -1,0 +1,35 @@
+{
+  "edges": [
+    {
+      "fromNode": "3ad57f931ac5bd67",
+      "fromSide": "right",
+      "id": "01c4cb909e433387",
+      "toNode": "eac80ad11de172e2",
+      "toSide": "left"
+    }
+  ],
+  "nodes": [
+    {
+      "height": 60,
+      "id": "3ad57f931ac5bd67",
+      "styleAttributes": {
+      },
+      "text": "☘️ Artificial Intelligence",
+      "type": "text",
+      "width": 280,
+      "x": -160,
+      "y": -30
+    },
+    {
+      "height": 103,
+      "id": "eac80ad11de172e2",
+      "styleAttributes": {
+      },
+      "text": "- [[🧃【AI】MCP Server]]",
+      "type": "text",
+      "width": 351,
+      "x": 320,
+      "y": -183
+    }
+  ]
+}

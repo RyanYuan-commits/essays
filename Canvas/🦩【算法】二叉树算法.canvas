@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"4b23305d60ded584","type":"text","text":"二叉树的遍历","x":-600,"y":-300,"width":177,"height":60},
+		{"id":"4da3e10aac4eb3bf","type":"text","text":"后序遍历","x":-1451,"y":-300,"width":131,"height":60},
+		{"id":"e7d48244555d2121","type":"file","file":"Documents/🥜【二叉树】后序遍历例题.md","x":-2280,"y":-410,"width":640,"height":280},
+		{"id":"abccd79c57e5b391","type":"text","text":"层序遍历","x":-1451,"y":-720,"width":131,"height":50},
+		{"id":"475bc19c9507c886","type":"file","file":"Documents/🦓【二叉树】二叉树的层序遍历.md","x":-2280,"y":-825,"width":640,"height":260},
+		{"id":"7250aae4ca1a115b","type":"file","file":"Documents/🍦【二叉树】通过数组构造二叉树.md","x":-2280,"y":59,"width":640,"height":301},
+		{"id":"92e6d8f3f8826ca2","type":"text","text":"🦩 二叉树算法","x":-60,"y":-291,"width":160,"height":51,"color":"1"}
+	],
+	"edges":[
+		{"id":"76d7f1331d931997","fromNode":"92e6d8f3f8826ca2","fromSide":"left","toNode":"4b23305d60ded584","toSide":"right","label":"二叉树的遍历"},
+		{"id":"75684eba59d2b881","fromNode":"4b23305d60ded584","fromSide":"left","toNode":"abccd79c57e5b391","toSide":"right","label":"层序遍历"},
+		{"id":"61354a1f2ec93086","fromNode":"abccd79c57e5b391","fromSide":"left","toNode":"475bc19c9507c886","toSide":"right"},
+		{"id":"61ee3b2611809798","fromNode":"4b23305d60ded584","fromSide":"left","toNode":"7250aae4ca1a115b","toSide":"right","label":"通过数组构造二叉树"},
+		{"id":"192547598e99c980","fromNode":"4b23305d60ded584","fromSide":"left","toNode":"4da3e10aac4eb3bf","toSide":"right","label":"后序遍历"},
+		{"id":"4c82e62f0ee50f77","fromNode":"4da3e10aac4eb3bf","fromSide":"left","toNode":"e7d48244555d2121","toSide":"right"}
+	]
+}

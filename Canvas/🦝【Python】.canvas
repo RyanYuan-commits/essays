@@ -1,0 +1,39 @@
+{
+	"edges":[],
+	"nodes":[
+		{
+			"height":460,
+			"id":"00b6aeb43c48e71d",
+			"styleAttributes":{},
+			"text":"## 常用框架\nORM 框架：\n- [[🤸【Python】pymysql 库]]\n- [[💐【Python】SQLAlchemy]]\n\nWeb：\n- [[🍀【Python】Flask.canvas|🍀【Python】Flask]]",
+			"type":"text",
+			"width":380,
+			"x":-480,
+			"y":-520
+		},
+		{
+			"height":200,
+			"id":"332e17afffc20640",
+			"styleAttributes":{},
+			"text":"## 常用库\n- [[🧃【Python】json 库]]\n- [[🌻【Python】UI 自动化功能]]\n-  [[🥟【Python】urllib 库]]",
+			"type":"text",
+			"width":1060,
+			"x":-480,
+			"y":20
+		},
+		{
+			"height":460,
+			"id":"5fe98776de27e00b",
+			"styleAttributes":{},
+			"text":"## 基础\n基础整理：\n- [[🎥【Python】数据类型]]\n- [[🍙【Python】列表推导式]]\n- [[🌴【Python】Python 语言规范]]\n- [[🏉【Python】模块与包]]\n- [[🥓【Python】装饰器]]\n\n面向对象编程：\n- [[🥒【Python】面向对象：封装]]\n- [[🌻【Python】面向对象：继承]]",
+			"type":"text",
+			"width":400,
+			"x":180,
+			"y":-520
+		}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}

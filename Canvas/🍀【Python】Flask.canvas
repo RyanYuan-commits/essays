@@ -1,0 +1,74 @@
+{
+  "edges": [
+    {
+      "fromNode": "2eb8c57d26bedc6d",
+      "fromSide": "right",
+      "id": "83a67856e1511011",
+      "label": "简单介绍",
+      "toNode": "95070a8d670e7a10",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "2eb8c57d26bedc6d",
+      "fromSide": "right",
+      "id": "c14e7a775574d69e",
+      "label": "基本概念",
+      "toNode": "6eefeba58b1534c6",
+      "toSide": "left"
+    },
+    {
+      "fromNode": "2eb8c57d26bedc6d",
+      "fromSide": "left",
+      "id": "d41c02a43760d843",
+      "label": "路由与视图函数",
+      "toNode": "b056eb4907a5dc5d",
+      "toSide": "right"
+    }
+  ],
+  "nodes": [
+    {
+      "height": 60,
+      "id": "2eb8c57d26bedc6d",
+      "styleAttributes": {
+      },
+      "text": "🍀 Flask",
+      "type": "text",
+      "width": 148,
+      "x": -128,
+      "y": -31
+    },
+    {
+      "height": 216,
+      "id": "6eefeba58b1534c6",
+      "styleAttributes": {
+      },
+      "text": "- [[🦋【Python】Flask 基本概念]]\n\t\n\t- [[🦜【Python】Flask 模板渲染]]\n\t- [[🍝【Python】Flask 表单处理]]\n\t- [[💐【Python】SQLAlchemy]]\n\t- [[🏡【Python】Flask 蓝图]]\n\t- [[🍿【Python】Flask 错误处理]]\n\t",
+      "type": "text",
+      "width": 500,
+      "x": 200,
+      "y": 64
+    },
+    {
+      "height": 97,
+      "id": "b056eb4907a5dc5d",
+      "styleAttributes": {
+      },
+      "text": "- [[🌱【Python】Flask 路由]]\n- [[🦄【Python】Flask 视图函数]]",
+      "type": "text",
+      "width": 347,
+      "x": -640,
+      "y": -197
+    },
+    {
+      "height": 100,
+      "id": "95070a8d670e7a10",
+      "styleAttributes": {
+      },
+      "text": "- [[🍁【Python】什么是 Flask？]]\n- [[🐥【Python】Flask 项目结构]]",
+      "type": "text",
+      "width": 420,
+      "x": 200,
+      "y": -220
+    }
+  ]
+}

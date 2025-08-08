@@ -1,0 +1,29 @@
+{
+	"edges":[],
+	"nodes":[
+		{
+			"height":500,
+			"id":"bbd87cac07a824ab",
+			"styleAttributes":{},
+			"text":"## Advanture\n- [[⛱️【Go】GMP 模型]]",
+			"type":"text",
+			"width":900,
+			"x":780,
+			"y":-520
+		},
+		{
+			"height":500,
+			"id":"496ba42e70cc19c5",
+			"styleAttributes":{},
+			"text":"## Basic\n- [[🧃【Golang】值类型与引用类型]]\n- [[🐋【Golang】defer]]\n- [[⛱️【Golang】内置函数]]\n- [[🥝【Golang】数组与切片]]\n- [[🧈【Go】Context]]",
+			"type":"text",
+			"width":780,
+			"x":-200,
+			"y":-520
+		}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}

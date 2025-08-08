@@ -1,0 +1,70 @@
+{
+	"edges":[
+		{
+			"fromNode":"50db5d7bc0e965e1",
+			"fromSide":"right",
+			"id":"f3e42e1064c071fb",
+			"label":"基础知识",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"toNode":"1a67df67c9a5ca61",
+			"toSide":"left"
+		},
+		{"fromNode":"50db5d7bc0e965e1","fromSide":"left","id":"1fd1f49ac068f5a6","label":"集群和分片","toNode":"5d977c1f8955b425","toSide":"right"},
+		{
+			"fromNode":"50db5d7bc0e965e1",
+			"fromSide":"right",
+			"id":"79376c86b09b0014",
+			"label":"查询与搜索",
+			"styleAttributes":{"pathfindingMethod":"square"},
+			"toNode":"f03d6bde3f15aa92",
+			"toSide":"left"
+		}
+	],
+	"nodes":[
+		{
+			"color":"1",
+			"height":60,
+			"id":"50db5d7bc0e965e1",
+			"styleAttributes":{"border":"invisible"},
+			"text":"## 🌼 ElasticSearch",
+			"type":"text",
+			"width":348,
+			"x":-168,
+			"y":-35
+		},
+		{
+			"height":60,
+			"id":"5d977c1f8955b425",
+			"styleAttributes":{},
+			"text":"- [[🥒【ES】集群和分片]]",
+			"type":"text",
+			"width":370,
+			"x":-880,
+			"y":-37
+		},
+		{
+			"height":160,
+			"id":"f03d6bde3f15aa92",
+			"styleAttributes":{},
+			"text":"- [[🍋【ES】DSL 示例]]\n- [[🐌【ES】 高级的 DSL 查询]]\n- [[🍝【ES】使用别名]]",
+			"type":"text",
+			"width":640,
+			"x":780,
+			"y":60
+		},
+		{
+			"height":140,
+			"id":"1a67df67c9a5ca61",
+			"styleAttributes":{},
+			"text":"- [[🌐【ElasticSearch】概念辨析]]\n- [[🍾【ElasticSearch】IK 分词器]]\n- [[🥭【ElasticSearch】倒排索引优化]]",
+			"type":"text",
+			"width":640,
+			"x":780,
+			"y":-240
+		}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}
