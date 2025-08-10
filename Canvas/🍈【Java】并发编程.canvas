@@ -5,19 +5,19 @@
 			"styleAttributes":{},
 			"text":"- [[🎽【并发】高并发 IO 底层原理]]\n- [[🥭【并发】Java NIO 详解]]\n\t- [[🦞【NIO】Selector]]\n\t- [[🥨【NIO】Channel]]\n\t- [[🍌【NIO】Buffer]]\n- [[🌲【并发】Reactor 反应器模式]]",
 			"type":"text",
-			"x":-1330,
+			"x":-1240,
 			"y":-142,
-			"width":660,
+			"width":570,
 			"height":243
 		},
 		{
 			"id":"d51b6c6bdabbd532",
 			"styleAttributes":{},
-			"text":"- [[💘 线程池基本介绍]]\n- [[🍡 【Java】线程池源码详解]]\n- [[💜 【Java】关于线程池的一些思考]]\n- [[🍗【Java】线程池的动态修改]]",
+			"text":"- [[💘【Java】线程池基本介绍]]\n- [[🍡 【Java】线程池源码详解]]\n- [[💜 【Java】关于线程池的一些思考]]\n- [[🍗【Java】线程池的动态修改]]",
 			"type":"text",
-			"x":-1330,
+			"x":-1240,
 			"y":-436,
-			"width":660,
+			"width":570,
 			"height":179
 		},
 		{
@@ -25,9 +25,9 @@
 			"styleAttributes":{},
 			"text":"- [[🍾 并发编程.canvas|🍾 并发编程]]\n- [[🍍【Java】CAS 原理]]\n- [[🥒【Java】AbstractQueueSynchronizer]]\n- [[💫【Java】ReentrantLock]]\n-  [[📀【Java】ConcurrentHashMap]]\n- [[🌵【Java】CountDownLatch]]\n- [[🏜️【Java】CyclicBarrier]]",
 			"type":"text",
-			"x":-1330,
+			"x":-1240,
 			"y":164,
-			"width":660,
+			"width":570,
 			"height":273
 		},
 		{
@@ -50,8 +50,8 @@
 			"type":"text",
 			"x":630,
 			"y":-135,
-			"width":700,
-			"height":230
+			"width":490,
+			"height":236
 		}
 	],
 	"edges":[

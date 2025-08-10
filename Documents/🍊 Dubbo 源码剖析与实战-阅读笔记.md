@@ -811,3 +811,183 @@ Warpper 是 Dubbo 中动态生成的代理类, 为什么不用 CgLib 或者 JDK 
 JDK 代理: 反射性能差, 耗时长.
 
 Cglib: 底层: 生成代理类的逻辑不够灵活, 难以自主定制.
+
+## 19 发布流程：带你一窥服务发布的三个重要环节
+
+https://time.geekbang.org/column/article/620988
+## 1 扫描 DubboService
+
+从 `@DubboService` 到 ServiceBean 的流程.
+
+```java
+private void scanServiceBeans(Set<String> packagesToScan, BeanDefinitionRegistry registry) {
+    
+    // ......
+
+    DubboClassPathBeanDefinitionScanner scanner =
+            new DubboClassPathBeanDefinitionScanner(registry, environment, resourceLoader);
+
+    // ......
+
+    for (String packageToScan : packagesToScan) {
+
+        // ......
+
+        // ComponentScan 是否包含都能扫描到
+        scanner.scan(packageToScan);
+        Set<BeanDefinitionHolder> beanDefinitionHolders =
+                findServiceBeanDefinitionHolders(scanner, packageToScan, registry, beanNameGenerator);
+
+        if (!CollectionUtils.isEmpty(beanDefinitionHolders)) {
+
+            // ......
+
+            // 处理扫描到的 BeanDefinition
+            for (BeanDefinitionHolder beanDefinitionHolder : beanDefinitionHolders) {
+                processScannedBeanDefinition(beanDefinitionHolder, registry, scanner);
+                servicePackagesHolder.addScannedClass(beanDefinitionHolder.getBeanDefinition().getBeanClassName());
+            }
+        } else {
+            // ......
+        }
+
+        servicePackagesHolder.addScannedPackage(packageToScan);
+    }
+}
+```
+
+代码来自 `ServiceAnnotationPostProcessor`, 利用扫描器将含有 `@DubboService` 注解的类注册成 `BeanDefinition`, 并调用 `processScannedBeanDefinition` 方法做后置处理.
+
+```java
+private void processScannedBeanDefinition(BeanDefinitionHolder beanDefinitionHolder, BeanDefinitionRegistry registry,
+                                              DubboClassPathBeanDefinitionScanner scanner) {
+
+	Class<?> beanClass = resolveClass(beanDefinitionHolder);
+
+	Annotation service = findServiceAnnotation(beanClass);
+
+	// 获取注解配置
+	Map<String, Object> serviceAnnotationAttributes = AnnotationUtils.getAttributes(service, true);
+
+	// 服务接口全类名, 如 com.ryan.service.UserService
+	String serviceInterface = resolveInterfaceName(serviceAnnotationAttributes, beanClass);
+
+	// Bean 名称, 如 userServiceImpl
+	String annotatedServiceBeanName = beanDefinitionHolder.getBeanName();
+
+	// 生成带有标识的 Bean Name, 如 ServiceBean:com.ryan.server.service.UserService
+	String beanName = generateServiceBeanName(serviceAnnotationAttributes, serviceInterface);
+
+	AbstractBeanDefinition serviceBeanDefinition =
+			buildServiceBeanDefinition(serviceAnnotationAttributes, serviceInterface, annotatedServiceBeanName);
+
+	registerServiceBeanDefinition(beanName, serviceBeanDefinition, serviceInterface);
+
+}
+    
+private AbstractBeanDefinition buildServiceBeanDefinition(Map<String, Object> serviceAnnotationAttributes,
+                                                              String serviceInterface,
+                                                              String refServiceBeanName) {
+
+	BeanDefinitionBuilder builder = rootBeanDefinition(ServiceBean.class);
+
+	// Definition 构建
+
+	return builder.getBeanDefinition();
+
+}
+```
+
+简单来说, 是将 `@DubboService` 上的配置提取出来, 构建出类型为 `ServiceBean` 的 Bean 定义, 并将其添加到 `BeanDefinitionRegistry` 中.
+
+---
+
+总结: 从 `@DubboService` 到 `ServiceBean` 的流程大概是这样的:
+
+- 利用 `Scanner` 将所有含有 `@DubboService` 的类扫描出来;
+- 遍历扫描出来的 `BeanDefinition`, 提取注解配置, 构造出一个 `ServiceBean`;
+- 将来使用 Bean 的时候, 实际上会使用 `ServiceBean` 的一些方法.
+
+### 19.2 核心导出流程
+
+#### 流程梳理
+
+```java
+// 单个接口服务的导出方法
+org.apache.dubbo.config.ServiceConfig#doExport
+
+// 适配多协议, 将单个接口服务按照不同的协议导出
+org.apache.dubbo.config.ServiceConfig#doExportUrls
+
+// 将单个接口服务按照单个协议导出
+org.apache.dubbo.config.ServiceConfig#doExportUrlsFor1Protocol
+
+// 将单个接口服务按照单协议导出到多个注册中心上
+org.apache.dubbo.config.ServiceConfig#exportUrl
+```
+
+`org.apache.dubbo.config.ServiceConfig#exportUrl`
+
+```java
+private void exportUrl(URL url, List<URL> registryURLs) {
+    String scope = url.getParameter(SCOPE_KEY);
+    // don't export when none is configured
+    if (!SCOPE_NONE.equalsIgnoreCase(scope)) {
+
+        // export to local if the config is not remote (export to remote only when config is remote)
+        if (!SCOPE_REMOTE.equalsIgnoreCase(scope)) {
+            exportLocal(url);
+        }
+
+        // export to remote if the config is not local (export to local only when config is local)
+        if (!SCOPE_LOCAL.equalsIgnoreCase(scope)) {
+            url = exportRemote(url, registryURLs);
+            MetadataUtils.publishServiceDefinition(url);
+        }
+
+    }
+    this.urls.add(url);
+}
+```
+
+关于 Dubbo 的本地导出和远程导出:
+
+- 本地导出是指服务在 **同一个 JVM 进程** 内暴露, 这种方式主要应用于服务的本地调用;
+- 远程导出指的是服务通过网络协议暴露, 进行不同进程之间的调用.
+
+#### 本地导出流程
+
+`org.apache.dubbo.config.ServiceConfig#exportLocal`
+
+```java
+private void exportLocal(URL url) {  
+    URL local = URLBuilder.from(url)  
+            .setProtocol(LOCAL_PROTOCOL) // "injvm"
+            .setHost(LOCALHOST_VALUE) // "127.0.0.1"
+            .setPort(0)
+            .build();
+    local = local.setScopeModel(getScopeModel())
+        .setServiceModel(providerModel);
+    doExportUrl(local, false);
+    logger.info("Export dubbo service " + interfaceClass.getName() + " to local registry url : " + local);
+}
+```
+
+`org.apache.dubbo.config.ServiceConfig#doExportUrl`
+
+```java
+private void doExportUrl(URL url, boolean withMetaData) {  
+    Invoker<?> invoker = proxyFactory.getInvoker(ref, (Class) interfaceClass, url);  
+    if (withMetaData) {  
+        invoker = new DelegateProviderMetaDataInvoker(invoker, this);  
+    }  
+    Exporter<?> exporter = protocolSPI.export(invoker);  
+    exporters.add(exporter);  
+}
+```
+
+上面的 `proxyFactory` 和 `protocolSPI` 均为自适应拓展点.
+
+
+### 20 订阅流程：消费方是怎么知道提供方地址信息的？
+
