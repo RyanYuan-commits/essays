@@ -1,5 +1,3 @@
-![[vue 简介.png|300]]
-官方地址：[https://cn.vuejs.org/](https://cn.vuejs.org/)
 ```html
 <!DOCTYPE html>
 <html lang="en">

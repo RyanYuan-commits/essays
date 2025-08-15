@@ -1,5 +1,7 @@
 在 Vue 3 中，父子组件之间的传值可以通过 `props` 和 `emits` 来实现。以下是一个简单的示例，展示如何在 Vue 3 中实现父子组件之间的通信。
->[!info] 父组件
+
+父组件:
+
 ```vue
 <template>
   <div>
@@ -36,7 +38,8 @@ export default {
 ```
 
 
->[!info] 子组件
+子组件:
+
 ```vue
 <template>
   <div>
@@ -67,6 +70,8 @@ export default defineComponent({
 });
 </script>
 ```
+
 ### 说明
-1. **父组件**：通过 `props` 向子组件传递数据，并通过 `emits` 接收子组件发送的事件。
-2. **子组件**：接收父组件传递的 `props`，并通过 `emit` 方法向父组件发送事件。
+
+1. **父组件**: 通过 `props` 向子组件传递数据, 并通过 `emits` 接收子组件发送的事件.
+2. **子组件**: 接收父组件传递的 `props`, 并通过 `emit` 方法向父组件发送事件.

@@ -39,10 +39,20 @@
 			},
 			"text":"## 未归类\n-  [[🍿【Java】Gradle]]\n- [[🍉【Java】注解]]",
 			"type":"text",
-			"x":-900,
+			"x":-880,
 			"y":-91,
 			"width":320,
 			"height":158
+		},
+		{
+			"id":"9cbb1708cd9733c9",
+			"type":"text",
+			"text":"- [[🏆【Java】JDK9 Release]]",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-490,
+			"y":-400,
+			"width":520,
+			"height":220
 		}
 	],
 	"edges":[
@@ -76,6 +86,17 @@
 			"toNode":"0d0d01aa9411ce2e",
 			"toSide":"right",
 			"label":"其他"
+		},
+		{
+			"id":"0f33680074af1a0b",
+			"styleAttributes":{"pathfindingMethod":"square","arrow":"blunt"},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"eccbd851eca1e2ec",
+			"fromSide":"top",
+			"toNode":"9cbb1708cd9733c9",
+			"toSide":"bottom",
+			"label":"版本更新"
 		}
 	],
 	"metadata":{
