@@ -1,35 +1,31 @@
 {
-  "edges": [
-    {
-      "fromNode": "3ad57f931ac5bd67",
-      "fromSide": "right",
-      "id": "01c4cb909e433387",
-      "toNode": "eac80ad11de172e2",
-      "toSide": "left"
-    }
-  ],
-  "nodes": [
-    {
-      "height": 60,
-      "id": "3ad57f931ac5bd67",
-      "styleAttributes": {
-      },
-      "text": "☘️ Artificial Intelligence",
-      "type": "text",
-      "width": 280,
-      "x": -160,
-      "y": -30
-    },
-    {
-      "height": 103,
-      "id": "eac80ad11de172e2",
-      "styleAttributes": {
-      },
-      "text": "- [[🧃【AI】MCP Server]]",
-      "type": "text",
-      "width": 351,
-      "x": 320,
-      "y": -183
-    }
-  ]
+	"edges":[
+		{"id":"01c4cb909e433387","fromNode":"3ad57f931ac5bd67","fromSide":"right","toNode":"eac80ad11de172e2","toSide":"left"}
+	],
+	"nodes":[
+		{
+			"id":"3ad57f931ac5bd67",
+			"styleAttributes":{},
+			"text":"☘️ Artificial Intelligence",
+			"type":"text",
+			"x":-160,
+			"y":-30,
+			"width":280,
+			"height":60
+		},
+		{
+			"id":"eac80ad11de172e2",
+			"styleAttributes":{},
+			"text":"- [[🧃【AI】MCP Server]]",
+			"type":"text",
+			"x":320,
+			"y":-183,
+			"width":351,
+			"height":103
+		}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
 }

@@ -1,6 +1,7 @@
 ---
 finished: "false"
-type: Java 框架
+type: Java
+sub-type: frame
 ---
 
 原文地址： https://time.geekbang.org/column/article/611301

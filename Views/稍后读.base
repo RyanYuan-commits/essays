@@ -1,0 +1,17 @@
+views:
+  - type: cards
+    name: 视图
+    filters:
+      and:
+        - tag == "clipper"
+    order:
+      - file.name
+      - file.basename
+      - file.ctime
+      - description
+    sort:
+      - property: file.mtime
+        direction: DESC
+    image: note.cover
+    cardSize: 300
+    imageAspectRatio: 0.5

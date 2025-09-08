@@ -1,7 +1,8 @@
 ## java.util.Date
+
 ### 简单介绍
 
-java.util.Date 是 Java 中用于表示特定瞬间（时间点）的类。
+`java.util.Date` 是 Java 中用于表示特定瞬间（时间点）的类。
 
 >[!tips]
 从 Java 8 开始，该类在很大程度上已被 `java.time` 包下的新日期和时间 API 所取代，但在旧的 Java 代码和一些遗留系统中仍然广泛使用。下面将从基本介绍、常用构造方法、常用方法、局限性以及与新日期时间 API 的转换等方面详细介绍 `java.util.Date` 类。
@@ -9,22 +10,31 @@ java.util.Date 是 Java 中用于表示特定瞬间（时间点）的类。
 优点：简单易用，直接存储日期和时间
 缺点：没有提供日期和时间的格式化和解析功能
 ### 常用构造方法
+
 直接获取当前时间
+
 ```java
 Date date = new Date();
 ```
 
 根据时间戳构建
+
 ```java
 long milliseconds = 1609459200000L; // 2021-01-01 00:00:00 的毫秒数
 Date specificDate = new Date(milliseconds);
 ```
 ### 常用方法
+
 **`long getTime()`**: 返回自 1970 年 1 月 1 日 00:00:00 GMT 以来此 `Date` 对象表示的毫秒数。
+
 **`void setTime(long time)`**： 根据时间戳设置 `Date` 对象表示的时间。
+
 **`boolean after(Date when)`**: 测试此 `Date` 对象表示的时间是否在指定 `Date` 对象表示的时间之后。
+
 **`boolean before(Date when)`**: 测试此 `Date` 对象表示的时间是否在指定 `Date` 对象表示的时间之前。
+
 ### 局限性
+
 - **可变性**：`java.util.Date` 类是可变的，这意味着在多线程环境下使用时可能会出现线程安全问题。一旦创建了 `Date` 对象，就可以使用 `setTime()` 方法改变其表示的时间。
 - **缺乏时区支持**：`Date` 类本身并不包含时区信息，它只是简单地存储自纪元以来的毫秒数。这使得在处理不同时区的日期和时间时变得复杂，需要结合 `java.util.TimeZone` 类来处理。
 - **设计缺陷**：`Date` 类的一些方法（如 `getYear()`、`getMonth()` 等）已经被标记为过时，因为它们的设计存在问题，容易引起混淆。例如，`getYear()` 返回的是从 1900 年开始计算的年份偏移量，而不是实际的年份。
@@ -229,11 +239,15 @@ public class LocalDateExample {
 ```
 同样使用 `DateTimeFormatter` 可以解析自定义格式的日期字符串为 `LocalDate` 实例。
 ## java.time.LocalDateTime
+
 `LocalDateTime` 是 Java 8 引入的 `java.time` 包中的一个类，用于表示不带时区信息的日期和时间，它结合了 `LocalDate` 和 `LocalTime` 的功能，可以精确到纳秒级别。`LocalDateTime` 是不可变且线程安全的，提供了简洁、高效且功能强大的日期时间处理方式。
 
 ### 创建 `LocalDateTime` 实例
+
 #### 1.1 使用 `now()` 方法获取当前日期和时间
+
 时区可以通过 TimeZone.setDefault 设置
+
 ```java
 import java.time.LocalDateTime;
 
@@ -244,7 +258,9 @@ public class LocalDateTimeExample {
     }
 }
 ```
+
 #### 1.2 使用 `of()` 方法指定日期和时间
+
 ```java
 import java.time.LocalDateTime;
 
@@ -256,7 +272,9 @@ public class LocalDateTimeExample {
     }
 }
 ```
+
 #### 1.3 结合 `LocalDate` 和 `LocalTime` 创建
+
 ```java
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -271,7 +289,9 @@ public class LocalDateTimeExample {
     }
 }
 ```
+
 #### 1.4 使用 `parse()` 方法从字符串解析
+
 ```java
 import java.time.LocalDateTime;
 

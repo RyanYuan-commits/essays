@@ -13,7 +13,7 @@
 		{
 			"id":"a7fb23f8373f7f23",
 			"type":"text",
-			"text":"[[🥒【Java】Spring.canvas|🥒 【Java】Spring]]",
+			"text":"[[🥒【Java】Spring.canvas|🥒 【Java】Spring]]\n[[♨️【Java】Spring]]",
 			"styleAttributes":{"textAlign":"center"},
 			"x":-700,
 			"y":100,
@@ -33,7 +33,7 @@
 		{
 			"id":"405e2d3b77254256",
 			"type":"text",
-			"text":"[[🍊 Dubbo 源码剖析与实战-阅读笔记]]",
+			"text":"[[🔮【Java】Dubbo]]",
 			"styleAttributes":{"textAlign":"center"},
 			"x":-340,
 			"y":-110,

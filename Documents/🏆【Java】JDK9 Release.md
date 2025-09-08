@@ -1,3 +1,9 @@
+---
+type: Java
+sub-type: release
+finished: "true"
+---
+
 官方文档: https://docs.oracle.com/javase/9/
 
 ## [1 Convenience Factory Methods for Collections](https://openjdk.org/jeps/269)
@@ -14,7 +20,6 @@ Map<String, Integer> map = Map.of("A", 1, "B", 2, "C", 3);
 List<String> list = Collections.unmodifiableList(
 	Arrays.asList("A", "B", "C")
 );
-
 ```
 
 需要注意创建的集合是只读的, 且不允许传入 null 值.

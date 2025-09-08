@@ -1,5 +1,5 @@
 ---
-type: Java 基础
+type: Java
 finished: "false"
 ---
 

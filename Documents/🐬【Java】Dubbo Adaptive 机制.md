@@ -1,20 +1,22 @@
 ---
+sub-type: Dubbo
+type: Java
 origin_url: https://time.geekbang.org/column/article/620941
 finished: "false"
-type: Java 框架
 ---
+## 1 Adaptive 机制
 
-## 1 什么是  Adaptive 机制?
+### 1.1 简单介绍
 
 **Adaptive 自适应机制**: 根据运行时传入的 URL 参数, 动态地为 Dubbo 扩展点选择和调用最合适的实现, 从而实现配置与代码的解耦和高度灵活性.
 
-举个例子, 比如 `Cluster` 集群容错接口, 传统方式, 问题在于无法在运行时动态的修改:
+举个例子, 比如 `Cluster` 集群容错接口, 传统的配置方式会降配置写死在 XML 配置文件中, 但是无法在运行时根据要求动态变化:
 
 ```xml
 <dubbo:reference interface="com.example.UserService" id="userService" cluster="failover" />
 ```
 
-使用`@Adaptive` 注解后, 默认的策略是 `failover`, 但是可以通过 URL 中的配置来动态变更.
+使用 `@Adaptive` 注解后, 制定了默认的策略是 `failover`, 并且可以根据 URL 中的配置进行动态选择.
 
 ```java
 // 默认策略是 failover
@@ -29,7 +31,61 @@ public interface Cluster {
 }
 ```
 
-## 2 自适应拓展点
+## 1.2 @SPI 注解
+
+```java
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.TYPE})
+public @interface SPI {
+
+    /**
+     * default extension name
+     */
+    String value() default "";
+
+    /**
+     * scope of SPI, default value is application scope.
+     */
+    ExtensionScope scope() default ExtensionScope.APPLICATION;
+}
+```
+
+使用在 `Class`, `interface`, `enum` 和 `record` 上, 有两个属性:
+
+- `value`: 默认的拓展名称, 如果 URL 中没有显示的指定拓展名称, 则使用.
+- `scope`: 拓展实例的生效范围, 默认为 `APPLICATION` 应用级, 除此之外, 还可以选择 `FRAMEWORK` (单个 JVM 进程中, 拓展对象单例), `MODULE` (每个模板创建独立的拓展实例).
+
+### 1.3 使用案例
+
+创建一个自定义的路由层拓展类:
+
+```java
+public class CustomCluster extends AbstractCluster {  
+  
+    public final static String NAME = "failover";  
+  
+    @Override  
+    public <T> AbstractClusterInvoker<T> doJoin(Directory<T> directory) throws RpcException {  
+        return new CustomClusterInvoker<>(directory);  
+    }  
+  
+}
+```
+
+配置文件, 路径为: `META-INF/dubbo/org.apache.dubbo.rpc.cluster.Cluster`
+
+```
+randomFail=com.example.dubbo.cluster.RandomFailCluster
+```
+
+引入 DubboReference 时在注解上指定路由方式:
+
+```java
+@DubboReference(cluster = "randomFail")
+```
+
+## 2 自适应拓展点原理
 
 ```java
 Cluster cluster = ApplicationModel.defaultModel()  
@@ -78,7 +134,7 @@ private Class<?> getAdaptiveExtensionClass() {
 }
 ```
 
-上面的方法中也用到了缓存机制, 每个拓展点只会有一个自适应拓展点对象.=
+上面的方法中也用到了缓存机制, 每个拓展点只会有一个自适应拓展点对象.
 
 `org.apache.dubbo.common.extension.ExtensionLoader#createAdaptiveExtensionClass`
 

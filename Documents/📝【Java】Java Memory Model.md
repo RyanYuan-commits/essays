@@ -1,6 +1,7 @@
 ---
-type: Java 基础
-finished: "false"
+type: Java
+sub-type: 并发编程
+finished: "true"
 ---
 ## 1 引言: Java 并发编程中的挑战与 JMM 核心作用
 

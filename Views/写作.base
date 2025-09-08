@@ -1,0 +1,34 @@
+views:
+  - type: table
+    name: 视图
+    filters:
+      and:
+        - finished == "false"
+        - tag != "clipper"
+        - '!file.name.endsWith("Template")'
+    order:
+      - file.name
+      - type
+      - sub-type
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 10
+    image: note.cover
+    cardSize: 240
+    imageAspectRatio: 0.65
+    columnSize:
+      file.name: 310
+      note.type: 78
+      note.sub-type: 107
+  - type: cards
+    name: 视图 2
+    filters:
+      and:
+        - finished == "false"
+        - tag != "clipper"
+    order:
+      - file.name
+      - file.mtime
+    cardSize: 330

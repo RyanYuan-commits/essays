@@ -1,4 +1,11 @@
+---
+type: Java 基础
+sub-type: 并发编程
+finished: "false"
+---
+
 # Channel 简介
+
 Channel，国内大多翻译成“通道”。Channel 的角色和 OIO 中的Stream(流)是差不多的。
 在 OIO 中，同一个网络连接会关联到两个流：一个输入流（Input Stream），另一个输出流（Output Stream），Java应用程序通过这两个流，不断地进行输入和输出的操作。
 
@@ -9,6 +16,7 @@ Channel，国内大多翻译成“通道”。Channel 的角色和 OIO 中的Str
 Channel和Stream的一个显著的不同是：Stream是单向的，譬如InputStream是单向的只读流，OutputStream是单向的只写流；
 而Channel是双向的，既可以用来进行读操作，又可以用来进行写操作。
 ## 什么是 Channel 的本质？
+
 要清楚的回答这个问题，还得回到TCP/IP协议的四层模型的基础知识。具体如下图所示
 ![[Java NIO 收发 HTTP 原理图.png|900]]
 在TCP/IP协议四层模型的最底层为链路层。在最原始的物理链路时代，咱们数据传输的两头（发送方和接收方）会通过拉同轴电缆的方式，拉一条物理电缆（类似于后来更加高级的网线），这条网线就代表一个双向的连接（connection），通过这条电缆，双方可以完成数据的传输。数据传输一旦完成，需要把这条物理链路拆除（就是这么粗暴）。
@@ -20,7 +28,7 @@ Channel和Stream的一个显著的不同是：Stream是单向的，譬如InputSt
 
 NIO 中的 SocketChannel，实际上就是对底层的传输链路所对应的文件描述符（file descriptor）的一种封装，具体的代码如下：
 ```java
-class SocketChannelImpl  extends SocketChannel  implements SelChImpl  {  
+class SocketChannelImpl extends SocketChannel implements SelChImpl  {  
 	/* 文件描述符对象 */
 	private final FileDescriptor fd;
 }
@@ -32,9 +40,11 @@ public final class FileDescriptor {
 如果两个Java应用通过NIO建立双向的连接（传输链路），它们各自都会有一个自己内部的文件描述符（file descriptor），代表这条连接的自己一方：
 ![[两个 Java 通过 NIO 连接.png|800]]
 # Channel 类详解
+
 Java NIO 中，一个 socket 连接使用一个 Channel（通道）来表示。然而，从更广泛的层面来说，一个通道封装了一个底层的文件描述符，例如硬件设备、文件、网络连接等。所以，与文件描述符相对应，Java NIO 的通道分为很多类型。
 但是Java的通道更加的细化，例如，对应到不同的网络传输协议类型，在 Java 中都有不同的 NIO Channel（通道）相对应。
 ## Channel 的主要类型
+
 这里不对Java NIO全部通道类型进行过多的描述，仅仅聚焦于介绍其中最为重要的四种 Channel（通道）实现：FileChannel、SocketChannel、ServerSocketChannel、DatagramChannel。
 对于以上四种通道，说明如下：
 	（1）FileChannel 文件通道，用于文件的数据读写；

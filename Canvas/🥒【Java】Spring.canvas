@@ -12,19 +12,9 @@
 			"height":720
 		},
 		{
-			"id":"47bdc39d7655632c",
-			"styleAttributes":{},
-			"text":"## Spring 源码笔记\n\n### AOP\n\n- [[🐿️【Java】Spring aop intro]] \n- [[🦦【Java】Spring aop infra]]\n- [[🗺️【Java】Spring aop proxy create]]\n\n### IoC\n\n- [[🧞【Spring】Spring 的三级缓存]]\n\n### 其他\n\n- [[⏰【Java】Spring @Schedule 注解]]",
-			"type":"text",
-			"x":440,
-			"y":-120,
-			"width":720,
-			"height":480
-		},
-		{
 			"id":"269095624bac1474",
 			"styleAttributes":{},
-			"text":"## Spring 随笔\n\n- [[🖼️【Spring】@Resource vs @AutoWire]]\n- [[🎣【Spring】事务机制]]\n- [[🕊️【Spring】Spring 拓展点梳理]]",
+			"text":"## Spring 随笔\n\n- [[🖼️【Spring】@Resource vs @AutoWired]]\n- [[🎣【Java】Spring 事务机制]]\n- [[🕊️【Spring】Spring 拓展点梳理]]",
 			"type":"text",
 			"x":440,
 			"y":400,

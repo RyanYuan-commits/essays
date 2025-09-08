@@ -1,0 +1,12 @@
+views:
+  - type: cards
+    name: 视图
+    filters:
+      and:
+        - file.basename.contains("【Main】")
+    order:
+      - file.basename
+    sort:
+      - property: file.mtime
+        direction: DESC
+    cardSize: 260
