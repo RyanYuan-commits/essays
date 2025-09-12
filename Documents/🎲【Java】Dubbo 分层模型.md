@@ -69,13 +69,17 @@ Dubbo 将这种封装多个提供者并承担路由过滤和负载均衡的层�
 
 ### Transport 网络传输层
 
-当 Request 请求对象准备好了, 不管是同步发送, 还是异步发送, 最终都是需要发送出去的, 但是对象通过谁来发到网络中的呢？
+当 `Request` 请求对象准备好了, 不管是同步发送, 还是异步发送, 最终都是需要发送出去的, 但是对象通过谁来发到网络中的呢？
 
 这就需要网络通信框架出场了. 网络通信框架, 封装了网络层面的各种细节, 只暴露一些发送对象的简单接口, 上层只需要放心把 Request 对象交给网络通信框架就可以了. 
 
 Dubbo 把这种能将数据通过网络发送至对端服务的层次称为网络传输层, 即 Transport. 
 
-抽象 Mina 和 Netty 为同意接口, 以 Message 为中心, 拓展接口为`Channel`, `Transporter`, `Client`, `Server`, `Codec`.
+抽象 Mina 和 Netty 为统一接口, 以 Message 为中心, 拓展接口为`Channel`, `Transporter`, `Client`, `Server`, `Codec`.
+
+`NettyChannel` 类图:
+
+![[NettyChannel 类图.png|500]]
 
 ### Serialize 数据序列化层
 
