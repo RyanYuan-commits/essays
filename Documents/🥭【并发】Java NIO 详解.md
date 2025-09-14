@@ -79,7 +79,7 @@ Java NIO，属于 IO 多路复用模型。只不过，Java NIO组件提供了统
 	NIO技术的实现，是基于底层的IO多路复用技术实现的，比如在Windows中需要select多路复用组件的支持，在Linux系统中需要select/poll/epoll多路复用组件的支持。所以NIO的需要底层操作系统提供支持。
 
 ## NIO 核心组件
-- [[🥨【NIO】Channel]]
+- [[🥨【Java】NIO Channel]]
 - [[🦞【NIO】Selector]]
 - [[🍌【NIO】Buffer]]
 

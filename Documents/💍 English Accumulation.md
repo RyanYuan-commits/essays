@@ -31,3 +31,5 @@ The museum posted and then deleted a vaguely worded statement that many inter
 >
 >如果去掉 who passed the exam, 句子变为所有学生都可以拿到证书, 句子的含义就变了, 
 
+
+The first time I learned about UTF-8 encoding, I was fascinated by how well-thought and brilliantly it was designed to represent millions of characters from different languages and scripts, and still be backward compatible with ASCII.
