@@ -2,8 +2,9 @@ views:
   - type: cards
     name: 视图
     filters:
-      and:
+      or:
         - file.basename.contains("【Main】")
+        - file.basename.contains("(Main)")
     order:
       - file.basename
     sort:
