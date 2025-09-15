@@ -3,7 +3,7 @@
 		{
 			"id":"eccbd851eca1e2ec",
 			"styleAttributes":{"border":"invisible","textAlign":"center"},
-			"text":"🎖️【Java】语言基础",
+			"text":"🎖️(Java) JavaSE",
 			"type":"text",
 			"x":-360,
 			"y":-42,
@@ -37,7 +37,7 @@
 				"border":"invisible",
 				"textAlign":null
 			},
-			"text":"## 未归类\n-  [[🍿【Java】Gradle]]\n- [[🍉【Java】注解]]",
+			"text":"## 未归类\n-  [[🍿(Java) Gradle]]\n- [[🍉【Java】注解]]",
 			"type":"text",
 			"x":-880,
 			"y":-91,

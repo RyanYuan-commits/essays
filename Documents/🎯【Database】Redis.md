@@ -22,3 +22,4 @@ aspectRatio: "100"
 
 [[📰【Redis】持久化]]
 
+[[🎯【Database】Redis]]

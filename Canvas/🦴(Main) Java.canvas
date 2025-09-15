@@ -23,7 +23,7 @@
 		{
 			"id":"e6e130bcfd22df0e",
 			"type":"text",
-			"text":"🦴【Java】Main",
+			"text":"🦴(Main) Java",
 			"styleAttributes":{"textAlign":"center"},
 			"x":460,
 			"y":3280,
@@ -33,7 +33,7 @@
 		{
 			"id":"d5f9ce5316f22029",
 			"type":"text",
-			"text":"[[🎖️【Java】JavaSE.canvas|🎖️【Java】语言基础]]",
+			"text":"[[🎖️(Java) JavaSE.canvas|🎖️(Java) JavaSE]]",
 			"styleAttributes":{"textAlign":"center"},
 			"x":780,
 			"y":3280,
@@ -43,7 +43,7 @@
 		{
 			"id":"8c6b2bb5682aeb95",
 			"type":"text",
-			"text":"[[🎏【Java】常用依赖.canvas|🎏【Java】常用依赖]]",
+			"text":"[[🎏(Java) 常用依赖.canvas|🎏(Java) 常用依赖]]",
 			"styleAttributes":{"textAlign":"center"},
 			"x":120,
 			"y":3280,
