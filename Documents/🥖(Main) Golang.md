@@ -1,3 +1,6 @@
+---
+cover: ../images/cover-go.png
+---
 ## 1 Go 基础
 
 [[🧃【Golang】值类型与引用类型]]

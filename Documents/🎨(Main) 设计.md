@@ -1,3 +1,8 @@
+---
+cover: ../images/cover-design.png
+---
+
+
 ### 🧶 基础知识
 
 [[🐋【系统设计】Restful API]]

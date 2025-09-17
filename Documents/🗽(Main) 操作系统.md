@@ -1,3 +1,6 @@
+---
+cover: ../images/cover-linux.png
+---
 ## 基础知识
 
 [[🍌【Linux】文件系统]]
