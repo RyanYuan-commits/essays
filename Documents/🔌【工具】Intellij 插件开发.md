@@ -1,3 +1,13 @@
+---
+type: 工具
+finished: "false"
+---
+## 1 基础知识
+
+[[🍥(Kotlin) 基础]]
+
+
+
 前置插件安装:
 
 - 下载 Gradle Plugin
