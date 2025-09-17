@@ -3,7 +3,6 @@ views:
     name: 视图
     filters:
       or:
-        - file.basename.contains("【Main】")
         - file.basename.contains("(Main)")
     order:
       - file.basename
@@ -11,3 +10,6 @@ views:
       - property: file.mtime
         direction: DESC
     cardSize: 260
+    imageAspectRatio: 0.25
+    image: note.cover
+    imageFit: ""

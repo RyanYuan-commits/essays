@@ -2,9 +2,9 @@
 type: Java
 sub-type: release
 finished: "false"
+source: https://www.oracle.com/java/technologies/javase/17-relnote-issues.html#NewFeature
 ---
-
-## 1 Record Classes
+## [1 Records](https://openjdk.org/jeps/395)
 
 ### 1.1 什么是 Record 类型
 
@@ -150,5 +150,4 @@ public record Address(String street, String city) {}
 public record Person(String name, int age, Address address) {}
 ```
 
-### 1.5 Record 性能考量
 

@@ -5,13 +5,11 @@ views:
       and:
         - tag == "clipper"
     order:
-      - file.name
       - file.basename
-      - file.ctime
       - description
     sort:
       - property: file.mtime
         direction: DESC
-    image: note.cover
-    cardSize: 300
-    imageAspectRatio: 0.5
+    limit: 15
+    cardSize: 310
+    imageAspectRatio: 0.25

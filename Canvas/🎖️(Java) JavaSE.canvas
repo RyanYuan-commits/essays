@@ -47,7 +47,7 @@
 		{
 			"id":"9cbb1708cd9733c9",
 			"type":"text",
-			"text":"- [[🏆【Java】JDK9 Release]]\n- [[🍇【Java】module-info]]\n- [[🐧【Java】JDK17 Release]]",
+			"text":"- [[🏆【Java】JDK9 Release Note]]\n- [[🍇【Java】module-info]]\n- [[🐧【Java】JDK17 Release Note]]",
 			"styleAttributes":{"textAlign":"center"},
 			"x":-405,
 			"y":-360,

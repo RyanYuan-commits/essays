@@ -1,7 +1,5 @@
 ---
-type: Main
-sub-type: Rust
-finished: "true"
+cover: ../images/cover-Rust.png
 ---
 ## 1 Rust 基础
 
