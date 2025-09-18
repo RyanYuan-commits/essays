@@ -11,6 +11,7 @@
 - [Java 泛型](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/09.Java%E6%B3%9B%E5%9E%8B.html)
 - [Java 反射](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/10.Java%E5%8F%8D%E5%B0%84.html)
 - [Java 注解](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/11.Java%E6%B3%A8%E8%A7%A3.html)
+- [[🍉【Java】注解]]
 - [Java String 类型](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/42.JavaString%E7%B1%BB%E5%9E%8B.html)
 
 ## Java 高级特性
@@ -30,6 +31,10 @@
 - [Java 容器之 Queue](https://dunwu.github.io/01.Java/01.JavaSE/03.%E5%AE%B9%E5%99%A8/05.Java%E5%AE%B9%E5%99%A8%E4%B9%8BQueue.html) - 关键词：`Queue`、`Deque`、`ArrayDeque`、`LinkedList`、`PriorityQueue`
 - [Java 容器之 Stream](https://dunwu.github.io/01.Java/01.JavaSE/03.%E5%AE%B9%E5%99%A8/06.Java%E5%AE%B9%E5%99%A8%E4%B9%8BStream.html)
 
+[[🍧【Java】HashMap 源码分析]]
+
+[[🐊【Java】ArrayList 源码分析]]
+
 ## Java IO
 
 - [Java IO 模型](https://dunwu.github.io/01.Java/01.JavaSE/04.IO/01.JavaIO%E6%A8%A1%E5%9E%8B.html) - 关键词：`InputStream`、`OutputStream`、`Reader`、`Writer`、`阻塞`
@@ -45,3 +50,21 @@
 ## Java 虚拟机
 
 [[🍒【Java】虚拟机.canvas|🍒【Java】虚拟机]]
+
+## 版本更新特性
+
+[[🏆【Java】JDK9 Release Note]]
+
+[[🍇【Java】module-info]]
+
+[[🐧(Java) JDK17 Release Note]]
+
+## 常用类
+
+[[💟【Java】四种引用类型]]
+
+[[🍒【Java】日期相关类]]
+
+[[🚘【Java】Random 类]]
+
+[[🍊【Java】String 类]]

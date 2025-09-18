@@ -3,7 +3,7 @@
 		{
 			"id":"aae4608eb5cc991d",
 			"type":"text",
-			"text":"🎏(Java) 常用依赖",
+			"text":"🎏【Java】常用依赖",
 			"styleAttributes":{"textAlign":"center"},
 			"x":-320,
 			"y":100,
@@ -13,9 +13,19 @@
 		{
 			"id":"a7fb23f8373f7f23",
 			"type":"text",
-			"text":"[[🥒【Java】Spring.canvas|🥒 【Java】Spring]]\n[[♨️【Java】Spring]]",
+			"text":"[[🥒 【Java】Spring.canvas|🥒 【Java】Spring]]",
 			"styleAttributes":{"textAlign":"center"},
 			"x":-700,
+			"y":100,
+			"width":260,
+			"height":60
+		},
+		{
+			"id":"98267f7acea9f515",
+			"type":"text",
+			"text":"[[🍒【Java】MyBatis.canvas|🍒【Java】MyBatis]]",
+			"styleAttributes":{"textAlign":"center"},
+			"x":80,
 			"y":100,
 			"width":260,
 			"height":60
@@ -33,31 +43,11 @@
 		{
 			"id":"405e2d3b77254256",
 			"type":"text",
-			"text":"[[🔮【Java】Dubbo]]",
+			"text":"[[🍊 Dubbo 源码剖析与实战-阅读笔记]]",
 			"styleAttributes":{"textAlign":"center"},
 			"x":-340,
-			"y":-110,
+			"y":-80,
 			"width":300,
-			"height":60
-		},
-		{
-			"id":"98267f7acea9f515",
-			"type":"text",
-			"text":"[[🍒【Java】MyBatis.canvas|🍒【Java】MyBatis]]",
-			"styleAttributes":{"textAlign":"center"},
-			"x":220,
-			"y":40,
-			"width":260,
-			"height":60
-		},
-		{
-			"id":"770bbffc091ba038",
-			"type":"text",
-			"text":"[[⛲ Netty.canvas|⛲ Netty]]",
-			"styleAttributes":{"textAlign":"center"},
-			"x":220,
-			"y":160,
-			"width":260,
 			"height":60
 		}
 	],
@@ -97,15 +87,6 @@
 			"fromSide":"top",
 			"toNode":"405e2d3b77254256",
 			"toSide":"bottom"
-		},
-		{
-			"id":"13266f18c6ab5cab",
-			"styleAttributes":{"pathfindingMethod":"square","arrow":"blunt"},
-			"toFloating":false,
-			"fromNode":"aae4608eb5cc991d",
-			"fromSide":"right",
-			"toNode":"770bbffc091ba038",
-			"toSide":"left"
 		}
 	],
 	"metadata":{

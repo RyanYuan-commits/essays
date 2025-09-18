@@ -1,3 +1,6 @@
+---
+cover: ../images/cover-python.png
+---
 ## 基础
 
 基础整理：

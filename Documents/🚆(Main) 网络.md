@@ -1,3 +1,7 @@
+---
+cover: ../images/cover-Internet.png
+---
+
 ## TCP 篇
 
 ### 连接建立与断开
