@@ -1,22 +1,30 @@
-### 核心
+## 核心
 
-IoC 依赖倒转
+### IoC 依赖倒转
 
-- [[🧞【Spring】三级缓存]]
-- [[🖼️【Spring】@Resource vs @AutoWired]]
-- [[🐚【Spring】Bean 生命周期]]
+[[🧞【Spring】三级缓存]] 
 
-AOP 切面
+[[🖼️【Spring】@Resource vs @AutoWired]]
 
-- [[🐿️【Java】Spring aop intro]]
-- [[🦦【Java】Spring aop infra]]
-- [[🗺️【Java】Spring aop proxy create]]
+[[🐚【Spring】Bean 生命周期]]
 
-Schedule 定时任务: [[⏰【Java】Spring 定时任务]]
+### AOP 切面
 
-Transaction 事务: [[🎣【Java】Spring 事务机制]]
+[[🐿️【Java】Spring aop intro]]
 
-### 插件开发
+[[🦦【Java】Spring aop infra]]
 
-- 拓展点: [[🕊️【Spring】Spring 拓展点梳理]]
+[[🗺️【Java】Spring aop proxy create]]
+
+### 其他
+
+[[⏰【Java】Spring 定时任务]]
+
+[[🎣【Java】Spring 事务机制]]
+
+[[🥫(Spring) @Cacheable注解]]
+
+## 插件开发
+
+拓展点: [[🕊️【Spring】Spring 拓展点梳理]]
 

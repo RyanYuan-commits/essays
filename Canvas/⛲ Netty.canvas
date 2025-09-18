@@ -1,153 +1,117 @@
 {
-  "edges": [
-    {
-      "fromNode": "727ce29ea6c34143",
-      "fromSide": "right",
-      "id": "015faa039809733e",
-      "toNode": "15ff8a1ce2dae0f4",
-      "toSide": "left"
-    },
-    {
-      "fromNode": "0d1d69e7d6255141",
-      "fromSide": "right",
-      "id": "cadad8abdd66a4f1",
-      "toNode": "9ed8977dadb5f2ab",
-      "toSide": "left"
-    },
-    {
-      "fromNode": "da3869aaee245b21",
-      "fromSide": "right",
-      "id": "023fb120114920d1",
-      "toNode": "5de85ef1b9f6cd32",
-      "toSide": "left"
-    },
-    {
-      "fromNode": "7aa3ba399c116e9f",
-      "fromSide": "right",
-      "id": "ce26076c4052c961",
-      "styleAttributes": {
-        "arrow": "blunt",
-        "pathfindingMethod": "square"
-      },
-      "toFloating": false,
-      "toNode": "727ce29ea6c34143",
-      "toSide": "left"
-    },
-    {
-      "fromNode": "7aa3ba399c116e9f",
-      "fromSide": "right",
-      "id": "b7662fb124deeb30",
-      "styleAttributes": {
-        "arrow": "blunt",
-        "pathfindingMethod": "square"
-      },
-      "toFloating": false,
-      "toNode": "0d1d69e7d6255141",
-      "toSide": "left"
-    },
-    {
-      "fromNode": "7aa3ba399c116e9f",
-      "fromSide": "right",
-      "id": "6e3bcc9cfdd95a4c",
-      "styleAttributes": {
-        "arrow": "blunt",
-        "pathfindingMethod": "square"
-      },
-      "toFloating": false,
-      "toNode": "da3869aaee245b21",
-      "toSide": "left"
-    }
-  ],
-  "metadata": {
-    "frontmatter": {
-    },
-    "version": "1.0-1.0"
-  },
-  "nodes": [
-    {
-      "color": "3",
-      "height": 57,
-      "id": "727ce29ea6c34143",
-      "styleAttributes": {
-      },
-      "text": "基础组件",
-      "type": "text",
-      "width": 243,
-      "x": -160,
-      "y": -245
-    },
-    {
-      "color": "5",
-      "height": 60,
-      "id": "0d1d69e7d6255141",
-      "styleAttributes": {
-      },
-      "text": "编码器与解码器",
-      "type": "text",
-      "width": 242,
-      "x": -159,
-      "y": 40
-    },
-    {
-      "color": "4",
-      "height": 56,
-      "id": "da3869aaee245b21",
-      "styleAttributes": {
-      },
-      "text": "序列化与反序列化",
-      "type": "text",
-      "width": 243,
-      "x": -160,
-      "y": 292
-    },
-    {
-      "color": "4",
-      "height": 60,
-      "id": "7aa3ba399c116e9f",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "text": "⛲ Netty",
-      "type": "text",
-      "width": 220,
-      "x": -680,
-      "y": 40
-    },
-    {
-      "color": "3",
-      "height": 284,
-      "id": "15ff8a1ce2dae0f4",
-      "styleAttributes": {
-      },
-      "text": "- [[🦖【Netty】实践案例：DiscardServer]]\n- [[🌾【Netty】核心原理：Reactor 模式实现]]\n\t- [[🧃【Netty】Bootstrap 引导类详解]]\n\t- [[🧭【Netty】Channel 通道详解]]\n\t- [[🏖️【Netty】Handler 业务处理类详解]]\n\t- [[🌵【Netty】Pipeline 流水线详解]]\n\t- [[🍬【ByteBuf】缓冲区详解]]\n",
-      "type": "text",
-      "width": 440,
-      "x": 220,
-      "y": -358
-    },
-    {
-      "color": "4",
-      "height": 150,
-      "id": "5de85ef1b9f6cd32",
-      "styleAttributes": {
-      },
-      "text": "- Json 与 Protobuf \n\t- [[🧱 关于序列化和反序列化]]\n\t- [[🎠【Netty】使用 JSON 协议通信]]\n\t- [[🏀【Netty】使用 Protobuf 通信]]",
-      "type": "text",
-      "width": 440,
-      "x": 220,
-      "y": 245
-    },
-    {
-      "color": "5",
-      "height": 208,
-      "id": "9ed8977dadb5f2ab",
-      "styleAttributes": {
-      },
-      "text": "- Decoder 与 Encoder\n\t- [[🍒 半包和粘包问题]]\n\t- [[🐰【Netty】Decoder 原理与实践]]\n\t- [[🍭【Netty】常用的内置 Decoder]]\n\t- [[🚅【Netty】解码器原理与实践]]",
-      "type": "text",
-      "width": 440,
-      "x": 220,
-      "y": -34
-    }
-  ]
+	"edges":[
+		{"id":"015faa039809733e","fromNode":"727ce29ea6c34143","fromSide":"right","toNode":"15ff8a1ce2dae0f4","toSide":"left"},
+		{"id":"cadad8abdd66a4f1","fromNode":"0d1d69e7d6255141","fromSide":"right","toNode":"9ed8977dadb5f2ab","toSide":"left"},
+		{"id":"023fb120114920d1","fromNode":"da3869aaee245b21","fromSide":"right","toNode":"5de85ef1b9f6cd32","toSide":"left"},
+		{
+			"id":"ce26076c4052c961",
+			"styleAttributes":{"arrow":"blunt","pathfindingMethod":"square"},
+			"toFloating":false,
+			"fromNode":"7aa3ba399c116e9f",
+			"fromSide":"right",
+			"toNode":"727ce29ea6c34143",
+			"toSide":"left"
+		},
+		{
+			"id":"b7662fb124deeb30",
+			"styleAttributes":{"arrow":"blunt","pathfindingMethod":"square"},
+			"toFloating":false,
+			"fromNode":"7aa3ba399c116e9f",
+			"fromSide":"right",
+			"toNode":"0d1d69e7d6255141",
+			"toSide":"left"
+		},
+		{
+			"id":"6e3bcc9cfdd95a4c",
+			"styleAttributes":{"arrow":"blunt","pathfindingMethod":"square"},
+			"toFloating":false,
+			"fromNode":"7aa3ba399c116e9f",
+			"fromSide":"right",
+			"toNode":"da3869aaee245b21",
+			"toSide":"left"
+		}
+	],
+	"metadata":{
+		"frontmatter":{},
+		"version":"1.0-1.0"
+	},
+	"nodes":[
+		{
+			"id":"727ce29ea6c34143",
+			"styleAttributes":{},
+			"text":"基础组件",
+			"type":"text",
+			"x":-160,
+			"y":-245,
+			"width":243,
+			"height":57,
+			"color":"3"
+		},
+		{
+			"id":"0d1d69e7d6255141",
+			"styleAttributes":{},
+			"text":"编码器与解码器",
+			"type":"text",
+			"x":-159,
+			"y":40,
+			"width":242,
+			"height":60,
+			"color":"5"
+		},
+		{
+			"id":"da3869aaee245b21",
+			"styleAttributes":{},
+			"text":"序列化与反序列化",
+			"type":"text",
+			"x":-160,
+			"y":292,
+			"width":243,
+			"height":56,
+			"color":"4"
+		},
+		{
+			"id":"7aa3ba399c116e9f",
+			"styleAttributes":{"textAlign":"center"},
+			"text":"⛲ Netty",
+			"type":"text",
+			"x":-680,
+			"y":40,
+			"width":220,
+			"height":60,
+			"color":"4"
+		},
+		{
+			"id":"15ff8a1ce2dae0f4",
+			"styleAttributes":{},
+			"text":"- [[🦖【Netty】实践案例：DiscardServer]]\n- [[🌾【Netty】核心原理：Reactor 模式实现]]\n\t- [[🧃【Netty】Bootstrap 引导类详解]]\n\t- [[🧭【Netty】Channel 通道详解]]\n\t- [[🏖️【Netty】Handler 业务处理类详解]]\n\t- [[🌵【Netty】Pipeline 流水线详解]]\n\t- [[🍬【ByteBuf】缓冲区详解]]\n",
+			"type":"text",
+			"x":220,
+			"y":-358,
+			"width":440,
+			"height":284,
+			"color":"3"
+		},
+		{
+			"id":"5de85ef1b9f6cd32",
+			"styleAttributes":{},
+			"text":"- Json 与 Protobuf \n\t- [[🧱 关于序列化和反序列化]]\n\t- [[🎠【Netty】使用 JSON 协议通信]]\n\t- [[🏀【Netty】使用 Protobuf 通信]]",
+			"type":"text",
+			"x":220,
+			"y":245,
+			"width":440,
+			"height":150,
+			"color":"4"
+		},
+		{
+			"id":"9ed8977dadb5f2ab",
+			"styleAttributes":{},
+			"text":"- Decoder 与 Encoder\n\t- [[🍒 半包和粘包问题]]\n\t- [[🐰【Netty】Decoder 原理与实践]]\n\t- [[🍭【Netty】常用的内置 Decoder]]\n\t- [[🚅【Netty】解码器原理与实践]]",
+			"type":"text",
+			"x":220,
+			"y":-34,
+			"width":440,
+			"height":208,
+			"color":"5"
+		}
+	]
 }
