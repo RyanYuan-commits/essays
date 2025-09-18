@@ -4,15 +4,14 @@ sub-type: release
 finished: "false"
 source: https://www.oracle.com/java/technologies/javase/17-relnote-issues.html#NewFeature
 ---
-## [1 Records](https://openjdk.org/jeps/395)
+## [1 Records Classes](https://openjdk.org/jeps/395)
 
-### 1.1 什么是 Record 类型
+Java 新的名义类型, 作为不可变数据的透明载体, 提供简单清晰的方式来定义不可变的数据结构.
 
-Java 新的名义类型, 作为是不可变数据的透明载体, 提供简单清晰的方式来定义不可变的数据结构.
+定义 `record` 类型后, 会自动拥有: 构造函数, 所有字段的 `get` 和 `set` 方法, `equals` 和 `hashCode` 方法, `toString` 方法.
 
-定义 `record` 类型后, 这个会自动拥有: 构造函数, 所有字段的 `get` 和 `set` 方法, `equals` 和 `hashCode` 方法, `toString` 方法.
-
-### 1.2 Record 类型语法
+该特性在 JDK14 中首次预览, 在 JDK16 中转正.
+### 1.1 Record 类型语法
 
 `record` 类型的基本语法:
 
@@ -63,7 +62,7 @@ public final class Person {
 }
 ```
 
-### 1.3 Record 类型的优点
+### 1.2 Record 类型的优点
 
 #### 减少样板代码的编写
 
@@ -105,7 +104,7 @@ public record Person(String name, List<String> hobbies) {
 
 被 Record 修饰表示这是一个纯粹的数据载体, 不包含任何的额外行为.
 
-### 1.4 Record 高级特性
+### 1.3 Record 高级特性
 
 #### 自定义构造函数
 
@@ -150,4 +149,23 @@ public record Address(String street, String city) {}
 public record Person(String name, int age, Address address) {}
 ```
 
+
+## 参考文章
+
+```embed
+title: "Java Language Updates"
+image: ""
+description: "This section summarizes the updated language features in Java SE 9 and subsequent releases."
+url: "https://docs.oracle.com/en/java/javase/17/language/java-language-changes-release.html#GUID-6459681C-6881-45D8-B0DB-395D1BD6DB9B"
+favicon: ""
+```
+
+```embed
+title: "Java 9 新特性概览"
+image: "https://oss.javaguide.cn/java-guide-blog/image-20210816083417616.png"
+description: "Java 9 发布于 2017 年 9 月 21 日 。作为 Java 8 之后 3 年半才发布的新版本，Java 9 带来了很多重大的变化其中最重要的改动是 Java 平台模块系统的引入，其他还有诸如集合、Stream 流……。 你可以在 Archived OpenJDK General-Availability Releases 上下载自己需要的 ..."
+url: "https://javaguide.cn/java/new-features/java9.html"
+favicon: ""
+aspectRatio: "60.07604562737643"
+```
 

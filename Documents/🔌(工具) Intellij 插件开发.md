@@ -1,6 +1,7 @@
 ---
 type: 工具
 finished: "false"
+sub-type: 插件
 ---
 ## 1 基础知识
 

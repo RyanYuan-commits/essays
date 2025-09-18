@@ -51,14 +51,6 @@
 
 [[🍒【Java】虚拟机.canvas|🍒【Java】虚拟机]]
 
-## 版本更新特性
-
-[[🏆【Java】JDK9 Release Note]]
-
-[[🍇【Java】module-info]]
-
-[[🐧(Java) JDK17 Release Note]]
-
 ## 常用类
 
 [[💟【Java】四种引用类型]]

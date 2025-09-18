@@ -7,6 +7,8 @@ cover: ../images/cover-Java.png
 
 [[🏜️(Java) JavaSE]]
 
+[[🥤(Java) 版本更新总结]]
+
 ## 2 Kotlin
 
 [[🍥(Kotlin) 基础]]
