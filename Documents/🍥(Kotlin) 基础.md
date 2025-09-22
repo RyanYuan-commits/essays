@@ -1,8 +1,16 @@
 ---
 type: Kotlin
 sub-type: " 语法基础"
-finished: "false"
+finished: "true"
 ---
+[[🍓(Kotlin) String]]
+
+[[🐨(Kotlin) 控制流]]
+
+[[🍸(Kotlin) 集合与数组]]
+
+[[🎬(Kotlin) 面向对象]]
+
 ## 1 数据类型
 
 ### 1.1 基本数据类型
@@ -27,7 +35,401 @@ Kotlin 没有 Java 中 "原生类型 + 包装类" 区分, 而是通过可空性�
 
 #### 布尔类型
 
+布尔类型(Boolean) 只有两个值 `true` 和 `false`, 常用于条件判断:
+```kotlin
+val isActive: Boolean = true
+if (isActive) {
+    println("Active")
+}
+```
+
 ### 1.2 引用数据类型
+
+Kotlin 的引用数据类型包括字符串(String)、数组(Array)、集合(Collection)等. 它们的使用方式与 Java 类似, 但提供了更多的扩展函数和更简洁的语法.
+
+#### 字符串类型
+
+字符串(String) 是不可变的, 可以通过模板表达式插入变量或表达式:
+
+```kotlin
+val name = "Kotlin"
+val message = "Hello, $name!"
+println(message) // 输出: Hello, Kotlin!
+```
+
+
+#### 数组类型
+
+数组(Array) 是固定大小的容器, 可以通过 `arrayOf` 或 `Array` 构造函数创建:
+
+```kotlin
+val numbers = arrayOf(1, 2, 3)
+val squares = Array(5) { i -> i * i }
+println(numbers.joinToString()) // 输出: 1, 2, 3
+println(squares.joinToString()) // 输出: 0, 1, 4, 9, 16
+```
+
+#### 集合类型
+
+集合(Collection) 包括列表(List)、集合(Set)、映射(Map), 提供了不可变和可变两种版本:
+```kotlin
+val immutableList = listOf(1, 2, 3)
+val mutableList = mutableListOf(1, 2, 3)
+mutableList.add(4)
+println(mutableList) // 输出: [1, 2, 3, 4]
+```
+
+### 1.3 类型系统特点
+
+Kotlin 的类型系统具有以下特点:
+1. **可空性**: 通过 `?` 标记可空类型, 避免空指针异常 (NPE);
+2. **智能类型转换**: 编译器会根据上下文自动转换类型, 无需显式转换;
+3. **类型推断**: 声明变量时可以省略类型, 由编译器自动推断;
+
+示例:
+```kotlin
+var name: String? = null
+if (name != null) {
+    println(name.length) // 智能类型转换, 无需显式 `name?.length`
+}
+
+val age = 25 // 类型推断为 Int
+```
+
+## 2 控制流
+
+### 2.1 条件语句
+
+Kotlin 的条件语句包括 `if` 和 `when`, 后者是更强大的分支选择工具:
+```kotlin
+val score = 85
+val grade = when {
+    score >= 90 -> "A"
+    score >= 80 -> "B"
+    score >= 70 -> "C"
+    else -> "D"
+}
+println(grade) // 输出: B
+```
+
+### 2.2 循环语句
+
+Kotlin 提供了 `for`、`while` 和 `do-while` 循环, 并支持区间表达式:
+```kotlin
+for (i in 1..5) {
+    println(i) // 输出: 1, 2, 3, 4, 5
+}
+
+val items = listOf("apple", "banana", "cherry")
+for (item in items) {
+    println(item)
+}
+```
+
+## 3 函数
+
+### 3.1 函数定义
+
+Kotlin 的函数定义非常简洁, 支持默认参数和命名参数:
+```kotlin
+fun greet(name: String = "Guest") {
+    println("Hello, $name!")
+}
+greet() // 输出: Hello, Guest!
+greet("Alice") // 输出: Hello, Alice!
+```
+
+### 3.2 高阶函数与 Lambda 表达式
+
+高阶函数可以接收函数作为参数或返回函数, Lambda 表达式提供了简洁的函数定义方式:
+```kotlin
+val numbers = listOf(1, 2, 3, 4)
+val doubled = numbers.map { it * 2 }
+println(doubled) // 输出: [2, 4, 6, 8]
+```
+
+## 4 面向对象编程
+
+### 4.1 类与对象
+
+Kotlin 的类定义简洁, 支持主构造函数和次构造函数:
+```kotlin
+class Person(val name: String, var age: Int) {
+    fun introduce() {
+        println("Hi, I'm $name and I'm $age years old.")
+    }
+}
+val person = Person("Alice", 25)
+person.introduce() // 输出: Hi, I'm Alice and I'm 25 years old.
+```
+
+### 4.2 继承与接口
+
+Kotlin 的继承使用 `:` 表示, 接口可以多继承:
+```kotlin
+open class Animal(val name: String) {
+    open fun sound() {
+        println("Animal sound")
+    }
+}
+
+class Dog(name: String) : Animal(name) {
+    override fun sound() {
+        println("Woof")
+    }
+}
+
+val dog = Dog("Buddy")
+dog.sound() // 输出: Woof
+```
+
+## 5 其他特性
+
+### 5.1 扩展函数
+
+扩展函数可以为现有类添加新功能, 而无需修改类定义:
+```kotlin
+fun String.repeat(times: Int): String {
+    return this.repeat(times)
+}
+println("Kotlin".repeat(3)) // 输出: KotlinKotlinKotlin
+```
+
+### 5.2 数据类
+
+数据类用于存储数据, 自动生成 `toString`、`equals` 和 `hashCode` 方法:
+```kotlin
+data class User(val name: String, val age: Int)
+val user = User("Alice", 25)
+println(user) // 输出: User(name=Alice, age=25)
+```
+
+### 5.3 单例模式
+
+单例模式通过 `object` 关键字实现:
+```kotlin
+object Singleton {
+    val name = "Singleton"
+    fun greet() {
+        println("Hello from $name")
+    }
+}
+Singleton.greet() // 输出: Hello from Singleton
+```
+
+## 6 空安全机制
+
+### 6.1 可空类型与安全调用
+
+Kotlin 的类型系统旨在消除空指针异常(NPE), 通过区分可空类型和非空类型:
+
+```kotlin
+var nonNullable: String = "Hello" // 非空类型, 不能赋值为 null
+var nullable: String? = null      // 可空类型, 可以赋值为 null
+```
+
+安全调用操作符 `?.` 允许在可能为空的对象上安全调用方法:
+
+```kotlin
+val length = nullable?.length // 如果 nullable 为 null, 则 length 也为 null
+```
+
+### 6.2 Elvis 操作符
+
+Elvis 操作符 `?:` 提供空值的默认替代值:
+
+```kotlin
+val name: String? = null
+val displayName = name ?: "Unknown" // 如果 name 为 null, 则使用 "Unknown"
+```
+
+### 6.3 非空断言
+
+非空断言操作符 `!!` 将任何值转换为非空类型, 如果值为 null 则抛出异常:
+
+```kotlin
+val value: String? = "Hello"
+val length = value!!.length // 如果 value 为 null, 则抛出 NPE
+```
+
+**注意**: 应谨慎使用 `!!`, 它会破坏 Kotlin 的空安全机制.
+
+### 6.4 安全类型转换
+
+安全类型转换操作符 `as?` 在转换失败时返回 null 而不是抛出异常:
+
+```kotlin
+val obj: Any = "Hello"
+val str: String? = obj as? String // 成功转换为 String
+val num: Int? = obj as? Int       // 转换失败, 返回 null
+```
+
+## 7 协程
+
+### 7.1 基本概念
+
+协程(Coroutines)是 Kotlin 提供的轻量级线程, 用于简化异步编程:
+
+```kotlin
+import kotlinx.coroutines.*
+
+fun main() = runBlocking {
+    launch { // 启动新协程
+        delay(1000L) // 非阻塞延迟 1 秒
+        println("World!") // 延迟后打印
+    }
+    println("Hello") // 主协程继续执行
+}
+// 输出:
+// Hello
+// World!
+```
+
+### 7.2 协程作用域
+
+协程作用域定义了协程的生命周期:
+
+```kotlin
+fun main() = runBlocking { // 创建阻塞协程作用域
+    launch { // 在 runBlocking 作用域中启动协程
+        delay(200L)
+        println("Task from runBlocking")
+    }
+    
+    coroutineScope { // 创建新的协程作用域
+        launch {
+            delay(500L)
+            println("Task from nested scope")
+        }
+        delay(100L)
+        println("Task from coroutine scope")
+    }
+    
+    println("End of runBlocking")
+}
+// 输出顺序:
+// Task from coroutine scope
+// Task from runBlocking
+// Task from nested scope
+// End of runBlocking
+```
+
+### 7.3 挂起函数
+
+挂起函数(suspend function)是可以暂停执行并稍后恢复的函数:
+
+```kotlin
+suspend fun fetchData(): String {
+    delay(1000L) // 挂起协程, 不阻塞线程
+    return "Data loaded"
+}
+
+fun main() = runBlocking {
+    val result = fetchData() // 调用挂起函数
+    println(result)
+}
+```
+
+### 7.4 协程上下文与调度器
+
+协程上下文包含调度器, 控制协程在哪个线程上执行:
+
+```kotlin
+fun main() = runBlocking {
+    launch(Dispatchers.Default) { // 使用默认调度器(适合CPU密集型任务)
+        println("Default: ${Thread.currentThread().name}")
+    }
+    
+    launch(Dispatchers.IO) { // 使用IO调度器(适合IO操作)
+        println("IO: ${Thread.currentThread().name}")
+    }
+    
+    launch(Dispatchers.Main.immediate) { // 使用Main调度器(适合UI操作, 仅在UI环境可用)
+        println("Main: ${Thread.currentThread().name}")
+    }
+}
+```
+
+## 8 Kotlin 与 Java 互操作
+
+### 8.1 调用 Java 代码
+
+Kotlin 可以直接调用 Java 代码, 但需注意空安全处理:
+
+```kotlin
+// Java 类
+public class JavaClass {
+    public String getData() {
+        return "Data from Java";
+    }
+}
+
+// Kotlin 代码
+fun useJavaClass() {
+    val javaObj = JavaClass()
+    val data = javaObj.data // 直接调用 Java 方法
+    println(data)
+}
+```
+
+### 8.2 平台类型
+
+从 Java 代码返回的类型在 Kotlin 中被视为"平台类型", 编译器不确定其可空性:
+
+```kotlin
+// Java 方法
+public String getStringOrNull() {
+    return Math.random() > 0.5 ? "Value" : null;
+}
+
+// Kotlin 代码
+fun usePlatformType() {
+    val value = getStringOrNull() // 平台类型, 可能为 null
+    // 需要开发者自行处理可能的空值
+    println(value?.length ?: "Value is null")
+}
+```
+
+### 8.3 注解互操作
+
+Kotlin 提供特殊注解以优化与 Java 的互操作:
+
+```kotlin
+// 指定 Java 调用时的方法名
+@JvmName("processItems")
+fun List<String>.process() {
+    // 处理逻辑
+}
+
+// 生成静态方法
+@JvmStatic
+fun staticMethod() {
+    println("Static method")
+}
+
+// 生成重载方法
+@JvmOverloads
+fun greet(name: String = "Guest") {
+    println("Hello, $name!")
+}
+```
+
+### 8.4 SAM 转换
+
+Kotlin 支持 Java 的 SAM (Single Abstract Method) 转换, 简化函数式接口的使用:
+
+```kotlin
+// Java 接口
+public interface Runnable {
+    void run();
+}
+
+// Kotlin 代码
+fun useRunnable() {
+    val runnable = Runnable { println("Running") } // SAM 转换
+    Thread(runnable).start()
+}
+```
 
 
 
