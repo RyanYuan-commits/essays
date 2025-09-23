@@ -5,9 +5,11 @@ finished: "true"
 ---
 [[🍓(Kotlin) String]]
 
-[[🐨(Kotlin) 控制流]]
-
 [[🍸(Kotlin) 集合与数组]]
+
+[[🛰️(Kotlin) 函数]]
+
+[[🐨(Kotlin) 控制流]]
 
 [[🎬(Kotlin) 面向对象]]
 

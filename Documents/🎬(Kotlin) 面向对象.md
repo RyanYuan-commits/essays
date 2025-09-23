@@ -183,5 +183,44 @@ fun handleState(state: NetworkState) {
 }
 ```
 
+### 6.3 对象与伴生对象
 
+#### 单例 Object
 
+```kotlin
+// 一个线程安全的单例
+object AppSettings {
+    val apiUrl = "https://api.myapp.com"
+    var theme = "dark"
+}
+
+// 全局直接使用
+println(AppSettings.apiUrl)
+AppSettings.theme = "light"
+```
+
+与 Java 相比, 极大的简化了单例模式的实现.
+
+#### 伴生对象
+
+```kotlin
+class Path private constructor(val fullPath: String) {
+    companion object {
+        const val SEPARATOR = "/" // 真正的编译期常量
+        
+        // 相当于 Java 的静态工厂方法
+        fun from(userPath: String): Path {
+            val sanitizedPath = userPath.trim()
+            return Path(sanitizedPath)
+        }
+    }
+}
+
+// 调用方式类似静态成员
+val separator = Path.SEPARATOR
+val myPath = Path.from("/usr/local/bin ")
+```
+
+Kotlin 用于替代 Java `static` 成员的方案, 本质是一个与外部类紧密关联的单例对象;
+
+伴生对象可以实现接口, 拥有自己的父类, 比 Java 的 `static` 更加灵活和强大.
