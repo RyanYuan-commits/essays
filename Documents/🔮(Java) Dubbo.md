@@ -31,7 +31,7 @@ favicon: ""
 aspectRatio: "140.85510688836104"
 ```
 
-[[🕹️【Java】Dubbo 拓展点]]
+[[🕹️(Java) Dubbo 拓展点]]
 
 ```embed
 title: "泛化调用"
