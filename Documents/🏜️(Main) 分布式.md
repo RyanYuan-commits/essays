@@ -6,7 +6,7 @@ cover: ../images/cover-分布式.png
 
 [[🍍【分布式】CAP & BASE 理论]]
 
-[[🛎️【分布式】分布式算法总结]]
+[[🛎️【分布式】Paxos 算法]]
 
 [[🌴【分布式】Raft 算法]]
 

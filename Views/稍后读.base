@@ -4,6 +4,7 @@ views:
     filters:
       and:
         - tag == "clipper"
+        - finished == "false"
     order:
       - file.basename
       - description
