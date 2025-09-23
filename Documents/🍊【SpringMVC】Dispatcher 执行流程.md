@@ -4,12 +4,12 @@
 
 也就是 Servlet 生命周期中的 init 方法。
 
-- org.springframework.web.servlet.**HttpServletBean**#init()：DispatcherServlet 初始化的起点
-- org.springframework.web.servlet.**FrameworkServlet**#initServletBean：调用方法 initWebApplicationContext 来初始化 Web 的 ApplicationContext，这是对 Spring 原生 ApplicationContext 的封装
-- org.springframework.web.servlet.**FrameworkServlet**#initWebApplicationContext
-- org.springframework.web.servlet.**FrameworkServlet**#configureAndRefreshWebApplicationContext：其中会调用 Spring 中的 refresh 方法来初始化容器。
-- org.springframework.web.servlet.**DispatcherServlet**#onRefresh
-- org.springframework.web.servlet.**DispatcherServlet**#initStrategies：初始化 SpringMVC 运行过程中需要的各种核心类
+- `org.springframework.web.servlet.HttpServletBean#init()`：DispatcherServlet 初始化的起点
+- `org.springframework.web.servlet.FrameworkServlet#initServletBean`：调用方法 initWebApplicationContext 来初始化 Web 的 ApplicationContext，这是对 Spring 原生 ApplicationContext 的封装
+- `org.springframework.web.servlet.FrameworkServlet#initWebApplicationContext`
+- `org.springframework.web.servlet.FrameworkServlet#configureAndRefreshWebApplicationContext`：其中会调用 Spring 中的 refresh 方法来初始化容器。
+- org.springframework.web.servlet.DispatcherServlet#onRefresh
+- org.springframework.web.servlet.DispatcherServlet#initStrategies：初始化 SpringMVC 运行过程中需要的各种核心类
 
 >[!info] org.springframework.web.servlet.DispatcherServlet#initStrategies
 ```java
@@ -52,8 +52,8 @@ static {
 
 对应的是 Servlet 生命周期中的 service 方法。
 
-- javax.servlet.http.**HttpServlet**#service：调用本类中的 doGet 和 doPost
-- org.springframework.web.servlet.FrameworkServlet#processRequest：FrameworkServlet 中重写了 doGet 和 doPost 方法，其最终都会调用到 processRequest 方法，方法中调用了 doService 方法
+- `javax.servlet.http.HttpServlet#service`：调用本类中的 doGet 和 doPost
+- `org.springframework.web.servlet.FrameworkServlet#processRequest`：FrameworkServlet 中重写了 doGet 和 doPost 方法，其最终都会调用到 processRequest 方法，方法中调用了 doService 方法
 
 >[!info] FrameworkServlet 中对 doGet 和 doPost 方法
 ```java
@@ -68,8 +68,8 @@ protected final void doPost(HttpServletRequest request, HttpServletResponse resp
     processRequest(request, response);  
 }
 ```
-- org.springframework.web.servlet.**DispatcherServlet**#doService：调用 doDispatch 核心方法
-- org.springframework.web.servlet.**DispatcherServlet**#doDispatch
+- `org.springframework.web.servlet.DispatcherServlet#doService`：调用 doDispatch 核心方法
+- `org.springframework.web.servlet.DispatcherServlet#doDispatch`
 
 >[!info] org.springframework.web.servlet.DispatcherServlet#doDispatch
 ```java

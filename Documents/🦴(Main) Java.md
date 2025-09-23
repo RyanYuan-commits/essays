@@ -11,6 +11,8 @@ cover: ../images/cover-Java.png
 
 ## 2 Kotlin
 
+[[🍍(Kotlin) 不得不看的学习资源]]
+
 [[🍥(Kotlin) 基础]]
 
 
