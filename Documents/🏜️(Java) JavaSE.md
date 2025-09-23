@@ -1,4 +1,4 @@
-## Java 基础特性
+## 1 🐤(Java) 基础特性
 
 - [Java 基础语法特性](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/01.Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.html)
 - [Java 基本数据类型](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/02.Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.html)
@@ -11,10 +11,12 @@
 - [Java 泛型](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/09.Java%E6%B3%9B%E5%9E%8B.html)
 - [Java 反射](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/10.Java%E5%8F%8D%E5%B0%84.html)
 - [Java 注解](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/11.Java%E6%B3%A8%E8%A7%A3.html)
-- [[🍉【Java】注解]]
-- [Java String 类型](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/42.JavaString%E7%B1%BB%E5%9E%8B.html)
+- [[🍉(Java) 注解]]
+- [[🍒(Java) 日期类]]
+- [[🦯(Java) BigDecimal]]
+- [[🍊(Java) String]]
 
-## Java 高级特性
+## 2 🎧(Java) 高级特性
 
 - [Java 正则从入门到精通](https://dunwu.github.io/01.Java/01.JavaSE/02.%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/01.Java%E6%AD%A3%E5%88%99.html) - 关键词：`Pattern`、`Matcher`、`捕获与非捕获`、`反向引用`、`零宽断言`、`贪婪与懒惰`、`元字符`、`DFA`、`NFA`
 - [Java 编码和加密](https://dunwu.github.io/01.Java/01.JavaSE/02.%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/02.Java%E7%BC%96%E7%A0%81%E5%92%8C%E5%8A%A0%E5%AF%86.html) - 关键词：`Base64`、`消息摘要`、`数字签名`、`对称加密`、`非对称加密`、`MD5`、`SHA`、`HMAC`、`AES`、`DES`、`DESede`、`RSA`
@@ -22,7 +24,7 @@
 - [Java JDK8](https://dunwu.github.io/01.Java/01.JavaSE/02.%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/04.JDK8.html) - 关键词：`Stream`、`lambda`、`Optional`、`@FunctionalInterface`
 - [Java SPI](https://dunwu.github.io/01.Java/01.JavaSE/02.%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/05.JavaSPI.html) - 关键词：`SPI`、`ClassLoader`
 
-## Java 容器
+## 3 🚧(Java) 容器
 
 - [Java 容器简介](https://dunwu.github.io/01.Java/01.JavaSE/03.%E5%AE%B9%E5%99%A8/01.Java%E5%AE%B9%E5%99%A8%E7%AE%80%E4%BB%8B.html) - 关键词：`Collection`、`泛型`、`Iterable`、`Iterator`、`Comparable`、`Comparator`、`Cloneable`、`fail-fast`
 - [Java 容器之 List](https://dunwu.github.io/01.Java/01.JavaSE/03.%E5%AE%B9%E5%99%A8/02.Java%E5%AE%B9%E5%99%A8%E4%B9%8BList.html) - 关键词：`List`、`ArrayList`、`LinkedList`
@@ -30,12 +32,10 @@
 - [Java 容器之 Set](https://dunwu.github.io/01.Java/01.JavaSE/03.%E5%AE%B9%E5%99%A8/04.Java%E5%AE%B9%E5%99%A8%E4%B9%8BSet.html) - 关键词：`Set`、`HashSet`、`TreeSet`、`LinkedHashSet`、`EmumSet`
 - [Java 容器之 Queue](https://dunwu.github.io/01.Java/01.JavaSE/03.%E5%AE%B9%E5%99%A8/05.Java%E5%AE%B9%E5%99%A8%E4%B9%8BQueue.html) - 关键词：`Queue`、`Deque`、`ArrayDeque`、`LinkedList`、`PriorityQueue`
 - [Java 容器之 Stream](https://dunwu.github.io/01.Java/01.JavaSE/03.%E5%AE%B9%E5%99%A8/06.Java%E5%AE%B9%E5%99%A8%E4%B9%8BStream.html)
+- [[🍧【Java】HashMap 源码分析]]
+- [[🐊(Java) ArrayList 源码分析]]
 
-[[🍧【Java】HashMap 源码分析]]
-
-[[🐊【Java】ArrayList 源码分析]]
-
-## Java IO
+## 4 🧅(Java) IO
 
 - [Java IO 模型](https://dunwu.github.io/01.Java/01.JavaSE/04.IO/01.JavaIO%E6%A8%A1%E5%9E%8B.html) - 关键词：`InputStream`、`OutputStream`、`Reader`、`Writer`、`阻塞`
 - [Java NIO](https://dunwu.github.io/01.Java/01.JavaSE/04.IO/02.JavaNIO.html) - 关键词：`Channel`、`Buffer`、`Selector`、`非阻塞`、`多路复用`
@@ -43,20 +43,83 @@
 - [Java 网络编程](https://dunwu.github.io/01.Java/01.JavaSE/04.IO/04.Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html) - 关键词：`Socket`、`ServerSocket`、`DatagramPacket`、`DatagramSocket`
 - [Java IO 工具类](https://dunwu.github.io/01.Java/01.JavaSE/04.IO/05.JavaIO%E5%B7%A5%E5%85%B7%E7%B1%BB.html) - 关键词：`File`、`RandomAccessFile`、`System`、`Scanner`
 
-## Java 并发
+## 5 🥥(Java) 并发编程
 
-[[🍈【Java】并发编程.canvas|🍈【Java】并发编程]]
+### 5.1 线程池
 
-## Java 虚拟机
+- [[💘【Java】线程池基本介绍]]
+- [[🍡【Java】线程池源码详解]]
+- [[💜【Java】关于线程池的一些思考]]
+- [[🍗【Java】线程池的动态修改]]
 
-[[🍒【Java】虚拟机.canvas|🍒【Java】虚拟机]]
+### 5.2 网络 IO
 
-## 常用类
+- [[🎽【并发】高并发 IO 底层原理]]
+- [[🥭【并发】Java NIO 详解]]
+- [[🌲【并发】Reactor 反应器模式]]
 
-[[💟【Java】四种引用类型]]
+### 5.3 并发工具类 
 
-[[🍒【Java】日期相关类]]
+- [[🍍【Java】CAS 原理]]
+- [[🥒【Java】AbstractQueueSynchronizer]]
+- [[💫【Java】ReentrantLock]]
+-  [[📀【Java】ConcurrentHashMap]]
+- [[🌵【Java】CountDownLatch]]
+- [[🏜️【Java】CyclicBarrier]]
+- [[🚤【Java】ThreadLocal]]
+- [[🚣【并发】ThreadLocalRandom 源码解析]]
+- [[💫【Java】ReentrantLock]]
+- [[🍨【Java】Java Memory Model]]
+- [[🥭【并发】Java 并发编程基础]]
+- [[🍦【并发】Java 中的 Unsafe 类]]
 
-[[🚘【Java】Random 类]]
+### 5.4 并发基础
 
-[[🍊【Java】String 类]]
+- [[🍓【Java】并发面试题整理]]
+- [[🍨【Java】Java Memory Model]]
+- [[🖼️【Java】创建线程的三种方式]]
+- [[🚤【Java】ThreadLocal]]
+- [[🌯【Java】CompletableFuture 使用与原理]]
+
+
+## 6 🎃(Java) 虚拟机
+
+### 6.1 理论基础
+
+- [[🏋️【Java】分代假说与垃圾收集算法]]
+- [[🦜【Java】可达性分析]]
+- [[🥐【Java】记忆集与卡表]]
+- [[🥝【Java】根节点枚举]]
+
+### 6.2 垃圾收集器
+
+- [[🧃【Java】垃圾回收器概述]]
+- [[🥤【Java】Serial 收集器]]
+- [[🤖【Java】ParNew 收集器]]
+- [[🌽【JVM】Parallel Scavenge 收集器]]
+- [[🍲【JVM】Parallel Old 收集器]]
+- [[🦚【JVM】CMS 收集器]]
+- [[🦚【JVM】Garbage First 收集器]]
+- [[🧃 Getting Start G1]]
+
+### 6.3 分析工具
+
+- [[🐁 【Java】基础故障处理工具]]
+
+### 6.4 内存管理
+
+- [[🏃【Java】运行时数据区域]]
+- [[🖨️【Java】HotSpot 虚拟机对象探秘]]
+-  [[🏂【Java】常见的 OOM 场景]]
+- [[🍑(Java) 字符串常量池]]
+
+### 6.5 类加载机制
+
+- [[🎠【Java】对象创建过程]]
+- [[🥁【Java】类加载器]]
+
+## 7 🌵(Java) 常用类
+
+- [[💟(Java) 引用类型]]
+- [[🚘(Java) Random]]
+

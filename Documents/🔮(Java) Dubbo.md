@@ -16,7 +16,7 @@ favicon: ""
 
 [[🎲【Java】Dubbo 分层模型]]
 
-[[🌻【Java】Dubbo 线程模型]]
+[[🌻(Java) Dubbo 线程模型]]
 
 ## 高级特性
 

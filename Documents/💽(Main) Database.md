@@ -1,8 +1,8 @@
 ---
 cover: ../images/cover-Database.png
 ---
-[[🍝【Database】MySQL]]
+[[🍝(Database) MySQL]]
 
-[[☃️【Database】ElasticSearch]]
+[[☃️(Database) ElasticSearch]]
 
-[[🎯【Database】Redis]]
+[[🎯(Database) Redis]]

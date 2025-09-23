@@ -6,7 +6,7 @@
 
 [[🖼️【Spring】@Resource vs @AutoWired]]
 
-[[🐚【Spring】Bean 生命周期]]
+[[🐚(Spring) Bean 生命周期]]
 
 ### AOP 切面
 
