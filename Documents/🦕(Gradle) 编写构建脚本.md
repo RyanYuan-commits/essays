@@ -1,3 +1,9 @@
+---
+type: 工具
+sub-type: Gradle
+finished: "false"
+---
+
 ![[Gradle构建.png|800]]
 ## 1 多项目构建的结构化
 
@@ -63,4 +69,41 @@ buildHtml → assembleDocs → createDocs
 ## 3 编写构建脚本
 
 Gradle 会在配置阶段使用构建脚本来配置每个 `Project` 对象.
+### 3.1 脚本结构
+
+Gradle 脚本主要由两种元素构成:
+
+- Statement 语句: 在初始化阶段或配置阶段立即执行的顶层表达式;
+- Blocks 代码块: 传递给配置方法的嵌套代码块 (Groovy 闭包或 Kotlin Lambda), 这些代码块将设置并应用于 Gradle 对象, 例如 `project`, `pluginManagement`, `dependencyResolutionManagement`, `repositories` 或者 `dependencies`.
+
+常见的代码块包含:
+
+```groovy
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation "junit:junit:4.13"
+    implementation project(':shared')
+}
+```
+
+Gradle 脚本基于 Groovy 的动态闭包实现, Gradle 会将方法/属性调用动态委托给目标对象. 
+=> [[🌪️(Groovy) 闭包]]
+
+
+
+
+
+
+
+
+
+
+
 

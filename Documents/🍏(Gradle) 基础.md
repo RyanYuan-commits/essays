@@ -41,6 +41,22 @@ project
 	- gradle-wrapper.properties: 配置文件, 用于定义 Gradle Wrapper 的行为, 比如指定要使用的 Gradle 版本和下载地址.
 - build.gradle(.kts): 定义了构建逻辑, 具体包含依赖项, 任务, 插件等.
 
+## 3 Gradle Wrapper 
 
+### 3.1 什么是 Gradle Wrapper?
 
+Gradle包装器, 是标准化的在项目中集成和执行 Gradle 构建的方式;
 
+允许新开发者通过 `./gradlew` 命令来完成项目的初始化, Wrapper 会搞定 Gradle 的下载和配置.
+
+一个包含 Gradle Wrapper 的项目通常有以下文件：
+
+- `gradlew`: 用于 macOS/Linux 的 shell 脚本;
+- `gradlew.bat`: 用于 Windows 的批处理脚本;
+- `gradle/wrapper/gradle-wrapper.jar`: Wrapper 的核心逻辑，负责下载 Gradle;
+- `gradle/wrapper/gradle-wrapper.properties`: 关键配置文件，定义了要下载的 Gradle 版本和下载地址.
+### 3.2 修改版本配置
+
+```bash
+./gradlew wrapper --gradle-version [VERSION]
+```

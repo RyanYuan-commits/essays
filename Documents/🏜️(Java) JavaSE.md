@@ -31,7 +31,7 @@
 - [Java 容器之 Set](https://dunwu.github.io/01.Java/01.JavaSE/03.%E5%AE%B9%E5%99%A8/04.Java%E5%AE%B9%E5%99%A8%E4%B9%8BSet.html) - 关键词：`Set`、`HashSet`、`TreeSet`、`LinkedHashSet`、`EmumSet`
 - [Java 容器之 Queue](https://dunwu.github.io/01.Java/01.JavaSE/03.%E5%AE%B9%E5%99%A8/05.Java%E5%AE%B9%E5%99%A8%E4%B9%8BQueue.html) - 关键词：`Queue`、`Deque`、`ArrayDeque`、`LinkedList`、`PriorityQueue`
 - [Java 容器之 Stream](https://dunwu.github.io/01.Java/01.JavaSE/03.%E5%AE%B9%E5%99%A8/06.Java%E5%AE%B9%E5%99%A8%E4%B9%8BStream.html)
-- [[🍧【Java】HashMap 源码分析]]
+- [[🍧(Java) HashMap 源码分析]]
 - [[🐊(Java) ArrayList 源码分析]]
 
 ## 4 🧅(Java) IO
@@ -69,8 +69,8 @@
 - [[🚣【并发】ThreadLocalRandom 源码解析]]
 - [[💫【Java】ReentrantLock]]
 - [[🍨【Java】Java Memory Model]]
-- [[🥭【并发】Java 并发编程基础]]
-- [[🍦【并发】Java 中的 Unsafe 类]]
+- [[🥭(Java) 并发编程基础]]
+- [[🍦(Java) Unsafe]]
 
 ### 5.4 并发基础
 
