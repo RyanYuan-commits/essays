@@ -1,11 +1,7 @@
 ---
 type: Java
 finished: "false"
-cover: "[[CompletableFuture 的定义.png]]"
 ---
-参考内容:
-
-- https://tech.meituan.com/2022/05/12/principles-and-practices-of-completablefuture.html
 
 ## 1 背景与定义
 
@@ -85,7 +81,7 @@ cf1.thenCombine(cf2, (result1, result2) -> {
 
 ### 1.2 CompletableFuture 的定义
 
-![[CompletableFuture 的定义.png|center|500]]
+![[CompletableFuture 的定义.png|500]]
 
 `CompletableFuture` 实现了两个接口: `Future`、`CompletionStage`.
 
@@ -97,7 +93,7 @@ cf1.thenCombine(cf2, (result1, result2) -> {
 
 下面我们通过一个例子来讲解 `CompletableFuture` 如何使用, 使用 `CompletableFuture` 也是构建依赖树的过程. 一个 `CompletableFuture` 的完成会触发另外一系列依赖它的 `CompletableFuture` 的执行:
 
-![[CompletableFuture的使用.png|center]]
+![[CompletableFuture的使用.png|300]]
 
 如上图所示, 这里描绘的是一个业务接口的流程, 其中包括 5 个步骤, 并描绘了这些步骤之间的依赖关系, 每个步骤可以是一次 RPC 调用、一次数据库操作或者是一次本地方法调用等, 在使用 `CompletableFuture` 进行异步化编程时, 图中的每个步骤都会产生一个 `CompletableFuture` 对象, 最终结果也会用一个 `CompletableFuture` 来进行表示. 
 
@@ -107,7 +103,7 @@ cf1.thenCombine(cf2, (result1, result2) -> {
 
 我们先看下如何不依赖其他 `CompletableFuture` 来创建新的 `CompletableFuture`: 
 
-![[零依赖-CompletableFuture的创建.png|center]]
+![[零依赖-CompletableFuture的创建.png|300]]
 
 如上图红色链路所示, 接口接收到请求后, 首先发起两个异步调用CF1、CF2, 主要有三种方式: 
 
@@ -167,7 +163,7 @@ public interface ThriftAsyncCall {
 
 ### 2.2 一元依赖: 依赖一个 CF
 
-![[一元依赖-依赖一个 CF.png|center]]
+![[一元依赖-依赖一个 CF.png|300]]
 
 如上图红色链路所示, CF3, CF5 分别依赖于 CF1 和 CF2, 这种对于单个 `CompletableFuture` 的依赖可以通过 `thenApply`、`thenAccept`、`thenCompose` 等方法来实现, 代码如下所示: 
 
@@ -186,7 +182,7 @@ CompletableFuture<String> cf5 = cf2.thenApply(result2 -> {
 
 ### 2.3 二元依赖: 依赖两个 CF
 
-![[二元依赖-依赖两个 CF.png|center]]
+![[二元依赖-依赖两个 CF.png|300]]
 
 如上图红色链路所示, CF4同时依赖于两个CF1和CF2, 这种二元依赖可以通过 `thenCombine` 等回调来实现, 如下代码所示: 
 
@@ -199,7 +195,7 @@ CompletableFuture<String> cf4 = cf1.thenCombine(cf2, (result1, result2) -> {
 
 ### 2.4 多元依赖: 依赖多个CF
 
-![[多元依赖-依赖多个CF.png|center]]
+![[多元依赖-依赖多个CF.png|center|300]]
 
 如上图红色链路所示, 整个流程的结束依赖于三个步骤 CF3、CF4、CF5, 这种多元依赖可以通过 `allOf` 或 `anyOf` 方法来实现, 区别是当需要多个依赖全部完成时使用 `allOf`, 当多个依赖中的任意一个完成即可时使用 `anyOf`, 如下代码所示: 
 
@@ -218,7 +214,7 @@ CompletableFuture<String> result = cf6.thenApply(v -> {
 
 CompletableFuture中包含两个字段: `result` 和 `stack`. `result` 用于存储当前 CF 的结果, `stack` 表示当前CF完成后需要触发的依赖动作, 去触发依赖它的 CF 的计算, 依赖动作可以有多个, 以栈的形式存储, `stack` 表示栈顶元素. 
 
-![[CompletableFuture 组成.png|center]]
+![[CompletableFuture 组成.png|center|700]]
 
 这种方式类似 “观察者模式”, 依赖动作都封装在一个单独 `Completion` 子类中. 下面是 `Completion` 类关系结构图. `CompletableFuture` 中的每个方法都对应了图中的一个 `Completion` 的子类, `Completion` 本身是 **观察者** 的基类. 
 

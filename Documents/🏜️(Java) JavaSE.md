@@ -78,7 +78,7 @@
 - [[🍨【Java】Java Memory Model]]
 - [[🖼️【Java】创建线程的三种方式]]
 - [[🚤【Java】ThreadLocal]]
-- [[🌯【Java】CompletableFuture 使用与原理]]
+- [[🌯(Java) CompletableFuture 使用与原理]]
 
 
 ## 6 🎃(Java) 虚拟机
