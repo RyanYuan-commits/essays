@@ -12,8 +12,6 @@ views:
       - sub-type
       - file.mtime
     sort:
-      - property: file.ctime
-        direction: DESC
       - property: file.mtime
         direction: DESC
     limit: 10

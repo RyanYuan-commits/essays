@@ -143,39 +143,21 @@ application {
 tasks.named('test', Test) { 
     useJUnitPlatform()
 }
-
-tasks.named('javadoc', Javadoc).configure {
-    exclude 'app/Internal*.java'
-    exclude 'app/internal/*'
-}
-
-tasks.register('zip-reports', Zip) {
-    from 'Reports/'
-    include '*'
-    archiveFileName = 'Reports.zip'
-    destinationDirectory = file('/dir')
-}
 ```
 
-## 4 依赖的声明与管理
+Gradle 脚本基于 Groovy 的动态闭包实现, Gradle 会将方法/属性调用动态委托给目标对象. 
+=> [[🌪️(Groovy) 闭包]]
 
-### 4.1 依赖声明
 
-在 `dependencies { ... }` 代码块声明项目编译, 运行或测试所依赖的外部库, 内部模块或文件.
 
-=> [[🌲(Gradle) 依赖管理 API]]
 
-### 4.2 强制执行和约束版本
 
-```groovy
-dependencies {
-    implementation("org.apache.httpcomponents:httpclient:4.5.4")
-    implementation("commons-codec:commons-codec") {
-        version {
-            strictly("1.9")
-        }
-    }
-}
-```
 
-Gradle 允许对依赖版本的约束, 以避免不必要的升级.
+
+
+
+
+
+
+
+

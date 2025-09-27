@@ -9,8 +9,7 @@
 - [Java 控制语句](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/07.Java%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5.html)
 - [Java 异常](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/08.Java%E5%BC%82%E5%B8%B8.html)
 - [Java 泛型](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/09.Java%E6%B3%9B%E5%9E%8B.html)
-- [Java 反射](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/10.Java%E5%8F%8D%E5%B0%84.html)
-- [Java 注解](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/11.Java%E6%B3%A8%E8%A7%A3.html)
+- [[🍨(Java) 反射]]
 - [[🍉(Java) 注解]]
 - [[🍒(Java) 日期类]]
 - [[🦯(Java) BigDecimal]]
@@ -79,7 +78,7 @@
 - [[🍨【Java】Java Memory Model]]
 - [[🖼️【Java】创建线程的三种方式]]
 - [[🚤【Java】ThreadLocal]]
-- [[🌯【Java】CompletableFuture 使用与原理]]
+- [[🌯(Java) CompletableFuture 使用与原理]]
 
 
 ## 6 🎃(Java) 虚拟机
