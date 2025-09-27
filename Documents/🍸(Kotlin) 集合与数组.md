@@ -1,3 +1,8 @@
+---
+type: Kotlin
+sub-type: 语法基础
+finished: "true"
+---
 ## 1 数组
 
 Kotlin 有类似 Java 的对象数组 `Array<T>`, 使用 `arrayOf()` 创建, 对应着 Java 中的 `String[]`, `Integer[]` 等:
