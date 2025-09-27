@@ -76,34 +76,106 @@ Gradle 脚本主要由两种元素构成:
 - Statement 语句: 在初始化阶段或配置阶段立即执行的顶层表达式;
 - Blocks 代码块: 传递给配置方法的嵌套代码块 (Groovy 闭包或 Kotlin Lambda), 这些代码块将设置并应用于 Gradle 对象, 例如 `project`, `pluginManagement`, `dependencyResolutionManagement`, `repositories` 或者 `dependencies`.
 
-常见的代码块包含:
-
-```groovy
-plugins {
-    id 'java'
-}
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testImplementation "junit:junit:4.13"
-    implementation project(':shared')
-}
-```
-
 Gradle 脚本基于 Groovy 的动态闭包实现, Gradle 会将方法/属性调用动态委托给目标对象. 
 => [[🌪️(Groovy) 闭包]]
 
+```groovy
+buildscript {
+    repositories {
+        maven { url "xxx" }
+    }
+}
+```
 
+调用 `Project#buildscript()` 函数, 传入的是一个闭包 `{ repositories { ... } }`;
 
+这个闭包会委托给 `RepositoryHandler` 实例, 执行 `maven` 方法;
 
+`maven` 方法接收一个闭包, 委托给 `MavenArtifactRepository` 实例, 来执行 `url("xxx")` 方法.
 
+### 3.2 变量
 
+**局部变量**: 使用 `def` 关键字声明局部变量, 局部变量仅在声明它的作用域内可见.
 
+```groovy
+def dest = 'dest'
 
+tasks.register('copy', Copy) {
+    from 'source'
+    into dest
+}
+```
 
+---
 
+**额外属性**: Gradle 为增强对象, 提供了对于存储用户自定义数据的额外属性;
 
+```groovy
+ext {
+    springVersion = "3.1.0.RELEASE"
+    emailNotification = "build@master.org"
+}
+```
 
+额外属性依附于其所属对象, 如 `Project`, 与局部变量不同, 额外属性具有更广阔的作用域, 可以在所属对象可见的任何位置访问它们, 包括从子项目访问其父项目的属性.
+
+### 3.3 案例
+
+```groovy
+plugins {   
+    id 'application'
+}
+
+repositories {  
+    mavenCentral()
+}
+
+dependencies {  
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'com.google.guava:guava:32.1.1-jre'
+}
+
+application {   
+    mainClass = 'com.example.Main'
+}
+
+tasks.named('test', Test) { 
+    useJUnitPlatform()
+}
+
+tasks.named('javadoc', Javadoc).configure {
+    exclude 'app/Internal*.java'
+    exclude 'app/internal/*'
+}
+
+tasks.register('zip-reports', Zip) {
+    from 'Reports/'
+    include '*'
+    archiveFileName = 'Reports.zip'
+    destinationDirectory = file('/dir')
+}
+```
+
+## 4 依赖的声明与管理
+
+### 4.1 依赖声明
+
+在 `dependencies { ... }` 代码块声明项目编译, 运行或测试所依赖的外部库, 内部模块或文件.
+
+=> [[🌲(Gradle) 依赖管理]]
+
+### 4.2 强制执行和约束版本
+
+```groovy
+dependencies {
+    implementation("org.apache.httpcomponents:httpclient:4.5.4")
+    implementation("commons-codec:commons-codec") {
+        version {
+            strictly("1.9")
+        }
+    }
+}
+```
+
+Gradle 允许对依赖版本的约束, 以避免不必要的升级.
