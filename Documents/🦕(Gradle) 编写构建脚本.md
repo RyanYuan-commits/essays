@@ -163,7 +163,7 @@ tasks.register('zip-reports', Zip) {
 
 在 `dependencies { ... }` 代码块声明项目编译, 运行或测试所依赖的外部库, 内部模块或文件.
 
-=> [[🌲(Gradle) 依赖管理]]
+=> [[🌲(Gradle) 依赖管理 API]]
 
 ### 4.2 强制执行和约束版本
 
