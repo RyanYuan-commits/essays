@@ -21,9 +21,9 @@ views:
     cardSize: 240
     imageAspectRatio: 0.65
     columnSize:
-      file.name: 310
+      file.name: 360
       note.type: 78
-      note.sub-type: 107
+      note.sub-type: 170
   - type: cards
     name: 视图 2
     filters:
