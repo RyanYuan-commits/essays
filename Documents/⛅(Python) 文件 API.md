@@ -1,7 +1,7 @@
 ---
 type: Python
 sub-type: API
-finished: "false"
+finished: "true"
 ---
 ## 1. 文件读写的基石: `open()` 与 `with` 语句
 
@@ -24,11 +24,7 @@ with open('文件名', '模式', encoding='utf-8') as f:
 | `'a'` | **追加 (Append)** | 在文件末尾追加内容. 如果文件不存在, 则创建.                                  |
 | `'+'` | 读写模式            | 通常与 r, w, a 结合, 如 `'r+'`, `'w+'`.                        |
 | `'b'` | **二进制模式**       | 用于处理非文本文件, 如图片、音频. 与 r, w, a 结合成 `'rb'`, `'wb'`, `'ab'`.  
-
-
-⚠️ 关键: 指定编码
-
-处理文本文件时, 务必显式指定 encoding='utf-8'. 这是避免在不同操作系统上出现乱码问题的最重要实践. 
+⚠️ 关键: 指定编码: 处理文本文件时, 务必显式指定 encoding='utf-8'. 这是避免在不同操作系统上出现乱码问题的最重要实践. 
 
 ## 2. 核心操作: 读取与写入
 
@@ -70,8 +66,6 @@ with open('article.txt', 'w', encoding='utf-8') as f:
 ## 3. 现代路径管理: `pathlib` 模块
 
 从 Python 3.4+ 开始, `pathlib` 是处理文件路径的**首选方式**. 它用面向对象的方式替代了陈旧的 `os.path`, 代码更直观、更不易出错. 
-
-**忘掉 `os.path`, 拥抱 `pathlib`!**
 
 ```Python
 from pathlib import Path

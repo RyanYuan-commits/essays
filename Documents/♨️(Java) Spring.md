@@ -18,7 +18,7 @@
 
 ### 其他
 
-[[⏰【Java】Spring 定时任务]]
+[[⏰(Java) Spring 定时任务]]
 
 [[🎣【Java】Spring 事务机制]]
 

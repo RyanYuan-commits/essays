@@ -31,3 +31,4 @@ flowchart TD
     if4{是否有未遍历的商品?} --> |否| stop
     if4 --> |是| if2
 ```
+

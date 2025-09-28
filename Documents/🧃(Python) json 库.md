@@ -1,6 +1,3 @@
----
-sticker: emoji//1f685
----
 在 Python 中，`json` 库是一个内置的标准库，用于处理 JSON（JavaScript Object Notation）数据。JSON 是一种轻量级的数据交换格式，易于人类阅读和编写，同时也易于机器解析和生成，在 Web 应用、API 数据传输等场景中广泛使用。
 ## 1 主要功能
 
