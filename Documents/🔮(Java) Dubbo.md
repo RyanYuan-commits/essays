@@ -10,7 +10,7 @@ url: "https://cn.dubbo.apache.org/zh-cn/overview/"
 favicon: ""
 ```
 
-[[🍊 Dubbo 源码剖析与实战-阅读笔记]]
+[[🍊(Dubbo) 源码剖析与实战-阅读笔记]]
 
 ## 模型架构
 

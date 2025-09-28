@@ -3,7 +3,7 @@ type: gather
 ---
 [[💘【Java】线程池基本介绍]]
 
-[[🍡【Java】线程池源码详解]]
+[[🍡(Java) ThreadPoolExecutor]]
 
 [[🍗【Java】线程池的动态修改]]
 

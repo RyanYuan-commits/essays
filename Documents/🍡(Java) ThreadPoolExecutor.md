@@ -1,5 +1,6 @@
 ---
 type: Java
+sub-type: sourceRead
 finished: "false"
 ---
 
@@ -317,7 +318,7 @@ private void dispatchUncaughtException(Throwable e) {
 
 如果线程池直接选择捕获异常, 这个处理器就会失效.
 
-## 4 shutdown 方法
+## 4 shutdown()
 
 ```java
 public void shutdown() {  

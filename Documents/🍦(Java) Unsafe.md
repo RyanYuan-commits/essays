@@ -3,6 +3,19 @@ type: Java
 sub-type: JavaSE
 finished: "false"
 ---
+`Unsafe` 是位于 sun.misc 包下的类, 主要提供一些用于执行低级别, 不安全操作的方法, 如直接访问系统内存资源, 自主管理内存资源等.
+
+## 1 基本介绍
+
+
+
+
+
+
+
+
+
+
 ## 1 Unsafe 类中的重要方法
 
 rt.jar 中的 Unsafe 类提供了硬件级别的原子行操作，其中的方法都是 native 方法，使用了 JNI 的方式访问本地的 C++ 实现库。
