@@ -18,7 +18,6 @@ cover: ../images/cover-python.png
 - [[🍀【Python】Flask.canvas|🍀【Python】Flask]]
 ## 常用库
 
-- [[🧃【Python】json 库]]
-- [[🌻【Python】UI 自动化功能]]
-- [[🥟【Python】urllib 库]]
+- [[🧃(Python) json 库]]
+- [[🥟(Python) urllib 库]]
 - [[⛅(Python) 文件 API]]

@@ -14,4 +14,4 @@ favicon: ""
 
 [[📳【Mermaid】时序图]]
 
-[[⏳【Mermaid】流程图]]
+[[⏳(Mermaid) 流程图]]
