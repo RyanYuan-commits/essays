@@ -47,7 +47,10 @@
 ### 5.1 线程池
 
 - [[💘(Java) 线程池基本介绍]]
+- [[💘(Java) 线程池基本介绍]]
 - [[🍡(Java) ThreadPoolExecutor]]
+- [[💜(Java) 关于线程池的一些思考]]
+- [[🍗(Java) 线程池的动态修改]]
 - [[💜(Java) 关于线程池的一些思考]]
 - [[🍗(Java) 线程池的动态修改]]
 
@@ -69,6 +72,16 @@
 - [[🚣(Java) ThreadLocalRandom 源码解析]]
 - [[💫(Java) ReentrantLock]]
 - [[🍨(Java) Java Memory Model]]
+- [[🍍(Java) CAS 原理]]
+- [[🥒(Java) AbstractQueueSynchronizer]]
+- [[💫(Java) ReentrantLock]]
+-  [[📀(Java) ConcurrentHashMap]]
+- [[🌵(Java) CountDownLatch]]
+- [[🏜️(Java) CyclicBarrier]]
+- [[🚤(Java) ThreadLocal]]
+- [[🚣(Java) ThreadLocalRandom 源码解析]]
+- [[💫(Java) ReentrantLock]]
+- [[🍨(Java) Java Memory Model]]
 - [[🥭(Java) 并发编程基础]]
 - [[🍦(Java) Unsafe]]
 
@@ -79,7 +92,6 @@
 - [[🖼️【Java】创建线程的三种方式]]
 - [[🚤(Java) ThreadLocal]]
 - [[🌯(Java) CompletableFuture 使用与原理]]
-
 
 ## 6 🎃(Java) 虚拟机
 
@@ -104,6 +116,7 @@
 ### 6.3 分析工具
 
 - [[🐁(Java) 基础故障处理工具]]
+- [[🥞(Java) javap 指令]] 
 
 ### 6.4 内存管理
 
