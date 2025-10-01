@@ -43,7 +43,7 @@ public class NettyDiscardServer {
 }
 ```
 
-首先要说的是反应器模式中的 Reactor 反应器组件。[[🌲【并发】Reactor 反应器模式]]，**反应器组件的作用是进行 IO 事件轮训，以及将事件分配到合适的 Handler**。
+首先要说的是反应器模式中的 Reactor 反应器组件。[[🌲(Java) Reactor 反应器模式]]，**反应器组件的作用是进行 IO 事件轮训，以及将事件分配到合适的 Handler**。
 
 在上面的例子中，使用了两个NioEventLoopGroup反应器组件实例。
 

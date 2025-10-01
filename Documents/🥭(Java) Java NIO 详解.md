@@ -1,6 +1,6 @@
 ## NIO 技术的起源
 ### Java BIO 案例
->[!info] BioDemoHandler
+BioDemoHandler
 ```java
 public class BioDemoHandler implements Runnable {  
     final Socket socket;  
@@ -30,7 +30,7 @@ public class BioDemoHandler implements Runnable {
 }
 ```
 
->[!info] BioDemoServer
+BioDemoServer
 ```java
 public class BioDemoServer {  
     private static final int SERVER_PORT = 8080;  

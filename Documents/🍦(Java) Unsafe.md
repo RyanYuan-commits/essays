@@ -92,6 +92,12 @@ public native byte getByte(long address);
 public native void putByte(long address, byte x);
 ```
 
+Java 对堆外内存这种存在于 JVM 管控之外的内存区域的操作, 依赖于 Unsafe 提供的 native 方法;
+
+在 I/O 过程中, 会存在堆内外的拷贝操作, 对于频繁进行内存间数据拷贝, 且生命周期较短的暂存数据, 都建议存储到堆外内存;
+
+
+
 
 
 
@@ -192,4 +198,4 @@ public class TestCAS {
 }
 ```
 
-上面代码中使用反射，成功获取了 String 类中的 hash 在内存中的偏移量。
+上面代码中使用反射, 成功获取了 String 类中的 hash 在内存中的偏移量.

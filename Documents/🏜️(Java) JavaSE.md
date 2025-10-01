@@ -46,38 +46,38 @@
 
 ### 5.1 线程池
 
-- [[💘【Java】线程池基本介绍]]
+- [[💘(Java) 线程池基本介绍]]
 - [[🍡(Java) ThreadPoolExecutor]]
-- [[💜【Java】关于线程池的一些思考]]
-- [[🍗【Java】线程池的动态修改]]
+- [[💜(Java) 关于线程池的一些思考]]
+- [[🍗(Java) 线程池的动态修改]]
 
 ### 5.2 网络 IO
 
-- [[🎽【并发】高并发 IO 底层原理]]
-- [[🥭【并发】Java NIO 详解]]
-- [[🌲【并发】Reactor 反应器模式]]
+- [[🎽(Java) 高并发 IO 底层原理]]
+- [[🥭(Java) Java NIO 详解]]
+- [[🌲(Java) Reactor 反应器模式]]
 
 ### 5.3 并发工具类 
 
-- [[🍍【Java】CAS 原理]]
-- [[🥒【Java】AbstractQueueSynchronizer]]
-- [[💫【Java】ReentrantLock]]
--  [[📀【Java】ConcurrentHashMap]]
-- [[🌵【Java】CountDownLatch]]
-- [[🏜️【Java】CyclicBarrier]]
-- [[🚤【Java】ThreadLocal]]
-- [[🚣【并发】ThreadLocalRandom 源码解析]]
-- [[💫【Java】ReentrantLock]]
-- [[🍨【Java】Java Memory Model]]
+- [[🍍(Java) CAS 原理]]
+- [[🥒(Java) AbstractQueueSynchronizer]]
+- [[💫(Java) ReentrantLock]]
+-  [[📀(Java) ConcurrentHashMap]]
+- [[🌵(Java) CountDownLatch]]
+- [[🏜️(Java) CyclicBarrier]]
+- [[🚤(Java) ThreadLocal]]
+- [[🚣(Java) ThreadLocalRandom 源码解析]]
+- [[💫(Java) ReentrantLock]]
+- [[🍨(Java) Java Memory Model]]
 - [[🥭(Java) 并发编程基础]]
 - [[🍦(Java) Unsafe]]
 
 ### 5.4 并发基础
 
 - [[🍓【Java】并发面试题整理]]
-- [[🍨【Java】Java Memory Model]]
+- [[🍨(Java) Java Memory Model]]
 - [[🖼️【Java】创建线程的三种方式]]
-- [[🚤【Java】ThreadLocal]]
+- [[🚤(Java) ThreadLocal]]
 - [[🌯(Java) CompletableFuture 使用与原理]]
 
 
@@ -85,20 +85,20 @@
 
 ### 6.1 理论基础
 
-- [[🏋️【Java】分代假说与垃圾收集算法]]
-- [[🦜【Java】可达性分析]]
-- [[🥐【Java】记忆集与卡表]]
-- [[🥝【Java】根节点枚举]]
+- [[🏋️(Java) 分代假说与垃圾收集算法]]
+- [[🦜(Java) 可达性分析]]
+- [[🥐(Java) 记忆集与卡表]]
+- [[🥝(Java) 根节点枚举]]
 
 ### 6.2 垃圾收集器
 
-- [[🧃【Java】垃圾回收器概述]]
-- [[🥤【Java】Serial 收集器]]
-- [[🤖【Java】ParNew 收集器]]
-- [[🌽【JVM】Parallel Scavenge 收集器]]
-- [[🍲【JVM】Parallel Old 收集器]]
-- [[🦚【JVM】CMS 收集器]]
-- [[🦚【JVM】Garbage First 收集器]]
+- [[🧃(Java) 垃圾回收器概述]]
+- [[🥤(Java) Serial 收集器]]
+- [[🤖(Java) ParNew 收集器]]
+- [[🌽(Java) Parallel Scavenge 收集器]]
+- [[🍲(Java) Parallel Old 收集器]]
+- [[🦚(Java) CMS 收集器]]
+- [[🦚(Java) G1 收集器]]
 - [[🧃 Getting Start G1]]
 
 ### 6.3 分析工具
