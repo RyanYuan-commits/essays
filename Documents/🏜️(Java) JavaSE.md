@@ -1,3 +1,6 @@
+---
+type: Java
+---
 ## 1 🐤(Java) 基础特性
 
 - [Java 基础语法特性](https://dunwu.github.io/01.Java/01.JavaSE/01.%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/01.Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.html)
@@ -14,6 +17,8 @@
 - [[🍒(Java) 日期类]]
 - [[🦯(Java) BigDecimal]]
 - [[🍊(Java) String]]
+- [[💟(Java) 引用类型]]
+- [[🚘(Java) Random]]
 
 ## 2 🎧(Java) 高级特性
 
@@ -41,98 +46,19 @@
 - [Java 序列化](https://dunwu.github.io/01.Java/01.JavaSE/04.IO/03.Java%E5%BA%8F%E5%88%97%E5%8C%96.html) - 关键词：`Serializable`、`serialVersionUID`、`transient`、`Externalizable`、`writeObject`、`readObject`
 - [Java 网络编程](https://dunwu.github.io/01.Java/01.JavaSE/04.IO/04.Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html) - 关键词：`Socket`、`ServerSocket`、`DatagramPacket`、`DatagramSocket`
 - [Java IO 工具类](https://dunwu.github.io/01.Java/01.JavaSE/04.IO/05.JavaIO%E5%B7%A5%E5%85%B7%E7%B1%BB.html) - 关键词：`File`、`RandomAccessFile`、`System`、`Scanner`
+- [[🎽(Java) 高并发 IO 底层原理]]
+- [[🥭(Java) NIO]]
+- [[🌲(Java) Reactor 反应器模式]]
 
 ## 5 🥥(Java) 并发编程
 
-### 5.1 线程池
+![[🥥(Java) Concurrent Progamming]]
 
-- [[💘(Java) 线程池基本介绍]]
-- [[💘(Java) 线程池基本介绍]]
-- [[🍡(Java) ThreadPoolExecutor]]
-- [[💜(Java) 关于线程池的一些思考]]
-- [[🍗(Java) 线程池的动态修改]]
-- [[💜(Java) 关于线程池的一些思考]]
-- [[🍗(Java) 线程池的动态修改]]
 
-### 5.2 网络 IO
 
-- [[🎽(Java) 高并发 IO 底层原理]]
-- [[🥭(Java) Java NIO 详解]]
-- [[🌲(Java) Reactor 反应器模式]]
+## 6 🎃(Java) Virtual Machine
 
-### 5.3 并发工具类 
+![[🎮(Java) Virtual Machine]]
 
-- [[🍍(Java) CAS 原理]]
-- [[🥒(Java) AbstractQueueSynchronizer]]
-- [[💫(Java) ReentrantLock]]
--  [[📀(Java) ConcurrentHashMap]]
-- [[🌵(Java) CountDownLatch]]
-- [[🏜️(Java) CyclicBarrier]]
-- [[🚤(Java) ThreadLocal]]
-- [[🚣(Java) ThreadLocalRandom 源码解析]]
-- [[💫(Java) ReentrantLock]]
-- [[🍨(Java) Java Memory Model]]
-- [[🍍(Java) CAS 原理]]
-- [[🥒(Java) AbstractQueueSynchronizer]]
-- [[💫(Java) ReentrantLock]]
--  [[📀(Java) ConcurrentHashMap]]
-- [[🌵(Java) CountDownLatch]]
-- [[🏜️(Java) CyclicBarrier]]
-- [[🚤(Java) ThreadLocal]]
-- [[🚣(Java) ThreadLocalRandom 源码解析]]
-- [[💫(Java) ReentrantLock]]
-- [[🍨(Java) Java Memory Model]]
-- [[🥭(Java) 并发编程基础]]
-- [[🍦(Java) Unsafe]]
 
-### 5.4 并发基础
-
-- [[🍓【Java】并发面试题整理]]
-- [[🍨(Java) Java Memory Model]]
-- [[🖼️【Java】创建线程的三种方式]]
-- [[🚤(Java) ThreadLocal]]
-- [[🌯(Java) CompletableFuture 使用与原理]]
-
-## 6 🎃(Java) 虚拟机
-
-### 6.1 理论基础
-
-- [[🏋️(Java) 分代假说与垃圾收集算法]]
-- [[🦜(Java) 可达性分析]]
-- [[🥐(Java) 记忆集与卡表]]
-- [[🥝(Java) 根节点枚举]]
-
-### 6.2 垃圾收集器
-
-- [[🧃(Java) 垃圾回收器概述]]
-- [[🥤(Java) Serial 收集器]]
-- [[🤖(Java) ParNew 收集器]]
-- [[🌽(Java) Parallel Scavenge 收集器]]
-- [[🍲(Java) Parallel Old 收集器]]
-- [[🦚(Java) CMS 收集器]]
-- [[🦚(Java) G1 收集器]]
-- [[🧃 Getting Start G1]]
-
-### 6.3 分析工具
-
-- [[🐁(Java) 基础故障处理工具]]
-- [[🥞(Java) javap 指令]] 
-
-### 6.4 内存管理
-
-- [[🏃(Java) 运行时数据区域]]
-- [[🖨️(Java) HotSpot 虚拟机对象探秘]]
-- [[🏂(Java) 常见的 OOM 场景]]
-- [[🍑(Java) 字符串常量池]]
-- [[🔭(Java) 压缩指针]]
-
-### 6.5 类加载机制
-
-- [[🎠(Java) 对象创建过程]]
-- [[🥁(Java) 类加载器]]
-
-## 7 🌵(Java) 常用类
-
-- [[💟(Java) 引用类型]]
-- [[🚘(Java) Random]]
 
