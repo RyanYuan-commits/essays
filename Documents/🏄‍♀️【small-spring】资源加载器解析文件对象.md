@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 # 目标
 在前面我们已经实现了 BeanDefination 的注册和 Bean 对象的获取，并且实现了通过 CgLib 来生成代理对象；来看一下 BeanDefinition 的注册是如何实现的：
 ```java

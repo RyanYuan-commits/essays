@@ -1,3 +1,7 @@
+---
+created: 2025-10-01 12:36:04
+updated: 2025-10-01 12:36:04
+---
 ## 1 Parallel Scavenge 的老年代版本
 
 Parallel Old是 Parallel Scavenge 收集器的老年代版本，支持多线程并发收集，基于**标记-整理算法**实现。

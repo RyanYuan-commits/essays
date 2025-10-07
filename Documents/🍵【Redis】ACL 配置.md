@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 官网文档地址：[https://redis.io/docs/latest/operate/oss_and_stack/management/security/acl/](https://redis.io/docs/latest/operate/oss_and_stack/management/security/acl/)
 使用版本：Redis@7.4.1
 # 什么是 ACL？

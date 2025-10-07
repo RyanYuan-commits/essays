@@ -2,6 +2,8 @@
 type: Java
 sub-type: 并发编程
 finished: "false"
+created: 2025-10-01 12:44:23
+updated: 2025-10-01 14:14:35
 ---
 `DirectByteBuffer` 是 Java 用于实现**堆外内存**的一个重要的类, 通常用于在通信过程中来做缓冲池, 在 Netty, MINA 等 NIO 框架中使用更广泛;
 

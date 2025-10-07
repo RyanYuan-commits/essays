@@ -1,0 +1,9 @@
+views:
+  - type: cards
+    name: Main
+    filters:
+      and:
+        - file.name.contains("(TED)")
+    cardSize: 440
+    image: note.cover
+    imageAspectRatio: 0.55

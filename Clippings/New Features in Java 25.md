@@ -5,6 +5,7 @@ created: 2025-09-17
 description: Java 25 作为一个新的 LTS 版本, 通过一系列语言、API 和运行时增强, 提升了开发体验、并发性能、安全性、内存效率和诊断能力, 为现代化应用开发提供了强大支持。
 finished: "false"
 tag: clipper
+updated: 2025-09-27 22:34:06
 ---
 ```embed
 title: "GitHub - SimonVerhoeven/java25-demo"

@@ -1,6 +1,8 @@
 ---
 type: Java
 sub-type: 基础
+created: 2025-09-27 22:34:06
+updated: 2025-10-01 13:55:39
 ---
 ## 1 强引用 StrongReference
 

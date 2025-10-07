@@ -1,11 +1,12 @@
 ---
-title: "如果您使用得足够错误，任何东西都可能成为消息队列"
-source: "https://xeiaso.net/blog/anything-message-queue/"
+title: 如果您使用得足够错误，任何东西都可能成为消息队列
+source: https://xeiaso.net/blog/anything-message-queue/
 created: 2025-08-29
-description: "本文以讽刺的方式，通过在AWS S3上构建一个基于TUN/TAP设备的IPv6网络，展示了如何“错误地”将对象存储服务当作消息队列使用，以规避NAT Gateway的高昂流量费用，尽管其自身运作成本极其不切实际。"
+description: 本文以讽刺的方式，通过在AWS S3上构建一个基于TUN/TAP设备的IPv6网络，展示了如何“错误地”将对象存储服务当作消息队列使用，以规避NAT Gateway的高昂流量费用，尽管其自身运作成本极其不切实际。
 finished: "false"
-tag: "clipper"
-cover: "https://stickers.xeiaso.net/sticker/cadey/coffee"
+tag: clipper
+cover: https://stickers.xeiaso.net/sticker/cadey/coffee
+updated: 2025-09-27 22:34:06
 ---
 关键词：AWS, S3, IPv6, TUN/TAP, 消息队列, NAT Gateway, 成本分析, Hoshino, satire, Go, Terraform, 网络协议, 云服务, Tailscale
 

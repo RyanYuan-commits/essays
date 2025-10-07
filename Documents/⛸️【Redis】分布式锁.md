@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 ### 1 简单分布式锁实现
 ```java
 public String sale() {

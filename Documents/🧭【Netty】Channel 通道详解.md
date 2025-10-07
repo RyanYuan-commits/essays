@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 ## 1 Channel 通道的主要成员和方法
 
 Netty 通道的抽象类 AbstractChannel 的构造函数如下: 

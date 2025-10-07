@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 >[!summary] 总结：
 REST 是资源表现形式转移的简称，根据 REST 提出了 RESTful 架构，客户端通过特定的 HTTP 动词实现对 URI 代表的资源进行操控；RESTful API 是根据 REST 构建的 API，提出了标准的规范，让用户能够通过路径 + Method 就能很清晰的理解路径的作用，通过 status_code 就能够理解接口的返回结果。
 ### 1 RESTful API 简介

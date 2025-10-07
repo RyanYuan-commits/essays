@@ -3,6 +3,8 @@ type: Java
 sub-type: release
 finished: "false"
 source: https://www.oracle.com/java/technologies/javase/17-relnote-issues.html#NewFeature
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
 ---
 ## [1 Records Classes](https://openjdk.org/jeps/395)
 

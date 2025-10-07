@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 # SpringBoot 整合 Netty
 在实际的开发中，我们需要对netty服务进行更多的操作，包括；获取它的状态信息、启动/停止、对客户端用户强制下线等等，为此我们需要把netty服务加入到web系统中，那么本章节介绍如何将Netty与SpringBoot整合。
 环境：SpringBoot 3.34、Netty 4.1.39.Final

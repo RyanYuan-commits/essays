@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 ### 1 Kafka 基本介绍
 Apache Kafka 是一个由 Apache 软件基金会开发的**分布式流处理平台**，最初由 LinkedIn 开发并于 2011 年开源。
 ![[Kafka 简图.png|center|500]]

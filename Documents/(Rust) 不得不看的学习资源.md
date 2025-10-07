@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 ```embed
 title: "Jon Gjengset"
 image: "https://yt3.googleusercontent.com/qeOPL5VD3HyYtB2IR45AamePTTlAPLAVMIJR1gnqB8-RB5giim7SBLhOz2NRYZx-CeBAF3wp=s900-c-k-c0x00ffffff-no-rj"

@@ -1,6 +1,8 @@
 ---
 type: Java
 sub-type: JVM
+created: 2025-10-01 12:36:04
+updated: 2025-10-01 12:36:04
 ---
 
 ## 1 根节点枚举

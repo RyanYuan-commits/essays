@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 Netty 的 Decoder 是一个 InBound 入站处理器，解码器负责处理“入站数据”。
 它能将上一站 Inbound 入站处理器传过来的输入（Input）数据，进行数据的解码或者格式转换，然后 **发送** 到下一站Inbound入站处理器。
 一个标准的解码器的职责为：将输入类型为 ByteBuf 缓冲区的数据进行解码，输出一个一个的 Java POJO 对象。Netty 内置了这么一个抽象的解码器类 ByteToMessageDecoder。

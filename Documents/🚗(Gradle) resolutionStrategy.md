@@ -2,6 +2,8 @@
 type: 工具
 sub-type: Gradle
 finished: "false"
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
 ---
 resolutionStrategy 配置块允许你对 Gradle 解析项目的过程进行精细化的控制和干预;
 

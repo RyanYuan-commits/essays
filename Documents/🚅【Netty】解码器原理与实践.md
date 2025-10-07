@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 在 Netty 的业务处理完成后，业务处理的结果往往是某个 Java POJO 对象，需要编码成最终的 ByteBuf 二进制类型，通过流水线写入到底层的 Java 通道，这就需要用到 Encoder（编码器）。
 编码器是一个 Outbound 出站处理器，负责处理“出站”数据；其次，编码器将上一站 Outbound 出站处理器传过来的输入（Input）数据进行编码或者格式转换，然后传递到下一站 ChannelOutboundHandler 出站处理器。编码器与解码器相呼应，Netty 中的编码器负责将“出站”的某种 Java POJO 对象编码成二进制 ByteBuf，或者转换成另一种 Java POJO 对象。
 # MessageToByteEncoder

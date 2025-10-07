@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
  https://bytetech.info/articles/6967222381572489230?searchId=20250406144408BBEB6FE0728F85A161A1#heading10
  术语解释
  - G：Goroutine ，指 go 语言中的协程，每个 Goroutine 都可以看成一个 **任务**。

@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 ## 1 ByteBuf 的优势
 
 与 Java NIO 的 `ByteBuffer` 相比, ByteBuf的优势如下: 

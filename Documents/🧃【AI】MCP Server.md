@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 ```python
 from mcp.server.fastmcp import FastMCP
 from bilibili_api import search, sync

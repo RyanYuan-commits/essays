@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 Protobuf 全称是 Google Protocol Buffer，是 Google 提出的一种数据交换的格式，是一套类似 JSON 或者 XML 的数据传输格式和规范，用于不同应用或进程之间进行通信。
 Protobuf 具有以下特点：
 	（1）语言无关，平台无关 Protobuf 支持 Java、 C++,、Python、JavaScript 等多种语言，支持跨多个平台。

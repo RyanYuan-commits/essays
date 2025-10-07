@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 # 目标
 目前已实现的 Spring 框架，在 Bean 操作上能提供出的能力，包括：Bean 对象的定义和注册，以及在操作 Bean 对象过程中执行的，`BeanFactoryPostProcessor`、`BeanPostProcessor`、`InitializingBean`、`DisposableBean`，以及在 XML 新增的一些配置处理，让我们可以 Bean 对象有更强的操作性。
 那么，如果我们想获得 Spring 框架提供的 `BeanFactory`、`ApplicationContext`、`BeanClassLoader` 等这些能力做一些扩展框架的使用时该怎么操作呢。所以我们本章节希望在 Spring 框架中提供一种能感知容器操作的接口，如果谁实现了这样的一个接口，就可以获取接口入参中的各类能力。

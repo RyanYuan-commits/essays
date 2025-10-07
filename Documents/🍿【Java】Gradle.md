@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 
 => [Gradle官网](https://link.juejin.cn?target=https%3A%2F%2Fdocs.gradle.org%2Fcurrent%2Fuserguide%2Fuserguide.html "https://docs.gradle.org/current/userguide/userguide.html")
 ### 1 什么是 Gradle

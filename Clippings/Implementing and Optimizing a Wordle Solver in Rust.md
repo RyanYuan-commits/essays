@@ -8,4 +8,5 @@ created: 2025-09-22
 description: We implement a Wordle solver in Rust based off on the excellent3blue1brown video on the same topic:https://www.youtube.com/watch?v=v68zYyaEmEAAnd then we pro...
 tag:
   - clipper
+updated: 2025-09-27 22:34:06
 ---

@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 ## Random 类的局限性
 在 JDK1.7 之前，java.util.Random 都是应用比较广泛的随机数生成工具，java.lang.Math 中的随机数生成也是使用的 Random 的实例。
 写一段代码来测试一下 Random 实例：

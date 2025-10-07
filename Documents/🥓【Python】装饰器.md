@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 在 Python 中，`@xxx` 这种语法被称为 **装饰器（Decorator）**。装饰器是一种特殊的函数或类，用于修改或扩展其他函数或类的行为。
 装饰器其实类似语法糖，将 `origin_func` 转化为 `decorator_func(origin_func)`
 ## 1 函数装饰器

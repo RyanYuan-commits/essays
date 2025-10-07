@@ -6,6 +6,7 @@ description: 该网页提供了“SQL设计模式”一书的前六章PDF链接�
 finished: "false"
 tag: clipper
 cover: https://picsum.photos/1200/600
+updated: 2025-09-27 22:34:06
 ---
 作为一名Java开发者，该网页内容与数据库设计和高级SQL查询紧密相关，这些是构建健壮企业级应用不可或缺的知识。为了深化这方面能力，建议补充学习：
 

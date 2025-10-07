@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 ## 1 什么是 Shell？
 ![[shell.png#pic_center]]
 通过编写 Shell 命令，发送给 Linux 内核去执行，操作的就是计算机硬件了，Shell 命令是用户操作内核的桥梁，Shell 脚本通过 Shell 命令或者编程语言编写的 Shell 文本文件，这就是 Shell 脚本，也叫 Shell 程序。

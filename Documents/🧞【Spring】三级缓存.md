@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 ### 1 Infra
 所谓三级缓存，实际上就是三个 Map 对象，存储着 bean 名称和缓存内容的对应关系，这三个 Map 均为默认单例 Bean 注册器 `DefaultSingletonBeanRegistry` 的属性，除此之外还有一个 Set 存储着当前正在创建的 Bean 对象，方便快速确认 Bean 是否正在被创建，下面是它们的具体定义：
 #### 1.1 singletonFactories 三级缓存

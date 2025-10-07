@@ -3,6 +3,8 @@ type: Java
 sub-type: Dubbo
 finished: "false"
 source: https://cn.dubbo.apache.org/zh-cn/docsv2.7/dev/source/service-invoking-process/
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
 ---
 ```embed
 title: "服务调用过程"

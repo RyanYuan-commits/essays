@@ -2,6 +2,8 @@
 type: Python
 sub-type: API
 finished: "true"
+created: 2025-09-28 22:54:09
+updated: 2025-09-28 23:04:31
 ---
 ## 1. 文件读写的基石: `open()` 与 `with` 语句
 

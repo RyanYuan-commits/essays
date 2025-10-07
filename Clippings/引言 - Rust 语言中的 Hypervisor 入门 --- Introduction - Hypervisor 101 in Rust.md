@@ -1,10 +1,11 @@
 ---
-title: "引言 - Rust 语言中的 Hypervisor 入门"
-source: "https://tandasat.github.io/Hypervisor-101-in-Rust/introduction/index.html"
+title: 引言 - Rust 语言中的 Hypervisor 入门
+source: https://tandasat.github.io/Hypervisor-101-in-Rust/introduction/index.html
 created: 2025-09-18
-description: "这是一门为期一天的 Rust 语言实战课程，教授如何利用硬件虚拟化技术构建用于高性能模糊测试的 Hypervisor。"
+description: 这是一门为期一天的 Rust 语言实战课程，教授如何利用硬件虚拟化技术构建用于高性能模糊测试的 Hypervisor。
 finished: "false"
-tag: "clipper"
+tag: clipper
+updated: 2025-09-27 22:34:06
 ---
 需要补充学习的知识：Rust 语言基础、硬件辅助虚拟化原理（Intel VT-x/AMD-V）、虚拟机管理程序（Hypervisor）架构、模糊测试（Fuzzing）技术。
 

@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-10-01 15:38:18
+---
 ## ConcurrentHashMap 和 Hashtable 的区别？​
 
 ConcurrentHashMap 和 Hashtable 的区别主要体现在实现线程安全的方式上不同。​

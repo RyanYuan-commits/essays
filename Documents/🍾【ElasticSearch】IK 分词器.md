@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 GitHub：https://github.com/medcl/elasticsearch-analysis-ik/releases
 IK 分词器是目前使用最广泛的中文分词器，提供了多种分词方式。
 ### 1 安装方式

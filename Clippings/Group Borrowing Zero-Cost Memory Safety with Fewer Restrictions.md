@@ -1,11 +1,12 @@
 ---
-title: "群体借贷：零成本内存安全，限制更少"
-source: "https://verdagon.dev/blog/group-borrowing"
+title: 群体借贷：零成本内存安全，限制更少
+source: https://verdagon.dev/blog/group-borrowing
 created: 2025-08-29
-description: "Nick Smith 提出的“群体借贷”是一种创新的内存安全模型，它通过区分对象及其可独立销毁的子内容，并利用函数签名中的组注解来精细控制引用失效，从而在不依赖引用计数或垃圾回收的情况下实现零成本的可变别名和更少的限制。"
+description: Nick Smith 提出的“群体借贷”是一种创新的内存安全模型，它通过区分对象及其可独立销毁的子内容，并利用函数签名中的组注解来精细控制引用失效，从而在不依赖引用计数或垃圾回收的情况下实现零成本的可变别名和更少的限制。
 finished: "false"
-tag: "clipper"
-cover: "https://images.unsplash.com/photo-1517487823903-ef06f6bf9149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+tag: clipper
+cover: https://images.unsplash.com/photo-1517487823903-ef06f6bf9149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80
+updated: 2025-09-27 22:34:06
 ---
 ## Java 开发者需要补充学习的知识
 

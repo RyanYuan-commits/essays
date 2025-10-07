@@ -6,4 +6,5 @@ description: 本文批评了科技高管们（以 Sam Altman 为例）对复杂�
 finished: "false"
 tag: clipper
 cover: https://picsum.photos/1200/800
+updated: 2025-09-27 22:34:06
 ---

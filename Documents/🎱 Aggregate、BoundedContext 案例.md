@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 # 对 DP 和 VO 的回顾
 ```Java
 public interface Identifier extends Serializable {}

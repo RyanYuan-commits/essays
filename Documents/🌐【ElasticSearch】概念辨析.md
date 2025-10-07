@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 ### 1 简单介绍
 #### 1.1 ELK Stack 工具集
 Elastic Stack，以前也被称为 ELK Stack，是一套开源的、用于数据收集、存储、分析和可视化的工具集，由 Elasticsearch、Logstash、Kibana 和 Beats 等主要组件组成。

@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 >[!tips] pymysql 是什么？
 >pymysql 是一个用于在 Python 中连接和操作 MySQL 数据库的库，它实现了 Python 数据库 API（DB-API）规范，提供了方便的接口让开发者能够在 Python 代码里与 MySQL 数据库进行交互。
 

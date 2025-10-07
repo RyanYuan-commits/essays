@@ -1,6 +1,8 @@
 ---
 type: ConcurrentProgramming
 sub-type: Basic
+created: 2025-09-27 22:34:06
+updated: 2025-10-01 15:24:00
 ---
 [[🥒(Java) AbstractQueueSynchronizer]]
 ## 1 背景

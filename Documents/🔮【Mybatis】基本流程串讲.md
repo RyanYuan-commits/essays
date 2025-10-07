@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 ### 1 配置文件
 在构建核心对象 `SqlSessionFactory` 的时候，依照的是 Mybatis 配置文件的信息，它常被命名为 `mybatis-config.xml`：
 ```java

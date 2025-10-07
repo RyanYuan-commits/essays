@@ -2,6 +2,8 @@
 type: Java
 sub-type: JavaSE
 finished: "false"
+created: 2025-09-28 22:54:09
+updated: 2025-10-02 22:59:04
 ---
 `Unsafe` 是位于 `sun.misc` 包下的类, 主要提供一些用于执行低级别, 不安全操作的方法, 如直接访问系统内存资源, 自主管理内存资源等.
 

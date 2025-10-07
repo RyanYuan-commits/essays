@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 React 组件使用 _props_ 来互相通信。每个父组件都可以提供 props 给它的子组件，从而将一些信息传递给它。Props 可能会让你想起 HTML 属性，但你可以通过它们传递任何 JavaScript 值，包括对象、数组和函数。
 
 Props 是你传递给 JSX 标签的信息，比如 className、src、alt、width 和 height 都是一些可以传递给 img 标签的 props

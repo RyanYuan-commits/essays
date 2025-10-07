@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 ### 1 安装 Minikube
 **Minikube** 是一个轻量级的工具，用于在本地快速搭建单节点的 **Kubernetes 集群**，帮助开发者在本地环境中开发、测试和学习 Kubernetes。
 官网链接: https://minikube.sigs.k8s.io/docs/

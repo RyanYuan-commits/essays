@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 A-- This is the text! ---B
 # 继承关系图
 AbstractAutowireCapableBeanFactory，抽象的、具有自动装配能力的 Bean 工厂。

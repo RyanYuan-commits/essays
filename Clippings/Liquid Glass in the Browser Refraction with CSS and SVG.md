@@ -1,11 +1,12 @@
 ---
-title: "浏览器中的液态玻璃：使用 CSS 和 SVG 实现折射效果"
-source: "https://kube.io/blog/liquid-glass-css-svg/"
+title: 浏览器中的液态玻璃：使用 CSS 和 SVG 实现折射效果
+source: https://kube.io/blog/liquid-glass-css-svg/
 created: 2025-09-09
-description: "本文深入探讨了如何利用光学折射原理、数学表面函数及 SVG 位移贴图，在网页中重现 Apple 的“液态玻璃”UI 效果，并辅以镜面高光，但目前主要依赖 Chrome 浏览器对 `backdrop-filter` 的支持。"
+description: 本文深入探讨了如何利用光学折射原理、数学表面函数及 SVG 位移贴图，在网页中重现 Apple 的“液态玻璃”UI 效果，并辅以镜面高光，但目前主要依赖 Chrome 浏览器对 `backdrop-filter` 的支持。
 finished: "false"
-tag: "clipper"
-cover: "https://picsum.photos/800/600"
+tag: clipper
+cover: https://picsum.photos/800/600
+updated: 2025-09-27 22:34:06
 ---
 作为一名 Java 开发者，您可能需要补充以下与网页内容相关的知识：
 

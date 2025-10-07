@@ -1,6 +1,8 @@
 ---
 type: Java
 finished: "false"
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
 ---
 
 这两个注解都是为了标记 Bean 注入。

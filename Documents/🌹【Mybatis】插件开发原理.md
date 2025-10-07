@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 ### 1 Mybatis 插件原理
 MyBatis 中的关键的四个对象都是代理对象，MyBatis 所允许拦截的⽅法如下：
 - 执⾏器 `Executor` (update、query、commit、rollback等⽅法)；

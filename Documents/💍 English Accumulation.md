@@ -2,6 +2,8 @@
 type: 工具
 sub-type: 英语
 finished: "false"
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
 ---
 The museum posted and then deleted a vaguely worded statement that many interpreted as a denunciation(noun. 痛斥，谴责) of Israel’s attacks on Gaza.
 

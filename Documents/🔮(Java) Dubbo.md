@@ -1,6 +1,8 @@
 ---
 type: Java
 sub: Dubbo
+created: 2025-09-28 22:54:09
+updated: 2025-09-28 22:54:09
 ---
 ```embed
 title: "Dubbo 文档"

@@ -2,6 +2,8 @@
 type: 设计原则
 finished: "true"
 sour: https://www.baeldung.com/solid-principles
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
 ---
 五大核心概念:
 

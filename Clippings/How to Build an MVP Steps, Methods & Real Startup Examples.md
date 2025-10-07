@@ -1,11 +1,12 @@
 ---
-title: "如何构建最小可行产品：步骤、方法及真实初创范例"
-source: "https://syndicode.com/blog/how-to-build-an-mvp/#benefits-of-mvp-development"
+title: 如何构建最小可行产品：步骤、方法及真实初创范例
+source: https://syndicode.com/blog/how-to-build-an-mvp/#benefits-of-mvp-development
 created: 2025-09-04
-description: "本文提供了一份全面的指南，详细介绍了最小可行产品（MVP）的定义、优势、规划方法、构建步骤、类型、成本考量、常见挑战以及如何衡量其成功，旨在帮助初创企业和成熟公司以最小风险验证产品创意并实现快速迭代。"
+description: 本文提供了一份全面的指南，详细介绍了最小可行产品（MVP）的定义、优势、规划方法、构建步骤、类型、成本考量、常见挑战以及如何衡量其成功，旨在帮助初创企业和成熟公司以最小风险验证产品创意并实现快速迭代。
 finished: "false"
-tag: "clipper"
-cover: "https://images.unsplash.com/photo-1502622340327-1422b9f9b5d2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+tag: clipper
+cover: https://images.unsplash.com/photo-1502622340327-1422b9f9b5d2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+updated: 2025-09-27 22:34:06
 ---
 ### Java 开发者需要补充学习的知识:
 

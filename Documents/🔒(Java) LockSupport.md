@@ -1,6 +1,8 @@
 ---
 type: Java
 sub-type: 并发编程
+created: 2025-10-02 23:01:01
+updated: 2025-10-03 11:14:57
 ---
 `LockSupoort` 是一个提供线程阻塞和唤醒功能的工具类, Java 各种同步组件底层的线程调度能力是 `LockSupport` 提供的.
 

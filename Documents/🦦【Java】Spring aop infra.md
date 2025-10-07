@@ -1,3 +1,7 @@
+---
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
+---
 Spring aop 按照 AspectJ 规范, 定义了一系列相应的内部基础设施(infra).
 
 `AbstractAutoProxyCreator#isInfrastructureClass`

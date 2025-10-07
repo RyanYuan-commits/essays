@@ -3,6 +3,8 @@ sub-type: Dubbo
 type: Java
 origin_url: https://time.geekbang.org/column/article/620941
 finished: "false"
+created: 2025-09-27 22:34:06
+updated: 2025-09-27 22:34:06
 ---
 ## 1 Adaptive 机制
 
