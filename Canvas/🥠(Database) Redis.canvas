@@ -414,7 +414,7 @@
 		{
 			"id":"3804b623b49522e3",
 			"styleAttributes":{"border":"invisible"},
-			"text":"[[🏈【Redis】过期删除]]",
+			"text":"[[🏈(Redis) 过期删除]]",
 			"type":"text",
 			"x":-480,
 			"y":-1180,
