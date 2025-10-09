@@ -4,6 +4,6 @@ views:
     filters:
       and:
         - file.name.contains("(TED)")
-    cardSize: 440
+    cardSize: 270
     image: note.cover
     imageAspectRatio: 0.55
