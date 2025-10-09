@@ -1,6 +1,8 @@
 ---
 type: Rust
 sub-type: Basic
+created: 2025-10-09 23:33:11
+updated: 2025-10-09 23:33:11
 ---
 Rust 官方网站给自己的介绍是: Rust is a systems programming language that runs blazingly fast, **prevents segfaults**, and guarantees thread safety.
 

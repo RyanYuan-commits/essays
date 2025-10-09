@@ -1,6 +1,8 @@
 ---
 type: Rust
 sub-type: Ownership
+created: 2025-10-09 23:33:11
+updated: 2025-10-09 23:33:11
 ---
 ## 1 解决了什么问题?
 
