@@ -1,6 +1,8 @@
 ---
 created: 2025-09-27 22:34:06
 updated: 2025-09-28 23:39:28
+sub-type: Spring
+type: Java
 ---
 ## 核心
 
@@ -22,7 +24,7 @@ updated: 2025-09-28 23:39:28
 
 ### 其他
 
-[[⏰(Java) Spring 定时任务]]
+[[⏰(Java) Spring @Schedule]]
 
 [[🎣【Java】Spring 事务机制]]
 

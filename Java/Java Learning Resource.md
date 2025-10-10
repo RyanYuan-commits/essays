@@ -1,8 +1,8 @@
 ---
-created: 2025-09-27 22:34:06
-updated: 2025-09-27 22:34:06
+type: Java
+sub-type: Resource
 ---
-> 面对Java版本更新的复杂信息, 本文提供一份清晰的阅读指南, 帮你快速的理清各种文档的区别, 了解在在哪个文档中能获取到哪些知识.
+> 面对 Java 版本更新的复杂信息, 本文提供一份清晰的阅读指南, 帮你快速的理清各种文档的区别, 了解在在哪个文档中能获取到哪些知识.
 ## 1 JDK Release Notes
 
 ```embed
@@ -33,7 +33,7 @@ aspectRatio: "82.6086956521739"
 
 是面向特定版本的, 百科全书式的官方技术规范合集. 
 
-文档的内容跨版本累积, 每个新版本的文档都会在旧版基础上增删改, 以精确描述该版本Java平台的完整状态.
+文档的内容跨版本累积, 每个新版本的文档都会在旧版基础上增删改, 以精确描述该版本 Java 平台的完整状态.
 
 下面简单介绍下文档中值得关注的部分.
 ### 2.1 Tools Release
@@ -144,7 +144,7 @@ aspectRatio: "27.12871287128713"
 
 1. 新功能的开发在 [OpenJDK](https://github.com/openjdk) 项目的各个子项目 (如 jdk, jmc 等) 中公开进行的, Oracle 是最大的主导者和贡献者;
 2. 当开发周期接近尾声的时候, OpenJDK 会创建一个代码冻结分支, 如 `jdk21`, 这个分支只接收严重 bug 修复, 而不会再添加新功能;
-3. 此时, 各个厂商(如 Oracle, Amazon, Azul 等), 会获取源代码, 进行构建测试, 添加差异化内容等操作来构建发行版;
+3. 此时, 各个厂商 (如 Oracle, Amazon, Azul 等), 会获取源代码, 进行构建测试, 添加差异化内容等操作来构建发行版;
 4. 之后, 各个厂商会进行 JDK 的支持和维护, 提供基于 OpenJDK 源码的 LTS 发行版, 并提供一些付费支持服务.
 
 和 Linux 内核与 Linux 的关系类似, OpenJDK 类似 Linux 的内核, Oracle JDK, Amazon Corretto 等就类似于 Ubuntu, RHEL 这样的发行版本.
@@ -154,12 +154,26 @@ Oracle 于 2010 年收购了 Sun Microsystems 公司, 获取到了 Java 的核�
 相较于其他公司, Oracle 拥有这些特殊点:
 
 1. 主导 Java 技术演进和标准规范, 掌控发展方向.
-2. 拥有 Java 商标, 只有其官方实现能冠以“Java”之名, 其他厂商只能使用 OpenJDK 或自己的品牌(如 Corretto, Zulu).
-3. 为其 Oracle JDK 提供需要付费订阅的长期支持(LTS),将免费支持作为吸引用户升级的策略, 从而驱动其商业业务.
+2. 拥有 Java 商标, 只有其官方实现能冠以“Java”之名, 其他厂商只能使用 OpenJDK 或自己的品牌 (如 Corretto, Zulu).
+3. 为其 Oracle JDK 提供需要付费订阅的长期支持 (LTS), 将免费支持作为吸引用户升级的策略, 从而驱动其商业业务.
 4. 是 OpenJDK 项目的主要维护者和贡献者, 对核心代码拥有最大的影响力.
 
 ### 5.2 内容概览
 
-OpenJDK 的发布文档是以 JEP 主导的, 可以快速直观的看到当前版本更新引入了哪些 JEP;
+OpenJDK 的发布文档是以 JEP 主导的, 可以快速直观的看到当前版本更新引入了哪些 JEP; 如果想要了解更多信息需要去阅读具体的 Release 文档或者 Oracle Documention.
 
-而如果想要了解更多信息需要去阅读具体的 Release 文档或者 Oracle Documention.
+## 6 Inside Java
+
+```embed
+title: "Inside.java"
+image: "https://inside.java/images/java-cup.png"
+description: "News and views from members of the Java team at Oracle"
+url: "https://inside.java/"
+favicon: ""
+aspectRatio: "93.75"
+```
+
+
+Inside Java 提供来自 Oracle Java 团队成员的新闻和观点, 它直接提供来自 Java Platform Group 的更新; 包括新闻广播、播客、简报和文章, 涵盖 Java 语言开发、JVM 更新、平台安全、创新项目以及社区活动等主题. 
+
+作为一个官方渠道, 用于分享洞察、技术深入探讨以及与 Java 技术和生态系统相关的公告. 这个资源帮助开发人员直接从 Java 生态系统的创建者那里了解 Java 生态系统的最新进展和持续工作.

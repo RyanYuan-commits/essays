@@ -3,17 +3,21 @@ views:
     name: 视图
     filters:
       and:
-        - finished == "false"
         - tag != "clipper"
         - '!file.name.endsWith("Template")'
+        - file.name != "Welcome"
+        - file.ext != "base"
+        - '!file.path.startsWith("Diary")'
+        - '!file.path.contains("Books")'
+        - '!file.path.startsWith("copilot")'
+        - '!file.name.contains("(Main)")'
+        - '!file.name.contains("(MOC)")'
+        - '!file.path.startsWith("images")'
     order:
       - file.name
       - type
       - sub-type
-      - file.mtime
     sort:
-      - property: file.name
-        direction: ASC
       - property: file.mtime
         direction: DESC
     limit: 10
@@ -22,7 +26,7 @@ views:
     imageAspectRatio: 0.65
     columnSize:
       file.name: 360
-      note.type: 78
+      note.type: 456
       note.sub-type: 170
   - type: cards
     name: 视图 2

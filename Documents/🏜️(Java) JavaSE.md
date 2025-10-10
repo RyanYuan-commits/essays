@@ -2,6 +2,7 @@
 type: Java
 created: 2025-10-01 12:36:04
 updated: 2025-10-02 22:53:06
+sub-type: Gather
 ---
 ## 1 🐤(Java) 基础特性
 

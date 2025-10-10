@@ -3,6 +3,7 @@ type: Java 框架
 finished: "true"
 created: 2025-09-27 22:34:06
 updated: 2025-09-27 22:34:06
+sub-type: Spring
 ---
 ## 1 使用方式
 
@@ -46,11 +47,8 @@ public class ScheduledTasks {
 
 ## 2 基本原理
 
-### 2.1 注册原理
-
-`ScheduledAnnotationBeanPostProcessor#postProcessAfterInitialization`
-
 ```java
+// org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor#postProcessAfterInitialization
 @Override
 public Object postProcessAfterInitialization(Object bean, String beanName) {
 	// ...
@@ -75,7 +73,7 @@ public Object postProcessAfterInitialization(Object bean, String beanName) {
 }
 ```
 
-在 Bean 初始化后, 所有绑定了 `@Scheduled` 的方法, 执行 `processScheduled`.
+在 Bean 初始化后, 会对所有绑定了 `@Scheduled` 的方法, 执行 `processScheduled`.
 
 ### 2.2 Cron job 注册流程
 
