@@ -11,3 +11,12 @@ favicon: ""
 aspectRatio: "100"
 ```
 
+
+```embed
+title: "The Rust Programming Language - The Rust Programming Language"
+image: ""
+description: ""
+url: "https://doc.rust-lang.org/book/title-page.html"
+favicon: ""
+```
+
