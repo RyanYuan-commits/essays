@@ -1,10 +1,10 @@
 ---
 type: Rust
 sub-type: Basic
-created: 2025-10-05 15:58:27
-updated: 2025-10-05 18:03:21
 ---
-## 1 tuple
+## 1	The Tuple Type
+
+### 1.1	Brief Introduction
 
 元组是一个将多个不同类型的值组合进一个复合类型的主要方式. 元组长度固定, 一旦声明, 其长度不会增大或缩小.
 
@@ -22,7 +22,9 @@ fn main() {
 }
 ```
 
-元组中可以一个元素也没有, 这样的元素有一个单独的名字, 叫做 unit 单元类型:
+### 1.2	The Unit Type
+
+元组中可以一个元素也没有, 这样的元素有一个单独的名字, 叫做 unit 单元类型, 当表达式没有任何返回时, 会默认返回 unit.
 
 ```rust
 let empty: () = ();
@@ -51,7 +53,7 @@ fn main() {
 }
 ```
 
-## 2 struct
+## 2	[[Example Programs#1 Example Programs Using Strucs|The Struct Type]]
 
 结构体 (struct) 是一种自定义数据类型, 允许你将多个相关的值组合成一个有意义的组合, 与元组不同, 每个元素都有自己的名字;
 
@@ -75,9 +77,53 @@ fn main() {
 }
 ```
 
-## 3 tuple struct
+### 2.1	Using the Field Init Shorthand
 
-元组结构体 (tuple struct) 是一种类似元组的结构体, 但它有自己的类型名.
+当初始化时传入的变量名和 struct 的属性名相同时, 可以不需要重复:
+
+```rust
+fn build_user(email: String, username: String) -> User {
+    User {
+        active: true,
+        username,
+        email,
+        sign_in_count: 1,
+    }
+}
+```
+
+### 2.2	Creating Instances from Other Instances
+
+```rust
+fn main() {
+    let user1 = User {
+        active: true,
+        username: String::from("RyanYuan"),
+        email: String::from("ryan@123.com"),
+    };
+
+    let user2 = User {
+        active: false,
+        ..user1
+    };
+
+    // println!("{}", user1.username); // Error: value borrowed here after move
+}
+
+// ====== 等同于 ======
+
+let user2 = User {
+	active: false,
+	username: user1.username,
+	email: user1.email,
+};
+```
+
+上面的写法等同于将 user2 未设值的属性赋成 user1 的属性, 如果属性未实现 `Copy` trait, 执行的是所有权转移.
+
+### 2.3	tuple struct
+
+元组结构体 (tuple struct) 是一种类似元组的结构体, **但它有自己的类型名**.
 
 ```rust
 struct Color(i32, i32, i32);
@@ -92,7 +138,20 @@ fn main() {
 }
 ```
 
-## 4 enum
+### 2.4	[[Tuple & Struct#1.2 The Unit Type|Unit]]-Like Structs Without Any Fields
+
+Unit-List Structs 指的是没有任何属性的 Struct, 它的表现类似 unit 类型; 主要用于希望赋予一些 trait 给某些类型, 但是这个类型并没有需要存储的变量;
+
+```rust
+struct UnitStruct;
+
+fn main() {
+    // Create a instance.
+    let u = UnitStruct;
+}
+```
+
+## 3	The Enum Type
 
 枚举 (enum) 允许你定义一个可以枚举其所有可能成员的类型.
 

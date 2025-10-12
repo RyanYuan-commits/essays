@@ -1,10 +1,8 @@
 ---
 type: Rust
 sub-type: Basic
-created: 2025-10-05 15:58:29
-updated: 2025-10-05 18:04:30
 ---
-## 1 语句
+## 1 Statements
 
 在 Rust 程序中, 表达式和语句是完成流程控制, 计算求值的重要工具;
 
@@ -20,7 +18,7 @@ return x + 5
 return { x + 5; } // 错误，函数期望返回 i32，但实际返回了 ()
 ```
 
-## 2 表达式
+## 2 Expressions
 
 在 Rust Reference 教程中有这样一句话: Rust is primarily an expression language; Rust 基本上就是一个表达式语言;
 

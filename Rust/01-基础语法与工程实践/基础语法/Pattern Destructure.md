@@ -1,9 +1,6 @@
 ---
 type: Rust
 sub-type: Basic
-finished: "false"
-created: 2025-10-05 15:58:38
-updated: 2025-10-08 22:56:39
 ---
 ## 1 简介
 
@@ -14,9 +11,7 @@ let (head, center, tail) = tuple;
 
 上面的代码是一个典型的 "模式解构", 第一个语句是 "构造", 将三个元素组合到一起形成一个 `tuple`, 而第二个越剧是将其拆解开来, 分成了三个不同的变量;
 
-在 `let` 语句中, 赋值号左边的内容就是 Pattern, 而赋值号右边就是需要被 Destructure 的内容;
-
-这个 Pattern 引入了三个变量, 分别绑定了这个 `tuple` 的三个成员.
+在 `let` 语句中, 赋值号左边的内容就是 Pattern, 而赋值号右边就是需要被 Destructure 的内容; 这个 Pattern 引入了三个变量, 分别绑定了这个 `tuple` 的三个成员.
 
 Rust 中的模式解构的原则是: **构造和解构遵循类似的语法**, 怎么将一个数据结构组合起来, 就怎么把它拆解开来:
 

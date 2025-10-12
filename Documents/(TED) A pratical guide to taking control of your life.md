@@ -60,7 +60,7 @@ By the time I went to ==rehab(恢复)==, I definitely had the gift of desperatio
 
 ---
 
-### The benefits of low period
+### The benefits of desperation
 
 But in a way, I think that was actually good. Because I felt like I had nothing left to lose. And that made me fearless and hungry. 
 

@@ -5,7 +5,7 @@ type: Rust
 sub-type: Ownership
 ---
 - [[Ownership]]
-- [[移动与复制语义]]
+- [[Clone & Copy]]
 - [[References and Borrowing]]
 - [[生命周期 Lifetime 标记]]
 - [[Box 智能指针]]

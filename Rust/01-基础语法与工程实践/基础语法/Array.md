@@ -1,8 +1,6 @@
 ---
 type: Rust
 sub-type: Basic
-created: 2025-10-05 15:58:36
-updated: 2025-10-07 21:06:18
 ---
 ## 1 基本介绍
 
