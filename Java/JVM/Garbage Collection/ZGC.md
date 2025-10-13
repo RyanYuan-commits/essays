@@ -4,16 +4,33 @@ sub-type: JVM
 ---
 ZGC 是一个 low latency 的 Java 垃圾收集器, 设计用来解决大堆的垃圾收集问题, ZGC is highly scalable , 支持 8MB 到 16 TB 空间的垃圾收集; 它使用 Concurrent marking 和 Concurrent relocation 技术来实现极低的延迟, rarely exceed 250 microseconds;
 
-## 1 回收流程
+## 1 Phases of ZGC Garbage Collection
 
-ZGC 的垃圾回收过程包含一下几个阶段:
+**Pause Mark Start**: 周期中的第一个 STW, 停顿时间通常在微妙级别; 在这个阶段, ZGC 会初始化标记操作, 遍历 GC Roots 并标记它们直接引用的对象, 为接下来的 Concurrent Mark 设置必要的条件;
 
-- **标记开始 Pause Mark Start:** 一个短暂的 STW 停顿, 仅用于标记 GC Roots 指向的初始对象集；
-- **并发标记 Concurrent Mark:** 与应用程序并行执行, 遍历对象图并标记所有存活的对象；
-- **标记结束 Pause Mark End:** 一个短暂的 STW 停顿, 用于处理并发标记期间的同步和边界情况, 其耗时与堆大小无关；
-- **并发预备重定位 Concurrent Prepare for Relocate:** 识别出需要被压缩和移动的区域 (Relocation Set), 并为下一阶段做准备；
-- **重定位开始 Pause Relocate Start:** 一个短暂的 STW 停顿, 用于重定位 GC Roots 引用的对象, 并确保所有线程都准备好进入并发迁移；
-- **并发重定位 Concurrent Relocate:** 核心的迁移阶段, 将存活对象复制到新的内存区域, 并通过读屏障 (Load Barrier) 机制确保应用线程能正确访问对象的新地址. 
+---
+
+**Concurrent Mark**: 周期中最长的一个阶段, 与应用线程并发执行; 从 Roots 开始, 遍历并标记所有存活的对象图, 在这个过程中, ZGC 使用 Colored Pointers 与 Read Barrier 技术处理线程对对象图的修改, 保证并发标记的正确性, 最终计算出哪个 Region 的对象存活率低, 适合进行 Relocation 和 Compact;
+
+---
+
+**Mark End**: 周期中的第二个 STW, 停顿时长也在微妙级别; 在这个阶段 ZGC 需要完成在 Concurrent Mark 阶段未完成的或需要全局同步才能完成的工作, 主要包括处理非强引用, 并为接下来的 Relocation 阶段做准备;
+
+---
+
+**Concurrent Pare for Relocate**: 与应用线程并发进行; 确定并选择需要进行 Relocation (Move and Compact) 的 Region, ZGC 根据存活对象的百分比来选择区域, 这个阶段会生成 ==Relocation Set==.
+
+---
+
+**Relocate Start**: 周期中的第三个 STW, 停顿时间微妙级别; 遍历 Relocation Set 中的所有对象, 并在堆中为它们找到新的地址. 这些地址会记录在 ==Forwarding Table== 中.
+
+---
+
+**Concurrent Relocate**: 周期中第二个最长的阶段, 同样与应用线程并发执行; GC 线程在这个阶段会将 Relocation Set 中的对象从旧地址移动到新地址; 而应用线程访问一个已经被移动或者将要被移动的线程时, 会触发 Read Barrier 检查改对象的指针, 如果发现其指向旧地址, 会将指针更改为新的转发地址, 这个过程被称为 ==Self-Healing==.
+
+---
+
+**Concurrent Free**: 对象移动完成后, 释放旧的 Region.
 
 ## 2 内存分布
 
@@ -27,11 +44,17 @@ ZGC 与传统的垃圾收集器不同, 没有分代的概念, 而是采用了类
 
 ZGC 核心特性之一是并发性, 需要确保在垃圾回收完成之前, 堆不会被塞满, 其主要触发机制包括:
 
-- **Blocking Memory Allocation Requests**: 当堆内存填充速度超过垃圾回收能力时, 线程可能会被阻塞, 日志关键字为 "Allocation Stall";
-- **Adaptive Algorithm Based on Allocation Rate**: 根据近期的分配速率以及 GC 次数动态计算何时触发垃圾回收, 日志关键字为 "Allocation Rate";
-- **Fixed Time Intervals**: 可以基于固定时间间隔触发, 在应对突发流量场景下非常有用, 日志关键字为 "Timer";
-- **Warmup Phase**: 发生在服务启动期间, 无需特别关注, 日志关键字为 "Warmup";
-- **External Trigger**: 显示的调用 `System.gc()`, 日志关键字为 "System.gc()".
+**Blocking Memory Allocation Requests**: 当堆内存填充速度超过垃圾回收能力时, 线程可能会被阻塞, 日志关键字为 "Allocation Stall";
+
+**Adaptive Algorithm Based on Allocation Rate**: 根据近期的分配速率以及 GC 次数动态计算何时触发垃圾回收, 日志关键字为 "Allocation Rate";
+
+**Fixed Time Intervals**: 基于固定时间间隔触发, 在应对突发流量场景下非常有用, 日志关键字为 "Timer";
+
+---
+
+**Warmup Phase**: 发生在服务启动期间, 无需特别关注, 日志关键字为 "Warmup";
+
+**External Trigger**: 显示的调用 `System.gc()`, 日志关键字为 "System.gc()".
 
 ## 4 Key Innovations in ZGC
 
@@ -39,7 +62,11 @@ ZGC 核心特性之一是并发性, 需要确保在垃圾回收完成之前, 堆
 
 ![[ZGC colored pointers.png|700]]
 
-上面展示的是一个 ZGC 指针, 开头的 18 位未被使用, 最后的 42 位用于地址定位, 可以定位 4TB 的地址; Marked0 和 Marked1 用于表示对象在当前 GC 周期中是否被标记为存活, 使用两个标志位来避免在下个周期开始之前对标志位的清理工作; Remapped 用于表示改对象是否已经被 Relocation 到新的地址;  Finallizable 用于标记这个对象无法正常使用, 仅可被 finalizer 访问.
+上面展示的是一个 ZGC 指针, 开头的 18 位未被使用, 最后的 42 位用于地址定位, 可以定位 4TB 的地址;
+
+==Marked0== 和 ==Marked1== 用于表示对象在当前 GC 周期中是否被标记为存活, 使用两个标志位来避免在下个周期开始之前对标志位的清理工作;
+
+==Remapped== 用于表示改对象是否已经被 Relocation 到新的地址;  ==Finallizable== 用于标记这个对象无法正常使用, 仅可被 ==Finalizer== 访问.
 
 ### 4.2 Load Barriers
 

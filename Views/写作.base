@@ -5,7 +5,7 @@ views:
       and:
         - tag != "clipper"
         - '!file.name.endsWith("Template")'
-        - file.name != "Welcome"
+        - file.name != "WelCome"
         - file.ext != "base"
         - '!file.path.startsWith("Diary")'
         - '!file.path.contains("Books")'

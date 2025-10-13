@@ -2,14 +2,12 @@
 type: Java
 sub-type: JVM
 ---
-
-## Grabage Collectors
+## 1	Grabage Collectors
 
 - [[ZGC]]
 - [[G1]]
 
-## Marking Algorithms & Concurrency
+## 2	Marking Algorithms & Concurrency
 
 - [[Marking Phase]]
 - [[Three-Color Marking Algorithms]]
-
