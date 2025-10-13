@@ -6,7 +6,7 @@ updated: 2025-10-08 22:56:39
 [[(Rust) 不得不看的学习资源]]
 ## 1 基础语法与工程实践
 
-- [[(MOC) Basic Syntax|基础语法]]
+- [[(MOC) Basic Syntax|Basic Syntax]]
 - [[工程化工具链 MOC|工程化工具链]]
 
 ## 2 所有权与内存安全
