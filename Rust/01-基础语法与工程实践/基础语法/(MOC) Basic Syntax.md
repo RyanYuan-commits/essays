@@ -14,6 +14,7 @@ updated: 2025-10-07 21:08:50
 [[String]]
 [[Slice]]
 [[Pattern Destructure]]
+[[Common Collections]]
 
 ---
 
