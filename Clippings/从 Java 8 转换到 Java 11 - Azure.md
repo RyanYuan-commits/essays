@@ -60,3 +60,12 @@ sun.misc.Unsafe                          See http://openjdk.java.net/jeps/260
 可以参考上面的输出来消除对 JDK 内部 API 的引用.
 
 模块 jdk.unsupport 中的 API 也建议消除, 
+
+```embed
+title: "JEP 260: Encapsulate Most Internal APIs"
+image: "https://openjdk.org/images/openjdk2.svg"
+description: ""
+url: "https://openjdk.org/jeps/260"
+favicon: ""
+aspectRatio: "27.12871287128713"
+```
