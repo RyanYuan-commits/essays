@@ -11,12 +11,7 @@ resolutionStrategy 配置块允许你对 Gradle 解析项目的过程进行精�
 
 `force(...)`: 强制版本, 优先级最高的指令,强制一个或多个依赖使用指定的版本, 无视任何其他版本请求;
 
-```
-```
-
 `failOnVersionConfilg`: Gradle 默认自动选择最高的版本来解决冲突, 使用此配置后, 一旦出现版本冲突, 构建将直接失败;
-
-
 
 ```groovy
 configurations.all {
