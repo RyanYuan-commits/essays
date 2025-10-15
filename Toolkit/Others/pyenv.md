@@ -1,5 +1,6 @@
 ---
 type: Toolkit
+sub-type: Python
 ---
 ```embed
 title: "GitHub - pyenv/pyenv: Simple Python version management"
@@ -10,7 +11,7 @@ favicon: ""
 aspectRatio: "50"
 ```
 
-## 1	安装 Pyenv 
+## 1	安装 Pyenv
 
 ### 1.1	macOS
 

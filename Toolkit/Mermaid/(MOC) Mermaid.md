@@ -1,9 +1,6 @@
 ---
-type: 工具
-sub-type: 绘图
-finished: "true"
-created: 2025-09-27 22:34:06
-updated: 2025-09-28 23:39:59
+type: Toolkit
+sub-type: Mermaid
 ---
 ```embed
 title: "Mermaid 在线编辑器"
@@ -13,7 +10,6 @@ url: "https://mermaid-live.nodejs.cn/"
 favicon: ""
 ```
 
+[[流程图]]
 
-[[📳【Mermaid】时序图]]
-
-[[⏳(Mermaid) 流程图]]
+[[时序图]]
