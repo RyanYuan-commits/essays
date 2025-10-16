@@ -1,7 +1,7 @@
 ---
-created: 2025-09-27 22:34:06
-updated: 2025-09-27 22:34:06
+type: Rust
 ---
+
 ## 1	Jon Gjengset
 
 ```embed
@@ -17,8 +17,17 @@ aspectRatio: "100"
 
 ```embed
 title: "The Rust Programming Language - The Rust Programming Language"
-image: ""
+image: "images/cover-Rust.png"
 description: ""
 url: "https://doc.rust-lang.org/book/title-page.html"
 favicon: ""
+```
+
+```embed
+title: "序和前言 - Yet another Chinese rust-lang book."
+image: "images/cover-Rust.png"
+description: "又一本 rust-lang 书，Yet another Chinese rust-lang book。"
+url: "https://rust-lang.xfoss.com/"
+favicon: ""
+aspectRatio: "109.09090909090908"
 ```

@@ -1,10 +1,10 @@
 ---
-title: "领域知识树：为掌控大型 Obsidian 知识库而生的解决方案 - 少数派"
-source: "https://sspai.com/post/99843"
+title: 领域知识树：为掌控大型 Obsidian 知识库而生的解决方案 - 少数派
+source: https://sspai.com/post/99843
 created: 2025-10-15
-description: "本文提出基于嵌套领域标签、文献综述和层级汇总的“领域知识树”方法，帮助用户有效管理大型Obsidian知识库，避免信息过载并建立全局视角。"
-finished: "false"
-tag: "clipper"
+description: 本文提出基于嵌套领域标签、文献综述和层级汇总的“领域知识树”方法，帮助用户有效管理大型Obsidian知识库，避免信息过载并建立全局视角。
+finished: "true"
+tag: clipper
 ---
 **需要补充学习的知识：**
 - 知识管理方法论（如PARA分类法、标签分类法）
