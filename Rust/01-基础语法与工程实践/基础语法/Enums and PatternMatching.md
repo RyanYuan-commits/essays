@@ -158,7 +158,7 @@ fn remove_fancy_hat() {}
 fn move_player(num_spaces: u8) {}
 ```
 
-此外, 对于只需要匹配单个模式的场景, `if let` 语句提供了一种更简洁的替代方案, 避免了完整 `match` 的冗余:
+此外, 对于只需要匹配单个模式的场景, `if let` 语句提供了一种更简洁的替代方案, 避免了完整 `match` 的冗余,
 
 ## 3	Concise Control Flow with if let and let else
 
