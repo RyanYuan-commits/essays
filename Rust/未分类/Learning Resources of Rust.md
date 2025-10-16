@@ -2,6 +2,8 @@
 created: 2025-09-27 22:34:06
 updated: 2025-09-27 22:34:06
 ---
+## 1	Jon Gjengset
+
 ```embed
 title: "Jon Gjengset"
 image: "https://yt3.googleusercontent.com/qeOPL5VD3HyYtB2IR45AamePTTlAPLAVMIJR1gnqB8-RB5giim7SBLhOz2NRYZx-CeBAF3wp=s900-c-k-c0x00ffffff-no-rj"
@@ -11,6 +13,7 @@ favicon: ""
 aspectRatio: "100"
 ```
 
+## 2	The Book
 
 ```embed
 title: "The Rust Programming Language - The Rust Programming Language"
@@ -19,4 +22,3 @@ description: ""
 url: "https://doc.rust-lang.org/book/title-page.html"
 favicon: ""
 ```
-

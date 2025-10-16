@@ -2,6 +2,7 @@
 created: 2025-10-09 00:28:46
 updated: 2025-10-09 00:29:00
 cover: https://pi.tedcdn.com/r/talkstar-assets.s3.amazonaws.com/production/talks/talk_158057/a22ff1b3-5148-4fbe-85a4-c24875c6e674/MichaelSun_2023X-embed.jpg?u%5Br%5D=2&u%5Bs%5D=0.5&u%5Ba%5D=0.8&u%5Bt%5D=0.03&quality=82c=1050%2C550&w=1050
+type: Toolkit
 ---
 ```embed
 title: "How to recapture the joy of the early internet"

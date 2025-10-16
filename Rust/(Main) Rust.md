@@ -3,23 +3,23 @@ cover: images/cover-Rust.png
 created: 2025-10-05 16:04:33
 updated: 2025-10-08 22:56:39
 ---
-[[(Rust) 不得不看的学习资源]]
-## 基础语法与工程实践
+### [[Learning Resources of Rust]]
 
-[[(MOC) Basic Syntax|Basic Syntax]]
-[[(MOC) Project Management Tool Chain|Project Management Tool Chain]]
+---
 
-## 所有权与内存安全
+### [[(MoC) Basic Syntax]]
 
-[[内存管理基础 MOC|内存管理基础]]
-[[核心内存机制 MOC|核心内存机制]]
-[[借用检查与安全边界 MOC|借用检查与安全边界]]
+### [[(MoC) Project Management Tool Chain]]
+
+### [[(MoC) Ownership and Memory Safety]]
 
 ## [[(MoC) Error Handling]]
 
+## [[(MoC) Type System]]
+
+---
+
 ## 高级抽象与类型系统
-
-
 
 [[类型系统与错误处理 MOC|类型系统与错误处理]]
 [[泛型与行为抽象 MOC|泛型与行为抽象]]
