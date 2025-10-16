@@ -1,5 +1,5 @@
-!.obsidian/snippets/
 .obsidian/*
+!.obsidian/snippets/
 
 # Ignore Smart Environment folder
 .smart-env

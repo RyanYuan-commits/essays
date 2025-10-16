@@ -1,0 +1,48 @@
+/* Moy-网格背景 */
+/* 更新日期：2024.10.29 */
+/* 用来显示两种样式的背景：网格 & 网点 */
+
+/* 原始代码来自：https://spacexcode.com/blog/pure-css-grid-line/ */
+/* 亦有参考：https://forum-zh.obsidian.md/t/topic/37076 */
+
+/* ============================================================ */
+
+/* 亮暗主题的不同配色 */
+.theme-dark {
+  --grid-line-color-1: #3d3d3f66;
+  --grid-line-color-2: #74747440;
+  --grid-dot-color: #c7c7c71f;
+}
+
+.theme-light {
+  --grid-line-color-1: #c7c7c740;
+  --grid-line-color-2: #afafaf40;
+  --grid-dot-color: #c7c7c780;
+}
+
+/* 网格背景 */
+.markdown-reading-view .markdown-rendered, .markdown-source-view.mod-cm6 .cm-scroller,
+.grid-bg {
+  background-size: 20px 20px;
+  background-position: center center;
+  background-image: linear-gradient(to right, var(--grid-line-color-1) 1px, transparent 1px), linear-gradient(to bottom, var(--grid-line-color-2) 1px, transparent 1px);
+
+}
+
+
+/* 点阵背景 */
+/* .markdown-reading-view .markdown-rendered, .markdown-source-view.mod-cm6 .cm-scroller, */
+.grid-dot-bg {
+  height: 100%;
+  background-image: radial-gradient(circle, var(--grid-dot-color) 1px, var(--background-primary) 1px);
+  background-size: 20px 20px;
+  background-position: center center;
+}
+
+/* 避免 Hover Editor 里奇怪的异常表现 */
+.popover .grid-bg {
+  mask-image: none;
+}
+
+
+/* ============================================================ */

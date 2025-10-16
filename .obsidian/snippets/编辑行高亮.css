@@ -1,0 +1,17 @@
+.markdown-source-view.mod-cm6 .cm-line.cm-active {
+    background-color: rgba(var(--mono-rgb-100), 0.08);
+    border-radius: 12px;
+    font-weight: 600 !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.cm-active:hover {
+    background-color: rgba(var(--mono-rgb-100), 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Bold */
+.cm-strong,
+.markdown-preview-view strong,
+.callout strong {
+    color: #800000;
+}
