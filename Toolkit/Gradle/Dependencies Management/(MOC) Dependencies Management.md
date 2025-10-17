@@ -1,5 +1,8 @@
-### [[Dependency Management API]]
+---
+type: Gradle
+---
+## [[Dependency Management API]]
 
-### [[ResolutionStrategy]]
+## [[ResolutionStrategy]]
 
-### [[Version Upgrade]]
+## [[Version Upgrade]]
