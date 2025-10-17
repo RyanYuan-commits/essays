@@ -5,7 +5,7 @@ cover: ../images/cover-tool.png
 
 ## [[(MOC) Mermaid]]
 
-## [[(MOC) Gradle]]
+## [[(MoC) Gradle]]
 
 ## [[(MOC) Others]]
 

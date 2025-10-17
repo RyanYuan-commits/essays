@@ -1,13 +1,15 @@
 ---
 type: Rust
 ---
-## 1	[[Basic of Memory Management]]
+## [[Basic of Memory Management]]
 
-## 2	[[Ownership]]
+## [[Ownership]]
 
-## 3	[[Clone & Copy]]
-## 4	[[References and Borrowing]]
+## [[Clone & Copy]]
+## [[References and Borrowing]]
 
-## 5	[[Deref Coercion]]
+## [[Lifetimes]]
 
-## 6	[[Box Pointer]]
+## [[Deref Coercion]]
+
+## [[Box Pointer]]

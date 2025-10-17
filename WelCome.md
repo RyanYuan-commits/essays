@@ -1,4 +1,4 @@
- ![[首页头图.png]]
+![[首页头图.png]]
 
 ## 📆 今天是 ==`=dateformat(date(today),"yyyy 年 M 月 d 日")`==
 
