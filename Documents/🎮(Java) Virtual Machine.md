@@ -1,19 +1,20 @@
 ---
 created: 2025-10-01 14:36:02
 updated: 2025-10-01 14:37:10
+type: Java
+sub-type: Garbage Collection
 ---
 
 ### 6.1 理论基础
 
-- [[🏋️(Java) 分代假说与垃圾收集算法]]
-- [[🦜(Java) 可达性分析]]
+- [[Generational Collection]]
 - [[🥐(Java) 记忆集与卡表]]
 - [[🥝(Java) 根节点枚举]]
 
 ### 6.2 垃圾收集器
 
 - [[🧃(Java) 垃圾回收器概述]]
-- [[🥤(Java) Serial 收集器]]
+- [[Serial GC]]
 - [[🤖(Java) ParNew 收集器]]
 - [[🌽(Java) Parallel Scavenge 收集器]]
 - [[🍲(Java) Parallel Old 收集器]]

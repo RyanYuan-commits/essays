@@ -1,9 +1,11 @@
 ---
 created: 2025-10-01 12:36:04
 updated: 2025-10-01 12:37:04
+type: Java
+sub-type: Garbage Collection
 ---
 #### 1 Serial
-=> [[🥤(Java) Serial 收集器]]
+=> [[Serial GC]]
 作用与新生代 + 老年代
 - 新生代使用标记复制算法
 - 老年代使用标记整理算法

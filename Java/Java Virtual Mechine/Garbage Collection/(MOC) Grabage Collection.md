@@ -2,12 +2,10 @@
 type: Java
 sub-type: JVM
 ---
-## 1	Grabage Collectors
+## [[(MoC) Fundamental Theory]]
+## [[(MoC) Garbage Collector]]
 
-- [[ZGC]]
-- [[G1]]
-
-## 2	Marking Algorithms & Concurrency
+## Marking Algorithms & Concurrency
 
 - [[Marking Phase]]
 - [[Three-Color Marking Algorithms]]
