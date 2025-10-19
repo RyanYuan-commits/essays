@@ -33,9 +33,7 @@ fn main() {
 }
 ```
 
-上面的代码会出现编译错误, 因为在 `let s1 = s;` 语句中, 原本由 s 拥有的字符串已经转移给了 `s1`, 后续就无法继续使用 s;
-
-而在 C++, 使用 `s` 初始化 `s1` 调用 `string` 类型的复制构造函数复制一个新的字符串, 在 Rust 中如果要实现这种行为, 需要手动调用 `clone()` 函数:
+上面的代码会出现编译错误, 因为在 `let s1 = s;` 语句中, 原本由 s 拥有的字符串已经转移给了 `s1`, 后续就无法继续使用 s; 而在 C++, 使用 `s` 初始化 `s1` 调用 `string` 类型的复制构造函数复制一个新的字符串, 在 Rust 中如果要实现这种行为, 需要手动调用 `clone()` 函数:
 
 ```rust
 fn main() {
@@ -114,9 +112,7 @@ fn makes_copy(some_integer: i32) {
 ```rust
 fn main() {
     let s1 = gives_ownership(); // gives_ownership moves its return value into s1
-
     let s2 = String::from("hello"); // s2 comes into scope
-
     let s3 = takes_and_gives_back(s2);
 }
 

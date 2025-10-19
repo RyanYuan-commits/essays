@@ -12,5 +12,4 @@ updated: 2025-10-07 21:08:50
 ## [[Array]]
 ## [[String]]
 ## [[Slice]]
-## [[Pattern Destructure]]
 ## [[Common Collections]]

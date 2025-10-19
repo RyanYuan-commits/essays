@@ -81,9 +81,7 @@ fn main() {
 
 ### 2.1	What Is a String?
 
-Rust 的 core language 只有一种 string 类型, 就是 string **slice** `str`, 字符串字面量也是 string slice.
-
-String 是 Rust 标准库中提供的类型, 是可增长, 可编辑, 且拥有所有权的 string **type**.
+Rust 的 Core Language 只有一种 string 类型, 就是 String Slice `str`, 字符串字面量也是 string slice; `String` 是 Rust 标准库中提供的类型, 是可增长, 可编辑, 且拥有所有权的 String Type.
 
 ### 2.2	Creating a New String
 
@@ -138,9 +136,9 @@ fn main() {
 
 ### 2.4	Indexing into Strings
 
-Rust 中, 不允许直接通过下标来取用 String 中的字符, 因为 String 在内部是以 UTF-8 编码的字节序列（`Vec<u8>`）存储的. 
+Rust 中, 不允许直接通过下标来取用 String 中的字符, 因为 String 在内部是以 UTF-8 编码的字节序列 (`Vec<u8>`) 存储的. 
 
-一个 Unicode 字符在 UTF-8 编码下可能占据一到四个字节. 因此, 一个整数下标并不总能对应到一个完整的、有效的 Unicode 字符边界, 直接索引字节可能导致获取到不完整的字符编码, 这会破坏 String 的有效性并引入难以预料的错误, 比如
+一个 Unicode 字符在 UTF-8 编码下可能占据一到四个字节. 因此, 一个整数下标并不总能对应到一个完整的、有效的 Unicode 字符边界, 直接索引字节可能导致获取到不完整的字符编码, 这会破坏 String 的有效性并引入难以预料的错误, 比如:
 
 ```rust
 let s = String::from("你好world");

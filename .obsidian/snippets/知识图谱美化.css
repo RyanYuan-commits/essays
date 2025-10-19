@@ -1,0 +1,5 @@
+body {
+  --graph-node: #6699CC; /* Change default node color */
+  --graph-line: #BBBBBB; /* Change link color */
+}
+.graph-view.color-fill-tag { color: #5dbcd2; } /* Change tag node color */

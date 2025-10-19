@@ -4,9 +4,7 @@ sub-type: Basic
 created: 2025-10-05 15:58:34
 updated: 2025-10-07 10:28:04
 ---
-## 1 成员方法
-
-trait 中可以定义函数:
+## 1 Method
 
 ```rust
 trait Shape {
@@ -87,7 +85,7 @@ trait 中可以包含方法的默认实现, 如果方法在 trait 中已经有�
 
 比如, 在标准库中, `Iterator` 这个 trait 就包含了十多种方法, 其中只有 `fn next(&mut self) -> Option<Self::Item>` 是没有默认实现的, 其他方法均有默认实现, 在实现迭代器的时候只需要挑选需要重写的方法即可.
 
-## 2 静态方法
+## 2 Static Methods
 
 没有 receiver 参数的方法, 称为静态方法, 可以通过 `Type::FunctionName` 的方式调用; 需要注意的是, 即使第一个参数是 Self 相关类型, 只要变量名字不是 Self, 也会被识别为静态方法.
 
