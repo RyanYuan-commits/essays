@@ -14,12 +14,14 @@ aspectRatio: "100"
 ```
 
 ---
-## [[(MoC) Core Components]]
 
 ## [[(MoC) Basic Knowledge]]
 
-## [[(MoC) Dependencies Management]]
+## [[(MoC) Dependency Management]]
+
+
+
 ---
 
-### [[Gradle Study Outline]]
+## [[Gradle Study Outline]]
 ## [[Gradle Deep Research]]
