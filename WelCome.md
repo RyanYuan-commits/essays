@@ -21,10 +21,3 @@
 ## 🔅 稍后读
 
 ![[稍后读.base]]
-
----
-
-## 🛏️ 休闲空间
-
-[来点白噪音?](https://www.youtube.com/watch?v=5dden6Vqj4A&t=12s)
-[来点 news feed?](https://www.inoreader.com/)

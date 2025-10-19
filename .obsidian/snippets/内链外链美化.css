@@ -122,15 +122,3 @@ body:not(.click-to-edit-link-in-live-preview) span.external-link {
 body.click-to-edit-link-in-live-preview :is(.cm-link .cm-underline, .cm-hmd-internal-link .cm-underline) {
   pointer-events: none;
 }
-
-/* @settings
-
-name: theme-subframe7536
-id: theme-subframe7536
-settings:
-    -
-        id: click-to-edit-link-in-live-preview
-        title: click to edit link in live preview
-        description.zh: live preview 模式时点击链接进行编辑而不是跳转
-        type: class-toggle
-*/

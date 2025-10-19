@@ -1,7 +1,7 @@
 ---
 cover: ../images/cover-tool.png
 ---
-## [[(MOC) Git]]
+## [[(MoC) Git]]
 
 ## [[(MOC) Mermaid]]
 
