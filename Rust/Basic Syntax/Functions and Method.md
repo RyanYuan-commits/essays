@@ -124,7 +124,7 @@ fn main() {
 
 ## 2	Method Syntax
 
-Rust 中的 Method 与 Function 一样, 使用 `fn` 关键字来定义, 并且都有参数和返回值, 调用方式也类似... 与函数不同的是, Method 需要定义在 [[Tuple & Struct#2 Example Programs 1 Example Programs Using Strucs The Struct Type|Struct]], [[Tuple & Struct#3 The Enum Type|Enum]] or [[Trait]] 下, 并且 Method 的第一个参数永远是 `self`, 表示的是调用这个方法的实例.
+Rust 中的 Method 与 Function 一样, 使用 `fn` 关键字来定义, 并且都有参数和返回值, 调用方式也类似... 与函数不同的是, Method 需要定义在 [[Tuple & Struct#2 The Struct Type|Struct]], [[Enums and PatternMatching|Enum]] or [[Trait]] 下, 并且 Method 的第一个参数永远是 `self`, 表示的是调用这个方法的实例.
 
 ### 2.1	Defining Methods
 
@@ -158,9 +158,7 @@ fn main() {
 
 ### 2.2	Self
 
-方法 `calcute_area` 的入参是 `&self`, 它实际上是 `self: &Self` 的缩写, 在 impl block 中, `Self` is an alias for the type that `impl` block is for;
-
-成员方法的第一个参数必须是 Self 类型或包装在 Self 之上的类型:
+方法 `calcute_area` 的入参是 `&self`, 它实际上是 `self: &Self` 的缩写, 在 impl block 中, `Self` is an alias for the type that `impl` block is for; 成员方法的第一个参数必须是 Self 类型或包装在 Self 之上的类型:
 
 ```rust
 trait T1 {
@@ -177,7 +175,3 @@ trait T2 {
     fn method3(&mut self);
 }
 ```
-
-
-
-

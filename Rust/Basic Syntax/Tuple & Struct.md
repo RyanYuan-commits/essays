@@ -24,7 +24,7 @@ fn main() {
 
 ### 1.2	The Unit Type
 
-元组中可以一个元素也没有, 这样的元素有一个单独的名字, 叫做 unit 单元类型, 当表达式没有任何返回时, 会默认返回 unit.
+元组中可以一个元素也没有, 这样的元组被定义为 unit 类型, 当表达式没有任何返回时, 会默认返回 unit.
 
 ```rust
 let empty: () = ();
@@ -53,7 +53,7 @@ fn main() {
 }
 ```
 
-## 2	[[Example Programs#1 Example Programs Using Strucs|The Struct Type]]
+## 2	The Struct Type
 
 结构体 (struct) 是一种自定义数据类型, 允许你将多个相关的值组合成一个有意义的组合, 与元组不同, 每个元素都有自己的名字;
 
@@ -148,41 +148,5 @@ struct UnitStruct;
 fn main() {
     // Create a instance.
     let u = UnitStruct;
-}
-```
-
-## 3	The Enum Type
-
-枚举 (enum) 允许你定义一个可以枚举其所有可能成员的类型.
-
-```rust
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
-fn main() {
-    let msg = Message::Write(String::from("hello"));
-
-    match msg {
-        Message::Quit => {
-            println!("The Quit variant has no data to destructure.");
-        }
-        Message::Move { x, y } => {
-            println!(
-                "Move in the x direction {} and y direction {}",
-                x, y
-            );
-        }
-        Message::Write(text) => println!("Text message: {}", text),
-        Message::ChangeColor(r, g, b) => {
-            println!(
-                "Change the color to red {}, green {}, and blue {}",
-                r, g, b
-            )
-        }
-    }
 }
 ```

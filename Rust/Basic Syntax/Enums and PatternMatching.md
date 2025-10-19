@@ -2,9 +2,9 @@
 type: Rust
 sub-type: Basic
 ---
-Enum 用于解决: 如何创建一个自定义类型, 该类型的值被限制在一个有限可能性的集合中.
-
 ## 1	Defining an Enum
+
+Enum 用于解决: 如何创建一个自定义类型, 该类型的值被限制在一个有限可能性的集合中.
 
 ### 1.1	Enum Values
 
