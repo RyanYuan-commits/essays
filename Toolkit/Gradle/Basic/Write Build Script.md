@@ -79,7 +79,7 @@ Gradle 脚本主要由两种元素构成:
 - Blocks 代码块: 传递给配置方法的嵌套代码块 (Groovy 闭包或 Kotlin Lambda), 这些代码块将设置并应用于 Gradle 对象, 例如 `project`, `pluginManagement`, `dependencyResolutionManagement`, `repositories` 或者 `dependencies`.
 
 Gradle 脚本基于 Groovy 的动态闭包实现, Gradle 会将方法/属性调用动态委托给目标对象. 
-=> [[🌪️(Groovy) 闭包]]
+=> [[🌪️(Groovy) Closure]]
 
 ```groovy
 buildscript {
@@ -148,4 +148,4 @@ tasks.named('test', Test) {
 ```
 
 Gradle 脚本基于 Groovy 的动态闭包实现, Gradle 会将方法/属性调用动态委托给目标对象. 
-=> [[🌪️(Groovy) 闭包]]
+=> [[🌪️(Groovy) Closure]]

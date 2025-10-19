@@ -1,7 +1,16 @@
-img {
+/* 只对独立成行的图片居中，排除 emoji 和内联图片 */
+img:not(.emoji):not([class*="emoticon"]) {
     display: block !important;
     margin-left: auto !important;
     margin-right: auto !important;
+}
+
+/* 保持 emoji 为内联显示 */
+img.emoji,
+img[class*="emoticon"],
+img[alt*="emoji"] {
+    display: inline !important;
+    margin: 0 !important;
 }
 
  .markdown-source-view.mod-cm6 .cm-content > * {
