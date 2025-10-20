@@ -18,7 +18,7 @@ sub-type: Garbage Collection
 - [[🤖(Java) ParNew 收集器]]
 - [[🌽(Java) Parallel Scavenge 收集器]]
 - [[🍲(Java) Parallel Old 收集器]]
-- [[🦚(Java) CMS 收集器]]
+- [[The CMS Collector]]
 - [[🦚(Java) G1 收集器]]
 - [[🧃 Getting Start G1]]
 
