@@ -2,9 +2,7 @@
 type: Java
 sub-type: Garbage Collection
 ---
-## Serial Garbage Collectors
-
-### [[Serial GC]]
+## [[Classic Collectors]]
 
 ## Mostly-Concurrent Collectors
 

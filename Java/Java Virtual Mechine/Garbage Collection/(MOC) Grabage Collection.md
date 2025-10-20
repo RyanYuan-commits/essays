@@ -2,7 +2,8 @@
 type: Java
 sub-type: JVM
 ---
-## [[(MoC) Fundamental Theory]]
+## [[(MoC) Fundational Principles and Memory Model]]
+
 ## [[(MoC) Garbage Collector]]
 
 ## Marking Algorithms & Concurrency
