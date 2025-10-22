@@ -3,7 +3,6 @@ type: Rust
 sub-type: ProjectManagement
 ---
 Cargo 是 Rust **官方构建系统和包管理器**, 用于管理项目依赖, 编译代码, 运行测试和生成文档.
-
 ## 1	Core Components
 
 ### 1.1	[Cargo.toml](https://doc.rust-lang.org/cargo/reference/manifest.html#the-manifest-format)
@@ -45,10 +44,10 @@ cargo publish
 
 ## 3	How It Works
 
-当执行 `cargo build` 时, Cargo 会先读取 `cargo.toml` 文件, 了解你的项目信息和直接依赖;
-
-然后, 它会检查 `Cargo.lock` 文件是否存在, 如果存在, 其会按照文件记录的精确版本号去下载依赖; 如果不存在, 它会根据 toml 文件的配置去 `crates.io` 查询, 找到所有依赖最新的兼容版本, 构建一个完整的依赖关系图, 并将这个精确的图写入新的 `Cargo.lock` 文件;
-
-下载完所有依赖后, Cargo 会先编译依赖库, 然后编译仓库 src 目录下的代码;
-
-所有的编译产物最终会统一存放在 target 目录中.
+- 当执行 `cargo build` 时, Cargo 会先读取 `cargo.toml` 文件, 了解你的项目信息和直接依赖;
+	
+- 然后, 它会检查 `Cargo.lock` 文件是否存在, 如果存在, 其会按照文件记录的精确版本号去下载依赖; 如果不存在, 它会根据 toml 文件的配置去 `crates.io` 查询, 找到所有依赖最新的兼容版本, 构建一个完整的依赖关系图, 并将这个精确的图写入新的 `Cargo.lock` 文件;
+	
+- 下载完所有依赖后, Cargo 会先编译依赖库, 然后编译仓库 src 目录下的代码;
+	
+- 所有的编译产物最终会统一存放在 target 目录中.
