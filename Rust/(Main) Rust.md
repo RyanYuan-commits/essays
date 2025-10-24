@@ -8,13 +8,10 @@ updated: 2025-10-08 22:56:39
 ---
 
 ### [[(MoC) Basic Syntax]]
-
 ### [[(MoC) Project Management Tool Chain]]
-
 ### [[(MoC) Ownership and Memory Safety]]
-
 ## [[(MoC) Error Handling]]
-
 ## [[(MoC) Type System]]
+## [[(MoC) Functional Programming]]
 
 ---
