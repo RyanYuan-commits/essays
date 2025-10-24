@@ -15,3 +15,5 @@ updated: 2025-10-08 22:56:39
 ## [[(MoC) Functional Programming]]
 
 ---
+
+[[(MoC) Commonly Used APIs]]
