@@ -22,3 +22,22 @@ sub-type: APIs
 
 `fs::remote_file(path)`: 删除文件.
 
+## 2	Common Directory APIs
+
+`fs::create_dir(path)`: 创建一个新的目录;
+
+`fs::create_dir_all(path)`: 递归的创建一个目录和它的父目录;
+
+`fs::read_dir(path)`: 读取目录内容, 返回一个迭代器;
+
+`fs::remove_dir(path)`: 删除一个空目录;
+
+`fs::remove_dir_all`: 递归的删除一个目录及其所有的内容.
+
+## 3	Metadata and Path Handling
+
+`fs::metadata(path)`: 返回文件的元数据, 如大小, 所有权, 时间戳等;
+
+`fs::canonicalize(path)`: 返回一个绝对的, 规范化的路径;
+
+`DirEntry::path()`: 返回一个目录的完整路径.
