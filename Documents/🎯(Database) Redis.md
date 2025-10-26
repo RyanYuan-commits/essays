@@ -14,14 +14,4 @@ favicon: ""
 aspectRatio: "100"
 ```
 
-[[🧷【Redis】基本数据类型]]
-
-[[🥑【Redis】高级数据类型]]
-
-[[🍓【Redis】数据结构]]
-
-[[🏂【Redis】过期删除和内存淘汰]]
-
-[[📰【Redis】持久化]]
-
 [[🥠(Database) Redis.canvas|🥠(Database) Redis]]

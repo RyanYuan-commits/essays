@@ -558,7 +558,7 @@
 		{
 			"id":"927723b48bf1638f",
 			"styleAttributes":{"border":"invisible"},
-			"text":"[[🍵【Redis】字符串 string]]",
+			"text":"[[Redis String]]",
 			"type":"text",
 			"x":-540,
 			"y":-1657,
