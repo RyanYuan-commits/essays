@@ -1,105 +1,117 @@
 
 @charset "UTF-8";
-/* @settings
-name: 【杰森的效率工坊】文件夹多彩配色方案
-id: folder-color-schemes
-settings:
-    - 
-        id: folder-color-scheme-class
-        title: 配色方案
-        description: "为文件列表中的顶级文件夹选择一套循环配色方案。"
-        type: class-select
-        allowEmpty: false
-        default: folder-scheme-misty-morning
-        options:
-            - 
-                label: 北境极光 (Nord Aurora)
-                value: folder-scheme-nord
-            - 
-                label: 蔚蓝海岸 (Azure Coast)
-                value: folder-scheme-azure
-            - 
-                label: 蔷薇之梦 (Rose Dream)
-                value: folder-scheme-rose
-            - 
-                label: 暖阳柑橘 (Sunny Citrus)
-                value: folder-scheme-citrus
-            - 
-                label: 雨后初晴 (Pastel Rainbow)
-                value: folder-scheme-pastel
-            - 
-                label: 晨雾薄彩 (Misty Morning)
-                value: folder-scheme-misty-morning
-*/
 
 /* --- 基础设定 --- */
 :root {
   /* 定义文字颜色，以确保在彩色背景上的可读性 */
-  --folder-text-color: #2E3440;
+  --folder-text-color: #ffffff;
+  
+  /* ============================================ */
+  /* 配色方案选择区 - 取消注释您喜欢的方案即可 */
+  /* ============================================ */
+  
+  /* 方案1: 赛博朋克 (Cyberpunk) - 高对比度霓虹色 */
+  /* 特点: 鲜艳明亮，科技感强，适合追求视觉冲击力的用户 */
+  /* --folder-color-1: #ff006e;
+  --folder-color-2: #fb5607;
+  --folder-color-3: #ffbe0b;
+  --folder-color-4: #8338ec; 
+  --folder-color-5: #3a86ff;
+  --folder-color-6: #06ffa5; */
+  
+  /* 方案2: 暗夜霓虹 (Dark Neon) - 深色背景下的柔和霓虹 */
+  /* 特点: 比赛博朋克更柔和，保持高辨识度但不刺眼 */
+  --folder-color-1: #e91e63; 
+  --folder-color-2: #ff9800; 
+  --folder-color-3: #ffc107;
+  --folder-color-4: #9c27b0;
+  --folder-color-5: #2196f3;
+  --folder-color-6: #00bcd4;
+  
+  /* 方案3: 深海探索 (Deep Ocean) - 冷色调专业风格 */
+  /* 特点: 冷静专业，适合长时间工作，护眼舒适 */
+  /* --folder-color-1: #1a535c;
+  --folder-color-2: #4ecdc4;
+  --folder-color-3: #f7b801;
+  --folder-color-4: #7209b7;
+  --folder-color-5: #3a86ff;
+  --folder-color-6: #06ffa5;  */
+  
+  /* 方案4: 暗黑彩虹 (Dark Rainbow) - 降低饱和度的柔和彩虹 */
+  /* 特点: 色彩丰富但不刺眼，平衡视觉舒适度和辨识度 */
+  /* --folder-color-1: #e63946; */ /* 暗红 */
+  /* --folder-color-2: #f77f00; */ /* 暗橙 */
+  /* --folder-color-3: #fcbf49; */ /* 暗黄 */
+  /* --folder-color-4: #06a77d; */ /* 暗绿 */
+  /* --folder-color-5: #457b9d; */ /* 暗蓝 */
+  /* --folder-color-6: #a8dadc; */ /* 暗青 */
+  
+  /* 方案5: 暮光渐变 (Twilight) - 温暖紫粉渐变 */
+  /* 特点: 温柔浪漫，适合喜欢柔和色调的用户 */
+  /* --folder-color-1: #ff006e; */ /* 玫红 */
+  /* --folder-color-2: #fb5607; */ /* 暖橙 */
+  /* --folder-color-3: #8338ec; */ /* 紫罗兰 */
+  /* --folder-color-4: #3a0ca3; */ /* 深蓝紫 */
+  /* --folder-color-5: #4361ee; */ /* 宝石蓝 */
+  /* --folder-color-6: #4cc9f0; */ /* 天蓝 */
+  
+  /* 方案6: 暗色极简 (Dark Minimal) - 低饱和度专业配色 */
+  /* 特点: 极简专业，对比度适中，非常护眼 */
+  /* --folder-color-1: #c9184a; */ /* 深玫红 */
+  /* --folder-color-2: #ff6d00; */ /* 深橙 */
+  /* --folder-color-3: #ffba08; */ /* 金橙 */
+  /* --folder-color-4: #588157; */ /* 墨绿 */
+  /* --folder-color-5: #2a9d8f; */ /* 青绿 */
+  /* --folder-color-6: #6a4c93; */ /* 紫灰 */
+  
+  /* 方案7: 北境极光 (Nord Aurora) - 原方案 */
+  /* 特点: 柔和舒适，配色和谐 */
+  /* --folder-color-1: #d08770; */
+  /* --folder-color-2: #ebcb8b; */
+  /* --folder-color-3: #a3be8c; */
+  /* --folder-color-4: #88c0d0; */
+  /* --folder-color-5: #81a1c1; */
+  /* --folder-color-6: #b48ead; */
 }
 
+/* --- 核心逻辑区：为文件夹应用颜色 --- */
 
-/* --- 配色方案定义区 --- */
-/* Style Settings 插件会根据你的选择，应用下面的其中一个类来定义颜色 */
+/* 为顶级文件夹的背景上色 (6色循环) */
+.nav-files-container > .tree-item > .nav-folder:nth-child(6n+2) > .tree-item-self { background-color: var(--folder-color-1); }
+.nav-files-container > .tree-item > .nav-folder:nth-child(6n+3) > .tree-item-self { background-color: var(--folder-color-2); }
+.nav-files-container > .tree-item > .nav-folder:nth-child(6n+4) > .tree-item-self { background-color: var(--folder-color-3); }
+.nav-files-container > .tree-item > .nav-folder:nth-child(6n+5) > .tree-item-self { background-color: var(--folder-color-4); }
+.nav-files-container > .tree-item > .nav-folder:nth-child(6n+6) > .tree-item-self { background-color: var(--folder-color-5); }
+.nav-files-container > .tree-item > .nav-folder:nth-child(6n+1) > .tree-item-self { background-color: var(--folder-color-6); }
 
-/* 方案一：北境极光 (Nord Aurora) */
-.folder-scheme-nord {
-  --folder-color-1: #d08770; 
-  --folder-color-2: #ebcb8b; 
-  --folder-color-3: #a3be8c; 
-  --folder-color-4: #88c0d0; 
-  --folder-color-5: #81a1c1; 
-  --folder-color-6: #b48ead; 
+/* 为下一级子元素的"缩进指示线"也染上对应的颜色 (6色循环) */
+.nav-files-container > .tree-item > .nav-folder:nth-child(6n+2) .tree-item-children { --nav-indentation-guide-color: var(--folder-color-1); }
+.nav-files-container > .tree-item > .nav-folder:nth-child(6n+3) .tree-item-children { --nav-indentation-guide-color: var(--folder-color-2); }
+.nav-files-container > .tree-item > .nav-folder:nth-child(6n+4) .tree-item-children { --nav-indentation-guide-color: var(--folder-color-3); }
+.nav-files-container > .tree-item > .nav-folder:nth-child(6n+5) .tree-item-children { --nav-indentation-guide-color: var(--folder-color-4); }
+.nav-files-container > .tree-item > .nav-folder:nth-child(6n+6) .tree-item-children { --nav-indentation-guide-color: var(--folder-color-5); }
+.nav-files-container > .tree-item > .nav-folder:nth-child(6n+1) .tree-item-children { --nav-indentation-guide-color: var(--folder-color-6); }
+
+/* --- 辅助样式区：优化视觉效果 --- */
+
+/* 为所有被上了背景色的文件夹，强制设定一个统一的文字和图标颜色 */
+.nav-files-container .nav-folder .nav-folder-title-content,
+.nav-files-container .nav-folder .nav-folder-title,
+.nav-files-container .nav-folder .collapse-icon svg {
+    color: var(--folder-text-color) !important;
 }
 
-/* 方案二：蔚蓝海岸 (Azure Coast) */
-.folder-scheme-azure {
-  --folder-color-1: #eaf2f8;
-  --folder-color-2: #d4e6f1;
-  --folder-color-3: #a9cce3;
-  --folder-color-4: #7fb3d5;
-  --folder-color-5: #5499c7;
-  --folder-color-6: #3471a9;
+/* 当鼠标悬浮在已上色的文件夹上时，保持文字颜色不变 */
+.nav-files-container .nav-folder .tree-item-self:hover .nav-folder-title-content,
+.nav-files-container .nav-folder .tree-item-self:hover .nav-folder-title {
+    color: var(--folder-text-color) !important;
 }
 
-/* 方案三：蔷薇之梦 (Rose Dream) */
-.folder-scheme-rose {
-  --folder-color-1: #fdebde;
-  --folder-color-2: #f6c8d7;
-  --folder-color-3: #e8b3c5;
-  --folder-color-4: #d89eb6;
-  --folder-color-5: #c68ba8;
-  --folder-color-6: #b27a97;
-}
-
-/* 方案四：暖阳柑橘 (Sunny Citrus) */
-.folder-scheme-citrus {
-  --folder-color-1: #fff0db;
-  --folder-color-2: #fde4ce;
-  --folder-color-3: #fbd3af;
-  --folder-color-4: #fac391;
-  --folder-color-5: #f8b373;
-  --folder-color-6: #f6a254;
-}
-
-/* 方案五：雨后初晴 (Pastel Rainbow) */
-.folder-scheme-pastel {
-  --folder-color-1: #e99494; 
-  --folder-color-2: #c5a9d6; 
-  --folder-color-3: #b3d1a0; 
-  --folder-color-4: #d0d999; 
-  --folder-color-5: #a0b9d4; 
-  --folder-color-6: #9fcae6; 
-}
-
-/* 方案六：晨雾薄彩 (Misty Morning) - 默认 */
-.folder-scheme-misty-morning {
-  --folder-color-1: #e9d5d5; 
-  --folder-color-2: #e9e0d5; 
-  --folder-color-3: #d5e9d5; 
-  --folder-color-4: #d5e4e9; 
-  --folder-color-5: #d5d9e9; 
-  --folder-color-6: #e9d5e7; 
+/* 为已上色的文件夹添加一些边距和圆角 */
+.nav-files-container .nav-folder > .tree-item-self {
+    margin: 1px 4px 1px 0;
+    border-radius: 5px;
+    padding: 4px 8px !important;
 }
 
 
@@ -126,18 +138,21 @@ settings:
 /* --- 辅助样式区：优化视觉效果 --- */
 
 /* 为所有被上了背景色的文件夹，强制设定一个统一的文字和图标颜色 */
-.nav-files-container > div > .nav-folder > .tree-item-self[style*="background-color"] .nav-folder-title,
-.nav-files-container > div > .nav-folder > .tree-item-self[style*="background-color"] .collapse-icon svg {
+.nav-files-container > div > .nav-folder .nav-folder-title-content,
+.nav-files-container > div > .nav-folder .nav-folder-title,
+.nav-files-container > div > .nav-folder .collapse-icon svg {
     color: var(--folder-text-color) !important;
 }
 
 /* 当鼠标悬浮在已上色的文件夹上时，保持文字颜色不变 */
-.nav-files-container > div > .nav-folder > .tree-item-self[style*="background-color"]:hover {
+.nav-files-container > div > .nav-folder .tree-item-self:hover .nav-folder-title-content,
+.nav-files-container > div > .nav-folder .tree-item-self:hover .nav-folder-title {
     color: var(--folder-text-color) !important;
 }
 
 /* 为已上色的文件夹添加一些边距和圆角 */
-.nav-files-container > div > .nav-folder > .tree-item-self[style*="background-color"] {
+.nav-files-container > div > .nav-folder > .tree-item-self {
     margin: 1px 4px 1px 0;
     border-radius: 5px;
+    padding: 4px 8px !important;
 }
