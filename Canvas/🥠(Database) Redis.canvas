@@ -608,7 +608,7 @@
 		{
 			"id":"698d3b0da9142118",
 			"styleAttributes":{"border":"invisible"},
-			"text":"[[🏰【Redis】有序集合 ZSet]]",
+			"text":"[[Redis ZSet]]",
 			"type":"text",
 			"x":-540,
 			"y":-1357,
