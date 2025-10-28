@@ -2,4 +2,4 @@
 type: Database
 sub-type: Redis
 ---
-[[Redis String]]
+## [[(MoC) Redis Data Type]]
