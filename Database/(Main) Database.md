@@ -1,7 +1,7 @@
 ---
 cover: ../images/cover-Database.png
 ---
-[[🍝(Database) MySQL]]
+[[(MoC) MySQL]]
 
 [[☃️(Database) ElasticSearch]]
 

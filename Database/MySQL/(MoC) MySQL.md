@@ -2,8 +2,6 @@
 type: Database
 sub-type: MySQL
 finished: "true"
-created: 2025-09-27 22:34:06
-updated: 2025-09-27 22:34:06
 ---
 ## 基础知识
 
@@ -33,13 +31,7 @@ updated: 2025-09-27 22:34:06
 
 [[🥽【MySQL】归档记录 bin log]]
 
-## 事务
-
-[[🎎【事务】基本介绍]]
-
-[[🐿️【MySQL】隔离级别底层原理]]
-
-[[🤿【MySQL】幻读问题]]
+## [[(MoC) Transaction]]
 
 ## 锁
 

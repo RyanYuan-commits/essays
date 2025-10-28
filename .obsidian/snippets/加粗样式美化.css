@@ -1,0 +1,6 @@
+/* Bold */
+.cm-strong,
+.markdown-preview-view strong,
+.callout strong {
+    color: #f83777;
+}

@@ -1,7 +1,7 @@
 body {
   
   /* 内部链接颜色 */
-  --link-color: #5291e5;
+  --link-color: rgba(135, 176, 85, 1);
   
   /* 鼠标经过当前行内部链接文字颜色 */
   --link-color-hover: var(--text-accent);

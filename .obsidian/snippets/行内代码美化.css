@@ -13,9 +13,9 @@
 	border-color: #91d5ff;
 }
 .theme-dark .markdown-source-view span.cm-inline-code{
-    color: #0050b3;
-    background-color: #e6f7ff;
-    border-color: #91d5ff;
+    color: #e7d3ae;
+    background-color: #282c34;
+    border-color: #343942;
 }
 /*阅读模式*/
 .markdown-reading-view :not(pre) > code {
@@ -32,7 +32,7 @@
     border-color: #91d5ff;
 }
 .theme-dark .markdown-reading-view :not(pre) > code {
-    color: #0050b3;
-    background-color: #e6f7ff;
-    border-color: #91d5ff;
+    color: #e7d3ae;
+    background-color: #282c34;
+    border-color: #343942;
 }
