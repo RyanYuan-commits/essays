@@ -3,6 +3,6 @@ cover: ../images/cover-Database.png
 ---
 [[(MoC) MySQL]]
 
-[[☃️(Database) ElasticSearch]]
+[[(Database) ElasticSearch]]
 
-[[🎯(Database) Redis]]
+[[(Database) Redis]]

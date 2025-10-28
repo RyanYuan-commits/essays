@@ -13,7 +13,7 @@ updated: 2025-10-08 22:56:39
 ## [[(MoC) Error Handling]]
 ## [[(MoC) Type System]]
 ## [[(MoC) Functional Programming]]
-
+## [[(MoC) Smart Pointers]]
 ---
 
 ## [[(MoC) Commonly Used APIs]]

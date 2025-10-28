@@ -29,7 +29,7 @@ pub trait Iterator {
 }
 ```
 
-`Iterator` 特质只需要实现者, 定义一个 `next` 方法, 该方法会一次返回一个封装在 `Some` 中的迭代器条目, 当迭代完毕时, 就会返回 `None`.
+`Iterator` Trait 只需要实现者, 定义一个 `next` 方法, 该方法会一次返回一个封装在 `Some` 中的迭代器条目, 当迭代完毕时, 就会返回 `None`.
 
 ```rust
 #[test]
