@@ -2,5 +2,5 @@
 .cm-strong,
 .markdown-preview-view strong,
 .callout strong {
-    color: #f83777;
+    color: #f83777 !important;
 }

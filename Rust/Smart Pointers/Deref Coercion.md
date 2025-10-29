@@ -18,26 +18,25 @@ print(&s1[..]);
 print(&(*s2)[..]);
 ```
 
-这样的代码繁琐且充满了认知负担, Deref Coercion 正是为了解决这个问题, 它的目标是: 在不牺牲任何安全性的前提下, 让编译器自动处理这些常见且安全的 Pointer 类型到其所指向内容的 Reference 的转化, 从而大大提升代码的便利性和可读性.
+这样的代码繁琐且充满了认知负担, Deref Coercion 正是为了解决这个问题, 它的目标是: **在不牺牲任何安全性的前提下, 让编译器自动处理这些常见且安全的 Pointer 类型到其所指向内容的 Reference 的转化, 从而大大提升代码的便利性和可读性.**
+
+实现 `Deref` Trait 允许我们自定义解引用操作符, 通过实现 `Deref` 灵巧指针也可以被当做普通指针来对待, 操作普通指针的代码便可以应用在灵巧指针上.
 
 ## 2	Operation Mechanism
 
 ### 2.1	Deref Trait
 
 ```rust
+// std::ops::Deref
 trait Deref {
     type Target; // 关联类型，指定解引用后得到什么类型
     fn deref(&self) -> &Self::Target; // 核心方法，返回一个指向 Target 的引用
 }
 ```
 
-Deref Trait 是整个机制的基石, 任何类型 `T` 如果实现了 `Deref<Target=U>` 就等于向编译器声明: 你可以把 `&T` 当做一个指向 `U` 的引用 `&U` 来看待; 例如, `String` 类型实现了 `Deref<Target=str>`.
+`Deref` Trait 是整个机制的基石, 任何类型 `T` 如果实现了 `Deref<Target=U>` 就等于向编译器声明: 你可以把 `&T` 当做一个指向 `U` 的引用 `&U` 来看待; 例如, `String` 类型实现了 `Deref<Target=str>`, 这代表了 `&String` 可以转化为 `&str` 使用.
 
-### 2.2	Complier Rules
-
-编译器内置了一套规则, 当函数或者方法发现类型不匹配时, 它会尝试进行 Deref Coercion;
-
-这个过程是**静默的**, **连续的**, 如果 `&A` 可以被解引用未 `&B`, 而 `&B` 有可以被解引用为 `&C`, 那么编译器会将 `&A` 强制转化为 `&C`.
+编译器内置了一套规则, 当函数或者方法发现入参中的**引用**类型不匹配时, 会自动尝试进行 Deref Coercion, 整个过程是**静默的**, **连续的**.
 
 ### 2.3	Execution Steps
 
