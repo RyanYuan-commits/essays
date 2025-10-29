@@ -5,7 +5,7 @@ finished: "true"
 ---
 ## 基础知识
 
-[[🏝️【MySQL】EXPLAIN 语句]]
+[[【MySQL】EXPLAIN 语句]]
 
 [[🍊【MySQL】执行流程]]
 

@@ -12,5 +12,5 @@ views:
       - property: file.mtime
         direction: DESC
     limit: 15
-    cardSize: 310
+    cardSize: 470
     imageAspectRatio: 0.25

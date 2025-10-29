@@ -4,7 +4,7 @@ updated: 2025-09-27 22:34:06
 ---
 - [[🔮(Java) Dubbo]]
 - [[🔭(Java) Mybatis]]
-- [[♨️(Java) Spring]]
+- [[(Java) Spring]]
 - [[❇️(Java) SpringMVC]]
 - [[📰(Java) Netty]]
 
