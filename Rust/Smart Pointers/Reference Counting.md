@@ -12,4 +12,27 @@ sub-type: Smart Pointers
 
 - Weak Count: 记录 `Weak<T>` 指针的数量, 用于解决循环引用.
 
-使用 `Rc::new` 来创建数据, Strong Count = 1, 后续可以使用 `Rc::Clone` 来将 Strong Count + 1,   
+使用 `Rc::new` 来创建数据, Strong Count = 1, 后续可以使用 `Rc::Clone` 来将 Strong Count + 1, 当引用离开其作用域时, Strong Count 会自动减一, 若减到 0, 则立即 `drop` 并释放堆内存. 
+
+## 2	The Rules
+
+### 2.1	Single-Threading vs Multi-Threading
+
+`Rc<T>` (Reference Counted): **只用于单线程**. 它的计数增减是非原子的, 速度快.
+    
+`Arc<T>` (Atomic Reference Counted): **用于多线程**. 它的计数是原子操作, 保证线程安全, 性能略低.
+    
+试图在线程间传递 `Rc<T>` 会导致编译错误.
+
+### 2.2	Immutability
+
+`Rc<T>` 默认只提供对数据的 **不可变** 引用, 如果数据被多方共享, 如果一方能任意修改, 会对其他方造成混乱.
+
+如果想要修改其中的数据, 可以结合 `RefCell` 或者 `Mutex` 使用.
+
+### 2.3	Reference Cycles
+
+在 Rust 中, 如果两个对象互相持有对方的 Reference Counting, 则两者的计数器永远不会为 0, 此时就出现了循环引用问题;
+
+这时候需要使用 Weak Reference 来解决, `Weak<T>` 是一种特殊的智能指针, 使用 `Rc::downgrade(rc_ptr)` 来创建:
+
