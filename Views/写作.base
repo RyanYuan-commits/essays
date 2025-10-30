@@ -28,13 +28,3 @@ views:
       file.name: 360
       note.type: 456
       note.sub-type: 170
-  - type: cards
-    name: 视图 2
-    filters:
-      and:
-        - finished == "false"
-        - tag != "clipper"
-    order:
-      - file.name
-      - file.mtime
-    cardSize: 330

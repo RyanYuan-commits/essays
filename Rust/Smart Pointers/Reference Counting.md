@@ -34,5 +34,5 @@ sub-type: Smart Pointers
 
 在 Rust 中, 如果两个对象互相持有对方的 Reference Counting, 则两者的计数器永远不会为 0, 此时就出现了循环引用问题;
 
-这时候需要使用 Weak Reference 来解决, `Weak<T>` 是一种特殊的智能指针, 使用 `Rc::downgrade(rc_ptr)` 来创建:
+这时候需要使用 Weak Reference 来解决, `Weak<T>` 是一种特殊的智能指针, 使用 `Rc::downgrade(rc_ptr)` 来创建.
 
