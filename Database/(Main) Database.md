@@ -1,8 +1,6 @@
 ---
 cover: ../images/cover-Database.png
 ---
-[[(MoC) MySQL]]
-
-[[(Database) ElasticSearch]]
-
-[[(Database) Redis]]
+## [[(MoC) MySQL]]
+## [[(Database) ElasticSearch]]
+## [[(MoC) Redis]]

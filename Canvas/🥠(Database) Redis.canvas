@@ -598,7 +598,7 @@
 		{
 			"id":"d509a698a7d2646f",
 			"styleAttributes":{"border":"invisible"},
-			"text":"[[🥭【Redis】集合 Set]]",
+			"text":"[[Redis Set]]",
 			"type":"text",
 			"x":-540,
 			"y":-1427,
