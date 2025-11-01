@@ -4,8 +4,19 @@ sub-type: Basic
 ---
 ## 1	Following the Reference to the Value
 
+常规的引用是一个指针类型, 指针可以理解为指向存储在其他某处值的箭头: 
 
+```rust
+fn main() {
+	let x = 5;
+	let y = &x;
+	
+	assert_eq!(5, x);
+	assert_eq!(5, *y);
+}
+```
 
+使用 `*y` 来追踪 y 引用的值.
 
 ## 2	Why Deref Coercion
 
