@@ -2,10 +2,11 @@
 created: 2025-09-27 22:34:06
 updated: 2025-09-27 22:34:06
 ---
-## 1 类与构造函数
+## 类与构造函数
 
-Kotlin 旨在消除冗余, 让类回归其描述事物的本质, 形式上和 Java 的 Records 类型非常类似;
-### 1.1 主构造函数
+Kotlin 旨在消除冗余, 让类回归其描述事物的本质, 形式上和 Java 的 `Records` 非常类似;
+
+### 主构造函数
 
 ```kotlin
 class Person(val id: Long, val name: String, var email: String) {
@@ -21,11 +22,9 @@ class Person(val id: Long, val name: String, var email: String) {
 val person = Person(1L, "Alice", "alice@example.com")
 ```
 
-Kotlin 引入了主构造函数的概念, 它是类头的一部分, 通常用于声明和初始化属性;
+Kotlin 引入了主构造函数的概念, 它是类头的一部分, 通常用于声明和初始化属性; 这样声明的属性会自带`get` 和 `set` 方法;
 
-这样声明的属性会自带`get` 和 `set` 方法;
-
-### 1.2 次构造函数
+### 次构造函数
 
 ```kotlin
 class HttpRequest(val url: String, val method: String, val timeout: Int) {
@@ -40,11 +39,9 @@ val postRequest = HttpRequest("https://api.example.com/data", "POST", 5000)
 val getRequest = HttpRequest("https://api.example.com/data", 3000) // 调用次构造函数
 ```
 
-当需要提供多种创建对象方法的时候, 可以使用次构造函数;
+当需要提供多种创建对象方法的时候, 可以使用次构造函数; 如果类有主构造函数, 所有次构造函数都必须直接或间接地委托给主构造函数 (`this(...)`).
 
-如果类有主构造函数, 所有次构造函数都必须直接或间接地委托给主构造函数 (`this(...)`).
-
-## 2 属性与字段
+## 属性与字段
 
 ```kotlin
 class Employee {
@@ -71,11 +68,12 @@ emp.department = "  Engineering  " // 调用自定义 setter
 println(emp.description) // 调用自定义 getter
 ```
 
-## 3 继承与多态
+## 继承与多态
 
 Kotlin 在继承方面采用了更安全的设计哲学 "默认关闭".
 
 - 类和方法默认是 `final` 的, 如果要允许继承, 需要使用 `open` 标记;
+	
 - 重写父类的方法或者属性, 必须使用 `override` 关键字明确标注.
 
 ```kotlin
