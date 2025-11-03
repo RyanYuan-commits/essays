@@ -2,7 +2,23 @@
 type: Rust
 sub-type: Basic
 ---
-## 1	Why Deref Coercion
+## 1	Following the Reference to the Value
+
+常规的引用是一个指针类型, 指针可以理解为指向存储在其他某处值的箭头: 
+
+```rust
+fn main() {
+	let x = 5;
+	let y = &x;
+	
+	assert_eq!(5, x);
+	assert_eq!(5, *y);
+}
+```
+
+使用 `*y` 来追踪 y 引用的值.
+
+## 2	Why Deref Coercion
 
 Rust 的 Ownership 是其安全性的基石, 它要求类型必须精确匹配, 例如, 一个函数的 syntax 是 `fn print(msg: &str)`, 那么理论上你只能传递一个 `&str` 类型的值. 此时, 假设你有这么两种类型的字符串: 
 
@@ -22,9 +38,9 @@ print(&(*s2)[..]);
 
 实现 `Deref` Trait 允许我们自定义解引用操作符, 通过实现 `Deref` 灵巧指针也可以被当做普通指针来对待, 操作普通指针的代码便可以应用在灵巧指针上.
 
-## 2	Operation Mechanism
+## 3	Operation Mechanism
 
-### 2.1	Deref Trait
+### 3.1	Deref Trait
 
 ```rust
 // std::ops::Deref
@@ -38,7 +54,7 @@ trait Deref {
 
 编译器内置了一套规则, 当函数或者方法发现入参中的**引用**类型不匹配时, 会自动尝试进行 Deref Coercion, 整个过程是**静默的**, **连续的**.
 
-### 2.3	Execution Steps
+### 3.2	Execution Steps
 
 Deref Coercion 触发的时机是: **当一个值的引用作为参数传递给函数或方法时, 如果其实际类型与期望类型不符, 编译器就会介入**.
 
@@ -78,7 +94,7 @@ fn print(s: &str) {
 }
 ```
 
-## 3	Associated Functions
+## 4	Associated Functions
 
 所有在 `impl` 块中定义的**函数**称为 associated functions;
 
