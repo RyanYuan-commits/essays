@@ -223,6 +223,4 @@ val separator = Path.SEPARATOR
 val myPath = Path.from("/usr/local/bin ")
 ```
 
-Kotlin 用于替代 Java `static` 成员的方案, 本质是一个与外部类紧密关联的单例对象;
-
-伴生对象可以实现接口, 拥有自己的父类, 比 Java 的 `static` 更加灵活和强大.
+Kotlin 用于替代 Java `static` 成员的方案, 本质是一个与外部类紧密关联的单例对象; 伴生对象可以实现接口, 拥有自己的父类, 比 Java 的 `static` 更加灵活和强大.
