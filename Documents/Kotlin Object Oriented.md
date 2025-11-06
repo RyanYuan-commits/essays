@@ -2,9 +2,9 @@
 created: 2025-09-27 22:34:06
 updated: 2025-09-27 22:34:06
 ---
-## 类与构造函数
+## 1	类与构造函数
 
-### 主构造函数
+### 1.1	主构造函数
 
 ```kotlin
 class Person(val id: Long, val name: String, var email: String) {
@@ -22,7 +22,7 @@ val person = Person(1L, "Alice", "alice@example.com")
 
 Kotlin 引入了主构造函数的概念, 它是类头的一部分, 通常用于声明和初始化属性; 这样声明的属性会自带`get` 和 `set` 方法;
 
-### 次构造函数
+### 1.2	次构造函数
 
 ```kotlin
 class HttpRequest(val url: String, val method: String, val timeout: Int) {
@@ -39,7 +39,7 @@ val getRequest = HttpRequest("https://api.example.com/data", 3000) // 调用次�
 
 当需要提供多种创建对象方法的时候, 可以使用次构造函数; 如果类有主构造函数, 所有次构造函数都必须直接或间接地委托给主构造函数 (`this(...)`).
 
-## 属性与字段
+## 2	属性与字段
 
 ```kotlin
 class Employee {
@@ -66,7 +66,7 @@ emp.department = "  Engineering  " // 调用自定义 setter
 println(emp.description) // 调用自定义 getter
 ```
 
-## 继承与多态
+## 3	继承与多态
 
 Kotlin 在继承方面采用了更安全的设计哲学 "默认关闭".
 
@@ -94,7 +94,7 @@ class Rectangle(name: String, val width: Double, val height: Double) : Polygon(n
 }
 ```
 
-## 接口与抽象类
+## 4	接口与抽象类
 
 ```kotlin
 // 接口可以有抽象属性和带默认实现的方法
@@ -123,7 +123,8 @@ class Eagle(name: String) : Bird(name), Flyable {
 }
 ```
 
-##  可见性修饰符
+## 5	 可见性修饰符
+
 | 修饰符       | 范围     | 描述                      |
 | --------- | ------ | ----------------------- |
 | public    | 所有地方   | 所有地方可见                  |
@@ -131,9 +132,9 @@ class Eagle(name: String) : Bird(name), Flyable {
 | protected | 类和子类   | 与 Java 类似               |
 | private   | 类/文件内部 | 在生命它的类或文件内部可见           |
 
-## Kotlin 特殊类
+## 6	Kotlin 特殊类
 
-### 数据类
+### 6.1	数据类
 
 为存储数据而生的类, 自动生成核心样板代码, 适合作为 DTO 类使用;
 
@@ -160,7 +161,7 @@ fun main() {
 }
 ```
 
-### 密封类
+### 6.2	密封类
 
 创建一种可控的, 有限的类结构层次, 是枚举的超集.
 
@@ -183,9 +184,9 @@ fun handleState(state: NetworkState) {
 }
 ```
 
-### 单例对象与伴生对象
+### 6.3	单例对象与伴生对象
 
-#### 单例 Object
+#### 6.3.1	单例 Object
 
 ```kotlin
 // 一个线程安全的单例
@@ -201,7 +202,7 @@ AppSettings.theme = "light"
 
 与 Java 相比, 极大的简化了单例模式的实现.
 
-#### 伴生对象
+#### 6.3.2	伴生对象
 
 ```kotlin
 class Path private constructor(val fullPath: String) {
