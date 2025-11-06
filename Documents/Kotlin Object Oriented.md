@@ -94,7 +94,7 @@ class Rectangle(name: String, val width: Double, val height: Double) : Polygon(n
 }
 ```
 
-## 4 接口与抽象类
+## 接口与抽象类
 
 ```kotlin
 // 接口可以有抽象属性和带默认实现的方法
@@ -123,7 +123,7 @@ class Eagle(name: String) : Bird(name), Flyable {
 }
 ```
 
-## 5 可见性修饰符
+##  可见性修饰符
 | 修饰符       | 范围     | 描述                      |
 | --------- | ------ | ----------------------- |
 | public    | 所有地方   | 所有地方可见                  |
@@ -131,9 +131,9 @@ class Eagle(name: String) : Bird(name), Flyable {
 | protected | 类和子类   | 与 Java 类似               |
 | private   | 类/文件内部 | 在生命它的类或文件内部可见           |
 
-## 6 Kotlin 特殊类
+## Kotlin 特殊类
 
-### 6.1 数据类
+### 数据类
 
 为存储数据而生的类, 自动生成核心样板代码, 适合作为 DTO 类使用;
 
@@ -160,7 +160,7 @@ fun main() {
 }
 ```
 
-### 6.2 密封类
+### 密封类
 
 创建一种可控的, 有限的类结构层次, 是枚举的超集.
 
@@ -183,7 +183,7 @@ fun handleState(state: NetworkState) {
 }
 ```
 
-### 6.3 对象与伴生对象
+### 单例对象与伴生对象
 
 #### 单例 Object
 
