@@ -9,8 +9,8 @@ topic: Kotlin
 
 [[Kotlin Object Oriented]]
 
-[[🔱(Kotlin) 空安全机制]]
+[[Kotlin Null Safety]]
 
-[[🍓(Kotlin) String]]
+[[Kotlin String]]
 
-[[🛰️(Kotlin) 函数]]
+[[Kotlin Functions]]

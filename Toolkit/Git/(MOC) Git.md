@@ -2,6 +2,4 @@
 
 ## [[Basic Commands]]
 
-## [[gitignore]]
-
 ## [[Rebase]]

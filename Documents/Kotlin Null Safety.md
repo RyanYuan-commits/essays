@@ -3,6 +3,7 @@ created: 2025-09-27 22:34:06
 updated: 2025-09-27 22:34:06
 ---
 Kotlin 的空安全机制是其最显著的特征之一, 它旨在消除代码中的空指针异常. 在 Kotlin 中, 类型系统明确区分了可以持有 null 的引用和不能持有 null 的引用.
+
 ## 1 空安全基础知识
 
 ### 1.1 可空类型与非空类型
@@ -129,7 +130,7 @@ data class User(val name: String = "", val age: Int = 0)
 ### 3.3 避免过度使用非空断言
 
 ```kotlin
-// 不好的做法
+		// 不好的做法
 val user: User? = getUser()
 val name = user!!.name // 危险, 可能抛出 NPE
 
