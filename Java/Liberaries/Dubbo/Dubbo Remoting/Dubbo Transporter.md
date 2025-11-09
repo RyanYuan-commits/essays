@@ -9,4 +9,5 @@ topic: Dubbo
 
 ## 1	AbstractPeer
 
-AbstractPeer 抽象类同时实现了 [[Dubbo Remoting 概览#2.1 Endpoint|Endpoint]] 和 [[Dubbo Remoting 概览#2.3 ChannelHandler|ChannelHandler]] 接口, 代表在网络通信中一个对等的, 可交互的端点, Dubbo 
+AbstractPeer 抽象类同时实现了 [[Dubbo Remoting 概览#2.1 Endpoint|Endpoint]] 和 [[Dubbo Remoting 概览#2.3 ChannelHandler|ChannelHandler]] 接口, 代表在网络通信中一个对等的, 可交互的端点. AbstractPeer 是 AbstractChannel 和 AbstractEndpoint 的父类.
+
