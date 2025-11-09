@@ -5,10 +5,9 @@ finished: "true"
 created: 2025-09-27 22:34:06
 updated: 2025-09-27 22:34:06
 ---
+## 1	Channel 简介
 
-## 1 Channel 简介
-
-### 1.1 什么是 Channel
+### 1.1	什么是 Channel
 
 在 OIO 中, 同一个网络连接会关联到输入流和输出流, Java 应用程序通过这两个流进行输入和输出. 
 
@@ -16,7 +15,7 @@ updated: 2025-09-27 22:34:06
 
 ![[channel 与 Buffer 读写.png|600]]
 
-### 1.2 Channel 的本质
+### 1.2	Channel 的本质
 
 要清楚的回答这个问题, 还得回到TCP/IP协议的四层模型的基础知识. 具体如下图所示:
 
@@ -49,7 +48,7 @@ public final class FileDescriptor {
 
 ![[两个 Java 通过 NIO 连接.png|800]]
 
-## 2 Channel 类详解
+## 2	Channel 类详解
 
 Java NIO 中, 一个 socket 连接使用一个 Channel 来表示. 然而, 从更广泛的层面来说, 一个通道封装了一个底层的文件描述符, 例如硬件设备、文件、网络连接等. 所以, 与文件描述符相对应, Java NIO 的通道分为很多类型. 
 
@@ -62,13 +61,9 @@ Java NIO 中, 一个 socket 连接使用一个 Channel 来表示. 然而, 从更
 
 这个四种通道, 涵盖了文件 IO、TCP 网络、UDP IO 三类基础 IO 读写操作.
 
-### 2.1 FileChannel 文件通道
+### 2.1	FileChannel 文件通道
 
-`FileChannel` 是专门操作文件的通道. 通过 `FileChannel`, 既可以从一个文件中读取数据, 也可以将数据写入到文件中. 
-
-特别申明一下, `FileChannel` 为阻塞模式, 不能设置为非阻塞模式. 
-
-获取:
+`FileChannel` 是专门操作文件的通道. 通过 `FileChannel`, 既可以从一个文件中读取数据, 也可以将数据写入到文件中.  `FileChannel` 为阻塞模式, 不能设置为非阻塞模式. 
 
 ```java
 static void getChannel() throws FileNotFoundException {  
@@ -87,12 +82,7 @@ static void getChannel() throws FileNotFoundException {
     RandomAccessFile randomAccessFile = new RandomAccessFile(file, "rw");  
     FileChannel randomAccessFileChannel = randomAccessFile.getChannel();  
 }
-```
 
-
-读取:
-
-```java
 public class FileChannelDemo {  
     public static void main(String[] args) throws IOException, URISyntaxException {  
         File file = new File(FileChannelDemo.class.getResource("/file.txt").toURI());  
@@ -108,12 +98,7 @@ public class FileChannelDemo {
         }  
     }  
 }
-```
 
-
-写入:
-
-```java
 public class FileChannelDemo {  
     public static void main(String[] args) throws IOException, URISyntaxException {  
 	    // 获取 File 对象
@@ -187,7 +172,7 @@ static void fileCopy(File sourceFile, File destFile) {
 }
 ```
 
-### 2.2 SocketChannel 套接字通道
+### 2.2	SocketChannel 套接字通道
 
 在 NIO 中, 涉及网络连接的通道有两个：一个是 `SocketChannel` 负责连接的数据传输, 另一个是 `ServerSocketChannel` 负责连接的监听. 
 
@@ -309,7 +294,7 @@ public class SocketChannelDemo {
 }
 ```
 
-### 2.3 DatagramChannel 数据报通道
+### 2.3	DatagramChannel 数据报通道
 
 在 Java 中使用 UDP 协议传输数据, 比 TCP 协议更加简单. 和 Socket 套接字的 TCP 传输协议不同, UDP协议不是面向连接的协议, 只要知道服务器的IP和端口, 就可以直接向对方发送数据. 
 
