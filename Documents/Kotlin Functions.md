@@ -1,6 +1,8 @@
 ---
 created: 2025-09-27 22:34:06
 updated: 2025-09-27 22:34:06
+type: Java
+sub-type: Other Jvm Language
 ---
 Kotlin 和 Python 一样, 都有 "函数是一等公民" 的概念, 这意味着函数可以:
 

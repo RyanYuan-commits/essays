@@ -1,6 +1,8 @@
 ---
 created: 2025-09-27 22:34:06
 updated: 2025-09-27 22:34:06
+type: Java
+sub-type: Other Jvm Language
 ---
 ## 1 字符串基础
 

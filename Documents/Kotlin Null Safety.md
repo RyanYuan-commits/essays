@@ -1,6 +1,8 @@
 ---
 created: 2025-09-27 22:34:06
 updated: 2025-09-27 22:34:06
+type: Java
+sub-type: Other Jvm Language
 ---
 Kotlin 的空安全机制是其最显著的特征之一, 它旨在消除代码中的空指针异常. 在 Kotlin 中, 类型系统明确区分了可以持有 null 的引用和不能持有 null 的引用.
 
