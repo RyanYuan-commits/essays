@@ -17,6 +17,7 @@ views:
       - file.name
       - type
       - sub-type
+      - topic
     sort:
       - property: file.mtime
         direction: DESC

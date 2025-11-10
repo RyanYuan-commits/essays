@@ -1,5 +1,10 @@
-## [[(MoC) Core Engine & Internal Mechanisms]]
+---
+type: Java
+sub-type: Framework
+topic: Dubbo
+---
+![[Dubbo 整体设计.png|600]]
+### [[(MoC) Dubbo Remoting]]
 
-### [[调用流程源码阅读]]
+### [[(MoC) Dubbo Others]]
 
-[[Dubbo Remoting]]
