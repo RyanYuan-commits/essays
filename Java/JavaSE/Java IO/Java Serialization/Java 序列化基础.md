@@ -37,9 +37,9 @@ public class User implements Serializable {
 	    return "User{" + "name='" + name + '\'' + ", age=" + age + '}';
 	}
 }
-```
 
-```java
+// ====== Use is ======
+
 User user = new User("Alice", 30); String filename = "user.dat";
 
 // 1. 序列化 (写入文件)
