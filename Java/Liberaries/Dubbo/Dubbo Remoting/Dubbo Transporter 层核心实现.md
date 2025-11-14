@@ -120,3 +120,30 @@ private final ConcurrentMap<String, ConcurrentMap<String, ExecutorService>> data
 
 第一层的 key 表示线程池属于 Provider 还是 Consumer 端, 第二层 Key 表示线程池关联服务的端口.
 
+DefaultExecutorRepository.createExecutorIfAbsent 方法会根据 URL 参数创建相应的线程池并存放在合适的位置:
+
+```java
+@Override
+public synchronized ExecutorService createExecutorIfAbsent(URL url) {
+	String executorKey = getExecutorKey(url);
+	ConcurrentMap<String, ExecutorService> executors =
+			ConcurrentHashMapUtils.computeIfAbsent(data, executorKey, k -> new ConcurrentHashMap<>());
+
+	String executorCacheKey = getExecutorSecondKey(url);
+
+	url = setThreadNameIfAbsent(url, executorCacheKey);
+
+	URL finalUrl = url;
+	ExecutorService executor =
+			ConcurrentHashMapUtils.computeIfAbsent(executors, executorCacheKey, k -> createExecutor(finalUrl));
+	// If executor has been shut down, create a new one
+	if (executor.isShutdown() || executor.isTerminated()) {
+		executors.remove(executorCacheKey);
+		executor = createExecutor(url);
+		executors.put(executorCacheKey, executor);
+	}
+	dataStore.put(executorKey, executorCacheKey, executor);
+	return executor;
+}
+```
+
