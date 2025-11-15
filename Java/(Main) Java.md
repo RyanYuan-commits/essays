@@ -9,6 +9,6 @@ cover: ../images/cover-Java.png
 
 ### [[(MOC) Advanced Features]]
 
-### [[(MoC)  Java Liberaries]]
+### [[(MoC) Java Liberaries]]
 
 ### [[(MoC) Other Jvm Languages]]
