@@ -45,13 +45,9 @@ sub-type: Gather
 ## 4 🧅(Java) IO
 
 - [Java IO 模型](https://dunwu.github.io/01.Java/01.JavaSE/04.IO/01.JavaIO%E6%A8%A1%E5%9E%8B.html) - 关键词：`InputStream`、`OutputStream`、`Reader`、`Writer`、`阻塞`
-- [Java NIO](https://dunwu.github.io/01.Java/01.JavaSE/04.IO/02.JavaNIO.html) - 关键词：`Channel`、`Buffer`、`Selector`、`非阻塞`、`多路复用`
 - [Java 序列化](https://dunwu.github.io/01.Java/01.JavaSE/04.IO/03.Java%E5%BA%8F%E5%88%97%E5%8C%96.html) - 关键词：`Serializable`、`serialVersionUID`、`transient`、`Externalizable`、`writeObject`、`readObject`
 - [Java 网络编程](https://dunwu.github.io/01.Java/01.JavaSE/04.IO/04.Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html) - 关键词：`Socket`、`ServerSocket`、`DatagramPacket`、`DatagramSocket`
 - [Java IO 工具类](https://dunwu.github.io/01.Java/01.JavaSE/04.IO/05.JavaIO%E5%B7%A5%E5%85%B7%E7%B1%BB.html) - 关键词：`File`、`RandomAccessFile`、`System`、`Scanner`
-- [[Java IO 底层原理]]
-- [[Java NIO 简介]]
-- [[Java Reactor 模式]]
 
 ## 5 🥥(Java) 并发编程
 

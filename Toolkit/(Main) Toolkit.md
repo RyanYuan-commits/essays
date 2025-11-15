@@ -9,3 +9,4 @@ cover: ../images/cover-tool.png
 
 ## [[(MOC) Others]]
 
+[[(MoC) Intellij Plugins Development]]
