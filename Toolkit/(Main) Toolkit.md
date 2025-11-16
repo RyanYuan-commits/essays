@@ -1,12 +1,12 @@
 ---
 cover: ../images/cover-tool.png
 ---
-## [[(MoC) Git]]
+### [[(MoC) Git]]
 
-## [[(MOC) Mermaid]]
+### [[(MOC) Mermaid]]
 
-## [[(MoC) Gradle]]
+### [[(MoC) Gradle]]
 
-## [[(MOC) Others]]
+### [[(MOC) Others]]
 
-[[(MoC) Intellij Plugins Development]]
+### [[(MoC) Intellij Plugins Development]]
