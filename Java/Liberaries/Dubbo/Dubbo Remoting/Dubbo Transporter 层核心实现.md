@@ -60,7 +60,7 @@ public void reset(URL url) {
 }
 ```
 
-## 3	NettyServer
+## 3	Server
 
 ![[NettyServer.png|600]]
 
@@ -123,27 +123,83 @@ private final ConcurrentMap<String, ConcurrentMap<String, ExecutorService>> data
 DefaultExecutorRepository.createExecutorIfAbsent 方法会根据 URL 参数创建相应的线程池并存放在合适的位置:
 
 ```java
-@Override
-public synchronized ExecutorService createExecutorIfAbsent(URL url) {
-	String executorKey = getExecutorKey(url);
-	ConcurrentMap<String, ExecutorService> executors =
-			ConcurrentHashMapUtils.computeIfAbsent(data, executorKey, k -> new ConcurrentHashMap<>());
-
-	String executorCacheKey = getExecutorSecondKey(url);
-
-	url = setThreadNameIfAbsent(url, executorCacheKey);
-
-	URL finalUrl = url;
-	ExecutorService executor =
-			ConcurrentHashMapUtils.computeIfAbsent(executors, executorCacheKey, k -> createExecutor(finalUrl));
-	// If executor has been shut down, create a new one
-	if (executor.isShutdown() || executor.isTerminated()) {
-		executors.remove(executorCacheKey);
-		executor = createExecutor(url);
-		executors.put(executorCacheKey, executor);
-	}
-	dataStore.put(executorKey, executorCacheKey, executor);
-	return executor;
+@Override  
+public synchronized ExecutorService createExecutorIfAbsent(URL url) {  
+    // 第一层, Provider or Consumer  
+    String executorKey = getExecutorKey(url);  
+    ConcurrentMap<String, ExecutorService> executors =  
+            ConcurrentHashMapUtils.computeIfAbsent(data, executorKey, k -> new ConcurrentHashMap<>());  
+  
+    // 第二层, Consumer 共享, Provider by port  
+    String executorCacheKey = getExecutorSecondKey(url);  
+  
+    url = setThreadNameIfAbsent(url, executorCacheKey);  
+  
+    URL finalUrl = url;  
+    ExecutorService executor =  
+            ConcurrentHashMapUtils.computeIfAbsent(executors, executorCacheKey, k -> createExecutor(finalUrl));  
+    // If executor has been shut down, create a new one  
+    if (executor.isShutdown() || executor.isTerminated()) {  
+        executors.remove(executorCacheKey);  
+        executor = createExecutor(url);  
+        executors.put(executorCacheKey, executor);  
+    }  
+    dataStore.put(executorKey, executorCacheKey, executor);  
+    return executor;  
 }
 ```
 
+### 3.3	ThreadPool
+
+
+### 3.4	NettyServer
+
+NettyServer 继承自 AbstractServer, 实现了 doOpen 和 doClose 方法.
+
+```java
+@Override  
+protected void doOpen() throws Throwable {  
+    bootstrap = new ServerBootstrap();  
+  
+    // initialize serverShutdownTimeoutMills before potential usage to avoid NPE.  
+    // read config before destroy    
+    serverShutdownTimeoutMills = ConfigurationUtils.getServerShutdownTimeout(getUrl().getOrDefaultModuleModel());  
+  
+    bossGroup = createBossGroup();  
+    workerGroup = createWorkerGroup();  
+  
+    final NettyServerHandler nettyServerHandler = createNettyServerHandler();  
+    channels = nettyServerHandler.getChannels();  
+  
+    initServerBootstrap(nettyServerHandler);  
+  
+    // bind  
+    try {  
+        ChannelFuture channelFuture = bootstrap.bind(getBindAddress());  
+        channelFuture.syncUninterruptibly();  
+        channel = channelFuture.channel();  
+    } catch (Throwable t) {  
+        closeBootstrap();  
+        throw t;  
+    }  
+	
+	// Metrics ......
+  
+}
+```
+
+Dubbo 在 NettyServer 的 doOpen 方法中初始化 ServerBootstrap, 创建 Boss 和 Worker EventLoopGroup, 创建 ChannelInitializer 等一系列标准的 Netty 流程.
+
+```java
+@Override
+                    protected void initChannel(SocketChannel ch) throws Exception {
+                        int closeTimeout = UrlUtils.getCloseTimeout(getUrl());
+                        NettyCodecAdapter adapter = new NettyCodecAdapter(getCodec(), getUrl(), NettyServer.this);
+                        ch.pipeline().addLast("negotiation", new SslServerTlsHandler(getUrl()));
+                        ch.pipeline()
+                                .addLast("decoder", adapter.getDecoder())
+                                .addLast("encoder", adapter.getEncoder())
+                                .addLast("server-idle-handler", new IdleStateHandler(0, 0, closeTimeout, MILLISECONDS))
+                                .addLast("handler", nettyServerHandler);
+                    }
+```
