@@ -192,14 +192,21 @@ Dubbo 在 NettyServer 的 doOpen 方法中初始化 ServerBootstrap, 创建 Boss
 
 ```java
 @Override
-                    protected void initChannel(SocketChannel ch) throws Exception {
-                        int closeTimeout = UrlUtils.getCloseTimeout(getUrl());
-                        NettyCodecAdapter adapter = new NettyCodecAdapter(getCodec(), getUrl(), NettyServer.this);
-                        ch.pipeline().addLast("negotiation", new SslServerTlsHandler(getUrl()));
-                        ch.pipeline()
-                                .addLast("decoder", adapter.getDecoder())
-                                .addLast("encoder", adapter.getEncoder())
-                                .addLast("server-idle-handler", new IdleStateHandler(0, 0, closeTimeout, MILLISECONDS))
-                                .addLast("handler", nettyServerHandler);
-                    }
+protected void initChannel(SocketChannel ch) throws Exception {
+	int closeTimeout = UrlUtils.getCloseTimeout(getUrl());
+	NettyCodecAdapter adapter = new NettyCodecAdapter(getCodec(), getUrl(), NettyServer.this);
+	ch.pipeline().addLast("negotiation", new SslServerTlsHandler(getUrl()));
+	ch.pipeline()
+			.addLast("decoder", adapter.getDecoder())
+			.addLast("encoder", adapter.getEncoder())
+			.addLast("server-idle-handler", new IdleStateHandler(0, 0, closeTimeout, MILLISECONDS))
+			.addLast("handler", nettyServerHandler);
+}
 ```
+
+## 4	核心 ChannelHandler
+
+![[Dubbo Netty 架构.png|600]]
+
+### 4.1	InternalEncoder & InternalDecoder
+
